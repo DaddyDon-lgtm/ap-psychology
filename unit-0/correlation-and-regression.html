@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Correlation and Regression | AP Psychology</title>
+<style>
+  :root {
+    --navy:#1f3864; --navy-light:#2e4f8f; --gold:#bf8f00; --gold-soft:#fff2cc;
+    --red:#9c2a2a; --red-soft:#fce8e8; --green:#1e6b45; --green-soft:#e6f4ec;
+    --grey:#f2f2f2; --border:#d4d8e0; --text:#1c1c1c; --muted:#5a6070;
+    --blue:#2c5f8a; --orange:#b06a1f;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:"Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;
+       font-size:17px;line-height:1.6;color:var(--text);background:#fafbfc}
+  .wrap{max-width:980px;margin:0 auto;padding:0 20px 80px}
+  .crumbs{background:#fff;border-bottom:1px solid var(--border);font-size:14.5px}
+  .crumbs .inner{max-width:980px;margin:0 auto;padding:10px 20px}
+  .crumbs a{color:var(--navy);text-decoration:none;font-weight:600}
+  .crumbs a:hover{text-decoration:underline}
+  .crumbs .sep{color:var(--border);margin:0 8px}
+  .crumbs .here{color:var(--muted)}
+  header.top{background:var(--navy);color:#fff;padding:32px 20px 28px}
+  header.top .inner{max-width:980px;margin:0 auto}
+  header.top .kicker{font-size:12.5px;letter-spacing:.11em;text-transform:uppercase;opacity:.82;margin:0 0 6px}
+  header.top h1{margin:0;font-size:29px;line-height:1.22}
+  header.top p.tag{margin:8px 0 0;font-size:17px;opacity:.92}
+  nav.jump{background:#fff;border-bottom:2px solid var(--border);position:sticky;top:0;z-index:30;
+           box-shadow:0 1px 4px rgba(0,0,0,.06)}
+  nav.jump ul{max-width:980px;margin:0 auto;padding:0 20px;list-style:none;display:flex;flex-wrap:wrap;gap:2px}
+  nav.jump a{display:block;padding:11px 12px;font-size:14.5px;font-weight:600;color:var(--navy);
+             text-decoration:none;border-bottom:3px solid transparent}
+  nav.jump a:hover{border-bottom-color:var(--gold);background:#f7f9fc}
+  h2{font-size:23px;color:var(--navy);margin:46px 0 6px;padding-bottom:8px;
+     border-bottom:3px solid var(--navy);scroll-margin-top:124px}
+  h2 .num{display:inline-block;background:var(--navy);color:#fff;width:30px;height:30px;line-height:30px;
+          text-align:center;border-radius:50%;font-size:16px;margin-right:10px;vertical-align:2px}
+  h3{font-size:19px;color:var(--navy);margin:28px 0 8px}
+  h4{font-size:16.5px;margin:20px 0 6px}
+  p{margin:11px 0}
+  ul,ol{margin:11px 0;padding-left:26px}
+  li{margin:5px 0}
+  code{background:var(--grey);padding:1px 6px;border-radius:3px;font-family:Consolas,Monaco,monospace;font-size:.92em}
+  .box{border-radius:6px;padding:16px 20px;margin:22px 0;border-left:6px solid}
+  .box p:first-child{margin-top:0}
+  .box p:last-child{margin-bottom:0}
+  .box .label{display:block;font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px}
+  .box.key{background:var(--gold-soft);border-color:var(--gold)}
+  .box.key .label{color:#8a6800}
+  .box.warn{background:var(--red-soft);border-color:var(--red)}
+  .box.warn .label{color:var(--red)}
+  .box.good{background:var(--green-soft);border-color:var(--green)}
+  .box.good .label{color:var(--green)}
+  .box.note{background:#eef2f9;border-color:var(--navy-light)}
+  .box.note .label{color:var(--navy)}
+  table{border-collapse:collapse;width:100%;margin:20px 0;font-size:16.5px}
+  th,td{border:1px solid var(--border);padding:9px 12px;text-align:left;vertical-align:top}
+  thead th{background:var(--navy);color:#fff;font-weight:600}
+  tbody tr:nth-child(even){background:var(--grey)}
+  /* ---------- widgets ---------- */
+  .widget{background:#fff;border:2px solid var(--border);border-radius:8px;padding:18px 20px 20px;margin:24px 0}
+  .widget > h3{margin-top:0;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+  .widget .tryit{font-size:13px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;
+                 color:#8a6800;background:var(--gold-soft);padding:3px 9px;border-radius:10px}
+  .widget svg{display:block;width:100%;height:auto;max-width:100%;touch-action:none}
+  .ctrls{display:flex;flex-wrap:wrap;gap:18px;margin:16px 0 4px;align-items:flex-end}
+  .ctrl{flex:1 1 220px;min-width:200px}
+  .ctrl label{display:block;font-size:13.5px;font-weight:700;letter-spacing:.04em;
+              text-transform:uppercase;color:var(--muted);margin-bottom:5px}
+  .ctrl .val{color:var(--navy);font-size:15px}
+  input[type=range]{width:100%;accent-color:var(--navy);height:26px;cursor:pointer}
+  .btnrow{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 0}
+  button{font-family:inherit;font-size:14.5px;font-weight:600;cursor:pointer;border-radius:5px;
+         padding:8px 14px;border:2px solid var(--navy);background:#fff;color:var(--navy);transition:background .12s}
+  button:hover{background:var(--navy);color:#fff}
+  button.primary{background:var(--navy);color:#fff}
+  button.primary:hover{background:var(--navy-light)}
+  button:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid var(--navy-light);outline-offset:2px}
+  .readouts{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 0}
+  .ro{flex:1 1 110px;background:var(--grey);border-radius:6px;padding:9px 12px;text-align:center}
+  .ro .k{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+  .ro .v{display:block;font-size:22px;font-weight:700;color:var(--navy);line-height:1.25}
+  .ro.hl .v{color:var(--green)}
+  .commentary{margin:14px 0 0;padding:11px 14px;background:#eef2f9;border-left:5px solid var(--navy-light);
+              border-radius:0 5px 5px 0;font-size:16px}
+  .toggle-line{display:flex;align-items:center;gap:9px;margin:14px 0 0;font-size:15.5px}
+  .toggle-line input{width:19px;height:19px;accent-color:var(--navy);cursor:pointer}
+  .field{display:inline-flex;flex-direction:column;gap:4px;margin:0 12px 10px 0}
+  .field label{font-size:12.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+  .field input{font-family:inherit;font-size:17px;padding:7px 9px;width:110px;border:2px solid var(--border);border-radius:5px}
+  .field input.ok{border-color:var(--green);background:var(--green-soft)}
+  .field input.bad{border-color:var(--gold);background:var(--gold-soft)}
+  .worked{display:none;margin:14px 0 0;padding:12px 15px;background:var(--grey);border-radius:6px;
+          font-family:Consolas,Monaco,monospace;font-size:14.5px;line-height:1.7;white-space:pre-wrap}
+  .worked.open{display:block}
+  .dataset{font-size:23px;font-weight:700;letter-spacing:.04em;color:var(--navy);
+           background:var(--grey);border-radius:6px;padding:13px 16px;margin:6px 0 16px;text-align:center}
+  .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  /* practice questions */
+  .q-item{border:2px solid var(--border);border-radius:6px;background:#fff;margin:16px 0;padding:16px 18px}
+  .q-item .qnum{display:inline-block;background:var(--navy);color:#fff;font-size:13.5px;font-weight:700;
+                padding:2px 10px;border-radius:10px;margin-bottom:8px}
+  .q-item .stem{margin:6px 0 10px}
+  .q-item .ask{font-weight:600;margin:10px 0}
+  .q-item ol.choices{list-style:upper-alpha;padding-left:26px;margin:10px 0 14px}
+  .q-item ol.choices li{margin:4px 0}
+  .reveal{display:none;border-top:2px dashed var(--border);margin-top:12px;padding-top:12px}
+  .reveal.open{display:block}
+  .reveal .ans{font-weight:700;color:var(--green);font-size:17px;margin:0 0 8px}
+  .reveal .why{margin:8px 0 0}
+  .reveal .why-not{margin:10px 0 0;font-size:15.5px}
+  .reveal .why-not li{color:var(--muted)}
+  .reveal .why-not li strong{color:var(--text)}
+  .toggle{font-size:14.5px}
+  footer{margin-top:58px;padding:22px 0 0;border-top:2px solid var(--border);font-size:15px;color:var(--muted)}
+  .pagenav{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0 0}
+  .pagenav a{flex:1 1 220px;border:2px solid var(--border);border-radius:6px;padding:12px 15px;
+             text-decoration:none;color:inherit;background:#fff}
+  .pagenav a:hover{border-color:var(--navy)}
+  .pagenav .dir{display:block;font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+  .pagenav .t{display:block;font-weight:700;color:var(--navy);margin-top:2px}
+  @media (max-width:720px){
+    body{font-size:16px}
+    header.top h1{font-size:24px}
+    nav.jump a{padding:9px 8px;font-size:13.5px}
+    .ro .v{font-size:19px}
+    .ctrls{gap:12px}
+  }
+  @media print{
+    body{background:#fff;font-size:11pt}
+    nav.jump,.crumbs,button,.btnrow,input[type=range],.pagenav{display:none!important}
+    header.top{background:#fff!important;color:var(--navy)!important;padding:0 0 12px}
+    .reveal{display:block!important}
+    .widget,.q-item,.box,table{break-inside:avoid;page-break-inside:avoid}
+    h2{break-after:avoid}
+    @page{size:A4;margin:15mm}
+  }
+</style>
+</head>
+<body>
+
+<div class="crumbs">
+  <div class="inner">
+    <a href="../index.html">AP Psychology</a>
+    <span class="sep">&rsaquo;</span>
+    <a href="index.html">Unit 0</a>
+    <span class="sep">&rsaquo;</span>
+    <span class="here">Correlation and Regression | AP Psychology</span>
+  </div>
+</div>
+
+<header class="top">
+  <div class="inner">
+    <p class="kicker">Unit 0 &bull; Statistical Reasoning &bull; Page 3 of 4</p>
+    <h1>Correlation and Regression</h1>
+    <p class="tag">Reading r, and why extreme scores drift back toward average</p>
+  </div>
+</header>
+
+<nav class="jump">
+  <ul>
+    <li><a href="#start">Where This Picks Up</a></li>
+    <li><a href="#slider">The r Slider</a></li>
+    <li><a href="#reading">Reading r</a></li>
+    <li><a href="#game">Guess the r</a></li>
+    <li><a href="#causation">Not Causation</a></li>
+    <li><a href="#regression">Regression to the Mean</a></li>
+    <li><a href="#secondtest">The Second Test</a></li>
+    <li><a href="#fools">Why It Fools Everyone</a></li>
+    <li><a href="#tips">AP Tips</a></li>
+    <li><a href="#questions">Practice Questions</a></li>
+  </ul>
+</nav>
+
+<div class="wrap">
+
+<h2 id="start"><span class="num">1</span>Where This Picks Up</h2>
+
+<p>The <a href="research-methods.html">research methods page</a> covered what a correlational study can and cannot claim. This page is about reading the number those studies produce, and about one statistical effect that fools almost everyone who has not been warned about it.</p>
+
+<h2 id="slider"><span class="num">2</span>The Correlation Slider</h2>
+
+<div class="widget">
+  <h3>Move r and watch the cloud reshape <span class="tryit">Interactive</span></h3>
+  <svg id="crSvg" viewBox="0 0 760 400" role="img" aria-label="Scatterplot that reshapes as the correlation slider moves"></svg>
+  <div class="ctrls">
+    <div class="ctrl" style="flex:1 1 100%">
+      <label for="crR">Correlation coefficient <span class="val" id="crRV">+0.60</span></label>
+      <input id="crR" type="range" min="-100" max="100" value="60" step="1">
+    </div>
+  </div>
+  <div class="readouts">
+    <div class="ro"><span class="k">r</span><span class="v" id="crRo">+0.60</span></div>
+    <div class="ro"><span class="k">Direction</span><span class="v" id="crDir" style="font-size:18px">positive</span></div>
+    <div class="ro"><span class="k">Strength</span><span class="v" id="crStr" style="font-size:18px">strong</span></div>
+  </div>
+  <div class="toggle-line">
+    <input id="crFit" type="checkbox">
+    <label for="crFit">Show line of best fit</label>
+  </div>
+  <p class="commentary" id="crNote" aria-live="polite"></p>
+</div>
+
+<div class="box key">
+  <span class="label">The thing to notice</span>
+  <p>Park the slider at <strong>-0.85</strong>, then at <strong>+0.40</strong>. Which relationship is stronger? The negative one, by a wide margin. The minus sign is a direction, not a smaller number.</p>
+</div>
+
+<h2 id="reading"><span class="num">3</span>Reading the Correlation Coefficient</h2>
+
+<p>The correlation coefficient, written <strong>r</strong>, is a single number from -1.00 to +1.00 that carries two separate pieces of information.</p>
+
+<p><strong>The sign gives direction.</strong> Positive means the two variables rise and fall together. Negative means as one rises, the other falls.</p>
+
+<p><strong>The absolute value gives strength</strong>, meaning how close to a straight line the points lie. Near 1.00 either way is strong, and one variable predicts the other well. Near 0 is weak, and knowing one tells you almost nothing about the other.</p>
+
+<p>So <code>r = -0.85</code> describes a much stronger relationship than <code>r = +0.40</code>.</p>
+
+<table>
+  <thead><tr><th style="width:30%">Absolute value of r</th><th>Strength</th></tr></thead>
+  <tbody>
+    <tr><td>0.00 to 0.29</td><td>weak</td></tr>
+    <tr><td>0.30 to 0.59</td><td>moderate</td></tr>
+    <tr><td>0.60 to 1.00</td><td>strong</td></tr>
+  </tbody>
+</table>
+
+<h2 id="game"><span class="num">4</span>Guess the r</h2>
+
+<div class="widget">
+  <h3>Ten rounds <span class="tryit">Game</span></h3>
+  <p style="margin-top:0">Look at the plot and estimate the correlation. Type a number between -1 and 1, with two decimal places.</p>
+  <svg id="ggSvg" viewBox="0 0 760 380" role="img" aria-label="Scatterplot to estimate the correlation of"></svg>
+  <div style="margin-top:14px">
+    <span class="field"><label for="ggIn">Your estimate</label><input id="ggIn" type="text" inputmode="decimal" autocomplete="off" placeholder="-0.45"></span>
+    <span style="display:inline-block;margin-left:6px">
+      <button class="primary" type="button" id="ggCheck">Check</button>
+      <button type="button" id="ggNext" style="display:none">Next plot</button>
+    </span>
+  </div>
+  <div class="readouts" style="margin-top:14px">
+    <div class="ro"><span class="k">Round</span><span class="v" id="ggRound">1 of 10</span></div>
+    <div class="ro"><span class="k">Average error</span><span class="v" id="ggAvg">&ndash;</span></div>
+    <div class="ro hl"><span class="k">Best ever</span><span class="v" id="ggBest">&ndash;</span></div>
+  </div>
+  <p class="commentary" id="ggNote" aria-live="polite">Estimate the correlation, then press Check.</p>
+  <div class="btnrow"><button type="button" id="ggReset">Start over</button></div>
+</div>
+
+<h2 id="causation"><span class="num">5</span>Correlation Still Is Not Causation</h2>
+
+<p>A slider makes relationships feel mechanical, so it is worth restating the limit here.</p>
+
+<p><strong>The directionality problem:</strong> even if two variables are genuinely related, a correlation cannot tell you which one came first. Does stress cause poor sleep, or does poor sleep cause stress?</p>
+
+<p><strong>The third-variable problem:</strong> an unmeasured variable may be causing both. Ice cream sales and drowning rates rise together because both are caused by hot weather.</p>
+
+<p>The <a href="research-methods.html">research methods page</a> has the full treatment, including why only an experiment with random assignment licenses a causal claim.</p>
+
+<h2 id="regression"><span class="num">6</span>Regression Toward the Mean</h2>
+
+<p>When a measurement comes out extreme, the next measurement of the same thing tends to land closer to average. Nothing has changed. The extreme was partly produced by chance, and chance does not repeat on demand.</p>
+
+<p>Think of any score as two things added together: real ability, plus luck on the day. A student who scores 98 almost certainly has real ability, and also had a good day. The ability carries over to the next test. The good day does not. So the second score drifts down toward their true level. The same logic runs in reverse for a student who scores 31.</p>
+
+<p>This is not a psychological effect. It is arithmetic, and it happens whenever the same thing is measured twice and the two measurements are less than perfectly related.</p>
+
+<div class="box note">
+  <span class="label">The connection to r, which is why it sits on this page</span>
+  <p>How much regression you get is decided by the correlation between the two measurements.</p>
+  <ul style="margin-bottom:0">
+    <li><code>r = 1.00</code>: the two measures agree perfectly, so there is no regression at all.</li>
+    <li><code>r = 0.60</code>: extreme scores move part of the way back toward the mean.</li>
+    <li><code>r = 0.00</code>: the second score is unrelated to the first, so extreme groups fall all the way back to the overall average.</li>
+  </ul>
+</div>
+
+<p><strong>Weaker relationship, more regression.</strong> That is the whole rule, and the widget below lets you watch it happen.</p>
+
+<h2 id="secondtest"><span class="num">7</span>The Second Test</h2>
+
+<div class="widget">
+  <h3>Two tests, the same 200 students <span class="tryit">Interactive</span></h3>
+  <svg id="stSvg" viewBox="0 0 760 420" role="img" aria-label="Scatterplot of Test 1 against Test 2 for 200 students"></svg>
+  <div class="ctrls">
+    <div class="ctrl" style="flex:1 1 100%">
+      <label for="stR">How related are the two tests <span class="val" id="stRV">r = 0.60</span></label>
+      <input id="stR" type="range" min="0" max="100" value="60" step="1">
+    </div>
+  </div>
+  <div class="btnrow">
+    <button type="button" id="stTop">Highlight the top 10 on Test 1</button>
+    <button type="button" id="stBot">Highlight the bottom 10 on Test 1</button>
+    <button type="button" id="stClear">Clear</button>
+  </div>
+  <p class="commentary" id="stNote" aria-live="polite">Pick a group to highlight, then watch what that same group does on Test 2.</p>
+  <div class="toggle-line">
+    <input id="stRun" type="checkbox">
+    <label for="stRun">Show the running average instead</label>
+  </div>
+</div>
+
+<div class="box key">
+  <span class="label">The thing to notice</span>
+  <p>Nobody improved. Nobody declined. No treatment was given. The movement is entirely a consequence of selecting a group <em>because</em> their score was extreme.</p>
+  <p>Drag the slider to <code>r = 1.00</code> and the effect vanishes completely. Drag it to <code>r = 0</code> and both groups fall all the way back to the class average.</p>
+</div>
+
+<h2 id="fools"><span class="num">8</span>Why This Fools Everyone</h2>
+
+<p>Regression toward the mean is dangerous because it produces evidence that looks exactly like a treatment working.</p>
+
+<p>Interventions almost always start when things are at their worst. A student is tutored after a bad test. A patient seeks treatment when symptoms peak. A team fires the coach after a terrible run. Then things improve, and the intervention gets the credit it may not have earned.</p>
+
+<div class="box warn">
+  <span class="label">The classic case</span>
+  <p>Flight instructors noticed that when they praised a cadet for an unusually smooth landing, the next landing was usually worse. When they shouted at a cadet for a rough landing, the next one was usually better. They concluded that criticism works and praise backfires.</p>
+  <p>They were watching regression toward the mean. An unusually good landing is followed by a more ordinary one, and an unusually bad landing is followed by a more ordinary one, whatever the instructor says. The instructors had taught themselves a false lesson about human behavior from a pattern that was pure arithmetic.</p>
+</div>
+
+<p>Other places it shows up:</p>
+
+<ul>
+  <li>The athlete who has a spectacular rookie season and a disappointing second one.</li>
+  <li>The miracle cure that reaches people at rock bottom and takes credit for the recovery that was coming anyway.</li>
+  <li>The school that adopts a new program after its worst year on record.</li>
+</ul>
+
+<div class="box good">
+  <span class="label">The fix, and it is always the same</span>
+  <p>A control group of people who were equally extreme to begin with and received nothing. If the treatment group improves more than they do, the improvement is real. Without that comparison, you cannot separate a working treatment from ordinary regression.</p>
+</div>
+
+<h2 id="tips"><span class="num">9</span>AP Exam Tips</h2>
+
+<ul>
+  <li>The sign of r is direction, the absolute value is strength. <code>r = -0.85</code> is stronger than <code>r = +0.40</code>.</li>
+  <li>A correlation of any size never establishes causation.</li>
+  <li>When reading a scatterplot, name the direction first, then judge the strength from how tightly the points cluster around a line.</li>
+  <li>Whenever a group is selected because its scores were extreme and then improves, <strong>regression toward the mean is a live alternative explanation</strong>. Ask whether there was a control group of equally extreme people.</li>
+  <li>The weaker the correlation between two measurements, the more regression you get between them.</li>
+</ul>
+
+<h2 id="questions"><span class="num">10</span>Practice Questions</h2>
+
+<p>Answer each one before you reveal it.</p>
+
+<div class="btnrow" style="margin:18px 0 24px">
+  <button class="primary" type="button" onclick="setAllAns(true)">Show all answers</button>
+  <button type="button" onclick="setAllAns(false)">Hide all answers</button>
+</div>
+
+<div class="q-item">
+  <span class="qnum">Question 1</span>
+  <p class="stem">Study A reports r = +0.35 between two variables. Study B reports r = -0.78 between two different variables.</p>
+  <p class="ask">Which statement is accurate?</p>
+  <ol class="choices">
+    <li>Study A found the stronger relationship because the value is positive</li>
+    <li>Study B found the stronger relationship because 0.78 is further from zero than 0.35</li>
+    <li>The two relationships are equally strong</li>
+    <li>Study B found a weaker relationship because the value is negative</li>
+  </ol>
+  <button class="toggle" type="button" onclick="tog(this)">Show answer</button>
+  <div class="reveal">
+    <p class="ans">Answer: B</p>
+    <p class="why">Strength is the distance from zero, in either direction. 0.78 is further from zero than 0.35, so Study B's relationship is considerably stronger. The negative sign tells you only that as one variable rises the other falls.</p>
+    <ul class="why-not">
+      <li><strong>A and D both treat the sign</strong> as though it measured strength, which is the single most common error with correlation coefficients.</li>
+      <li><strong>C ignores</strong> the difference in magnitude.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="q-item">
+  <span class="qnum">Question 2</span>
+  <p class="stem">Four scatterplots are shown to a class.</p>
+  <p class="ask">Which pattern indicates the strongest relationship?</p>
+  <ol class="choices">
+    <li>Points scattered evenly across the whole plot with no direction</li>
+    <li>Points loosely trending upward with wide vertical spread</li>
+    <li>Points clustered tightly along a line sloping downward</li>
+    <li>Points forming a horizontal band across the middle</li>
+  </ol>
+  <button class="toggle" type="button" onclick="tog(this)">Show answer</button>
+  <div class="reveal">
+    <p class="ans">Answer: C</p>
+    <p class="why">Strength is about how tightly points hug a straight line, not which way the line tilts. A tight downward cluster is a strong negative correlation, close to -1.</p>
+    <ul class="why-not">
+      <li><strong>A describes r near 0.</strong></li>
+      <li><strong>B describes a weak to moderate positive correlation:</strong> there is a direction, but wide spread means poor prediction.</li>
+      <li><strong>D also describes r near 0</strong>, since the value of one variable does not change as the other varies.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="q-item">
+  <span class="qnum">Question 3</span>
+  <p class="stem">A school identifies the 25 lowest-scoring students on a September reading test and enrolls them in an after-school program. In January they retest, and the group's average has risen by 9 points. The principal concludes the program works.</p>
+  <p class="ask">What is the strongest objection?</p>
+  <ol class="choices">
+    <li>Nine points is not a statistically significant improvement</li>
+    <li>The group was selected for extreme low scores, so some improvement was expected through regression toward the mean alone</li>
+    <li>Reading scores cannot be measured reliably</li>
+    <li>The sample of 25 is too small to analyze</li>
+  </ol>
+  <button class="toggle" type="button" onclick="tog(this)">Show answer</button>
+  <div class="reveal">
+    <p class="ans">Answer: B</p>
+    <p class="why">The students were chosen precisely because they scored at the bottom, and an extreme low score is partly a bad day. On any retest, that group drifts upward toward their true level whether or not anything is done for them. To claim the program caused the gain, the school needs a comparison group of equally low scorers who received no program.</p>
+    <ul class="why-not">
+      <li><strong>A cannot be judged</strong> from the information given, and significance is not the issue here.</li>
+      <li><strong>C is unsupported</strong> and too sweeping.</li>
+      <li><strong>D is a weak objection:</strong> 25 is workable, and sample size is not what makes this conclusion unsafe.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="q-item">
+  <span class="qnum">Question 4</span>
+  <p class="stem">A coach records each player's free throw percentage in game one and again in game two. The correlation between the two games is r = 0.30. The five players who shot best in game one shoot considerably worse in game two.</p>
+  <p class="ask">What best explains this?</p>
+  <ol class="choices">
+    <li>The players became complacent after their strong first game</li>
+    <li>The correlation is negative, so good performance predicts bad performance</li>
+    <li>The two measurements are weakly related, so extreme scores regress substantially toward the mean</li>
+    <li>Free throw shooting is not a real skill</li>
+  </ol>
+  <button class="toggle" type="button" onclick="tog(this)">Show answer</button>
+  <div class="reveal">
+    <p class="ans">Answer: C</p>
+    <p class="why">With r = 0.30 the two games are only weakly related, which means a large part of any single game's result is chance. The players selected for being extreme in game one give back most of that luck in game two. The lower the correlation between two measurements, the more regression you see between them.</p>
+    <ul class="why-not">
+      <li><strong>A is the tempting psychological story</strong>, and it is exactly the kind of false explanation regression invites. It requires no evidence and explains nothing that arithmetic does not already explain.</li>
+      <li><strong>B misreads the coefficient:</strong> 0.30 is positive.</li>
+      <li><strong>D is unsupported.</strong> Skill is real; it is simply not the only thing determining a single game.</li>
+    </ul>
+  </div>
+</div>
+<div class="pagenav">
+  <a href="normal-curve.html"><span class="dir">&larr; Previous</span><span class="t">The Normal Curve</span></a>
+  <a href="significance-and-effect-size.html"><span class="dir">Next &rarr;</span><span class="t">Significance and Effect Size</span></a>
+</div>
+
+<footer>
+  <p>AP Psychology, Unit 0: Science Practices. Statistical reasoning, aligned to Science Practice 3 of the 2024 Course and Exam Description.</p>
+  <p>Don West, AP Psychology Teacher. Questions? Message me on Canvas or ask at the start of class.</p>
+</footer>
+
+</div>
+
+<script>
+
+  // ---- shared maths helpers ----
+  function erf(x){
+    var s = x<0?-1:1; x = Math.abs(x);
+    var a1=0.254829592,a2=-0.284496736,a3=1.421413741,a4=-1.453152027,a5=1.061405429,p=0.3275911;
+    var t=1/(1+p*x);
+    var y=1-(((((a5*t+a4)*t)+a3)*t+a2)*t+a1)*t*Math.exp(-x*x);
+    return s*y;
+  }
+  function normCdf(x,mu,sd){ return 0.5*(1+erf((x-mu)/(sd*Math.SQRT2))); }
+  function normPdf(x,mu,sd){ var z=(x-mu)/sd; return Math.exp(-0.5*z*z)/(sd*Math.sqrt(2*Math.PI)); }
+  var _spare=null;
+  function randn(){
+    if(_spare!==null){var v=_spare;_spare=null;return v;}
+    var u,v,s;
+    do{u=Math.random()*2-1;v=Math.random()*2-1;s=u*u+v*v;}while(s===0||s>=1);
+    var m=Math.sqrt(-2*Math.log(s)/s);_spare=v*m;return u*m;
+  }
+  function mean(a){ return a.reduce(function(x,y){return x+y;},0)/a.length; }
+  function median(a){
+    var b=a.slice().sort(function(x,y){return x-y;}), n=b.length, h=Math.floor(n/2);
+    return n%2 ? b[h] : (b[h-1]+b[h])/2;
+  }
+  function modes(a){
+    var c={},best=0;
+    a.forEach(function(v){c[v]=(c[v]||0)+1; if(c[v]>best)best=c[v];});
+    if(best<2) return [];
+    return Object.keys(c).filter(function(k){return c[k]===best;}).map(Number).sort(function(x,y){return x-y;});
+  }
+  function fmt(n,d){ d=(d===undefined)?1:d; var r=Math.round(n*Math.pow(10,d))/Math.pow(10,d);
+    return (Math.abs(r-Math.round(r))<1e-9) ? String(Math.round(r)) : r.toFixed(d); }
+  function pearson(xs,ys){
+    var mx=mean(xs),my=mean(ys),sx=0,sy=0,sxy=0;
+    for(var i=0;i<xs.length;i++){var a=xs[i]-mx,b=ys[i]-my;sx+=a*a;sy+=b*b;sxy+=a*b;}
+    if(sx===0||sy===0) return 0;
+    return sxy/Math.sqrt(sx*sy);
+  }
+  function store(k,v){ try{ localStorage.setItem(k,JSON.stringify(v)); return true; }catch(e){ return false; } }
+  function recall(k,d){ try{ var s=localStorage.getItem(k); return s===null?d:JSON.parse(s); }catch(e){ return d; } }
+  function SVG(tag,attrs){
+    var e=document.createElementNS("http://www.w3.org/2000/svg",tag);
+    for(var k in attrs) e.setAttribute(k,attrs[k]);
+    return e;
+  }
+  // pointer dragging that works for mouse and touch
+  function makeDraggable(svg, onMove){
+    var active=null;
+    function pt(evt){
+      var r=svg.getBoundingClientRect();
+      var vb=svg.viewBox.baseVal;
+      return { x:(evt.clientX-r.left)/r.width*vb.width, y:(evt.clientY-r.top)/r.height*vb.height };
+    }
+    svg.addEventListener('pointerdown',function(e){
+      var t=e.target.closest('[data-drag]'); if(!t) return;
+      active=t; svg.setPointerCapture(e.pointerId); e.preventDefault();
+      onMove(active, pt(e));
+    });
+    svg.addEventListener('pointermove',function(e){
+      if(!active) return; e.preventDefault(); onMove(active, pt(e));
+    });
+    function end(e){ if(active){ try{svg.releasePointerCapture(e.pointerId);}catch(_){} active=null; } }
+    svg.addEventListener('pointerup',end);
+    svg.addEventListener('pointercancel',end);
+  }
+  // practice question reveals
+  function tog(btn){
+    var box=btn.nextElementSibling;
+    var open=box.classList.toggle('open');
+    btn.textContent=open?'Hide answer':'Show answer';
+  }
+  function setAllAns(open){
+    document.querySelectorAll('.q-item').forEach(function(q){
+      var b=q.querySelector('.reveal'), t=q.querySelector('.toggle');
+      if(!b||!t) return;
+      b.classList.toggle('open',open);
+      t.textContent=open?'Hide answer':'Show answer';
+    });
+  }
+
+
+var FONT='Segoe UI, Arial, sans-serif';
+function frame(svg,X0,X1,Y0,Y1,xlab,ylab){
+  svg.appendChild(SVG('line',{x1:X0,y1:Y1,x2:X1,y2:Y1,stroke:'#1c1c1c','stroke-width':2}));
+  svg.appendChild(SVG('line',{x1:X0,y1:Y0,x2:X0,y2:Y1,stroke:'#1c1c1c','stroke-width':2}));
+  var t1=SVG('text',{x:(X0+X1)/2,y:Y1+34,'text-anchor':'middle','font-size':14.5,fill:'#1c1c1c','font-family':FONT});
+  t1.textContent=xlab; svg.appendChild(t1);
+  var t2=SVG('text',{x:X0-32,y:(Y0+Y1)/2,'text-anchor':'middle','font-size':14.5,fill:'#1c1c1c','font-family':FONT,
+                     transform:'rotate(-90 '+(X0-32)+' '+((Y0+Y1)/2)+')'});
+  t2.textContent=ylab; svg.appendChild(t2);
+}
+function strengthWord(a){ a=Math.abs(a); return a<0.30?'weak':(a<0.60?'moderate':'strong'); }
+function signed(r){ return (r>=0?'+':'') + r.toFixed(2); }
+
+// ============ WIDGET 6: correlation slider ============
+(function(){
+  var svg=document.getElementById('crSvg');
+  var X0=64,X1=720,Y0=30,Y1=330, N=60;
+  frame(svg,X0,X1,Y0,Y1,'Variable X','Variable Y');
+  var z1=[],e=[];
+  for(var i=0;i<N;i++){ z1.push(randn()); e.push(randn()); }
+  var fit=SVG('line',{stroke:'#bf8f00','stroke-width':3,'stroke-dasharray':'7,5'}); svg.appendChild(fit);
+  var g=SVG('g',{}); svg.appendChild(g);
+  var pts=[];
+  for(var i=0;i<N;i++){ var c=SVG('circle',{r:6,fill:'#2e4f8f','fill-opacity':.75}); g.appendChild(c); pts.push(c); }
+  var cx=(X0+X1)/2, cy=(Y0+Y1)/2, sx=(X1-X0)/8.4, sy=(Y1-Y0)/8.4;
+  function draw(){
+    var r=+document.getElementById('crR').value/100;
+    var k=Math.sqrt(Math.max(0,1-r*r));
+    var xs=[],ys=[];
+    for(var i=0;i<N;i++){
+      var z2=r*z1[i]+k*e[i];
+      var X=cx+z1[i]*sx, Y=cy-z2*sy;
+      pts[i].setAttribute('cx',X); pts[i].setAttribute('cy',Y);
+      xs.push(z1[i]); ys.push(z2);
+    }
+    document.getElementById('crRV').textContent=signed(r);
+    document.getElementById('crRo').textContent=signed(r);
+    document.getElementById('crDir').textContent = Math.abs(r)<0.05?'none':(r>0?'positive':'negative');
+    document.getElementById('crStr').textContent = strengthWord(r);
+    var show=document.getElementById('crFit').checked;
+    fit.style.display=show?'':'none';
+    if(show){
+      var b=pearson(xs,ys)*1; // standardized slope equals r here
+      var x1=-3.6,x2=3.6;
+      fit.setAttribute('x1',cx+x1*sx); fit.setAttribute('y1',cy-(r*x1)*sy);
+      fit.setAttribute('x2',cx+x2*sx); fit.setAttribute('y2',cy-(r*x2)*sy);
+    }
+    var note;
+    if(Math.abs(r)<0.08) note='No relationship worth speaking of. Knowing a value of X tells you essentially nothing about Y.';
+    else if(r>0) note='As one variable increases, the other tends to increase. '+
+      (Math.abs(r)>=0.6?'The relationship is strong, so knowing one gives you a good guess at the other.':
+       Math.abs(r)>=0.3?'The relationship is moderate, so knowing one gives you a fair but imperfect guess at the other.':
+       'The relationship is weak, so knowing one barely helps you guess the other.');
+    else note='As one variable increases, the other tends to decrease. '+
+      (Math.abs(r)>=0.6?'The relationship is strong, so knowing one gives you a good guess at the other.':
+       Math.abs(r)>=0.3?'The relationship is moderate, so knowing one gives you a fair but imperfect guess at the other.':
+       'The relationship is weak, so knowing one barely helps you guess the other.');
+    document.getElementById('crNote').textContent=note;
+  }
+  document.getElementById('crR').addEventListener('input',draw);
+  document.getElementById('crFit').addEventListener('change',draw);
+  draw();
+})();
+
+// ============ WIDGET 7: guess the r ============
+(function(){
+  var svg=document.getElementById('ggSvg');
+  var X0=64,X1=720,Y0=26,Y1=312, N=55;
+  frame(svg,X0,X1,Y0,Y1,'Variable X','Variable Y');
+  var fit=SVG('line',{stroke:'#bf8f00','stroke-width':3,'stroke-dasharray':'7,5'}); fit.style.display='none';
+  svg.appendChild(fit);
+  var g=SVG('g',{}); svg.appendChild(g);
+  var cx=(X0+X1)/2, cy=(Y0+Y1)/2, sx=(X1-X0)/8.4, sy=(Y1-Y0)/8.4;
+  var target=0, round=1, errs=[], answered=false;
+  var BESTKEY='ap-psych-guess-r-best';
+  function showBest(){
+    var b=recall(BESTKEY,null);
+    document.getElementById('ggBest').textContent = (b===null)?'\u2013':b.toFixed(2);
+  }
+  function plot(){
+    while(g.firstChild) g.removeChild(g.firstChild);
+    var sgn = Math.random()<0.5?-1:1;
+    target = sgn*(0.05+Math.random()*0.92);
+    target = Math.round(target*100)/100;
+    var k=Math.sqrt(Math.max(0,1-target*target));
+    for(var i=0;i<N;i++){
+      var a=randn(), b=target*a+k*randn();
+      g.appendChild(SVG('circle',{cx:cx+a*sx, cy:cy-b*sy, r:6, fill:'#2e4f8f','fill-opacity':.75}));
+    }
+    fit.style.display='none';
+    answered=false;
+    document.getElementById('ggIn').value='';
+    document.getElementById('ggIn').disabled=false;
+    document.getElementById('ggCheck').style.display='';
+    document.getElementById('ggNext').style.display='none';
+    document.getElementById('ggRound').textContent=round+' of 10';
+  }
+  function check(){
+    if(answered) return;
+    var v=parseFloat(document.getElementById('ggIn').value);
+    if(isNaN(v)||v<-1||v>1){
+      document.getElementById('ggNote').textContent='Type a number between -1 and 1, for example -0.45 or 0.7.';
+      return;
+    }
+    answered=true;
+    var err=Math.abs(v-target);
+    errs.push(err);
+    fit.style.display='';
+    fit.setAttribute('x1',cx-3.6*sx); fit.setAttribute('y1',cy-(target*-3.6)*sy);
+    fit.setAttribute('x2',cx+3.6*sx); fit.setAttribute('y2',cy-(target*3.6)*sy);
+    var msg;
+    if(err<=0.10) msg='Excellent. You are reading these well.';
+    else if(err<=0.20) msg='Close. You have the direction and rough strength.';
+    else if(err<=0.35) msg='Not quite. Look at how tightly the dots hug a line.';
+    else msg='Check the direction first, then the tightness.';
+    document.getElementById('ggNote').textContent=
+      'The true value was '+signed(target)+'. You said '+signed(v)+', so you were off by '+err.toFixed(2)+'. '+msg;
+    var avg=errs.reduce(function(a,b){return a+b;},0)/errs.length;
+    document.getElementById('ggAvg').textContent=avg.toFixed(2);
+    document.getElementById('ggIn').disabled=true;
+    document.getElementById('ggCheck').style.display='none';
+    document.getElementById('ggNext').style.display='';
+    if(round===10){
+      var best=recall(BESTKEY,null);
+      if(best===null||avg<best){ store(BESTKEY,avg); showBest();
+        document.getElementById('ggNote').textContent+='  That is a new best average error of '+avg.toFixed(2)+'.';
+      } else {
+        document.getElementById('ggNote').textContent+='  Ten rounds done. Average error '+avg.toFixed(2)+', best so far '+best.toFixed(2)+'.';
+      }
+      document.getElementById('ggNext').textContent='Play again';
+    }
+  }
+  document.getElementById('ggCheck').addEventListener('click',check);
+  document.getElementById('ggIn').addEventListener('keydown',function(e){ if(e.key==='Enter') check(); });
+  document.getElementById('ggNext').addEventListener('click',function(){
+    if(round===10){ round=1; errs=[]; document.getElementById('ggAvg').textContent='\u2013';
+      document.getElementById('ggNext').textContent='Next plot'; }
+    else round++;
+    plot();
+    document.getElementById('ggNote').textContent='Estimate the correlation, then press Check.';
+  });
+  document.getElementById('ggReset').addEventListener('click',function(){
+    round=1; errs=[]; document.getElementById('ggAvg').textContent='\u2013';
+    document.getElementById('ggNext').textContent='Next plot';
+    plot(); document.getElementById('ggNote').textContent='Estimate the correlation, then press Check.';
+  });
+  showBest(); plot();
+})();
+
+// ============ WIDGET 8: the second test ============
+(function(){
+  var svg=document.getElementById('stSvg');
+  var X0=70,X1=720,Y0=26,Y1=334, N=200, MU=65, SD=12;
+  var scatterG=SVG('g',{}); var runG=SVG('g',{});
+  var base=SVG('g',{}); svg.appendChild(base); svg.appendChild(scatterG); svg.appendChild(runG);
+  var z1=[],e=[];
+  for(var i=0;i<N;i++){ z1.push(randn()); e.push(randn()); }
+  var mode='scatter', sel=null;
+
+  function clearAll(){ [base,scatterG,runG].forEach(function(g){ while(g.firstChild) g.removeChild(g.firstChild); }); }
+  function sx(v){ return X0+(v-25)/(105-25)*(X1-X0); }
+  function sy(v){ return Y1-(v-25)/(105-25)*(Y1-Y0); }
+
+  function drawScatter(){
+    clearAll();
+    var r=+document.getElementById('stR').value/100;
+    document.getElementById('stRV').textContent='r = '+r.toFixed(2);
+    var k=Math.sqrt(Math.max(0,1-r*r));
+    var t1=[],t2=[];
+    for(var i=0;i<N;i++){ t1.push(MU+SD*z1[i]); t2.push(MU+SD*(r*z1[i]+k*e[i])); }
+    // frame + gridlines
+    base.appendChild(SVG('line',{x1:X0,y1:Y1,x2:X1,y2:Y1,stroke:'#1c1c1c','stroke-width':2}));
+    base.appendChild(SVG('line',{x1:X0,y1:Y0,x2:X0,y2:Y1,stroke:'#1c1c1c','stroke-width':2}));
+    for(var v=30;v<=100;v+=10){
+      var t=SVG('text',{x:sx(v),y:Y1+22,'text-anchor':'middle','font-size':12.5,fill:'#5a6070','font-family':FONT});
+      t.textContent=v; base.appendChild(t);
+      var t3=SVG('text',{x:X0-10,y:sy(v)+4,'text-anchor':'end','font-size':12.5,fill:'#5a6070','font-family':FONT});
+      t3.textContent=v; base.appendChild(t3);
+    }
+    var xl=SVG('text',{x:(X0+X1)/2,y:Y1+46,'text-anchor':'middle','font-size':14.5,'font-family':FONT});
+    xl.textContent='Test 1 score'; base.appendChild(xl);
+    var yl=SVG('text',{x:X0-44,y:(Y0+Y1)/2,'text-anchor':'middle','font-size':14.5,'font-family':FONT,
+                       transform:'rotate(-90 '+(X0-44)+' '+((Y0+Y1)/2)+')'});
+    yl.textContent='Test 2 score'; base.appendChild(yl);
+    base.appendChild(SVG('line',{x1:sx(25),y1:sy(25),x2:sx(105),y2:sy(105),
+                                 stroke:'#5a6070','stroke-width':1.5,'stroke-dasharray':'6,5','stroke-opacity':.7}));
+    var dl=SVG('text',{x:sx(41),y:sy(44),'font-size':12.5,fill:'#5a6070','font-family':FONT});
+    dl.textContent='same score both times'; base.appendChild(dl);
+
+    var order=t1.map(function(v,i){return i;}).sort(function(a,b){return t1[a]-t1[b];});
+    var chosen=[];
+    if(sel==='top') chosen=order.slice(-10);
+    if(sel==='bot') chosen=order.slice(0,10);
+    var isSel={}; chosen.forEach(function(i){ isSel[i]=1; });
+    for(var i=0;i<N;i++){
+      scatterG.appendChild(SVG('circle',{cx:sx(t1[i]),cy:sy(t2[i]),r:isSel[i]?6.5:4,
+        fill:isSel[i]?'#9c2a2a':'#2e4f8f','fill-opacity':isSel[i]?1:(sel?0.18:0.5)}));
+    }
+    if(chosen.length){
+      var m1=mean(chosen.map(function(i){return t1[i];}));
+      var m2=mean(chosen.map(function(i){return t2[i];}));
+      scatterG.appendChild(SVG('line',{x1:sx(m1),y1:Y0,x2:sx(m1),y2:Y1,stroke:'#9c2a2a','stroke-width':2.5,'stroke-dasharray':'6,4'}));
+      scatterG.appendChild(SVG('line',{x1:X0,y1:sy(m2),x2:X1,y2:sy(m2),stroke:'#1e6b45','stroke-width':2.5,'stroke-dasharray':'6,4'}));
+      var right = m1 > 80;
+      var a=SVG('text',{x:sx(m1)+(right?-8:8), y:Y1-14, 'text-anchor':right?'end':'start',
+                        'font-size':13,'font-weight':'700',fill:'#9c2a2a','font-family':FONT});
+      a.textContent='Test 1 average '+m1.toFixed(0); scatterG.appendChild(a);
+      var b=SVG('text',{x:X1-4,y:sy(m2)-7,'text-anchor':'end','font-size':13,'font-weight':'700',fill:'#1e6b45','font-family':FONT});
+      b.textContent='Test 2 average '+m2.toFixed(0); scatterG.appendChild(b);
+      var shift=Math.abs(m2-m1), dir = m2<m1 ? 'down' : 'up';
+      var head='These 10 students averaged '+m1.toFixed(0)+' on Test 1. The same 10 students averaged '+
+               m2.toFixed(0)+' on Test 2';
+      var msg;
+      if(shift<1.5){
+        msg=head+', essentially unchanged. With the two tests this strongly related there is almost no luck left to give back, so there is no regression to see.';
+      } else {
+        var word = sel==='top' ? 'They did not get worse. Part of their first score was a good day, and a good day does not repeat on demand.'
+                               : 'They did not get better. Part of their first score was a bad day, and a bad day does not repeat on demand.';
+        msg=head+', a move of '+shift.toFixed(0)+' points '+dir+' toward the class average of '+MU+'. '+word;
+      }
+      document.getElementById('stNote').textContent=msg;
+    } else {
+      document.getElementById('stNote').textContent=
+        'Pick a group to highlight, then watch what that same group does on Test 2. The slider controls how strongly the two tests agree.';
+    }
+  }
+
+  function drawRunning(){
+    clearAll();
+    var TRUE=0.5, M=200;
+    base.appendChild(SVG('line',{x1:X0,y1:Y1,x2:X1,y2:Y1,stroke:'#1c1c1c','stroke-width':2}));
+    base.appendChild(SVG('line',{x1:X0,y1:Y0,x2:X0,y2:Y1,stroke:'#1c1c1c','stroke-width':2}));
+    var ry=function(p){ return Y1-(p-0)/(1-0)*(Y1-Y0); };
+    var rx=function(n){ return X0+(n-1)/(M-1)*(X1-X0); };
+    [0,0.25,0.5,0.75,1].forEach(function(p){
+      base.appendChild(SVG('line',{x1:X0,y1:ry(p),x2:X1,y2:ry(p),stroke:'#d4d8e0','stroke-width':1.2}));
+      var t=SVG('text',{x:X0-10,y:ry(p)+4,'text-anchor':'end','font-size':12.5,fill:'#5a6070','font-family':FONT});
+      t.textContent=(p*100)+'%'; base.appendChild(t);
+    });
+    base.appendChild(SVG('line',{x1:X0,y1:ry(TRUE),x2:X1,y2:ry(TRUE),stroke:'#bf8f00','stroke-width':2.5}));
+    var tl=SVG('text',{x:X1-4,y:ry(TRUE)-8,'text-anchor':'end','font-size':13,'font-weight':'700',fill:'#8a6800','font-family':FONT});
+    tl.textContent='true value, 50%'; base.appendChild(tl);
+    var xl=SVG('text',{x:(X0+X1)/2,y:Y1+40,'text-anchor':'middle','font-size':14.5,'font-family':FONT});
+    xl.textContent='number of coin flips so far'; base.appendChild(xl);
+    var heads=0, xs=[], ys=[];
+    for(var n=1;n<=M;n++){
+      if(Math.random()<TRUE) heads++;
+      xs.push(rx(n)); ys.push(ry(heads/n));
+    }
+    runG.appendChild(SVG('path',{d:pathFromPts(xs,ys),fill:'none',stroke:'#1f3864','stroke-width':3,'stroke-linejoin':'round'}));
+    document.getElementById('stNote').textContent=
+      'Each step is one more coin flip, and the line is the percentage of heads so far. The first few flips swing wildly, then the line settles toward the true value. Early extremes are mostly chance, and they stop looking impressive as more data comes in.';
+  }
+  function pathFromPts(xs,ys){ var d=''; for(var i=0;i<xs.length;i++) d+=(i?'L':'M')+xs[i].toFixed(2)+' '+ys[i].toFixed(2); return d; }
+
+  function render(){ if(mode==='scatter') drawScatter(); else drawRunning(); }
+  document.getElementById('stR').addEventListener('input',function(){ if(mode==='scatter') drawScatter(); });
+  document.getElementById('stTop').addEventListener('click',function(){ sel='top'; mode='scatter';
+    document.getElementById('stRun').checked=false; render(); });
+  document.getElementById('stBot').addEventListener('click',function(){ sel='bot'; mode='scatter';
+    document.getElementById('stRun').checked=false; render(); });
+  document.getElementById('stClear').addEventListener('click',function(){ sel=null; render(); });
+  document.getElementById('stRun').addEventListener('change',function(e){
+    mode=e.target.checked?'running':'scatter'; render();
+  });
+  render();
+})();
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>The Normal Curve | AP Psychology</title>
+<style>
+  :root {
+    --navy:#1f3864; --navy-light:#2e4f8f; --gold:#bf8f00; --gold-soft:#fff2cc;
+    --red:#9c2a2a; --red-soft:#fce8e8; --green:#1e6b45; --green-soft:#e6f4ec;
+    --grey:#f2f2f2; --border:#d4d8e0; --text:#1c1c1c; --muted:#5a6070;
+    --blue:#2c5f8a; --orange:#b06a1f;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:"Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;
+       font-size:17px;line-height:1.6;color:var(--text);background:#fafbfc}
+  .wrap{max-width:980px;margin:0 auto;padding:0 20px 80px}
+  .crumbs{background:#fff;border-bottom:1px solid var(--border);font-size:14.5px}
+  .crumbs .inner{max-width:980px;margin:0 auto;padding:10px 20px}
+  .crumbs a{color:var(--navy);text-decoration:none;font-weight:600}
+  .crumbs a:hover{text-decoration:underline}
+  .crumbs .sep{color:var(--border);margin:0 8px}
+  .crumbs .here{color:var(--muted)}
+  header.top{background:var(--navy);color:#fff;padding:32px 20px 28px}
+  header.top .inner{max-width:980px;margin:0 auto}
+  header.top .kicker{font-size:12.5px;letter-spacing:.11em;text-transform:uppercase;opacity:.82;margin:0 0 6px}
+  header.top h1{margin:0;font-size:29px;line-height:1.22}
+  header.top p.tag{margin:8px 0 0;font-size:17px;opacity:.92}
+  nav.jump{background:#fff;border-bottom:2px solid var(--border);position:sticky;top:0;z-index:30;
+           box-shadow:0 1px 4px rgba(0,0,0,.06)}
+  nav.jump ul{max-width:980px;margin:0 auto;padding:0 20px;list-style:none;display:flex;flex-wrap:wrap;gap:2px}
+  nav.jump a{display:block;padding:11px 12px;font-size:14.5px;font-weight:600;color:var(--navy);
+             text-decoration:none;border-bottom:3px solid transparent}
+  nav.jump a:hover{border-bottom-color:var(--gold);background:#f7f9fc}
+  h2{font-size:23px;color:var(--navy);margin:46px 0 6px;padding-bottom:8px;
+     border-bottom:3px solid var(--navy);scroll-margin-top:124px}
+  h2 .num{display:inline-block;background:var(--navy);color:#fff;width:30px;height:30px;line-height:30px;
+          text-align:center;border-radius:50%;font-size:16px;margin-right:10px;vertical-align:2px}
+  h3{font-size:19px;color:var(--navy);margin:28px 0 8px}
+  h4{font-size:16.5px;margin:20px 0 6px}
+  p{margin:11px 0}
+  ul,ol{margin:11px 0;padding-left:26px}
+  li{margin:5px 0}
+  code{background:var(--grey);padding:1px 6px;border-radius:3px;font-family:Consolas,Monaco,monospace;font-size:.92em}
+  .box{border-radius:6px;padding:16px 20px;margin:22px 0;border-left:6px solid}
+  .box p:first-child{margin-top:0}
+  .box p:last-child{margin-bottom:0}
+  .box .label{display:block;font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px}
+  .box.key{background:var(--gold-soft);border-color:var(--gold)}
+  .box.key .label{color:#8a6800}
+  .box.warn{background:var(--red-soft);border-color:var(--red)}
+  .box.warn .label{color:var(--red)}
+  .box.good{background:var(--green-soft);border-color:var(--green)}
+  .box.good .label{color:var(--green)}
+  .box.note{background:#eef2f9;border-color:var(--navy-light)}
+  .box.note .label{color:var(--navy)}
+  table{border-collapse:collapse;width:100%;margin:20px 0;font-size:16.5px}
+  th,td{border:1px solid var(--border);padding:9px 12px;text-align:left;vertical-align:top}
+  thead th{background:var(--navy);color:#fff;font-weight:600}
+  tbody tr:nth-child(even){background:var(--grey)}
+  /* ---------- widgets ---------- */
+  .widget{background:#fff;border:2px solid var(--border);border-radius:8px;padding:18px 20px 20px;margin:24px 0}
+  .widget > h3{margin-top:0;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+  .widget .tryit{font-size:13px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;
+                 color:#8a6800;background:var(--gold-soft);padding:3px 9px;border-radius:10px}
+  .widget svg{display:block;width:100%;height:auto;max-width:100%;touch-action:none}
+  .ctrls{display:flex;flex-wrap:wrap;gap:18px;margin:16px 0 4px;align-items:flex-end}
+  .ctrl{flex:1 1 220px;min-width:200px}
+  .ctrl label{display:block;font-size:13.5px;font-weight:700;letter-spacing:.04em;
+              text-transform:uppercase;color:var(--muted);margin-bottom:5px}
+  .ctrl .val{color:var(--navy);font-size:15px}
+  input[type=range]{width:100%;accent-color:var(--navy);height:26px;cursor:pointer}
+  .btnrow{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 0}
+  button{font-family:inherit;font-size:14.5px;font-weight:600;cursor:pointer;border-radius:5px;
+         padding:8px 14px;border:2px solid var(--navy);background:#fff;color:var(--navy);transition:background .12s}
+  button:hover{background:var(--navy);color:#fff}
+  button.primary{background:var(--navy);color:#fff}
+  button.primary:hover{background:var(--navy-light)}
+  button:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid var(--navy-light);outline-offset:2px}
+  .readouts{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 0}
+  .ro{flex:1 1 110px;background:var(--grey);border-radius:6px;padding:9px 12px;text-align:center}
+  .ro .k{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+  .ro .v{display:block;font-size:22px;font-weight:700;color:var(--navy);line-height:1.25}
+  .ro.hl .v{color:var(--green)}
+  .commentary{margin:14px 0 0;padding:11px 14px;background:#eef2f9;border-left:5px solid var(--navy-light);
+              border-radius:0 5px 5px 0;font-size:16px}
+  .toggle-line{display:flex;align-items:center;gap:9px;margin:14px 0 0;font-size:15.5px}
+  .toggle-line input{width:19px;height:19px;accent-color:var(--navy);cursor:pointer}
+  .field{display:inline-flex;flex-direction:column;gap:4px;margin:0 12px 10px 0}
+  .field label{font-size:12.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+  .field input{font-family:inherit;font-size:17px;padding:7px 9px;width:110px;border:2px solid var(--border);border-radius:5px}
+  .field input.ok{border-color:var(--green);background:var(--green-soft)}
+  .field input.bad{border-color:var(--gold);background:var(--gold-soft)}
+  .worked{display:none;margin:14px 0 0;padding:12px 15px;background:var(--grey);border-radius:6px;
+          font-family:Consolas,Monaco,monospace;font-size:14.5px;line-height:1.7;white-space:pre-wrap}
+  .worked.open{display:block}
+  .dataset{font-size:23px;font-weight:700;letter-spacing:.04em;color:var(--navy);
+           background:var(--grey);border-radius:6px;padding:13px 16px;margin:6px 0 16px;text-align:center}
+  .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  /* practice questions */
+  .q-item{border:2px solid var(--border);border-radius:6px;background:#fff;margin:16px 0;padding:16px 18px}
+  .q-item .qnum{display:inline-block;background:var(--navy);color:#fff;font-size:13.5px;font-weight:700;
+                padding:2px 10px;border-radius:10px;margin-bottom:8px}
+  .q-item .stem{margin:6px 0 10px}
+  .q-item .ask{font-weight:600;margin:10px 0}
+  .q-item ol.choices{list-style:upper-alpha;padding-left:26px;margin:10px 0 14px}
+  .q-item ol.choices li{margin:4px 0}
+  .reveal{display:none;border-top:2px dashed var(--border);margin-top:12px;padding-top:12px}
+  .reveal.open{display:block}
+  .reveal .ans{font-weight:700;color:var(--green);font-size:17px;margin:0 0 8px}
+  .reveal .why{margin:8px 0 0}
+  .reveal .why-not{margin:10px 0 0;font-size:15.5px}
+  .reveal .why-not li{color:var(--muted)}
+  .reveal .why-not li strong{color:var(--text)}
+  .toggle{font-size:14.5px}
+  footer{margin-top:58px;padding:22px 0 0;border-top:2px solid var(--border);font-size:15px;color:var(--muted)}
+  .pagenav{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0 0}
+  .pagenav a{flex:1 1 220px;border:2px solid var(--border);border-radius:6px;padding:12px 15px;
+             text-decoration:none;color:inherit;background:#fff}
+  .pagenav a:hover{border-color:var(--navy)}
+  .pagenav .dir{display:block;font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+  .pagenav .t{display:block;font-weight:700;color:var(--navy);margin-top:2px}
+  @media (max-width:720px){
+    body{font-size:16px}
+    header.top h1{font-size:24px}
+    nav.jump a{padding:9px 8px;font-size:13.5px}
+    .ro .v{font-size:19px}
+    .ctrls{gap:12px}
+  }
+  @media print{
+    body{background:#fff;font-size:11pt}
+    nav.jump,.crumbs,button,.btnrow,input[type=range],.pagenav{display:none!important}
+    header.top{background:#fff!important;color:var(--navy)!important;padding:0 0 12px}
+    .reveal{display:block!important}
+    .widget,.q-item,.box,table{break-inside:avoid;page-break-inside:avoid}
+    h2{break-after:avoid}
+    @page{size:A4;margin:15mm}
+  }
+</style>
+</head>
+<body>
+
+<div class="crumbs">
+  <div class="inner">
+    <a href="../index.html">AP Psychology</a>
+    <span class="sep">&rsaquo;</span>
+    <a href="index.html">Unit 0</a>
+    <span class="sep">&rsaquo;</span>
+    <span class="here">The Normal Curve | AP Psychology</span>
+  </div>
+</div>
+
+<header class="top">
+  <div class="inner">
+    <p class="kicker">Unit 0 &bull; Statistical Reasoning &bull; Page 2 of 4</p>
+    <h1>The Normal Curve</h1>
+    <p class="tag">Standard deviation, percentiles, and what the shape is telling you</p>
+  </div>
+</header>
+
+<nav class="jump">
+  <ul>
+    <li><a href="#dist">What a Distribution Is</a></li>
+    <li><a href="#curve">The Bell Curve</a></li>
+    <li><a href="#sd">Standard Deviation</a></li>
+    <li><a href="#percentile">Percentile Finder</a></li>
+    <li><a href="#skew">Skew and Bimodal</a></li>
+    <li><a href="#tips">AP Tips</a></li>
+    <li><a href="#questions">Practice Questions</a></li>
+  </ul>
+</nav>
+
+<div class="wrap">
+
+<h2 id="dist"><span class="num">1</span>What a Distribution Is</h2>
+
+<p>A distribution is just a picture of how often each score occurred. Scores run along the bottom. Height shows how many people got that score. That is the whole idea, and everything else on this page is a description of the shape that picture makes.</p>
+
+<h2 id="curve"><span class="num">2</span>The Bell Curve</h2>
+
+<div class="widget">
+  <h3>Move the mean and the standard deviation <span class="tryit">Interactive</span></h3>
+  <svg id="bcSvg" viewBox="0 0 760 320" role="img" aria-label="A normal curve that changes shape as the mean and standard deviation sliders move"></svg>
+  <div id="bcLegend" style="display:flex;flex-wrap:wrap;gap:18px;margin:4px 0 0;font-size:15px;color:var(--muted)">
+    <span style="display:flex;align-items:center;gap:7px"><i style="width:17px;height:17px;border-radius:3px;background:#1f3864;opacity:.58;display:inline-block"></i>68% lie within 1 SD of the mean</span>
+    <span style="display:flex;align-items:center;gap:7px"><i style="width:17px;height:17px;border-radius:3px;background:#1f3864;opacity:.42;display:inline-block"></i>95% within 2 SD</span>
+    <span style="display:flex;align-items:center;gap:7px"><i style="width:17px;height:17px;border-radius:3px;background:#1f3864;opacity:.30;display:inline-block"></i>99.7% within 3 SD</span>
+  </div>
+  <div class="ctrls">
+    <div class="ctrl">
+      <label for="bcMean">Mean <span class="val" id="bcMeanV">100</span></label>
+      <input id="bcMean" type="range" min="40" max="160" value="100" step="1">
+    </div>
+    <div class="ctrl">
+      <label for="bcSd">Standard deviation <span class="val" id="bcSdV">15</span></label>
+      <input id="bcSd" type="range" min="5" max="30" value="15" step="1">
+    </div>
+  </div>
+  <div class="toggle-line">
+    <input id="bcBands" type="checkbox" checked>
+    <label for="bcBands">Show the 68, 95, 99.7 bands</label>
+  </div>
+  <p class="commentary" id="bcNote" aria-live="polite"></p>
+</div>
+
+<div class="box key">
+  <span class="label">The thing to notice</span>
+  <p>Set the standard deviation to 5, then to 30, with the bands showing. It is always 68% in the middle band. What changes is the range of scores that 68% covers. That is what standard deviation means.</p>
+</div>
+
+<h2 id="sd"><span class="num">3</span>Standard Deviation in Plain Language</h2>
+
+<p>Standard deviation measures how far scores typically sit from the mean.</p>
+
+<p>A <strong>small</strong> standard deviation means scores are bunched tightly around the mean and the group is fairly uniform. A <strong>large</strong> standard deviation means scores are spread widely and the group is diverse.</p>
+
+<p>You will not be asked to calculate standard deviation on the AP exam. You will be asked to interpret it, compare two of them, and know what happens to the curve when it changes.</p>
+
+<div class="box note">
+  <span class="label">The rule worth knowing cold</span>
+  <p>In any normal distribution: about <strong>68%</strong> of scores fall within 1 standard deviation of the mean, about <strong>95%</strong> within 2, and about <strong>99.7%</strong> within 3.</p>
+  <p>IQ scores have a mean of 100 and a standard deviation of 15. So about 68% of people score between 85 and 115, and about 95% score between 70 and 130. A score of 145 is three standard deviations above the mean, which fewer than 2 people in 1,000 reach.</p>
+</div>
+
+<h2 id="percentile"><span class="num">4</span>The Percentile Finder</h2>
+
+<div class="widget">
+  <h3>Drag the line <span class="tryit">Interactive</span></h3>
+  <p style="margin-top:0">This curve has a mean of 100 and a standard deviation of 15. Everything to the left of the line is shaded. That shaded proportion is the percentile rank.</p>
+  <svg id="pcSvg" viewBox="0 0 760 300" role="img" aria-label="Normal curve with a draggable line showing percentile rank"></svg>
+  <div class="readouts">
+    <div class="ro"><span class="k">Score</span><span class="v" id="pcScore">115</span></div>
+    <div class="ro hl"><span class="k">Percentile rank</span><span class="v" id="pcPct">84th</span></div>
+  </div>
+  <p class="commentary" id="pcNote" aria-live="polite"></p>
+  <div class="btnrow">
+    <button type="button" data-pc="100">Jump to the mean</button>
+    <button type="button" data-pc="115">Jump to +1 SD</button>
+    <button type="button" data-pc="130">Jump to +2 SD</button>
+    <button type="button" data-pc="85">Jump to -1 SD</button>
+  </div>
+  <p style="font-size:14.5px;color:var(--muted);margin-top:12px">Keyboard: Tab to the line, then use the left and right arrow keys.</p>
+</div>
+
+<div class="box warn">
+  <span class="label">The misreading, and it is extremely common</span>
+  <p>Percentile rank is <strong>not</strong> the percentage of questions you answered correctly. A student at the 90th percentile might have answered 60% of the items correctly. Those are two completely different numbers that both happen to be written as percents.</p>
+  <p>Percentile rank is the percentage of <em>people</em> you scored above. The median is always the 50th percentile, in any distribution.</p>
+</div>
+
+<h2 id="skew"><span class="num">5</span>Skew and Two-Peaked Shapes</h2>
+
+<div class="widget">
+  <h3>Slide from one skew to the other <span class="tryit">Interactive</span></h3>
+  <svg id="skSvg" viewBox="0 0 760 320" role="img" aria-label="A curve that changes from negative skew through normal to positive skew, with mean, median and mode marked"></svg>
+  <div class="ctrls">
+    <div class="ctrl" style="flex:1 1 100%">
+      <label for="skSlider">Skew <span class="val" id="skLabel">roughly normal</span></label>
+      <input id="skSlider" type="range" min="-100" max="100" value="0" step="1">
+    </div>
+  </div>
+  <div class="toggle-line">
+    <input id="skBimodal" type="checkbox">
+    <label for="skBimodal">Show a bimodal distribution instead</label>
+  </div>
+  <p class="commentary" id="skNote" aria-live="polite"></p>
+</div>
+
+<div class="box key">
+  <span class="label">Skew is named for the tail, not the hump</span>
+  <p>A <strong>positively skewed</strong> distribution has its tail stretching toward the high numbers, even though most of the scores are piled up low. A <strong>negatively skewed</strong> distribution has its tail stretching toward the low numbers.</p>
+  <p>This is backwards from how most students first guess it, so here it is again: look at where the thin tail points, not where the tall hump sits.</p>
+</div>
+
+<p>The mean is always the marker furthest out into the tail, because the mean is the only one of the three that feels distance.</p>
+
+<table>
+  <thead><tr><th style="width:26%">Shape</th><th>Real examples</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Positively skewed</strong></td><td>income, reaction times, number of children per family</td></tr>
+    <tr><td><strong>Negatively skewed</strong></td><td>scores on an easy test, age at retirement, lifespan</td></tr>
+  </tbody>
+</table>
+
+<h3>Bimodal distributions</h3>
+
+<p>A bimodal distribution has two peaks. It almost always means two different groups have been mixed together in one data set.</p>
+
+<p>Measure the heights of everyone in a middle school and you get one smooth hump. Measure the heights of everyone in the building including staff and young children and you may get two humps, because you have combined populations that differ.</p>
+
+<p>On the exam, a bimodal shape is a signal. It suggests the sample contains two distinct subgroups that should probably be analyzed separately. The mean of a bimodal distribution often falls in the valley between the two peaks, describing almost nobody. Switch the toggle above to see it.</p>
+
+<h2 id="tips"><span class="num">6</span>AP Exam Tips</h2>
+
+<ul>
+  <li>Know <strong>68, 95, 99.7</strong> cold, and be able to apply it to a given mean and standard deviation without a calculator.</li>
+  <li>Percentile rank means the percentage scoring <strong>below</strong> you. It is never the percentage of items correct.</li>
+  <li><strong>Skew is named for the tail.</strong> Positive skew means the tail points to the high scores.</li>
+  <li>In a skewed distribution, the mean is pulled furthest toward the tail, and the median is the better description of the typical score.</li>
+  <li>A bimodal distribution suggests two groups mixed together.</li>
+  <li>Standard deviation is about spread, never about center. A larger standard deviation does not mean higher scores.</li>
+</ul>
+
+<h2 id="questions"><span class="num">7</span>Practice Questions</h2>
+
+<p>Answer each one before you reveal it.</p>
+
+<div class="btnrow" style="margin:18px 0 24px">
+  <button class="primary" type="button" onclick="setAllAns(true)">Show all answers</button>
+  <button type="button" onclick="setAllAns(false)">Hide all answers</button>
+</div>
+
+<div class="q-item">
+  <span class="qnum">Question 1</span>
+  <p class="stem">A test has a mean of 500 and a standard deviation of 100.</p>
+  <p class="ask">Approximately what percentage of scores fall between 400 and 600?</p>
+  <ol class="choices">
+    <li>34%</li>
+    <li>68%</li>
+    <li>95%</li>
+    <li>99.7%</li>
+  </ol>
+  <button class="toggle" type="button" onclick="tog(this)">Show answer</button>
+  <div class="reveal">
+    <p class="ans">Answer: B</p>
+    <p class="why">400 is one standard deviation below the mean and 600 is one above, so this is the band within one SD either side, which holds about 68% of scores in a normal distribution.</p>
+    <ul class="why-not">
+      <li><strong>A is the half:</strong> about 34% lies between the mean and one SD in one direction only.</li>
+      <li><strong>C would be 300 to 700</strong>, which is two SD either side.</li>
+      <li><strong>D would be 200 to 800</strong>, three SD either side.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="q-item">
+  <span class="qnum">Question 2</span>
+  <p class="stem">Maria scored at the 75th percentile on a standardized test.</p>
+  <p class="ask">What does this mean?</p>
+  <ol class="choices">
+    <li>She answered 75% of the questions correctly</li>
+    <li>She scored higher than about 75% of test takers</li>
+    <li>She scored 75 points above the mean</li>
+    <li>Her score was 75% of the highest possible score</li>
+  </ol>
+  <button class="toggle" type="button" onclick="tog(this)">Show answer</button>
+  <div class="reveal">
+    <p class="ans">Answer: B</p>
+    <p class="why">Percentile rank describes position relative to other people, not performance against the test content.</p>
+    <ul class="why-not">
+      <li><strong>A is the most common misreading</strong>, and it is a completely different quantity. She could have answered half the items correctly and still placed at the 75th percentile if the test was hard.</li>
+      <li><strong>C describes a raw score difference</strong>, which percentile does not report.</li>
+      <li><strong>D describes a proportion of the maximum score</strong>, which percentile also does not report.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="q-item">
+  <span class="qnum">Question 3</span>
+  <p class="stem">A distribution of household incomes in a city has a mean of $74,000 and a median of $52,000.</p>
+  <p class="ask">Which statement is best supported?</p>
+  <ol class="choices">
+    <li>The distribution is negatively skewed</li>
+    <li>The distribution is positively skewed, and the median better describes a typical household</li>
+    <li>Most households earn about $74,000</li>
+    <li>The distribution is normal</li>
+  </ol>
+  <button class="toggle" type="button" onclick="tog(this)">Show answer</button>
+  <div class="reveal">
+    <p class="ans">Answer: B</p>
+    <p class="why">The mean sits well above the median, which happens when a tail of very high values pulls the mean up. That is positive skew. Because most households cluster below the mean, the median is the more honest description of a typical household, which is exactly why income is always reported as a median.</p>
+    <ul class="why-not">
+      <li><strong>A has the direction reversed.</strong></li>
+      <li><strong>C is the error the mean invites here:</strong> very few households actually earn near $74,000.</li>
+      <li><strong>D is wrong:</strong> in a normal distribution the mean and median would match.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="q-item">
+  <span class="qnum">Question 4</span>
+  <p class="stem">A teacher graphs her class results and finds two clear peaks, one around 55 and one around 85, with few scores in between.</p>
+  <p class="ask">What is the most reasonable interpretation?</p>
+  <ol class="choices">
+    <li>The test was too easy</li>
+    <li>The data is positively skewed</li>
+    <li>Two distinct groups are present in the class, and the mean would describe neither</li>
+    <li>The standard deviation must be zero</li>
+  </ol>
+  <button class="toggle" type="button" onclick="tog(this)">Show answer</button>
+  <div class="reveal">
+    <p class="ans">Answer: C</p>
+    <p class="why">Two peaks is a bimodal distribution, which usually means two subgroups have been combined. Here it might be students who had already covered the material and students who had not. The mean would land somewhere near 70, in the valley, describing almost no one.</p>
+    <ul class="why-not">
+      <li><strong>A would produce</strong> a negatively skewed single peak bunched high.</li>
+      <li><strong>B describes one peak</strong> with a high tail, not two peaks.</li>
+      <li><strong>D is wrong:</strong> a standard deviation of zero would mean every score was identical.</li>
+    </ul>
+  </div>
+</div>
+<div class="pagenav">
+  <a href="describing-data.html"><span class="dir">&larr; Previous</span><span class="t">Describing Data</span></a>
+  <a href="correlation-and-regression.html"><span class="dir">Next &rarr;</span><span class="t">Correlation and Regression</span></a>
+</div>
+
+<footer>
+  <p>AP Psychology, Unit 0: Science Practices. Statistical reasoning, aligned to Science Practice 3 of the 2024 Course and Exam Description.</p>
+  <p>Don West, AP Psychology Teacher. Questions? Message me on Canvas or ask at the start of class.</p>
+</footer>
+
+</div>
+
+<script>
+
+  // ---- shared maths helpers ----
+  function erf(x){
+    var s = x<0?-1:1; x = Math.abs(x);
+    var a1=0.254829592,a2=-0.284496736,a3=1.421413741,a4=-1.453152027,a5=1.061405429,p=0.3275911;
+    var t=1/(1+p*x);
+    var y=1-(((((a5*t+a4)*t)+a3)*t+a2)*t+a1)*t*Math.exp(-x*x);
+    return s*y;
+  }
+  function normCdf(x,mu,sd){ return 0.5*(1+erf((x-mu)/(sd*Math.SQRT2))); }
+  function normPdf(x,mu,sd){ var z=(x-mu)/sd; return Math.exp(-0.5*z*z)/(sd*Math.sqrt(2*Math.PI)); }
+  var _spare=null;
+  function randn(){
+    if(_spare!==null){var v=_spare;_spare=null;return v;}
+    var u,v,s;
+    do{u=Math.random()*2-1;v=Math.random()*2-1;s=u*u+v*v;}while(s===0||s>=1);
+    var m=Math.sqrt(-2*Math.log(s)/s);_spare=v*m;return u*m;
+  }
+  function mean(a){ return a.reduce(function(x,y){return x+y;},0)/a.length; }
+  function median(a){
+    var b=a.slice().sort(function(x,y){return x-y;}), n=b.length, h=Math.floor(n/2);
+    return n%2 ? b[h] : (b[h-1]+b[h])/2;
+  }
+  function modes(a){
+    var c={},best=0;
+    a.forEach(function(v){c[v]=(c[v]||0)+1; if(c[v]>best)best=c[v];});
+    if(best<2) return [];
+    return Object.keys(c).filter(function(k){return c[k]===best;}).map(Number).sort(function(x,y){return x-y;});
+  }
+  function fmt(n,d){ d=(d===undefined)?1:d; var r=Math.round(n*Math.pow(10,d))/Math.pow(10,d);
+    return (Math.abs(r-Math.round(r))<1e-9) ? String(Math.round(r)) : r.toFixed(d); }
+  function pearson(xs,ys){
+    var mx=mean(xs),my=mean(ys),sx=0,sy=0,sxy=0;
+    for(var i=0;i<xs.length;i++){var a=xs[i]-mx,b=ys[i]-my;sx+=a*a;sy+=b*b;sxy+=a*b;}
+    if(sx===0||sy===0) return 0;
+    return sxy/Math.sqrt(sx*sy);
+  }
+  function store(k,v){ try{ localStorage.setItem(k,JSON.stringify(v)); return true; }catch(e){ return false; } }
+  function recall(k,d){ try{ var s=localStorage.getItem(k); return s===null?d:JSON.parse(s); }catch(e){ return d; } }
+  function SVG(tag,attrs){
+    var e=document.createElementNS("http://www.w3.org/2000/svg",tag);
+    for(var k in attrs) e.setAttribute(k,attrs[k]);
+    return e;
+  }
+  // pointer dragging that works for mouse and touch
+  function makeDraggable(svg, onMove){
+    var active=null;
+    function pt(evt){
+      var r=svg.getBoundingClientRect();
+      var vb=svg.viewBox.baseVal;
+      return { x:(evt.clientX-r.left)/r.width*vb.width, y:(evt.clientY-r.top)/r.height*vb.height };
+    }
+    svg.addEventListener('pointerdown',function(e){
+      var t=e.target.closest('[data-drag]'); if(!t) return;
+      active=t; svg.setPointerCapture(e.pointerId); e.preventDefault();
+      onMove(active, pt(e));
+    });
+    svg.addEventListener('pointermove',function(e){
+      if(!active) return; e.preventDefault(); onMove(active, pt(e));
+    });
+    function end(e){ if(active){ try{svg.releasePointerCapture(e.pointerId);}catch(_){} active=null; } }
+    svg.addEventListener('pointerup',end);
+    svg.addEventListener('pointercancel',end);
+  }
+  // practice question reveals
+  function tog(btn){
+    var box=btn.nextElementSibling;
+    var open=box.classList.toggle('open');
+    btn.textContent=open?'Hide answer':'Show answer';
+  }
+  function setAllAns(open){
+    document.querySelectorAll('.q-item').forEach(function(q){
+      var b=q.querySelector('.reveal'), t=q.querySelector('.toggle');
+      if(!b||!t) return;
+      b.classList.toggle('open',open);
+      t.textContent=open?'Hide answer':'Show answer';
+    });
+  }
+
+
+var FONT='Segoe UI, Arial, sans-serif';
+function axis(svg,x0,x1,y,lo,hi,step,fmtFn){
+  svg.appendChild(SVG('line',{x1:x0,y1:y,x2:x1,y2:y,stroke:'#1c1c1c','stroke-width':2}));
+  for(var v=lo;v<=hi;v+=step){
+    var x=x0+(v-lo)/(hi-lo)*(x1-x0);
+    svg.appendChild(SVG('line',{x1:x,y1:y,x2:x,y2:y+7,stroke:'#5a6070','stroke-width':1.5}));
+    var t=SVG('text',{x:x,y:y+24,'text-anchor':'middle','font-size':13,fill:'#5a6070','font-family':FONT});
+    t.textContent=fmtFn?fmtFn(v):v; svg.appendChild(t);
+  }
+}
+function pathFrom(xs,ys){
+  var d='';
+  for(var i=0;i<xs.length;i++) d+=(i?'L':'M')+xs[i].toFixed(2)+' '+ys[i].toFixed(2);
+  return d;
+}
+
+// ============ WIDGET 3: bell curve ============
+(function(){
+  var svg=document.getElementById('bcSvg');
+  var X0=60,X1=730,BASE=252,TOP=30,LO=0,HI=200;
+  var px=function(v){return X0+(v-LO)/(HI-LO)*(X1-X0);};
+  axis(svg,X0,X1,BASE,0,200,25);
+  var bands=SVG('g',{}); svg.appendChild(bands);
+  var curve=SVG('path',{fill:'none',stroke:'#1f3864','stroke-width':3.5,'stroke-linejoin':'round'});
+  svg.appendChild(curve);
+  var meanLine=SVG('line',{y1:TOP,y2:BASE,stroke:'#bf8f00','stroke-width':2.5,'stroke-dasharray':'6,4'});
+  svg.appendChild(meanLine);
+  var lblG=SVG('g',{}); svg.appendChild(lblG);
+
+  var mEl=document.getElementById('bcMean'), sEl=document.getElementById('bcSd');
+  function draw(){
+    var mu=+mEl.value, sd=+sEl.value;
+    document.getElementById('bcMeanV').textContent=mu;
+    document.getElementById('bcSdV').textContent=sd;
+    var peak=normPdf(mu,mu,sd), H=BASE-TOP;
+    var xs=[],ys=[];
+    for(var i=0;i<=340;i++){
+      var v=LO+(HI-LO)*i/340;
+      xs.push(px(v)); ys.push(BASE-normPdf(v,mu,sd)/peak*H);
+    }
+    curve.setAttribute('d',pathFrom(xs,ys));
+    meanLine.setAttribute('x1',px(mu)); meanLine.setAttribute('x2',px(mu));
+    while(bands.firstChild) bands.removeChild(bands.firstChild);
+    while(lblG.firstChild) lblG.removeChild(lblG.firstChild);
+    if(document.getElementById('bcBands').checked){
+      var tints=[['#1f3864',.30,3],['#1f3864',.42,2],['#1f3864',.58,1]];
+      tints.forEach(function(t){
+        var k=t[2], a=Math.max(LO,mu-k*sd), b=Math.min(HI,mu+k*sd);
+        var dx=[],dy=[];
+        for(var i=0;i<=200;i++){
+          var v=a+(b-a)*i/200; dx.push(px(v)); dy.push(BASE-normPdf(v,mu,sd)/peak*H);
+        }
+        var d=pathFrom(dx,dy)+'L'+px(b).toFixed(2)+' '+BASE+'L'+px(a).toFixed(2)+' '+BASE+'Z';
+        bands.appendChild(SVG('path',{d:d,fill:t[0],'fill-opacity':t[1]}));
+      });
+    }
+    document.getElementById('bcLegend').style.display =
+      document.getElementById('bcBands').checked ? 'flex' : 'none';
+    var r=function(k){return [Math.round(mu-k*sd),Math.round(mu+k*sd)];};
+    var a=r(1),b=r(2),c=r(3);
+    document.getElementById('bcNote').textContent=
+      'With a mean of '+mu+' and a standard deviation of '+sd+', about 68% of scores fall between '+
+      a[0]+' and '+a[1]+', about 95% fall between '+b[0]+' and '+b[1]+
+      ', and about 99.7% fall between '+c[0]+' and '+c[1]+'.';
+  }
+  mEl.addEventListener('input',draw); sEl.addEventListener('input',draw);
+  document.getElementById('bcBands').addEventListener('change',draw);
+  draw();
+})();
+
+// ============ WIDGET 4: percentile finder ============
+(function(){
+  var svg=document.getElementById('pcSvg');
+  var X0=60,X1=730,BASE=232,TOP=28,MU=100,SD=15,LO=40,HI=160;
+  var px=function(v){return X0+(v-LO)/(HI-LO)*(X1-X0);};
+  var pv=function(x){return LO+(x-X0)/(X1-X0)*(HI-LO);};
+  axis(svg,X0,X1,BASE,40,160,20);
+  var peak=normPdf(MU,MU,SD), H=BASE-TOP;
+  function y(v){ return BASE-normPdf(v,MU,SD)/peak*H; }
+  var shade=SVG('path',{fill:'#1f3864','fill-opacity':.45}); svg.appendChild(shade);
+  var xs=[],ys=[];
+  for(var i=0;i<=340;i++){ var v=LO+(HI-LO)*i/340; xs.push(px(v)); ys.push(y(v)); }
+  svg.appendChild(SVG('path',{d:pathFrom(xs,ys),fill:'none',stroke:'#1f3864','stroke-width':3.5}));
+  var line=SVG('line',{y1:TOP-6,y2:BASE,stroke:'#bf8f00','stroke-width':3.5,'data-drag':'1',
+                       tabindex:0,role:'slider','aria-label':'Score line',cursor:'ew-resize'});
+  var grab=SVG('circle',{r:10,cy:TOP-6,fill:'#bf8f00','data-drag':'1',cursor:'ew-resize'});
+  svg.appendChild(line); svg.appendChild(grab);
+  var score=115;
+  function draw(){
+    document.getElementById('pcScore').textContent=Math.round(score);
+    var p=normCdf(score,MU,SD)*100;
+    var shown=Math.max(1,Math.min(99,Math.round(p)));
+    var suf=(shown%10===1&&shown!==11)?'st':(shown%10===2&&shown!==12)?'nd':(shown%10===3&&shown!==13)?'rd':'th';
+    document.getElementById('pcPct').textContent=shown+suf;
+    var dx=[],dy=[];
+    for(var i=0;i<=240;i++){ var v=LO+(score-LO)*i/240; dx.push(px(v)); dy.push(y(v)); }
+    shade.setAttribute('d',pathFrom(dx,dy)+'L'+px(score).toFixed(2)+' '+BASE+'L'+px(LO).toFixed(2)+' '+BASE+'Z');
+    line.setAttribute('x1',px(score)); line.setAttribute('x2',px(score));
+    line.setAttribute('aria-valuenow',Math.round(score));
+    grab.setAttribute('cx',px(score));
+    var note;
+    if(Math.abs(score-MU)<1.5) note='A score of 100 is exactly the mean, and it sits at the 50th percentile. Half of all scores are below it. The mean is the middle, not a high score.';
+    else note='A score of '+Math.round(score)+' is higher than about '+shown+'% of scores.';
+    document.getElementById('pcNote').textContent=note;
+  }
+  makeDraggable(svg,function(el,p){ score=Math.max(LO,Math.min(HI,pv(p.x))); draw(); });
+  line.addEventListener('keydown',function(e){
+    if(e.key==='ArrowLeft'||e.key==='ArrowDown'){ score=Math.max(LO,score-1); draw(); e.preventDefault(); }
+    if(e.key==='ArrowRight'||e.key==='ArrowUp'){ score=Math.min(HI,score+1); draw(); e.preventDefault(); }
+  });
+  document.querySelectorAll('[data-pc]').forEach(function(b){
+    b.addEventListener('click',function(){ score=+b.getAttribute('data-pc'); draw(); });
+  });
+  draw();
+})();
+
+// ============ WIDGET 5: skew + bimodal ============
+(function(){
+  var svg=document.getElementById('skSvg');
+  var X0=60,X1=730,BASE=252,TOP=34;
+  var T0=-4.2,T1=4.2,N=420;
+  var tpx=function(t){return X0+(t-T0)/(T1-T0)*(X1-X0);};
+  svg.appendChild(SVG('line',{x1:X0,y1:BASE,x2:X1,y2:BASE,stroke:'#1c1c1c','stroke-width':2}));
+  var lowLbl=SVG('text',{x:X0+6,y:BASE+24,'font-size':13.5,fill:'#5a6070','font-family':FONT});
+  lowLbl.textContent='lower scores';
+  var hiLbl=SVG('text',{x:X1-6,y:BASE+24,'text-anchor':'end','font-size':13.5,fill:'#5a6070','font-family':FONT});
+  hiLbl.textContent='higher scores';
+  svg.appendChild(lowLbl); svg.appendChild(hiLbl);
+  var fillP=SVG('path',{fill:'#1f3864','fill-opacity':.16}); svg.appendChild(fillP);
+  var curve=SVG('path',{fill:'none',stroke:'#1f3864','stroke-width':3.5,'stroke-linejoin':'round'});
+  svg.appendChild(curve);
+  var mk=SVG('g',{}); svg.appendChild(mk);
+  var shapeLbl=SVG('text',{x:(X0+X1)/2,y:22,'text-anchor':'middle','font-size':15,'font-weight':'700',
+                           fill:'#1f3864','font-family':FONT});
+  svg.appendChild(shapeLbl);
+
+  var COLS={mean:'#9c2a2a',median:'#1e6b45',mode:'#bf8f00'};
+  function marker(t,val,name,slot){
+    var x=tpx(t);
+    mk.appendChild(SVG('line',{x1:x,y1:TOP+30,x2:x,y2:BASE,stroke:COLS[name],'stroke-width':2.5,
+                               'stroke-dasharray':'5,4'}));
+    var lab=SVG('text',{x:x,y:TOP+24-slot*19,'text-anchor':'middle','font-size':13,'font-weight':'700',
+                        fill:COLS[name],'font-family':FONT});
+    lab.textContent=name.toUpperCase();
+    mk.appendChild(lab);
+  }
+  function draw(){
+    var a=+document.getElementById('skSlider').value/100;
+    var bim=document.getElementById('skBimodal').checked;
+    document.getElementById('skSlider').disabled=bim;
+    var alpha=a*7;
+    var ts=[],fs=[],tot=0,dt=(T1-T0)/N;
+    for(var i=0;i<=N;i++){
+      var t=T0+(T1-T0)*i/N, f;
+      if(bim) f=0.5*normPdf(t,-1.45,0.62)+0.5*normPdf(t,1.45,0.62);
+      else    f=2*normPdf(t,0,1)*normCdf(alpha*t,0,1);
+      ts.push(t); fs.push(f); tot+=f*dt;
+    }
+    var peak=Math.max.apply(null,fs), H=BASE-TOP;
+    var xs=[],ys=[];
+    for(var i=0;i<=N;i++){ xs.push(tpx(ts[i])); ys.push(BASE-fs[i]/peak*H); }
+    var d=pathFrom(xs,ys);
+    curve.setAttribute('d',d);
+    fillP.setAttribute('d',d+'L'+tpx(T1).toFixed(2)+' '+BASE+'L'+tpx(T0).toFixed(2)+' '+BASE+'Z');
+    // numeric mean, median, mode
+    var mu=0,cum=0,med=null,modeT=ts[0],best=-1;
+    for(var i=0;i<=N;i++){ mu+=ts[i]*fs[i]*dt/tot; if(fs[i]>best){best=fs[i];modeT=ts[i];} }
+    for(var i=0;i<=N;i++){ cum+=fs[i]*dt/tot; if(med===null&&cum>=0.5) med=ts[i]; }
+    while(mk.firstChild) mk.removeChild(mk.firstChild);
+    var note, lbl;
+    if(bim){
+      lbl='BIMODAL';
+      marker(mu,mu,'mean',0); marker(med,med,'median',1);
+      // mark both peaks
+      [-1.45,1.45].forEach(function(t){
+        mk.appendChild(SVG('circle',{cx:tpx(t),cy:BASE-normPdf(0,0,0.62)*0+TOP+4,r:0}));
+      });
+      var p1=SVG('text',{x:tpx(-1.45),y:TOP+52,'text-anchor':'middle','font-size':13,'font-weight':'700',
+                         fill:COLS.mode,'font-family':FONT}); p1.textContent='PEAK';
+      var p2=SVG('text',{x:tpx(1.45),y:TOP+52,'text-anchor':'middle','font-size':13,'font-weight':'700',
+                         fill:COLS.mode,'font-family':FONT}); p2.textContent='PEAK';
+      mk.appendChild(p1); mk.appendChild(p2);
+      note='Two peaks, so there are two modes. The mean and the median both land in the valley between the groups, where almost nobody actually scored. A shape like this usually means two different groups have been mixed into one data set.';
+      document.getElementById('skLabel').textContent='bimodal shown';
+    } else {
+      marker(mu,mu,'mean',0); marker(med,med,'median',1); marker(modeT,modeT,'mode',2);
+      if(a>0.12){ lbl='POSITIVELY SKEWED';
+        note='The tail points toward the higher scores, so this is positive skew. The order is mode < median < mean, with the mean dragged furthest into the tail.';
+        document.getElementById('skLabel').textContent=(a>0.6?'strong':'moderate')+' positive skew';
+      } else if(a<-0.12){ lbl='NEGATIVELY SKEWED';
+        note='The tail points toward the lower scores, so this is negative skew. The order is mean < median < mode, with the mean dragged furthest into the tail.';
+        document.getElementById('skLabel').textContent=(a<-0.6?'strong':'moderate')+' negative skew';
+      } else { lbl='ROUGHLY NORMAL';
+        note='With no skew, the mean, median, and mode all sit on top of each other in the middle of a symmetric curve.';
+        document.getElementById('skLabel').textContent='roughly normal';
+      }
+    }
+    shapeLbl.textContent=lbl;
+    document.getElementById('skNote').textContent=note;
+  }
+  document.getElementById('skSlider').addEventListener('input',draw);
+  document.getElementById('skBimodal').addEventListener('change',draw);
+  draw();
+})();
+
+</script>
+
+</body>
+</html>

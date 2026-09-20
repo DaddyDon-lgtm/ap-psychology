@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Significance and Effect Size | AP Psychology</title>
+<style>
+  :root {
+    --navy:#1f3864; --navy-light:#2e4f8f; --gold:#bf8f00; --gold-soft:#fff2cc;
+    --red:#9c2a2a; --red-soft:#fce8e8; --green:#1e6b45; --green-soft:#e6f4ec;
+    --grey:#f2f2f2; --border:#d4d8e0; --text:#1c1c1c; --muted:#5a6070;
+    --blue:#2c5f8a; --orange:#b06a1f;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:"Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;
+       font-size:17px;line-height:1.6;color:var(--text);background:#fafbfc}
+  .wrap{max-width:980px;margin:0 auto;padding:0 20px 80px}
+  .crumbs{background:#fff;border-bottom:1px solid var(--border);font-size:14.5px}
+  .crumbs .inner{max-width:980px;margin:0 auto;padding:10px 20px}
+  .crumbs a{color:var(--navy);text-decoration:none;font-weight:600}
+  .crumbs a:hover{text-decoration:underline}
+  .crumbs .sep{color:var(--border);margin:0 8px}
+  .crumbs .here{color:var(--muted)}
+  header.top{background:var(--navy);color:#fff;padding:32px 20px 28px}
+  header.top .inner{max-width:980px;margin:0 auto}
+  header.top .kicker{font-size:12.5px;letter-spacing:.11em;text-transform:uppercase;opacity:.82;margin:0 0 6px}
+  header.top h1{margin:0;font-size:29px;line-height:1.22}
+  header.top p.tag{margin:8px 0 0;font-size:17px;opacity:.92}
+  nav.jump{background:#fff;border-bottom:2px solid var(--border);position:sticky;top:0;z-index:30;
+           box-shadow:0 1px 4px rgba(0,0,0,.06)}
+  nav.jump ul{max-width:980px;margin:0 auto;padding:0 20px;list-style:none;display:flex;flex-wrap:wrap;gap:2px}
+  nav.jump a{display:block;padding:11px 12px;font-size:14.5px;font-weight:600;color:var(--navy);
+             text-decoration:none;border-bottom:3px solid transparent}
+  nav.jump a:hover{border-bottom-color:var(--gold);background:#f7f9fc}
+  h2{font-size:23px;color:var(--navy);margin:46px 0 6px;padding-bottom:8px;
+     border-bottom:3px solid var(--navy);scroll-margin-top:124px}
+  h2 .num{display:inline-block;background:var(--navy);color:#fff;width:30px;height:30px;line-height:30px;
+          text-align:center;border-radius:50%;font-size:16px;margin-right:10px;vertical-align:2px}
+  h3{font-size:19px;color:var(--navy);margin:28px 0 8px}
+  h4{font-size:16.5px;margin:20px 0 6px}
+  p{margin:11px 0}
+  ul,ol{margin:11px 0;padding-left:26px}
+  li{margin:5px 0}
+  code{background:var(--grey);padding:1px 6px;border-radius:3px;font-family:Consolas,Monaco,monospace;font-size:.92em}
+  .box{border-radius:6px;padding:16px 20px;margin:22px 0;border-left:6px solid}
+  .box p:first-child{margin-top:0}
+  .box p:last-child{margin-bottom:0}
+  .box .label{display:block;font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px}
+  .box.key{background:var(--gold-soft);border-color:var(--gold)}
+  .box.key .label{color:#8a6800}
+  .box.warn{background:var(--red-soft);border-color:var(--red)}
+  .box.warn .label{color:var(--red)}
+  .box.good{background:var(--green-soft);border-color:var(--green)}
+  .box.good .label{color:var(--green)}
+  .box.note{background:#eef2f9;border-color:var(--navy-light)}
+  .box.note .label{color:var(--navy)}
+  table{border-collapse:collapse;width:100%;margin:20px 0;font-size:16.5px}
+  th,td{border:1px solid var(--border);padding:9px 12px;text-align:left;vertical-align:top}
+  thead th{background:var(--navy);color:#fff;font-weight:600}
+  tbody tr:nth-child(even){background:var(--grey)}
+  /* ---------- widgets ---------- */
+  .widget{background:#fff;border:2px solid var(--border);border-radius:8px;padding:18px 20px 20px;margin:24px 0}
+  .widget > h3{margin-top:0;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+  .widget .tryit{font-size:13px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;
+                 color:#8a6800;background:var(--gold-soft);padding:3px 9px;border-radius:10px}
+  .widget svg{display:block;width:100%;height:auto;max-width:100%;touch-action:none}
+  .ctrls{display:flex;flex-wrap:wrap;gap:18px;margin:16px 0 4px;align-items:flex-end}
+  .ctrl{flex:1 1 220px;min-width:200px}
+  .ctrl label{display:block;font-size:13.5px;font-weight:700;letter-spacing:.04em;
+              text-transform:uppercase;color:var(--muted);margin-bottom:5px}
+  .ctrl .val{color:var(--navy);font-size:15px}
+  input[type=range]{width:100%;accent-color:var(--navy);height:26px;cursor:pointer}
+  .btnrow{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 0}
+  button{font-family:inherit;font-size:14.5px;font-weight:600;cursor:pointer;border-radius:5px;
+         padding:8px 14px;border:2px solid var(--navy);background:#fff;color:var(--navy);transition:background .12s}
+  button:hover{background:var(--navy);color:#fff}
+  button.primary{background:var(--navy);color:#fff}
+  button.primary:hover{background:var(--navy-light)}
+  button:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid var(--navy-light);outline-offset:2px}
+  .readouts{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 0}
+  .ro{flex:1 1 110px;background:var(--grey);border-radius:6px;padding:9px 12px;text-align:center}
+  .ro .k{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+  .ro .v{display:block;font-size:22px;font-weight:700;color:var(--navy);line-height:1.25}
+  .ro.hl .v{color:var(--green)}
+  .commentary{margin:14px 0 0;padding:11px 14px;background:#eef2f9;border-left:5px solid var(--navy-light);
+              border-radius:0 5px 5px 0;font-size:16px}
+  .toggle-line{display:flex;align-items:center;gap:9px;margin:14px 0 0;font-size:15.5px}
+  .toggle-line input{width:19px;height:19px;accent-color:var(--navy);cursor:pointer}
+  .field{display:inline-flex;flex-direction:column;gap:4px;margin:0 12px 10px 0}
+  .field label{font-size:12.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+  .field input{font-family:inherit;font-size:17px;padding:7px 9px;width:110px;border:2px solid var(--border);border-radius:5px}
+  .field input.ok{border-color:var(--green);background:var(--green-soft)}
+  .field input.bad{border-color:var(--gold);background:var(--gold-soft)}
+  .worked{display:none;margin:14px 0 0;padding:12px 15px;background:var(--grey);border-radius:6px;
+          font-family:Consolas,Monaco,monospace;font-size:14.5px;line-height:1.7;white-space:pre-wrap}
+  .worked.open{display:block}
+  .dataset{font-size:23px;font-weight:700;letter-spacing:.04em;color:var(--navy);
+           background:var(--grey);border-radius:6px;padding:13px 16px;margin:6px 0 16px;text-align:center}
+  .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  /* practice questions */
+  .q-item{border:2px solid var(--border);border-radius:6px;background:#fff;margin:16px 0;padding:16px 18px}
+  .q-item .qnum{display:inline-block;background:var(--navy);color:#fff;font-size:13.5px;font-weight:700;
+                padding:2px 10px;border-radius:10px;margin-bottom:8px}
+  .q-item .stem{margin:6px 0 10px}
+  .q-item .ask{font-weight:600;margin:10px 0}
+  .q-item ol.choices{list-style:upper-alpha;padding-left:26px;margin:10px 0 14px}
+  .q-item ol.choices li{margin:4px 0}
+  .reveal{display:none;border-top:2px dashed var(--border);margin-top:12px;padding-top:12px}
+  .reveal.open{display:block}
+  .reveal .ans{font-weight:700;color:var(--green);font-size:17px;margin:0 0 8px}
+  .reveal .why{margin:8px 0 0}
+  .reveal .why-not{margin:10px 0 0;font-size:15.5px}
+  .reveal .why-not li{color:var(--muted)}
+  .reveal .why-not li strong{color:var(--text)}
+  .toggle{font-size:14.5px}
+  footer{margin-top:58px;padding:22px 0 0;border-top:2px solid var(--border);font-size:15px;color:var(--muted)}
+  .pagenav{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0 0}
+  .pagenav a{flex:1 1 220px;border:2px solid var(--border);border-radius:6px;padding:12px 15px;
+             text-decoration:none;color:inherit;background:#fff}
+  .pagenav a:hover{border-color:var(--navy)}
+  .pagenav .dir{display:block;font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+  .pagenav .t{display:block;font-weight:700;color:var(--navy);margin-top:2px}
+  @media (max-width:720px){
+    body{font-size:16px}
+    header.top h1{font-size:24px}
+    nav.jump a{padding:9px 8px;font-size:13.5px}
+    .ro .v{font-size:19px}
+    .ctrls{gap:12px}
+  }
+  @media print{
+    body{background:#fff;font-size:11pt}
+    nav.jump,.crumbs,button,.btnrow,input[type=range],.pagenav{display:none!important}
+    header.top{background:#fff!important;color:var(--navy)!important;padding:0 0 12px}
+    .reveal{display:block!important}
+    .widget,.q-item,.box,table{break-inside:avoid;page-break-inside:avoid}
+    h2{break-after:avoid}
+    @page{size:A4;margin:15mm}
+  }
+</style>
+</head>
+<body>
+
+<div class="crumbs">
+  <div class="inner">
+    <a href="../index.html">AP Psychology</a>
+    <span class="sep">&rsaquo;</span>
+    <a href="index.html">Unit 0</a>
+    <span class="sep">&rsaquo;</span>
+    <span class="here">Significance and Effect Size | AP Psychology</span>
+  </div>
+</div>
+
+<header class="top">
+  <div class="inner">
+    <p class="kicker">Unit 0 &bull; Statistical Reasoning &bull; Page 4 of 4</p>
+    <h1>Significance and Effect Size</h1>
+    <p class="tag">Two numbers that answer two different questions</p>
+  </div>
+</header>
+
+<nav class="jump">
+  <ul>
+    <li><a href="#two">The Two Questions</a></li>
+    <li><a href="#effect">Effect Size</a></li>
+    <li><a href="#sig">Significance and p-Values</a></li>
+    <li><a href="#sim">Run the Study 100 Times</a></li>
+    <li><a href="#tips">AP Tips</a></li>
+    <li><a href="#questions">Practice Questions</a></li>
+  </ul>
+</nav>
+
+<div class="wrap">
+
+<h2 id="two"><span class="num">1</span>The Two Questions</h2>
+
+<p>When a study reports a difference between two groups, two separate questions need answering, and each has its own statistic.</p>
+
+<table>
+  <thead><tr><th style="width:38%">The question</th><th style="width:26%">The statistic</th><th>What it tells you</th></tr></thead>
+  <tbody>
+    <tr><td>Is this difference real, or could chance alone have produced it?</td><td><strong>Statistical significance</strong>, reported as a p-value</td><td>How surprising the result would be if there were no effect</td></tr>
+    <tr><td>How big is the difference, and would anyone notice it?</td><td><strong>Effect size</strong></td><td>The size of the difference in practical terms</td></tr>
+  </tbody>
+</table>
+
+<p>A study can answer yes to the first and still be useless, because the answer to the second was "barely any." Modern research reports both, and the AP exam expects you to know why one cannot substitute for the other.</p>
+
+<h2 id="effect"><span class="num">2</span>Effect Size</h2>
+
+<div class="widget">
+  <h3>Pull the two groups apart <span class="tryit">Interactive</span></h3>
+  <p style="margin-top:0">Two groups, one treatment and one control. The slider changes how far apart their averages sit.</p>
+  <svg id="esSvg" viewBox="0 0 760 320" role="img" aria-label="Two overlapping bell curves that separate as the effect size slider moves"></svg>
+  <div class="ctrls">
+    <div class="ctrl" style="flex:1 1 100%">
+      <label for="esD">Effect size (d) <span class="val" id="esDV">0.45</span></label>
+      <input id="esD" type="range" min="0" max="200" value="45" step="1">
+    </div>
+  </div>
+  <div class="readouts">
+    <div class="ro"><span class="k">Effect size</span><span class="v" id="esDo">0.45</span></div>
+    <div class="ro"><span class="k">Size</span><span class="v" id="esBand" style="font-size:18px">medium</span></div>
+    <div class="ro"><span class="k">Overlap</span><span class="v" id="esOv">82%</span></div>
+  </div>
+  <p class="commentary" id="esNote" aria-live="polite"></p>
+  <div class="btnrow">
+    <button type="button" data-es="20">Small (0.20)</button>
+    <button type="button" data-es="50">Medium (0.50)</button>
+    <button type="button" data-es="80">Large (0.80)</button>
+  </div>
+</div>
+
+<div class="box key">
+  <span class="label">The thing to notice</span>
+  <p>Set d to <strong>0.20</strong> and look at how nearly identical the two groups are. A study can report a real, statistically significant difference at that effect size. Effect size is what tells you whether anyone should care.</p>
+</div>
+
+<table>
+  <thead><tr><th style="width:34%">Effect size</th><th>Interpretation</th></tr></thead>
+  <tbody>
+    <tr><td>0.2 and below</td><td>small</td></tr>
+    <tr><td>0.3 to 0.7</td><td>medium</td></tr>
+    <tr><td>0.8 and above</td><td>large</td></tr>
+  </tbody>
+</table>
+
+<h2 id="sig"><span class="num">3</span>Statistical Significance and p-Values</h2>
+
+<p>Statistical significance means a result is unlikely to have happened by chance alone. By convention, researchers call a result significant when the p-value is below .05, meaning there is less than a 5% probability of seeing a difference this large if there were really no effect at all.</p>
+
+<div class="box warn">
+  <span class="label">Read that definition carefully, because the order matters</span>
+  <p>The p-value answers <strong>"how surprising would this result be if there were no effect?"</strong></p>
+  <p>It does <strong>not</strong> answer "what is the probability that there is no effect?" Those sound similar and are not the same statement. A p-value describes the data given a hypothesis, not the hypothesis given the data.</p>
+</div>
+
+<p>Two things significance does not mean, and both are tested:</p>
+
+<ul>
+  <li><strong>It does not mean the effect is large.</strong> With a big enough sample, a tiny and useless difference becomes statistically significant.</li>
+  <li><strong>It does not mean the finding is important</strong>, or that it will replicate, or that the study was well designed. A significant result from a badly confounded experiment is still a badly confounded experiment.</li>
+</ul>
+
+<p>Effect size answers the question significance cannot: how big is it?</p>
+
+<h2 id="sim"><span class="num">4</span>Run the Study 100 Times</h2>
+
+<div class="widget">
+  <h3>What happens when you repeat a study <span class="tryit">Simulation</span></h3>
+  <p style="margin-top:0">Each dot is one study. The gold line marks the true effect. Solid dots reached statistical significance; hollow dots did not.</p>
+  <svg id="smSvg" viewBox="0 0 760 360" role="img" aria-label="Dot plot of 100 simulated study results scattered around the true effect"></svg>
+  <div class="ctrls">
+    <div class="ctrl">
+      <label for="smN">Total participants <span class="val" id="smNV">100</span></label>
+      <input id="smN" type="range" min="0" max="100" value="29" step="1">
+    </div>
+    <div class="ctrl">
+      <label for="smT">True effect <span class="val" id="smTV">0.30</span></label>
+      <input id="smT" type="range" min="0" max="100" value="30" step="1">
+    </div>
+  </div>
+  <div class="btnrow">
+    <button class="primary" type="button" id="smRun">Run 100 studies</button>
+    <button type="button" data-sm="0">Set true effect to zero</button>
+    <button type="button" data-sm="tiny">Tiny effect, 5,000 people</button>
+  </div>
+  <div class="readouts" style="margin-top:16px">
+    <div class="ro hl"><span class="k">Reached significance</span><span class="v" id="smCount">&ndash;</span></div>
+    <div class="ro"><span class="k">Average result</span><span class="v" id="smAvg">&ndash;</span></div>
+  </div>
+  <p class="commentary" id="smNote" aria-live="polite">Press Run 100 studies to begin.</p>
+</div>
+
+<div class="box key">
+  <span class="label">Two things to try</span>
+  <p><strong>Set the true effect to zero and run it.</strong> Some studies still come out significant. That is what a 5% false positive rate looks like, and it is why replication matters.</p>
+  <p><strong>Set a tiny effect with a huge sample.</strong> Almost everything becomes significant even though the effect is trivial. That is the "significant but meaningless" problem made visible.</p>
+</div>
+
+<h2 id="tips"><span class="num">5</span>AP Exam Tips</h2>
+
+<ul>
+  <li>Statistical significance means <strong>unlikely due to chance</strong>. It does not mean large, and it does not mean important.</li>
+  <li>Effect size indicates the strength of a relationship or the size of a difference. Roughly: 0.2 and below small, 0.3 to 0.7 medium, 0.8 and above large.</li>
+  <li>A large sample can make a trivial difference statistically significant. When a question contrasts a huge sample with a tiny difference, it is testing this.</li>
+  <li>A p-value tells you how surprising the data would be <em>if there were no effect</em>. It does not tell you the probability that the finding is true.</li>
+  <li>Significance says nothing about whether the study was well designed. A confounded experiment can produce a significant result.</li>
+</ul>
+
+<h2 id="questions"><span class="num">6</span>Practice Questions</h2>
+
+<p>Answer each one before you reveal it.</p>
+
+<div class="btnrow" style="margin:18px 0 24px">
+  <button class="primary" type="button" onclick="setAllAns(true)">Show all answers</button>
+  <button type="button" onclick="setAllAns(false)">Hide all answers</button>
+</div>
+
+<div class="q-item">
+  <span class="qnum">Question 1</span>
+  <p class="stem">A study of 40,000 participants finds that a new study technique improves test scores by an average of 0.4 points out of 100, and the result is statistically significant at p &lt; .001.</p>
+  <p class="ask">What is the best interpretation?</p>
+  <ol class="choices">
+    <li>The technique has a large effect on learning</li>
+    <li>The result is unlikely to be due to chance, but the effect is far too small to matter practically</li>
+    <li>The result must be a coding error, since p is so small</li>
+    <li>The study proves the technique causes better learning in all students</li>
+  </ol>
+  <button class="toggle" type="button" onclick="tog(this)">Show answer</button>
+  <div class="reveal">
+    <p class="ans">Answer: B</p>
+    <p class="why">A very large sample makes even minuscule differences detectable, which is what the tiny p-value reflects. Significance answers &quot;is this likely to be real,&quot; not &quot;is this big enough to care about.&quot; A 0.4 point gain out of 100 is not worth changing anyone's study habits over. This is exactly why effect size is reported alongside significance.</p>
+    <ul class="why-not">
+      <li><strong>A confuses</strong> statistical significance with magnitude.</li>
+      <li><strong>C misunderstands p-values:</strong> a small p is expected with a huge sample.</li>
+      <li><strong>D overreaches</strong> on generalization even if the design were experimental.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="q-item">
+  <span class="qnum">Question 2</span>
+  <p class="stem">Two therapies for anxiety are compared. Therapy A shows an effect size of 0.25 and Therapy B shows an effect size of 0.9. Both results are statistically significant.</p>
+  <p class="ask">What does this tell a clinician?</p>
+  <ol class="choices">
+    <li>Both therapies work equally well, since both are significant</li>
+    <li>Therapy B produces a substantially larger difference and would likely matter more to a patient</li>
+    <li>Therapy A did not really work</li>
+    <li>Therapy B is significant and Therapy A is not</li>
+  </ol>
+  <button class="toggle" type="button" onclick="tog(this)">Show answer</button>
+  <div class="reveal">
+    <p class="ans">Answer: B</p>
+    <p class="why">Both effects are real, since both are significant. Effect size tells you how much they differ in magnitude. An effect size of 0.9 is large, while 0.25 is small, so patients would notice considerably more benefit from Therapy B.</p>
+    <ul class="why-not">
+      <li><strong>A is the error the question is built around:</strong> significance is not a measure of size.</li>
+      <li><strong>C is wrong:</strong> a small effect that is statistically significant is still a genuine effect, just a modest one.</li>
+      <li><strong>D contradicts the stem</strong>, which says both are significant.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="q-item">
+  <span class="qnum">Question 3</span>
+  <p class="stem">A researcher reports p = .03.</p>
+  <p class="ask">Which statement is the most accurate reading of that number?</p>
+  <ol class="choices">
+    <li>There is a 3% chance that the researcher's hypothesis is wrong</li>
+    <li>If there were really no effect, there would be about a 3% chance of getting a result at least this extreme</li>
+    <li>The effect accounts for 3% of the difference between groups</li>
+    <li>The finding will replicate 97% of the time</li>
+  </ol>
+  <button class="toggle" type="button" onclick="tog(this)">Show answer</button>
+  <div class="reveal">
+    <p class="ans">Answer: B</p>
+    <p class="why">A p-value is calculated by assuming there is no effect and then asking how surprising the observed data would be under that assumption. It describes the data given a hypothesis, not the hypothesis given the data.</p>
+    <ul class="why-not">
+      <li><strong>A reverses that logic.</strong> It is the most common misreading of p-values among students and, frankly, among a lot of published researchers.</li>
+      <li><strong>C describes something closer</strong> to a proportion of variance, which is a different statistic.</li>
+      <li><strong>D is unsupported.</strong> Replication depends on effect size, sample size, and study quality, not on the p-value from a single study.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="q-item">
+  <span class="qnum">Question 4</span>
+  <p class="stem">Two studies test the same treatment. Study A uses 30 participants and reports a large effect size that is not statistically significant. Study B uses 3,000 participants and reports a small effect size that is statistically significant.</p>
+  <p class="ask">What is the most reasonable conclusion?</p>
+  <ol class="choices">
+    <li>Study B is better because its result was significant</li>
+    <li>Study A is better because its effect size was larger</li>
+    <li>The two studies disagree, so the treatment does not work</li>
+    <li>Neither study alone settles it, and the results are worth combining in a meta-analysis</li>
+  </ol>
+  <button class="toggle" type="button" onclick="tog(this)">Show answer</button>
+  <div class="reveal">
+    <p class="ans">Answer: D</p>
+    <p class="why">Small samples make significance hard to reach even when an effect is real, so Study A's non-significant result is weak evidence of absence rather than evidence of no effect. Large samples make significance easy to reach even when an effect is trivial. The two statistics are measuring different things, which is why combining results across studies is the standard response to exactly this situation.</p>
+    <ul class="why-not">
+      <li><strong>A treats significance</strong> as a quality rating rather than a function of sample size.</li>
+      <li><strong>B ignores</strong> that a large effect size from 30 people is an unstable estimate.</li>
+      <li><strong>C misreads the situation:</strong> the studies do not actually contradict each other.</li>
+    </ul>
+  </div>
+</div>
+<div class="pagenav">
+  <a href="correlation-and-regression.html"><span class="dir">&larr; Previous</span><span class="t">Correlation and Regression</span></a>
+</div>
+
+<footer>
+  <p>AP Psychology, Unit 0: Science Practices. Statistical reasoning, aligned to Science Practice 3 of the 2024 Course and Exam Description.</p>
+  <p>Don West, AP Psychology Teacher. Questions? Message me on Canvas or ask at the start of class.</p>
+</footer>
+
+</div>
+
+<script>
+
+  // ---- shared maths helpers ----
+  function erf(x){
+    var s = x<0?-1:1; x = Math.abs(x);
+    var a1=0.254829592,a2=-0.284496736,a3=1.421413741,a4=-1.453152027,a5=1.061405429,p=0.3275911;
+    var t=1/(1+p*x);
+    var y=1-(((((a5*t+a4)*t)+a3)*t+a2)*t+a1)*t*Math.exp(-x*x);
+    return s*y;
+  }
+  function normCdf(x,mu,sd){ return 0.5*(1+erf((x-mu)/(sd*Math.SQRT2))); }
+  function normPdf(x,mu,sd){ var z=(x-mu)/sd; return Math.exp(-0.5*z*z)/(sd*Math.sqrt(2*Math.PI)); }
+  var _spare=null;
+  function randn(){
+    if(_spare!==null){var v=_spare;_spare=null;return v;}
+    var u,v,s;
+    do{u=Math.random()*2-1;v=Math.random()*2-1;s=u*u+v*v;}while(s===0||s>=1);
+    var m=Math.sqrt(-2*Math.log(s)/s);_spare=v*m;return u*m;
+  }
+  function mean(a){ return a.reduce(function(x,y){return x+y;},0)/a.length; }
+  function median(a){
+    var b=a.slice().sort(function(x,y){return x-y;}), n=b.length, h=Math.floor(n/2);
+    return n%2 ? b[h] : (b[h-1]+b[h])/2;
+  }
+  function modes(a){
+    var c={},best=0;
+    a.forEach(function(v){c[v]=(c[v]||0)+1; if(c[v]>best)best=c[v];});
+    if(best<2) return [];
+    return Object.keys(c).filter(function(k){return c[k]===best;}).map(Number).sort(function(x,y){return x-y;});
+  }
+  function fmt(n,d){ d=(d===undefined)?1:d; var r=Math.round(n*Math.pow(10,d))/Math.pow(10,d);
+    return (Math.abs(r-Math.round(r))<1e-9) ? String(Math.round(r)) : r.toFixed(d); }
+  function pearson(xs,ys){
+    var mx=mean(xs),my=mean(ys),sx=0,sy=0,sxy=0;
+    for(var i=0;i<xs.length;i++){var a=xs[i]-mx,b=ys[i]-my;sx+=a*a;sy+=b*b;sxy+=a*b;}
+    if(sx===0||sy===0) return 0;
+    return sxy/Math.sqrt(sx*sy);
+  }
+  function store(k,v){ try{ localStorage.setItem(k,JSON.stringify(v)); return true; }catch(e){ return false; } }
+  function recall(k,d){ try{ var s=localStorage.getItem(k); return s===null?d:JSON.parse(s); }catch(e){ return d; } }
+  function SVG(tag,attrs){
+    var e=document.createElementNS("http://www.w3.org/2000/svg",tag);
+    for(var k in attrs) e.setAttribute(k,attrs[k]);
+    return e;
+  }
+  // pointer dragging that works for mouse and touch
+  function makeDraggable(svg, onMove){
+    var active=null;
+    function pt(evt){
+      var r=svg.getBoundingClientRect();
+      var vb=svg.viewBox.baseVal;
+      return { x:(evt.clientX-r.left)/r.width*vb.width, y:(evt.clientY-r.top)/r.height*vb.height };
+    }
+    svg.addEventListener('pointerdown',function(e){
+      var t=e.target.closest('[data-drag]'); if(!t) return;
+      active=t; svg.setPointerCapture(e.pointerId); e.preventDefault();
+      onMove(active, pt(e));
+    });
+    svg.addEventListener('pointermove',function(e){
+      if(!active) return; e.preventDefault(); onMove(active, pt(e));
+    });
+    function end(e){ if(active){ try{svg.releasePointerCapture(e.pointerId);}catch(_){} active=null; } }
+    svg.addEventListener('pointerup',end);
+    svg.addEventListener('pointercancel',end);
+  }
+  // practice question reveals
+  function tog(btn){
+    var box=btn.nextElementSibling;
+    var open=box.classList.toggle('open');
+    btn.textContent=open?'Hide answer':'Show answer';
+  }
+  function setAllAns(open){
+    document.querySelectorAll('.q-item').forEach(function(q){
+      var b=q.querySelector('.reveal'), t=q.querySelector('.toggle');
+      if(!b||!t) return;
+      b.classList.toggle('open',open);
+      t.textContent=open?'Hide answer':'Show answer';
+    });
+  }
+
+
+var FONT='Segoe UI, Arial, sans-serif';
+function pathXY(xs,ys){ var d=''; for(var i=0;i<xs.length;i++) d+=(i?'L':'M')+xs[i].toFixed(2)+' '+ys[i].toFixed(2); return d; }
+
+// ============ WIDGET 9: effect size ============
+(function(){
+  var svg=document.getElementById('esSvg');
+  var X0=54,X1=730,BASE=254,TOP=34,LO=-4,HI=6;
+  var px=function(t){return X0+(t-LO)/(HI-LO)*(X1-X0);};
+  svg.appendChild(SVG('line',{x1:X0,y1:BASE,x2:X1,y2:BASE,stroke:'#1c1c1c','stroke-width':2}));
+  var overlapP=SVG('path',{fill:'#5a6070','fill-opacity':.5}); svg.appendChild(overlapP);
+  var cA=SVG('path',{fill:'#2c5f8a','fill-opacity':.28,stroke:'#2c5f8a','stroke-width':3}); svg.appendChild(cA);
+  var cB=SVG('path',{fill:'#b06a1f','fill-opacity':.28,stroke:'#b06a1f','stroke-width':3}); svg.appendChild(cB);
+  var lblA=SVG('text',{'font-size':14,'font-weight':'700',fill:'#2c5f8a','font-family':FONT,'text-anchor':'middle'});
+  lblA.textContent='CONTROL';
+  var lblB=SVG('text',{'font-size':14,'font-weight':'700',fill:'#b06a1f','font-family':FONT,'text-anchor':'middle'});
+  lblB.textContent='TREATMENT';
+  svg.appendChild(lblA); svg.appendChild(lblB);
+  var peak=normPdf(0,0,1), H=BASE-TOP, NP=300;
+
+  function curve(mu){
+    var xs=[],ys=[];
+    for(var i=0;i<=NP;i++){ var t=LO+(HI-LO)*i/NP; xs.push(px(t)); ys.push(BASE-normPdf(t,mu,1)/peak*H); }
+    return pathXY(xs,ys)+'L'+px(HI).toFixed(2)+' '+BASE+'L'+px(LO).toFixed(2)+' '+BASE+'Z';
+  }
+  function draw(){
+    var d=+document.getElementById('esD').value/100;
+    document.getElementById('esDV').textContent=d.toFixed(2);
+    document.getElementById('esDo').textContent=d.toFixed(2);
+    cA.setAttribute('d',curve(0)); cB.setAttribute('d',curve(d));
+    lblA.setAttribute('x',px(0)); lblA.setAttribute('y',BASE-H-8);
+    lblB.setAttribute('x',px(d)); lblB.setAttribute('y',BASE-H-8);
+    var xs=[],ys=[];
+    for(var i=0;i<=NP;i++){ var t=LO+(HI-LO)*i/NP;
+      xs.push(px(t)); ys.push(BASE-Math.min(normPdf(t,0,1),normPdf(t,d,1))/peak*H); }
+    overlapP.setAttribute('d',pathXY(xs,ys)+'L'+px(HI).toFixed(2)+' '+BASE+'L'+px(LO).toFixed(2)+' '+BASE+'Z');
+    var ov=Math.round(2*normCdf(-d/2,0,1)*100);
+    document.getElementById('esOv').textContent=ov+'%';
+    var band = d<=0.2?'small' : (d<0.8?'medium':'large');
+    document.getElementById('esBand').textContent=band;
+    var note;
+    if(d<0.05) note='No difference at all. The two groups are the same distribution sitting on top of each other.';
+    else if(d<=0.2) note='A small effect. The two groups overlap almost completely, so a randomly chosen person from the treatment group is only slightly more likely to score above a randomly chosen control. A study this size can still be statistically significant with enough participants.';
+    else if(d<0.8) note='A medium effect. The two groups still overlap a great deal. Plenty of people in the control group did better than the average person in the treatment group.';
+    else note='A large effect. The groups are clearly separated now, though they still overlap by '+ov+'%. Effects this size are uncommon in psychology.';
+    document.getElementById('esNote').textContent=note;
+  }
+  document.getElementById('esD').addEventListener('input',draw);
+  document.querySelectorAll('[data-es]').forEach(function(b){
+    b.addEventListener('click',function(){
+      document.getElementById('esD').value=b.getAttribute('data-es'); draw();
+    });
+  });
+  draw();
+})();
+
+// ============ WIDGET 10: run the study 100 times ============
+(function(){
+  var svg=document.getElementById('smSvg');
+  var X0=54,X1=730,BASE=290,TOP=26,LO=-0.7,HI=1.7;
+  var px=function(v){return X0+(v-LO)/(HI-LO)*(X1-X0);};
+  var base=SVG('g',{}); var dotsG=SVG('g',{});
+  svg.appendChild(base); svg.appendChild(dotsG);
+  var timer=null;
+
+  function furniture(trueEff){
+    while(base.firstChild) base.removeChild(base.firstChild);
+    base.appendChild(SVG('line',{x1:X0,y1:BASE,x2:X1,y2:BASE,stroke:'#1c1c1c','stroke-width':2}));
+    for(var v=-0.5;v<=1.5001;v+=0.25){
+      var x=px(v);
+      base.appendChild(SVG('line',{x1:x,y1:BASE,x2:x,y2:BASE+7,stroke:'#5a6070','stroke-width':1.5}));
+      var t=SVG('text',{x:x,y:BASE+24,'text-anchor':'middle','font-size':12.5,fill:'#5a6070','font-family':FONT});
+      t.textContent=v.toFixed(2); base.appendChild(t);
+    }
+    var xl=SVG('text',{x:(X0+X1)/2,y:BASE+46,'text-anchor':'middle','font-size':14.5,'font-family':FONT});
+    xl.textContent='effect size this study measured'; base.appendChild(xl);
+    base.appendChild(SVG('line',{x1:px(trueEff),y1:TOP,x2:px(trueEff),y2:BASE,stroke:'#bf8f00','stroke-width':3}));
+    var tl=SVG('text',{x:px(trueEff),y:TOP-6,'text-anchor':'middle','font-size':13.5,'font-weight':'700',
+                       fill:'#8a6800','font-family':FONT});
+    tl.textContent='TRUE EFFECT '+trueEff.toFixed(2); base.appendChild(tl);
+  }
+
+  function nFromSlider(v){ return Math.round(20*Math.pow(250, v/100)); }
+  function sliderFromN(n){ return Math.round(100*Math.log(n/20)/Math.log(250)); }
+
+  function run(){
+    if(timer){ clearInterval(timer); timer=null; }
+    while(dotsG.firstChild) dotsG.removeChild(dotsG.firstChild);
+    var n=nFromSlider(+document.getElementById('smN').value), trueEff=+document.getElementById('smT').value/100;
+    furniture(trueEff);
+    var se=2/Math.sqrt(n), crit=1.96*se;
+    var results=[], sig=0;
+    for(var i=0;i<100;i++){
+      var obs=trueEff+randn()*se;
+      var isSig=Math.abs(obs)>crit;
+      if(isSig) sig++;
+      results.push({d:obs,sig:isSig});
+    }
+    // work out stack spacing up front so a tight cluster never overflows the chart
+    var pre={}, tallest=1;
+    results.forEach(function(r){ var b=Math.round(px(r.d)/11)*11; pre[b]=(pre[b]||0)+1;
+                                 if(pre[b]>tallest) tallest=pre[b]; });
+    var dy=Math.min(9.5,(BASE-TOP-14)/tallest);
+    var bins={};
+    var k=0;
+    document.getElementById('smNote').textContent='Running...';
+    timer=setInterval(function(){
+      if(k>=results.length){
+        clearInterval(timer); timer=null;
+        var avg=mean(results.map(function(r){return r.d;}));
+        document.getElementById('smCount').textContent=sig+' of 100';
+        document.getElementById('smAvg').textContent=avg.toFixed(2);
+        var note;
+        if(trueEff<0.02){
+          note='The true effect is zero, so every significant result here is a false positive. You should see roughly 5 of 100, because that is exactly what a .05 threshold allows. Any one of those studies, published on its own, would look like a real discovery. This is why replication matters.';
+        } else if(sig>=80 && trueEff<=0.15){
+          note='Nearly every study reached significance even though the true effect is '+trueEff.toFixed(2)+', which is trivially small. With a sample this large, significance is almost guaranteed and tells you very little. Effect size is the statistic doing the real work here.';
+        } else if(sig<50){
+          note='Only '+sig+' of 100 studies reached significance even though the effect is real. Small samples miss real effects often, so a single non-significant study is weak evidence that nothing is there.';
+        } else {
+          note=sig+' of 100 studies reached significance. Notice how widely the results scatter around the true value of '+trueEff.toFixed(2)+'. Any single study could have landed anywhere in that spread, which is why one study is never the last word.';
+        }
+        document.getElementById('smNote').textContent=note;
+        return;
+      }
+      var r=results[k++];
+      var b=Math.round(px(r.d)/11)*11;
+      bins[b]=(bins[b]||0)+1;
+      var y=BASE-8-(bins[b]-1)*dy;
+      dotsG.appendChild(SVG('circle',{cx:px(r.d),cy:Math.max(TOP+4,y),r:Math.min(4.4,dy/2+0.6),
+        fill:r.sig?'#1f3864':'#fff',stroke:'#1f3864','stroke-width':1.6}));
+    },16);
+  }
+  document.getElementById('smRun').addEventListener('click',run);
+  document.getElementById('smN').addEventListener('input',function(){
+    document.getElementById('smNV').textContent=nFromSlider(+this.value);
+  });
+  document.getElementById('smT').addEventListener('input',function(){
+    document.getElementById('smTV').textContent=(+this.value/100).toFixed(2);
+    furniture(+this.value/100);
+  });
+  document.querySelectorAll('[data-sm]').forEach(function(b){
+    b.addEventListener('click',function(){
+      var k=b.getAttribute('data-sm');
+      if(k==='0'){ document.getElementById('smT').value=0; document.getElementById('smN').value=sliderFromN(100); }
+      else { document.getElementById('smT').value=10; document.getElementById('smN').value=100; }
+      document.getElementById('smTV').textContent=(+document.getElementById('smT').value/100).toFixed(2);
+      document.getElementById('smNV').textContent=nFromSlider(+document.getElementById('smN').value);
+      run();
+    });
+  });
+  document.getElementById('smNV').textContent=nFromSlider(+document.getElementById('smN').value);
+  furniture(0.30);
+})();
+
+</script>
+
+</body>
+</html>

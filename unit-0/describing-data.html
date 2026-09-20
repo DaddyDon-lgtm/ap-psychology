@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Describing Data | AP Psychology</title>
+<style>
+  :root {
+    --navy:#1f3864; --navy-light:#2e4f8f; --gold:#bf8f00; --gold-soft:#fff2cc;
+    --red:#9c2a2a; --red-soft:#fce8e8; --green:#1e6b45; --green-soft:#e6f4ec;
+    --grey:#f2f2f2; --border:#d4d8e0; --text:#1c1c1c; --muted:#5a6070;
+    --blue:#2c5f8a; --orange:#b06a1f;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:"Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;
+       font-size:17px;line-height:1.6;color:var(--text);background:#fafbfc}
+  .wrap{max-width:980px;margin:0 auto;padding:0 20px 80px}
+  .crumbs{background:#fff;border-bottom:1px solid var(--border);font-size:14.5px}
+  .crumbs .inner{max-width:980px;margin:0 auto;padding:10px 20px}
+  .crumbs a{color:var(--navy);text-decoration:none;font-weight:600}
+  .crumbs a:hover{text-decoration:underline}
+  .crumbs .sep{color:var(--border);margin:0 8px}
+  .crumbs .here{color:var(--muted)}
+  header.top{background:var(--navy);color:#fff;padding:32px 20px 28px}
+  header.top .inner{max-width:980px;margin:0 auto}
+  header.top .kicker{font-size:12.5px;letter-spacing:.11em;text-transform:uppercase;opacity:.82;margin:0 0 6px}
+  header.top h1{margin:0;font-size:29px;line-height:1.22}
+  header.top p.tag{margin:8px 0 0;font-size:17px;opacity:.92}
+  nav.jump{background:#fff;border-bottom:2px solid var(--border);position:sticky;top:0;z-index:30;
+           box-shadow:0 1px 4px rgba(0,0,0,.06)}
+  nav.jump ul{max-width:980px;margin:0 auto;padding:0 20px;list-style:none;display:flex;flex-wrap:wrap;gap:2px}
+  nav.jump a{display:block;padding:11px 12px;font-size:14.5px;font-weight:600;color:var(--navy);
+             text-decoration:none;border-bottom:3px solid transparent}
+  nav.jump a:hover{border-bottom-color:var(--gold);background:#f7f9fc}
+  h2{font-size:23px;color:var(--navy);margin:46px 0 6px;padding-bottom:8px;
+     border-bottom:3px solid var(--navy);scroll-margin-top:124px}
+  h2 .num{display:inline-block;background:var(--navy);color:#fff;width:30px;height:30px;line-height:30px;
+          text-align:center;border-radius:50%;font-size:16px;margin-right:10px;vertical-align:2px}
+  h3{font-size:19px;color:var(--navy);margin:28px 0 8px}
+  h4{font-size:16.5px;margin:20px 0 6px}
+  p{margin:11px 0}
+  ul,ol{margin:11px 0;padding-left:26px}
+  li{margin:5px 0}
+  code{background:var(--grey);padding:1px 6px;border-radius:3px;font-family:Consolas,Monaco,monospace;font-size:.92em}
+  .box{border-radius:6px;padding:16px 20px;margin:22px 0;border-left:6px solid}
+  .box p:first-child{margin-top:0}
+  .box p:last-child{margin-bottom:0}
+  .box .label{display:block;font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px}
+  .box.key{background:var(--gold-soft);border-color:var(--gold)}
+  .box.key .label{color:#8a6800}
+  .box.warn{background:var(--red-soft);border-color:var(--red)}
+  .box.warn .label{color:var(--red)}
+  .box.good{background:var(--green-soft);border-color:var(--green)}
+  .box.good .label{color:var(--green)}
+  .box.note{background:#eef2f9;border-color:var(--navy-light)}
+  .box.note .label{color:var(--navy)}
+  table{border-collapse:collapse;width:100%;margin:20px 0;font-size:16.5px}
+  th,td{border:1px solid var(--border);padding:9px 12px;text-align:left;vertical-align:top}
+  thead th{background:var(--navy);color:#fff;font-weight:600}
+  tbody tr:nth-child(even){background:var(--grey)}
+  /* ---------- widgets ---------- */
+  .widget{background:#fff;border:2px solid var(--border);border-radius:8px;padding:18px 20px 20px;margin:24px 0}
+  .widget > h3{margin-top:0;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+  .widget .tryit{font-size:13px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;
+                 color:#8a6800;background:var(--gold-soft);padding:3px 9px;border-radius:10px}
+  .widget svg{display:block;width:100%;height:auto;max-width:100%;touch-action:none}
+  .ctrls{display:flex;flex-wrap:wrap;gap:18px;margin:16px 0 4px;align-items:flex-end}
+  .ctrl{flex:1 1 220px;min-width:200px}
+  .ctrl label{display:block;font-size:13.5px;font-weight:700;letter-spacing:.04em;
+              text-transform:uppercase;color:var(--muted);margin-bottom:5px}
+  .ctrl .val{color:var(--navy);font-size:15px}
+  input[type=range]{width:100%;accent-color:var(--navy);height:26px;cursor:pointer}
+  .btnrow{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 0}
+  button{font-family:inherit;font-size:14.5px;font-weight:600;cursor:pointer;border-radius:5px;
+         padding:8px 14px;border:2px solid var(--navy);background:#fff;color:var(--navy);transition:background .12s}
+  button:hover{background:var(--navy);color:#fff}
+  button.primary{background:var(--navy);color:#fff}
+  button.primary:hover{background:var(--navy-light)}
+  button:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid var(--navy-light);outline-offset:2px}
+  .readouts{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 0}
+  .ro{flex:1 1 110px;background:var(--grey);border-radius:6px;padding:9px 12px;text-align:center}
+  .ro .k{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+  .ro .v{display:block;font-size:22px;font-weight:700;color:var(--navy);line-height:1.25}
+  .ro.hl .v{color:var(--green)}
+  .commentary{margin:14px 0 0;padding:11px 14px;background:#eef2f9;border-left:5px solid var(--navy-light);
+              border-radius:0 5px 5px 0;font-size:16px}
+  .toggle-line{display:flex;align-items:center;gap:9px;margin:14px 0 0;font-size:15.5px}
+  .toggle-line input{width:19px;height:19px;accent-color:var(--navy);cursor:pointer}
+  .field{display:inline-flex;flex-direction:column;gap:4px;margin:0 12px 10px 0}
+  .field label{font-size:12.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+  .field input{font-family:inherit;font-size:17px;padding:7px 9px;width:110px;border:2px solid var(--border);border-radius:5px}
+  .field input.ok{border-color:var(--green);background:var(--green-soft)}
+  .field input.bad{border-color:var(--gold);background:var(--gold-soft)}
+  .worked{display:none;margin:14px 0 0;padding:12px 15px;background:var(--grey);border-radius:6px;
+          font-family:Consolas,Monaco,monospace;font-size:14.5px;line-height:1.7;white-space:pre-wrap}
+  .worked.open{display:block}
+  .dataset{font-size:23px;font-weight:700;letter-spacing:.04em;color:var(--navy);
+           background:var(--grey);border-radius:6px;padding:13px 16px;margin:6px 0 16px;text-align:center}
+  .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  /* practice questions */
+  .q-item{border:2px solid var(--border);border-radius:6px;background:#fff;margin:16px 0;padding:16px 18px}
+  .q-item .qnum{display:inline-block;background:var(--navy);color:#fff;font-size:13.5px;font-weight:700;
+                padding:2px 10px;border-radius:10px;margin-bottom:8px}
+  .q-item .stem{margin:6px 0 10px}
+  .q-item .ask{font-weight:600;margin:10px 0}
+  .q-item ol.choices{list-style:upper-alpha;padding-left:26px;margin:10px 0 14px}
+  .q-item ol.choices li{margin:4px 0}
+  .reveal{display:none;border-top:2px dashed var(--border);margin-top:12px;padding-top:12px}
+  .reveal.open{display:block}
+  .reveal .ans{font-weight:700;color:var(--green);font-size:17px;margin:0 0 8px}
+  .reveal .why{margin:8px 0 0}
+  .reveal .why-not{margin:10px 0 0;font-size:15.5px}
+  .reveal .why-not li{color:var(--muted)}
+  .reveal .why-not li strong{color:var(--text)}
+  .toggle{font-size:14.5px}
+  footer{margin-top:58px;padding:22px 0 0;border-top:2px solid var(--border);font-size:15px;color:var(--muted)}
+  .pagenav{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0 0}
+  .pagenav a{flex:1 1 220px;border:2px solid var(--border);border-radius:6px;padding:12px 15px;
+             text-decoration:none;color:inherit;background:#fff}
+  .pagenav a:hover{border-color:var(--navy)}
+  .pagenav .dir{display:block;font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+  .pagenav .t{display:block;font-weight:700;color:var(--navy);margin-top:2px}
+  @media (max-width:720px){
+    body{font-size:16px}
+    header.top h1{font-size:24px}
+    nav.jump a{padding:9px 8px;font-size:13.5px}
+    .ro .v{font-size:19px}
+    .ctrls{gap:12px}
+  }
+  @media print{
+    body{background:#fff;font-size:11pt}
+    nav.jump,.crumbs,button,.btnrow,input[type=range],.pagenav{display:none!important}
+    header.top{background:#fff!important;color:var(--navy)!important;padding:0 0 12px}
+    .reveal{display:block!important}
+    .widget,.q-item,.box,table{break-inside:avoid;page-break-inside:avoid}
+    h2{break-after:avoid}
+    @page{size:A4;margin:15mm}
+  }
+</style>
+</head>
+<body>
+
+<div class="crumbs">
+  <div class="inner">
+    <a href="../index.html">AP Psychology</a>
+    <span class="sep">&rsaquo;</span>
+    <a href="index.html">Unit 0</a>
+    <span class="sep">&rsaquo;</span>
+    <span class="here">Describing Data | AP Psychology</span>
+  </div>
+</div>
+
+<header class="top">
+  <div class="inner">
+    <p class="kicker">Unit 0 &bull; Statistical Reasoning &bull; Page 1 of 4</p>
+    <h1>Describing Data</h1>
+    <p class="tag">Mean, median, mode, and range, and when each one lies to you</p>
+  </div>
+</header>
+
+<nav class="jump">
+  <ul>
+    <li><a href="#why">Why Summarize</a></li>
+    <li><a href="#line">The Number Line</a></li>
+    <li><a href="#center">Measures of Center</a></li>
+    <li><a href="#practice">Calculation Practice</a></li>
+    <li><a href="#range">Range</a></li>
+    <li><a href="#tips">AP Tips</a></li>
+    <li><a href="#questions">Practice Questions</a></li>
+  </ul>
+</nav>
+
+<div class="wrap">
+
+<h2 id="why"><span class="num">1</span>Why Summarize At All</h2>
+
+<p>A researcher finishes a study and has 200 numbers. Nobody can hold 200 numbers in their head, so we replace them with a few numbers that describe the whole set. Those are descriptive statistics.</p>
+
+<p>Two questions do most of the work:</p>
+
+<ul>
+  <li><strong>Where is the center of the data?</strong> That is mean, median, and mode.</li>
+  <li><strong>How spread out is the data?</strong> That is range and standard deviation.</li>
+</ul>
+
+<p>The trap is that every one of these summaries throws information away. That is the point of a summary. But it means each one can hide something important, and the AP exam likes to ask which one is hiding something.</p>
+
+<h2 id="line"><span class="num">2</span>The Number Line</h2>
+
+<div class="widget">
+  <h3>Drag the dots <span class="tryit">Interactive</span></h3>
+  <p style="margin-top:0">Nine scores sit on the line. Drag any of them and watch all four statistics change. Try the buttons underneath to jump to a shape worth looking at.</p>
+
+  <svg id="nlSvg" viewBox="0 0 760 210" role="img" aria-label="Number line from 0 to 100 with nine draggable data points"></svg>
+
+  <div class="readouts">
+    <div class="ro"><span class="k">Mean</span><span class="v" id="nlMean">50</span></div>
+    <div class="ro"><span class="k">Median</span><span class="v" id="nlMedian">50</span></div>
+    <div class="ro"><span class="k">Mode</span><span class="v" id="nlMode">none</span></div>
+    <div class="ro"><span class="k">Range</span><span class="v" id="nlRange">0</span></div>
+  </div>
+
+  <p class="commentary" id="nlNote" aria-live="polite">Drag a dot to begin.</p>
+
+  <div class="btnrow">
+    <button type="button" data-preset="sym">Symmetric</button>
+    <button type="button" data-preset="outlier">Add an outlier</button>
+    <button type="button" data-preset="clusters">Two clusters</button>
+    <button type="button" data-preset="same">All the same</button>
+    <button type="button" data-preset="random">Randomize</button>
+  </div>
+  <p style="font-size:14.5px;color:var(--muted);margin-top:12px">Keyboard: press Tab to reach a dot, then use the left and right arrow keys to move it.</p>
+</div>
+
+<div class="box key">
+  <span class="label">The thing to notice</span>
+  <p>Press <strong>Symmetric</strong>, then <strong>Add an outlier</strong>. One score moves, and the mean climbs from 32 to 38 while the median does not budge from 32. That single difference is the most tested idea on this page, and it is why income is always reported as a median.</p>
+</div>
+
+<h2 id="center"><span class="num">3</span>The Three Measures of Center</h2>
+
+<p><strong>Mean:</strong> the arithmetic average. Add every score, divide by how many scores there are. The mean uses every single data point, which is its strength and its weakness. One extreme score changes it.</p>
+
+<p><strong>Median:</strong> the middle score when the data is put in order. Half the scores are above it, half below. If there is an even number of scores, take the average of the middle two. The median only cares about position, not size, so an extreme score barely moves it.</p>
+
+<p><strong>Mode:</strong> the score that appears most often. A data set can have no mode, one mode, or more than one mode. Mode is the only one of the three that works on data that is not numerical, such as favorite color.</p>
+
+<table>
+  <thead><tr><th style="width:18%">Use the</th><th>When</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Mean</strong></td><td>the data is roughly symmetric with no extreme outliers</td></tr>
+    <tr><td><strong>Median</strong></td><td>the data is skewed or has outliers, which is why income is always reported as a median and never a mean</td></tr>
+    <tr><td><strong>Mode</strong></td><td>you need the most common category, or the data is not numerical</td></tr>
+  </tbody>
+</table>
+
+<div class="box note">
+  <span class="label">The income example, because it is the clearest</span>
+  <p>Put nine ordinary people in a room. Their mean income and median income are close. Now walk in a billionaire. The mean income of the room is now over a hundred million dollars, which describes nobody standing there. The median barely moved, and it still describes the room honestly.</p>
+</div>
+
+<h2 id="practice"><span class="num">4</span>Calculation Practice</h2>
+
+<div class="widget">
+  <h3>Work out all four <span class="tryit">Interactive</span></h3>
+  <p style="margin-top:0">Every data set here is built so all four answers come out as whole numbers. If a set has no repeated value, type <code>none</code> for the mode.</p>
+
+  <div class="dataset" id="cpData" aria-live="polite">12, 15, 15, 18, 22, 27, 31</div>
+
+  <div>
+    <span class="field"><label for="cpMean">Mean</label><input id="cpMean" type="text" inputmode="numeric" autocomplete="off"></span>
+    <span class="field"><label for="cpMedian">Median</label><input id="cpMedian" type="text" inputmode="numeric" autocomplete="off"></span>
+    <span class="field"><label for="cpMode">Mode</label><input id="cpMode" type="text" autocomplete="off"></span>
+    <span class="field"><label for="cpRange">Range</label><input id="cpRange" type="text" inputmode="numeric" autocomplete="off"></span>
+  </div>
+
+  <div class="btnrow">
+    <button class="primary" type="button" id="cpCheck">Check my answers</button>
+    <button type="button" id="cpHow">Show me how</button>
+    <button type="button" id="cpNew">New data set</button>
+  </div>
+
+  <p class="commentary" id="cpNote" aria-live="polite">Fill in all four boxes, then press Check.</p>
+  <pre class="worked" id="cpWorked"></pre>
+</div>
+
+<h2 id="range"><span class="num">5</span>Range, and Why It Is a Weak Measure</h2>
+
+<p>Range is the highest score minus the lowest score. It is the simplest measure of variability and the least informative, because it uses only two numbers and ignores everything in between.</p>
+
+<p>These two data sets have an identical range of 40:</p>
+
+<table>
+  <thead><tr><th style="width:14%">Set</th><th>Scores</th><th style="width:16%">Range</th></tr></thead>
+  <tbody>
+    <tr><td><strong>A</strong></td><td>30, 48, 50, 51, 52, 54, 70</td><td>40</td></tr>
+    <tr><td><strong>B</strong></td><td>30, 32, 35, 50, 65, 68, 70</td><td>40</td></tr>
+  </tbody>
+</table>
+
+<p>Set A is tightly clustered with two stragglers. Set B is genuinely spread out. Range cannot tell them apart. Standard deviation can, which is the next page.</p>
+
+<h2 id="tips"><span class="num">6</span>AP Exam Tips</h2>
+
+<ul>
+  <li>When a question describes skewed data and asks which measure of center best represents it, the answer is the <strong>median</strong>.</li>
+  <li>When a question gives you a data set and asks for the median, <strong>put the numbers in order first</strong>. Students lose this mark constantly by taking the middle number of an unordered list.</li>
+  <li>If a distribution has an even number of scores, the median is the average of the two middle values, and it may not be a value that appears in the data at all.</li>
+  <li>A data set can have <strong>no mode</strong>. If nothing repeats, "no mode" is the correct answer, not zero.</li>
+  <li>Range is a measure of variability, not of center. Questions sometimes offer it as a distractor when asking about central tendency.</li>
+</ul>
+
+<h2 id="questions"><span class="num">7</span>Practice Questions</h2>
+
+<p>Answer each one before you reveal it.</p>
+
+<div class="btnrow" style="margin:18px 0 24px">
+  <button class="primary" type="button" onclick="setAllAns(true)">Show all answers</button>
+  <button type="button" onclick="setAllAns(false)">Hide all answers</button>
+</div>
+
+<div class="q-item">
+  <span class="qnum">Question 1</span>
+  <p class="stem">A psychology class takes a quiz. Eight students score between 78 and 85. One student, who was ill, scores 12. Which measure of central tendency would best represent the typical performance of the class?</p>
+  <p class="ask">Which measure should the teacher report?</p>
+  <ol class="choices">
+    <li>The mean, because it uses every score</li>
+    <li>The median, because it is not distorted by the extreme low score</li>
+    <li>The mode, because it shows the most common score</li>
+    <li>The range, because it shows the full spread</li>
+  </ol>
+  <button class="toggle" type="button" onclick="tog(this)">Show answer</button>
+  <div class="reveal">
+    <p class="ans">Answer: B</p>
+    <p class="why">The score of 12 is an outlier. Because the mean uses every value, that one score drags it well below what the rest of the class actually did. The median only cares about position, so it still sits among the scores in the 78 to 85 band and describes the class honestly.</p>
+    <ul class="why-not">
+      <li><strong>A is wrong:</strong> using every score is exactly the problem here.</li>
+      <li><strong>C is plausible but weaker:</strong> the mode only tells you the most repeated score, which may be a coincidence in a set this small.</li>
+      <li><strong>D is wrong:</strong> range measures spread, not center.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="q-item">
+  <span class="qnum">Question 2</span>
+  <p class="stem">A researcher reports that the mean of a data set is 62 and the median is 48.</p>
+  <p class="ask">What does this tell you about the shape of the distribution?</p>
+  <ol class="choices">
+    <li>It is symmetric</li>
+    <li>It is negatively skewed, with a tail of low scores</li>
+    <li>It is positively skewed, with a tail of high scores</li>
+    <li>It is bimodal</li>
+  </ol>
+  <button class="toggle" type="button" onclick="tog(this)">Show answer</button>
+  <div class="reveal">
+    <p class="ans">Answer: C</p>
+    <p class="why">The mean is pulled toward the tail, because the mean is the only measure of center that responds to how far away a score is. A mean sitting well above the median means high values are doing the pulling, so the tail stretches to the right, which is positive skew.</p>
+    <ul class="why-not">
+      <li><strong>A is wrong:</strong> in a symmetric distribution mean and median are about equal.</li>
+      <li><strong>B has the direction backwards:</strong> a low-score tail would pull the mean below the median.</li>
+      <li><strong>D is wrong:</strong> nothing here indicates two peaks.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="q-item">
+  <span class="qnum">Question 3</span>
+  <p class="stem">Five students report the number of hours they slept: 6, 7, 7, 8, 22.</p>
+  <p class="ask">Which statement is accurate?</p>
+  <ol class="choices">
+    <li>The mean is 7 and the median is 10</li>
+    <li>The mean is 10 and the median is 7</li>
+    <li>The mean and median are both 7</li>
+    <li>There is no mode</li>
+  </ol>
+  <button class="toggle" type="button" onclick="tog(this)">Show answer</button>
+  <div class="reveal">
+    <p class="ans">Answer: B</p>
+    <p class="why">The mean is 50 divided by 5, which is 10. In order, the middle of five scores is the third, which is 7. The 22 is almost certainly a recording error, and it has pushed the mean three hours above what any typical student reported.</p>
+    <ul class="why-not">
+      <li><strong>A reverses the two values.</strong></li>
+      <li><strong>C ignores</strong> the effect of the outlier on the mean.</li>
+      <li><strong>D is wrong:</strong> 7 appears twice, so 7 is the mode.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="q-item">
+  <span class="qnum">Question 4</span>
+  <p class="stem">Two classes take the same test. Both have a range of 30 points.</p>
+  <p class="ask">What can you conclude about the two distributions?</p>
+  <ol class="choices">
+    <li>They have the same variability</li>
+    <li>They have the same mean</li>
+    <li>Their highest and lowest scores differ by the same amount, and nothing more</li>
+    <li>Both distributions are normal</li>
+  </ol>
+  <button class="toggle" type="button" onclick="tog(this)">Show answer</button>
+  <div class="reveal">
+    <p class="ans">Answer: C</p>
+    <p class="why">Range is built from exactly two numbers, the maximum and the minimum. Everything between them is invisible to it. One class could be tightly bunched with two stragglers while the other is evenly spread, and both would report the same range.</p>
+    <ul class="why-not">
+      <li><strong>A overstates it:</strong> identical range does not mean identical variability, which is the reason standard deviation exists.</li>
+      <li><strong>B does not follow:</strong> range says nothing about center.</li>
+      <li><strong>D does not follow:</strong> range says nothing about shape.</li>
+    </ul>
+  </div>
+</div>
+<div class="pagenav">
+  <a href="normal-curve.html"><span class="dir">Next &rarr;</span><span class="t">The Normal Curve</span></a>
+</div>
+
+<footer>
+  <p>AP Psychology, Unit 0: Science Practices. Statistical reasoning, aligned to Science Practice 3 of the 2024 Course and Exam Description.</p>
+  <p>Don West, AP Psychology Teacher. Questions? Message me on Canvas or ask at the start of class.</p>
+</footer>
+
+</div>
+
+<script>
+
+  // ---- shared maths helpers ----
+  function erf(x){
+    var s = x<0?-1:1; x = Math.abs(x);
+    var a1=0.254829592,a2=-0.284496736,a3=1.421413741,a4=-1.453152027,a5=1.061405429,p=0.3275911;
+    var t=1/(1+p*x);
+    var y=1-(((((a5*t+a4)*t)+a3)*t+a2)*t+a1)*t*Math.exp(-x*x);
+    return s*y;
+  }
+  function normCdf(x,mu,sd){ return 0.5*(1+erf((x-mu)/(sd*Math.SQRT2))); }
+  function normPdf(x,mu,sd){ var z=(x-mu)/sd; return Math.exp(-0.5*z*z)/(sd*Math.sqrt(2*Math.PI)); }
+  var _spare=null;
+  function randn(){
+    if(_spare!==null){var v=_spare;_spare=null;return v;}
+    var u,v,s;
+    do{u=Math.random()*2-1;v=Math.random()*2-1;s=u*u+v*v;}while(s===0||s>=1);
+    var m=Math.sqrt(-2*Math.log(s)/s);_spare=v*m;return u*m;
+  }
+  function mean(a){ return a.reduce(function(x,y){return x+y;},0)/a.length; }
+  function median(a){
+    var b=a.slice().sort(function(x,y){return x-y;}), n=b.length, h=Math.floor(n/2);
+    return n%2 ? b[h] : (b[h-1]+b[h])/2;
+  }
+  function modes(a){
+    var c={},best=0;
+    a.forEach(function(v){c[v]=(c[v]||0)+1; if(c[v]>best)best=c[v];});
+    if(best<2) return [];
+    return Object.keys(c).filter(function(k){return c[k]===best;}).map(Number).sort(function(x,y){return x-y;});
+  }
+  function fmt(n,d){ d=(d===undefined)?1:d; var r=Math.round(n*Math.pow(10,d))/Math.pow(10,d);
+    return (Math.abs(r-Math.round(r))<1e-9) ? String(Math.round(r)) : r.toFixed(d); }
+  function pearson(xs,ys){
+    var mx=mean(xs),my=mean(ys),sx=0,sy=0,sxy=0;
+    for(var i=0;i<xs.length;i++){var a=xs[i]-mx,b=ys[i]-my;sx+=a*a;sy+=b*b;sxy+=a*b;}
+    if(sx===0||sy===0) return 0;
+    return sxy/Math.sqrt(sx*sy);
+  }
+  function store(k,v){ try{ localStorage.setItem(k,JSON.stringify(v)); return true; }catch(e){ return false; } }
+  function recall(k,d){ try{ var s=localStorage.getItem(k); return s===null?d:JSON.parse(s); }catch(e){ return d; } }
+  function SVG(tag,attrs){
+    var e=document.createElementNS("http://www.w3.org/2000/svg",tag);
+    for(var k in attrs) e.setAttribute(k,attrs[k]);
+    return e;
+  }
+  // pointer dragging that works for mouse and touch
+  function makeDraggable(svg, onMove){
+    var active=null;
+    function pt(evt){
+      var r=svg.getBoundingClientRect();
+      var vb=svg.viewBox.baseVal;
+      return { x:(evt.clientX-r.left)/r.width*vb.width, y:(evt.clientY-r.top)/r.height*vb.height };
+    }
+    svg.addEventListener('pointerdown',function(e){
+      var t=e.target.closest('[data-drag]'); if(!t) return;
+      active=t; svg.setPointerCapture(e.pointerId); e.preventDefault();
+      onMove(active, pt(e));
+    });
+    svg.addEventListener('pointermove',function(e){
+      if(!active) return; e.preventDefault(); onMove(active, pt(e));
+    });
+    function end(e){ if(active){ try{svg.releasePointerCapture(e.pointerId);}catch(_){} active=null; } }
+    svg.addEventListener('pointerup',end);
+    svg.addEventListener('pointercancel',end);
+  }
+  // practice question reveals
+  function tog(btn){
+    var box=btn.nextElementSibling;
+    var open=box.classList.toggle('open');
+    btn.textContent=open?'Hide answer':'Show answer';
+  }
+  function setAllAns(open){
+    document.querySelectorAll('.q-item').forEach(function(q){
+      var b=q.querySelector('.reveal'), t=q.querySelector('.toggle');
+      if(!b||!t) return;
+      b.classList.toggle('open',open);
+      t.textContent=open?'Hide answer':'Show answer';
+    });
+  }
+
+
+// ================= WIDGET 1: number line =================
+(function(){
+  var svg=document.getElementById('nlSvg');
+  var X0=60,X1=720,AX=132,V2P=function(v){return X0+v*(X1-X0)/100;},P2V=function(p){return (p-X0)*100/(X1-X0);};
+  var data=[20,23,26,29,32,35,38,41,44];
+  var dots=[];
+
+  // static furniture
+  var g=SVG('g',{});
+  g.appendChild(SVG('line',{x1:X0,y1:AX,x2:X1,y2:AX,stroke:'#1c1c1c','stroke-width':2}));
+  for(var v=0;v<=100;v+=10){
+    var x=V2P(v);
+    g.appendChild(SVG('line',{x1:x,y1:AX,x2:x,y2:AX+7,stroke:'#5a6070','stroke-width':1.5}));
+    var t=SVG('text',{x:x,y:AX+24,'text-anchor':'middle','font-size':13,fill:'#5a6070','font-family':'Segoe UI, Arial, sans-serif'});
+    t.textContent=v; g.appendChild(t);
+  }
+  svg.appendChild(g);
+
+  var medLine=SVG('line',{y1:40,y2:AX,stroke:'#bf8f00','stroke-width':2.5,'stroke-dasharray':'6,4'});
+  var medLbl=SVG('text',{y:33,'text-anchor':'middle','font-size':13,'font-weight':'700',fill:'#8a6800','font-family':'Segoe UI, Arial, sans-serif'});
+  medLbl.textContent='MEDIAN';
+  var meanTri=SVG('polygon',{fill:'#1f3864'});
+  var meanLbl=SVG('text',{y:AX+55,'text-anchor':'middle','font-size':13,'font-weight':'700',fill:'#1f3864','font-family':'Segoe UI, Arial, sans-serif'});
+  meanLbl.textContent='MEAN';
+  svg.appendChild(medLine); svg.appendChild(medLbl); svg.appendChild(meanTri); svg.appendChild(meanLbl);
+
+  var dotG=SVG('g',{}); svg.appendChild(dotG);
+  for(var i=0;i<9;i++){
+    var c=SVG('circle',{r:11,fill:'#2e4f8f',stroke:'#fff','stroke-width':2,'data-drag':i,
+                        tabindex:0,role:'slider','aria-label':'Data point '+(i+1),cursor:'grab'});
+    dotG.appendChild(c); dots.push(c);
+  }
+
+  function draw(){
+    var counts={};
+    data.forEach(function(v,i){
+      counts[v]=(counts[v]||0);
+      var lvl=counts[v]; counts[v]++;
+      dots[i].setAttribute('cx',V2P(v));
+      dots[i].setAttribute('cy',AX-13-lvl*23);
+      dots[i].setAttribute('aria-valuenow',v);
+      dots[i].setAttribute('aria-valuemin',0);
+      dots[i].setAttribute('aria-valuemax',100);
+    });
+    var mn=mean(data), md=median(data), mo=modes(data), rg=Math.max.apply(null,data)-Math.min.apply(null,data);
+    document.getElementById('nlMean').textContent=fmt(mn,1);
+    document.getElementById('nlMedian').textContent=fmt(md,1);
+    document.getElementById('nlMode').textContent= mo.length? mo.join(', ') : 'none';
+    document.getElementById('nlRange').textContent=rg;
+    var mx=V2P(mn);
+    meanTri.setAttribute('points',(mx-9)+','+(AX+38)+' '+(mx+9)+','+(AX+38)+' '+mx+','+(AX+22));
+    meanLbl.setAttribute('x',mx);
+    var dx=V2P(md);
+    medLine.setAttribute('x1',dx); medLine.setAttribute('x2',dx); medLbl.setAttribute('x',dx);
+    // biggest gap between consecutive sorted values, and how it splits the data
+    var srt=data.slice().sort(function(a,b){return a-b;}), gap=0, gapAt=0;
+    for(var q=1;q<srt.length;q++){ var d=srt[q]-srt[q-1]; if(d>gap){ gap=d; gapAt=q; } }
+    var smallSide=Math.min(gapAt, srt.length-gapAt);
+    var strayHigh = gapAt > srt.length/2;
+    var note;
+    if(rg===0) note='Every score is identical, so the mean, median, and mode all land on the same value and the range is zero.';
+    else if(gap>=25 && smallSide>=3) note='Two separate groups, with a gap in the middle. The mean lands near the empty space between them, describing almost nobody. This is what a bimodal distribution looks like.';
+    else if(gap>=25 && smallSide<=2) note='One score sits far away from the rest. That single outlier has dragged the mean '+fmt(Math.abs(mn-md),1)+' '+(strayHigh?'above':'below')+' the median, while the median has barely moved. This is why the median is used for data with outliers.';
+    else if(mn-md>3) note='The mean is being pulled right by high values, and now sits '+fmt(mn-md,1)+' above the median. This data is skewed, so the median is the safer description of a typical score.';
+    else if(md-mn>3) note='The mean is being pulled left by low values, and now sits '+fmt(md-mn,1)+' below the median. This data is skewed, so the median is the safer description of a typical score.';
+    else if(!mo.length) note='Mean and median agree, so the data is roughly symmetric. No value repeats, so there is no mode.';
+    else note='Mean and median agree, so the data is roughly symmetric.';
+    document.getElementById('nlNote').textContent=note;
+  }
+  function setVal(i,v){ data[i]=Math.max(0,Math.min(100,Math.round(v))); draw(); }
+  makeDraggable(svg,function(el,p){ setVal(+el.getAttribute('data-drag'), P2V(p.x)); });
+  dots.forEach(function(c,i){
+    c.addEventListener('keydown',function(e){
+      if(e.key==='ArrowLeft'||e.key==='ArrowDown'){ setVal(i,data[i]-1); e.preventDefault(); }
+      if(e.key==='ArrowRight'||e.key==='ArrowUp'){ setVal(i,data[i]+1); e.preventDefault(); }
+    });
+  });
+  var presets={
+    sym:[20,23,26,29,32,35,38,41,44],
+    outlier:[20,23,26,29,32,35,38,41,100],
+    clusters:[16,19,22,25,76,79,82,85,88],
+    same:[50,50,50,50,50,50,50,50,50]
+  };
+  document.querySelectorAll('[data-preset]').forEach(function(b){
+    b.addEventListener('click',function(){
+      var k=b.getAttribute('data-preset');
+      if(k==='random'){ data=[]; for(var i=0;i<9;i++) data.push(Math.round(Math.random()*100)); }
+      else data=presets[k].slice();
+      draw();
+    });
+  });
+  draw();
+})();
+
+// ================= WIDGET 2: calculation practice =================
+(function(){
+  var cur=null, streak=0;
+  var elData=document.getElementById('cpData'), elNote=document.getElementById('cpNote'),
+      elWorked=document.getElementById('cpWorked');
+  var boxes={mean:document.getElementById('cpMean'),median:document.getElementById('cpMedian'),
+             mode:document.getElementById('cpMode'),range:document.getElementById('cpRange')};
+
+  function gen(){
+    for(var t=0;t<4000;t++){
+      var n=[5,6,7,8][Math.floor(Math.random()*4)];
+      var a=[]; for(var i=0;i<n;i++) a.push(4+Math.floor(Math.random()*36));
+      var style=Math.random();
+      if(style<0.55){ var j=Math.floor(Math.random()*n), k=(j+1+Math.floor(Math.random()*(n-1)))%n; a[k]=a[j]; }
+      var s=a.reduce(function(x,y){return x+y;},0);
+      var rem=s%n;
+      if(rem!==0){ var idx=Math.floor(Math.random()*n); var nv=a[idx]+(n-rem); if(nv>45) continue; a[idx]=nv; }
+      var srt=a.slice().sort(function(x,y){return x-y;});
+      var m=mean(a), md=median(a), mo=modes(a);
+      if(Math.abs(m-Math.round(m))>1e-9) continue;
+      if(Math.abs(md-Math.round(md))>1e-9) continue;
+      if(mo.length>1) continue;
+      if(new Set(a).size<3) continue;
+      return {sorted:srt,mean:Math.round(m),median:Math.round(md),mode:mo.length?mo[0]:null,
+              range:srt[srt.length-1]-srt[0],n:n};
+    }
+    return {sorted:[12,15,15,18,22,27,31],mean:20,median:18,mode:15,range:19,n:7};
+  }
+  function show(){
+    cur=gen();
+    elData.textContent=cur.sorted.join(', ');
+    Object.keys(boxes).forEach(function(k){ boxes[k].value=''; boxes[k].className=''; });
+    elWorked.classList.remove('open');
+    elNote.textContent='Fill in all four boxes, then press Check.'+(streak?'  Current streak: '+streak:'');
+  }
+  function modeMatches(v){
+    var s=String(v||'').trim().toLowerCase();
+    if(cur.mode===null) return s==='none'||s==='no mode'||s==='n'||s==='-'||s==='';
+    return s===String(cur.mode);
+  }
+  function numMatches(v,target){
+    var s=String(v||'').trim();
+    if(s==='') return false;
+    return Math.abs(parseFloat(s)-target)<1e-9;
+  }
+  function worked(){
+    var s=cur.sorted, sum=s.reduce(function(x,y){return x+y;},0);
+    var lines=[];
+    lines.push('MEAN    Add all '+cur.n+': '+s.join(' + ')+' = '+sum);
+    lines.push('        Divide by '+cur.n+': '+sum+' / '+cur.n+' = '+cur.mean);
+    if(cur.n%2===1){
+      lines.push('MEDIAN  In order already. '+cur.n+' scores, so the middle is number '+((cur.n+1)/2)+': '+cur.median);
+    } else {
+      var h=cur.n/2;
+      lines.push('MEDIAN  '+cur.n+' scores, so average the middle two: ('+s[h-1]+' + '+s[h]+') / 2 = '+cur.median);
+    }
+    lines.push(cur.mode===null ? 'MODE    No value repeats, so there is no mode.'
+                               : 'MODE    '+cur.mode+' appears more than once, everything else once: '+cur.mode);
+    lines.push('RANGE   Highest minus lowest: '+s[s.length-1]+' - '+s[0]+' = '+cur.range);
+    return lines.join('\n');
+  }
+  document.getElementById('cpCheck').addEventListener('click',function(){
+    var res={mean:numMatches(boxes.mean.value,cur.mean),
+             median:numMatches(boxes.median.value,cur.median),
+             mode:modeMatches(boxes.mode.value),
+             range:numMatches(boxes.range.value,cur.range)};
+    var wrong=[];
+    Object.keys(res).forEach(function(k){
+      boxes[k].className=res[k]?'ok':'bad';
+      if(!res[k]) wrong.push(k);
+    });
+    if(!wrong.length){
+      streak++;
+      elNote.textContent='All four correct. Streak: '+streak+'. Press New data set to keep going.';
+    } else {
+      streak=0;
+      elNote.textContent='Check again: '+wrong.join(', ')+'. Your answers are still in the boxes. Press Show me how if you want the steps.';
+    }
+  });
+  document.getElementById('cpHow').addEventListener('click',function(){
+    elWorked.textContent=worked();
+    elWorked.classList.toggle('open');
+  });
+  document.getElementById('cpNew').addEventListener('click',show);
+  show();
+})();
+
+</script>
+
+</body>
+</html>
