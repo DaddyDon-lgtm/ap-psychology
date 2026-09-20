@@ -44,17 +44,34 @@ search engines only read `robots.txt` at a domain root, so on a project site lik
 
 If you later decide you want the site discoverable, delete that meta tag line from each page.
 
+## Look and feel
+
+The site is set as a document rather than an app: Source Serif 4 headings, Source Sans 3
+body text, a narrow reading column, hairline rules instead of boxes, and no card shadows.
+Interactive widgets and wide tables break out past the text column on a large screen so the
+charts stay big, and every page prints cleanly to A4 with the navigation stripped out.
+
+Fonts are served from `assets/fonts/` rather than from Google Fonts. That is deliberate: a
+school network that blocks external hosts would otherwise strip the typography off every
+page. Nothing on this site loads from a CDN.
+
 ## Structure
 
 ```
 index.html            course home, unit cards
-assets/site.css       all styling for the site
+assets/site.css       styling for the home and unit landing pages
+assets/fonts/         self-hosted woff2 files (Source Serif 4, Source Sans 3)
+assets/img/           images and figures
 unit-0/index.html     unit landing page
 unit-0/research-methods.html
+unit-0/describing-data.html, normal-curve.html,
+       correlation-and-regression.html, significance-and-effect-size.html
 unit-1/ ... unit-5/   same pattern
 .nojekyll             tells GitHub Pages to serve files as-is
 ```
 
 Resource pages such as `research-methods.html` are self-contained and carry their own styles, so
 they do not depend on `assets/site.css`. That is deliberate: it means you can also hand one of them
-out as a standalone file or upload it to Canvas without anything breaking.
+out as a standalone file or upload it to Canvas without anything breaking. The one thing that does
+not survive that trip is the fonts, since they live in `assets/fonts/`; the pages fall back to
+Georgia and a system sans and stay perfectly readable.
