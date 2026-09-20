@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Research Methods in AP Psychology</title>
+<style>
+  :root {
+    --navy: #1f3864;
+    --navy-light: #2e4f8f;
+    --gold: #bf8f00;
+    --gold-soft: #fff2cc;
+    --red: #9c2a2a;
+    --red-soft: #fce8e8;
+    --green: #1e6b45;
+    --green-soft: #e6f4ec;
+    --grey: #f2f2f2;
+    --border: #d4d8e0;
+    --text: #1c1c1c;
+    --muted: #5a6070;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--text);
+    background: #fafbfc;
+  }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 0 20px 80px; }
+
+  /* Header */
+  header {
+    background: var(--navy);
+    color: #fff;
+    padding: 34px 20px 30px;
+    margin-bottom: 0;
+  }
+  header .inner { max-width: 980px; margin: 0 auto; }
+  header h1 { margin: 0 0 6px; font-size: 29px; line-height: 1.25; }
+  header .sub { font-size: 17px; opacity: .9; margin: 0; }
+  header .meta { font-size: 14px; opacity: .75; margin: 14px 0 0; }
+
+  /* Nav */
+  nav {
+    background: #fff;
+    border-bottom: 2px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    box-shadow: 0 1px 4px rgba(0,0,0,.06);
+  }
+  nav ul {
+    max-width: 980px; margin: 0 auto; padding: 0 20px;
+    list-style: none; display: flex; flex-wrap: wrap; gap: 4px;
+  }
+  nav a {
+    display: block; padding: 11px 12px; font-size: 14.5px; font-weight: 600;
+    color: var(--navy); text-decoration: none; border-bottom: 3px solid transparent;
+  }
+  nav a:hover { border-bottom-color: var(--gold); background: #f7f9fc; }
+
+  h2 {
+    font-size: 23px; color: var(--navy); margin: 48px 0 4px;
+    padding-bottom: 8px; border-bottom: 3px solid var(--navy);
+    scroll-margin-top: 120px;
+  }
+  h2 .num {
+    display: inline-block; background: var(--navy); color: #fff;
+    width: 30px; height: 30px; line-height: 30px; text-align: center;
+    border-radius: 50%; font-size: 16px; margin-right: 10px; vertical-align: 2px;
+  }
+  h3 { font-size: 19px; color: var(--navy); margin: 30px 0 8px; }
+  h4 { font-size: 16px; margin: 20px 0 6px; }
+  p { margin: 10px 0; }
+  ul, ol { margin: 10px 0; padding-left: 26px; }
+  li { margin: 5px 0; }
+  code {
+    background: var(--grey); padding: 1px 6px; border-radius: 3px;
+    font-family: Consolas, Monaco, monospace; font-size: .92em;
+  }
+
+  /* Callout boxes */
+  .box { border-radius: 6px; padding: 16px 20px; margin: 22px 0; border-left: 6px solid; }
+  .box p:first-child { margin-top: 0; }
+  .box p:last-child { margin-bottom: 0; }
+  .box .label {
+    display: block; font-size: 13px; font-weight: 700; letter-spacing: .06em;
+    text-transform: uppercase; margin-bottom: 6px;
+  }
+  .box.key { background: var(--gold-soft); border-color: var(--gold); }
+  .box.key .label { color: #8a6800; }
+  .box.warn { background: var(--red-soft); border-color: var(--red); }
+  .box.warn .label { color: var(--red); }
+  .box.good { background: var(--green-soft); border-color: var(--green); }
+  .box.good .label { color: var(--green); }
+  .box.note { background: #eef2f9; border-color: var(--navy-light); }
+  .box.note .label { color: var(--navy); }
+
+  /* Tables */
+  table { border-collapse: collapse; width: 100%; margin: 20px 0; font-size: 16px; }
+  caption {
+    caption-side: top; text-align: left; font-weight: 600;
+    color: var(--muted); font-size: 14.5px; padding-bottom: 6px;
+  }
+  th, td { border: 1px solid var(--border); padding: 9px 12px; text-align: left; vertical-align: top; }
+  thead th { background: var(--navy); color: #fff; font-weight: 600; }
+  tbody tr:nth-child(even) { background: var(--grey); }
+  td.center, th.center { text-align: center; }
+  .yes { color: var(--green); font-weight: 700; }
+  .no { color: var(--red); font-weight: 700; }
+
+  /* Two-column split */
+  .split { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin: 22px 0; }
+  .panel { border: 2px solid var(--border); border-radius: 6px; padding: 16px 18px; background: #fff; }
+  .panel h4 { margin-top: 0; font-size: 17px; }
+  .panel.is-method { border-color: var(--green); }
+  .panel.is-method h4 { color: var(--green); }
+  .panel.is-tool { border-color: var(--gold); }
+  .panel.is-tool h4 { color: #8a6800; }
+  .panel ul { padding-left: 20px; margin-bottom: 0; }
+
+  /* Decision tree */
+  .tree { margin: 26px 0; }
+  .step {
+    display: grid; grid-template-columns: 44px 1fr; gap: 14px;
+    border: 2px solid var(--border); border-radius: 6px;
+    background: #fff; padding: 14px 16px; margin-bottom: 10px;
+  }
+  .step .n {
+    background: var(--navy-light); color: #fff; border-radius: 50%;
+    width: 34px; height: 34px; line-height: 34px; text-align: center;
+    font-weight: 700; font-size: 16px;
+  }
+  .step .q { font-weight: 600; font-size: 17px; margin: 4px 0 8px; }
+  .step .out {
+    font-size: 15.5px; background: var(--green-soft); border-left: 4px solid var(--green);
+    padding: 7px 12px; border-radius: 0 4px 4px 0; margin: 6px 0 0;
+  }
+  .step .out strong { color: var(--green); }
+  .step .nope {
+    font-size: 15px; color: var(--muted); margin: 8px 0 0; font-style: italic;
+  }
+  .arrow { text-align: center; color: var(--border); font-size: 22px; line-height: 1; margin: -4px 0 6px; }
+
+  /* Method cards */
+  .card {
+    border: 2px solid var(--border); border-radius: 6px; background: #fff;
+    margin: 20px 0; overflow: hidden;
+  }
+  .card > .head {
+    background: var(--navy); color: #fff; padding: 11px 18px;
+    display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap;
+  }
+  .card > .head .name { font-size: 18.5px; font-weight: 700; }
+  .card > .head .tag {
+    font-size: 12.5px; text-transform: uppercase; letter-spacing: .07em;
+    background: rgba(255,255,255,.18); padding: 3px 9px; border-radius: 10px; white-space: nowrap;
+  }
+  .card.exp > .head { background: var(--green); }
+  .card > .body { padding: 14px 18px 18px; }
+  .card dl { margin: 0; }
+  .card dt {
+    font-weight: 700; font-size: 13px; letter-spacing: .05em; text-transform: uppercase;
+    color: var(--muted); margin-top: 14px;
+  }
+  .card dt:first-child { margin-top: 0; }
+  .card dd { margin: 3px 0 0; }
+  .card dd ul { margin: 3px 0 0; }
+  .claim-yes { color: var(--green); font-weight: 600; }
+  .claim-no { color: var(--red); font-weight: 600; }
+  .signals { font-style: italic; color: var(--navy-light); }
+
+  /* Practice questions */
+  .controls { margin: 18px 0 24px; display: flex; gap: 10px; flex-wrap: wrap; }
+  button {
+    font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer;
+    border-radius: 5px; padding: 9px 16px; border: 2px solid var(--navy);
+    background: #fff; color: var(--navy); transition: background .15s;
+  }
+  button:hover { background: var(--navy); color: #fff; }
+  button.primary { background: var(--navy); color: #fff; }
+  button.primary:hover { background: var(--navy-light); }
+
+  .q-item {
+    border: 2px solid var(--border); border-radius: 6px; background: #fff;
+    margin: 16px 0; padding: 16px 18px;
+  }
+  .q-item .qnum {
+    display: inline-block; background: var(--navy); color: #fff; font-size: 13.5px;
+    font-weight: 700; padding: 2px 10px; border-radius: 10px; margin-bottom: 8px;
+  }
+  .q-item .stem { margin: 6px 0 10px; }
+  .q-item .ask { font-weight: 600; margin: 10px 0; }
+  .q-item ol.choices { list-style: upper-alpha; padding-left: 26px; margin: 10px 0 14px; }
+  .q-item ol.choices li { margin: 4px 0; }
+  .reveal {
+    display: none; border-top: 2px dashed var(--border); margin-top: 12px; padding-top: 12px;
+  }
+  .reveal.open { display: block; }
+  .reveal .ans {
+    font-weight: 700; color: var(--green); font-size: 17px; margin: 0 0 8px;
+  }
+  .reveal .why { margin: 8px 0 0; }
+  .reveal .why-not { margin: 10px 0 0; font-size: 15.5px; }
+  .reveal .why-not li { color: var(--muted); }
+  .reveal .why-not li strong { color: var(--text); }
+  .toggle {
+    font-size: 14.5px; padding: 7px 14px; border-width: 2px;
+  }
+
+  /* Quick drill */
+  .drill { border: 2px solid var(--border); border-radius: 6px; background: #fff; padding: 4px 18px 14px; }
+  .drill-row {
+    display: grid; grid-template-columns: 1fr auto; gap: 14px; align-items: center;
+    padding: 12px 0; border-bottom: 1px solid var(--border);
+  }
+  .drill-row:last-child { border-bottom: none; }
+  .drill-row .stem { font-size: 16px; }
+  .drill-row .ans-slot {
+    min-width: 210px; text-align: right; font-weight: 700; color: var(--green);
+    font-size: 15.5px; cursor: pointer; user-select: none; border-radius: 4px; padding: 2px 6px;
+  }
+  .drill-row .ans-slot:hover { background: var(--grey); }
+  .drill-row .ans-slot:focus-visible { outline: 3px solid var(--navy-light); outline-offset: 2px; }
+  .drill-row .ans-slot .ph {
+    display: none; color: var(--muted); font-weight: 600; font-size: 14px;
+    letter-spacing: .04em; text-transform: uppercase;
+  }
+  .drill-row .ans-slot.hidden-ans .ph { display: inline; }
+  .drill-row .ans-slot.hidden-ans .txt { display: none; }
+
+  footer {
+    margin-top: 60px; padding: 22px 0 0; border-top: 2px solid var(--border);
+    font-size: 15px; color: var(--muted);
+  }
+
+  @media (max-width: 720px) {
+    body { font-size: 16px; }
+    .split { grid-template-columns: 1fr; }
+    header h1 { font-size: 24px; }
+    .drill-row { grid-template-columns: 1fr; }
+    .drill-row .ans-slot { text-align: left; min-width: 0; }
+    nav a { padding: 9px 8px; font-size: 13.5px; }
+  }
+
+  @media print {
+    body { background: #fff; font-size: 11.5pt; }
+    nav, .controls, .toggle { display: none !important; }
+    header { background: #fff !important; color: var(--navy) !important; padding: 0 0 12px; }
+    header .inner { padding: 0; }
+    .reveal { display: block !important; }
+    body > div:first-of-type { display: none !important; }
+    .drill-row .ans-slot .txt { display: inline !important; }
+    .drill-row .ans-slot .ph { display: none !important; }
+    .card, .q-item, .panel, .step, .drill { break-inside: avoid; page-break-inside: avoid; }
+    h2 { break-after: avoid; }
+    @page { size: A4; margin: 15mm; }
+  }
+</style>
+</head>
+<body>
+<div style="background:#ffffff;border-bottom:1px solid #d9dde4;font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;font-size:14.5px;">
+  <div style="max-width:980px;margin:0 auto;padding:10px 20px;">
+    <a href="../index.html" style="color:#1f3864;text-decoration:none;font-weight:600;">AP Psychology</a>
+    <span style="color:#d9dde4;margin:0 8px;">&rsaquo;</span>
+    <a href="index.html" style="color:#1f3864;text-decoration:none;font-weight:600;">Unit 0</a>
+    <span style="color:#d9dde4;margin:0 8px;">&rsaquo;</span>
+    <span style="color:#5a6070;">Research Methods</span>
+  </div>
+</div>
+
+
+<header>
+  <div class="inner">
+    <h1>Research Methods in AP Psychology</h1>
+    <p class="sub">The six methods you must know, and how to identify each one on the exam</p>
+    <p class="meta">AP Psychology &bull; Unit 0: Science Practices &bull; CED Topics 0.2 to 0.4, Science Practice 2</p>
+  </div>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#start">Start Here</a></li>
+    <li><a href="#trap">The Survey Trap</a></li>
+    <li><a href="#tree">Decision Tree</a></li>
+    <li><a href="#cards">The Six Methods</a></li>
+    <li><a href="#designs">Study Designs</a></li>
+    <li><a href="#signals">Signal Words</a></li>
+    <li><a href="#drill">Quick Drill</a></li>
+    <li><a href="#practice">Practice Questions</a></li>
+    <li><a href="#traps">Common Traps</a></li>
+  </ul>
+</nav>
+
+<div class="wrap">
+
+<!-- ============ START HERE ============ -->
+<h2 id="start"><span class="num">1</span>Start Here: The Whole Picture on One Page</h2>
+
+<p>The AP Psychology course recognizes <strong>six research methods</strong>. That is the entire list. Every study you read about in this course, on a quiz, or on the AP exam uses one of them.</p>
+
+<div class="box key">
+  <span class="label">The complete list</span>
+  <p><strong>Experimental method</strong> (one method): the researcher manipulates an independent variable and randomly assigns participants to groups.</p>
+  <p><strong>Non-experimental methods</strong> (five methods): case study, correlational study, naturalistic observation, laboratory observation, meta-analysis.</p>
+  <p>Science Practice 2.A on the AP exam asks you to do exactly one thing with this list: decide whether a study is experimental or non-experimental, and if it is non-experimental, name which one it is.</p>
+</div>
+
+<p>Everything else you have heard about research is either a <em>study design</em> (a variation on how a method is arranged, such as longitudinal or within-subjects) or a <em>data collection tool</em> (how the researcher actually gathered the numbers or words). Those are covered further down, and confusing them with methods is the single most common mistake students make on this topic.</p>
+
+<table>
+  <caption>What each method can and cannot claim</caption>
+  <thead>
+    <tr>
+      <th>Method</th>
+      <th class="center">Manipulates a variable?</th>
+      <th class="center">Random assignment?</th>
+      <th class="center">Can show cause and effect?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Experiment</strong></td>
+      <td class="center"><span class="yes">Yes</span></td>
+      <td class="center"><span class="yes">Yes</span></td>
+      <td class="center"><span class="yes">Yes</span></td>
+    </tr>
+    <tr>
+      <td><strong>Correlational study</strong></td>
+      <td class="center"><span class="no">No</span></td>
+      <td class="center"><span class="no">No</span></td>
+      <td class="center"><span class="no">No</span></td>
+    </tr>
+    <tr>
+      <td><strong>Case study</strong></td>
+      <td class="center"><span class="no">No</span></td>
+      <td class="center"><span class="no">No</span></td>
+      <td class="center"><span class="no">No</span></td>
+    </tr>
+    <tr>
+      <td><strong>Naturalistic observation</strong></td>
+      <td class="center"><span class="no">No</span></td>
+      <td class="center"><span class="no">No</span></td>
+      <td class="center"><span class="no">No</span></td>
+    </tr>
+    <tr>
+      <td><strong>Laboratory observation</strong></td>
+      <td class="center"><span class="no">No</span> (setting is controlled, variables are not manipulated)</td>
+      <td class="center"><span class="no">No</span></td>
+      <td class="center"><span class="no">No</span></td>
+    </tr>
+    <tr>
+      <td><strong>Meta-analysis</strong></td>
+      <td class="center"><span class="no">No</span> (analyzes studies that already exist)</td>
+      <td class="center"><span class="no">No</span></td>
+      <td class="center">Only as strongly as the studies inside it</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="box note">
+  <span class="label">Why this table matters</span>
+  <p>Notice that five of the six methods cannot establish causation. If a question describes anything other than an experiment and then offers you an answer choice containing the words <em>causes</em>, <em>leads to</em>, <em>improves</em>, or <em>reduces</em>, that choice is almost always wrong. Read the method first, then read the answer choices with that limit in mind.</p>
+</div>
+
+<!-- ============ SURVEY TRAP ============ -->
+<h2 id="trap"><span class="num">2</span>The Survey Trap: Method Versus Data Collection</h2>
+
+<p>This is the section to read twice.</p>
+
+<div class="box warn">
+  <span class="label">A survey is not a research method</span>
+  <p>A survey is a <strong>data collection method</strong>. It describes how a researcher got information out of participants, not how the study was designed. The same is true of interviews, questionnaires, and Likert scales.</p>
+  <p>If a question asks "which research method did the researcher use?" the answer is never "survey." Keep reading the stem until you find out what the researcher <em>did</em> with the survey data.</p>
+</div>
+
+<p>Here is the reason the distinction exists. A survey can appear inside almost any method:</p>
+
+<ul>
+  <li>A researcher surveys 2,000 people about sleep and stress, then reports the relationship as <code>r = -.43</code>. The method is a <strong>correlational study</strong>. The survey was the tool.</li>
+  <li>A researcher randomly assigns participants to a quiet room or a noisy room, then has each one complete a 20-item anxiety questionnaire. The method is an <strong>experiment</strong>. The questionnaire was the tool.</li>
+  <li>A researcher interviews one patient with a rare memory disorder over three years. The method is a <strong>case study</strong>. The interview was the tool.</li>
+</ul>
+
+<p>In all three studies the researcher asked people questions. In all three the method is different. That is why "survey" cannot be an answer to a question about method.</p>
+
+<div class="split">
+  <div class="panel is-method">
+    <h4>Research methods (the design)</h4>
+    <p style="margin-top:0"><em>The plan for how the study is structured and what conclusions it will support.</em></p>
+    <ul>
+      <li>Experiment</li>
+      <li>Correlational study</li>
+      <li>Case study</li>
+      <li>Naturalistic observation</li>
+      <li>Laboratory observation</li>
+      <li>Meta-analysis</li>
+    </ul>
+  </div>
+  <div class="panel is-tool">
+    <h4>Data collection methods (the tools)</h4>
+    <p style="margin-top:0"><em>The instruments used to gather the actual data, usable inside more than one design.</em></p>
+    <ul>
+      <li>Survey and questionnaire</li>
+      <li>Structured interview</li>
+      <li>Likert scale rating</li>
+      <li>Behavioral observation and coding</li>
+      <li>Physiological measures (heart rate, fMRI, skin conductance)</li>
+      <li>Standardized tests and reaction time tasks</li>
+      <li>Archival records</li>
+    </ul>
+  </div>
+</div>
+
+<div class="box key">
+  <span class="label">One way to remember it</span>
+  <p>The research method is the blueprint. The data collection method is the tool. A hammer is not a floor plan, and a survey is not a research design. Both a house and a garden shed can be built with a hammer, and both a correlational study and an experiment can be built with a survey.</p>
+</div>
+
+<h3>Quantitative and qualitative measures</h3>
+
+<p>The CED also asks you to identify whether the measurement instrument was qualitative or quantitative. This is another property of the <em>tool</em>, not the method.</p>
+
+<ul>
+  <li><strong>Quantitative measures</strong> produce numbers you can average and analyze: Likert scales, test scores, reaction times, counts of a behavior per hour.</li>
+  <li><strong>Qualitative measures</strong> produce descriptive, non-numerical data: structured interview transcripts, open-ended responses, observation field notes.</li>
+</ul>
+
+<p>An experiment can use a qualitative measure, and a case study can use a quantitative one. Neither type is inherently better. They answer different questions: quantitative data tells you how much, and qualitative data tells you what it is like.</p>
+
+<!-- ============ DECISION TREE ============ -->
+<h2 id="tree"><span class="num">3</span>The Decision Tree: How to Identify Any Method in Five Questions</h2>
+
+<p>Work through these in order. Stop at the first question you can answer yes to.</p>
+
+<div class="tree">
+
+  <div class="step">
+    <div class="n">1</div>
+    <div>
+      <p class="q">Did the researcher <em>do something to</em> the participants, creating <em>two or more conditions to compare</em>?</p>
+      <p>Look for a variable the researcher controlled (gave a drug, changed the lighting, showed one video instead of another) and at least two conditions built from it. Then check how participants met those conditions, because there are two legitimate ways:</p>
+      <p class="out"><strong>Different people in each condition, assigned by chance: Experiment (between-subjects).</strong> The familiar version. One group gets the treatment, another group is the control.</p>
+      <p class="out"><strong>The same people in every condition, in a counterbalanced or randomized order: Experiment (within-subjects).</strong> Still an experiment. Each participant serves as their own control.</p>
+      <p class="nope">No manipulated variable at all, or only one condition that everyone experienced identically? It is not an experiment. Continue to question 2.</p>
+    </div>
+  </div>
+
+  <div class="arrow">&#9660;</div>
+
+  <div class="step">
+    <div class="n">2</div>
+    <div>
+      <p class="q">Is the researcher measuring two variables that <em>already exist</em> to see how they relate?</p>
+      <p>Nobody was assigned to anything. The researcher measured two things as they naturally occur and reported how they move together. Watch for a correlation coefficient, a scatterplot, or wording like "related to," "associated with," or "predicted."</p>
+      <p class="out"><strong>Yes: Correlational study.</strong> It can show a relationship and make predictions. It can never establish which variable caused the other.</p>
+      <p class="nope">No relationship between two measured variables? Continue to question 3.</p>
+    </div>
+  </div>
+
+  <div class="arrow">&#9660;</div>
+
+  <div class="step">
+    <div class="n">3</div>
+    <div>
+      <p class="q">Is the study about <em>one individual or one small group</em>, studied in depth?</p>
+      <p>Look for a single patient, one unusual person, one family, or one organization, usually studied over a long time and in great detail. Often the person has a rare condition or an experience that could not be created ethically.</p>
+      <p class="out"><strong>Yes: Case study.</strong> Extraordinary depth, zero generalizability. One person is never a representative sample.</p>
+      <p class="nope">More than a few participants? Continue to question 4.</p>
+    </div>
+  </div>
+
+  <div class="arrow">&#9660;</div>
+
+  <div class="step">
+    <div class="n">4</div>
+    <div>
+      <p class="q">Is the researcher <em>watching and recording behavior without interfering</em>?</p>
+      <p>The researcher changes nothing and assigns nobody to anything. They watch, and they write down what happens. If yes, ask one more question: <strong>where</strong> is the behavior happening?</p>
+      <p class="out"><strong>In a real-world setting the researcher did not arrange: Naturalistic observation.</strong> Classrooms, playgrounds, shopping malls, jungles, social media feeds. High real-world validity, no control over other variables, and results may not generalize past that setting.</p>
+      <p class="out"><strong>In a setting the researcher built and controls: Laboratory observation.</strong> A one-way mirror room, an observation suite, a controlled testing space. More precision and cleaner measurement, but people behave differently when they know they are being studied.</p>
+      <p class="nope">Not observing live behavior at all? Continue to question 5.</p>
+    </div>
+  </div>
+
+  <div class="arrow">&#9660;</div>
+
+  <div class="step">
+    <div class="n">5</div>
+    <div>
+      <p class="q">Is the researcher combining the results of <em>many studies that already exist</em>?</p>
+      <p>No new participants were tested. The researcher gathered published studies on a question and statistically pooled their results, usually reporting an overall effect size.</p>
+      <p class="out"><strong>Yes: Meta-analysis.</strong> Enormous statistical power because it draws on thousands of participants, but it inherits every flaw of the studies it includes.</p>
+      <p class="nope">If you answered no to all five, reread the stem. You are probably looking at a data collection detail (a survey, an interview, a rating scale) and mistaking it for the design.</p>
+    </div>
+  </div>
+
+</div>
+
+<div class="box note">
+  <span class="label">Shortcut for the exam</span>
+  <p>Question 1 does almost all the work. Scan for the phrase "randomly assigned." If it is there, the study is an experiment and you are done. If it is absent, ask one follow-up before moving on: <em>did every participant complete more than one condition?</em> If they did, it is still an experiment, just a within-subjects one. Only when there is no manipulated variable at all are you choosing among the five non-experimental methods, and none of those can support a causal claim.</p>
+</div>
+
+<!-- ============ METHOD CARDS ============ -->
+<h2 id="cards"><span class="num">4</span>The Six Methods in Detail</h2>
+
+<div class="card exp">
+  <div class="head"><span class="name">1. Experimental Method</span><span class="tag">Experimental</span></div>
+  <div class="body">
+    <dl>
+      <dt>What it is</dt>
+      <dd>The researcher manipulates one or more independent variables, randomly assigns participants to conditions, controls other variables, and measures the effect on a dependent variable.</dd>
+
+      <dt>The two non-negotiable features</dt>
+      <dd>
+        <ul>
+          <li><strong>Manipulation of an independent variable:</strong> the researcher decides what each condition involves.</li>
+          <li><strong>Chance controls who experiences what:</strong> in most experiments this means random assignment to groups, so confounding variables spread evenly across them. In a within-subjects experiment, where everyone completes every condition, chance controls the <em>order</em> of conditions instead. Either way the researcher is not letting participants choose.</li>
+        </ul>
+      </dd>
+
+      <dt>What it can claim</dt>
+      <dd><span class="claim-yes">Cause and effect.</span> This is the only method that can.</dd>
+
+      <dt>What it cannot claim</dt>
+      <dd><span class="claim-no">That the finding holds outside the study.</span> A tightly controlled lab experiment may not reflect real-world behavior, and a non-representative sample limits generalization.</dd>
+
+      <dt>Parts to identify in the stem</dt>
+      <dd>Independent variable, dependent variable, experimental and control conditions, confounding variables, operational definitions, placebo, single-blind or double-blind procedure, and whether the design is between-subjects or within-subjects.</dd>
+
+      <dt>Signal phrases</dt>
+      <dd class="signals">randomly assigned, assigned to one of two conditions, participants in the treatment group received, the researcher varied, control group, placebo, double-blind</dd>
+
+      <dt>Watch out</dt>
+      <dd><strong>Random assignment is not random sampling.</strong> Random <em>sampling</em> decides who gets into the study at all and affects generalizability. Random <em>assignment</em> decides which group a participant lands in and is what makes an experiment an experiment. A study can have one without the other.</dd>
+    </dl>
+  </div>
+</div>
+
+<div class="card">
+  <div class="head"><span class="name">2. Correlational Study</span><span class="tag">Non-experimental</span></div>
+  <div class="body">
+    <dl>
+      <dt>What it is</dt>
+      <dd>The researcher measures two variables as they already exist and reports the direction and strength of their relationship, usually with a correlation coefficient (r) ranging from -1.00 to +1.00.</dd>
+
+      <dt>Reading the coefficient</dt>
+      <dd>The <strong>sign</strong> gives direction (positive means the variables rise and fall together, negative means one rises as the other falls). The <strong>absolute value</strong> gives strength. So <code>r = -.85</code> is a stronger relationship than <code>r = +.40</code>.</dd>
+
+      <dt>What it can claim</dt>
+      <dd><span class="claim-yes">That two variables are related, and that one predicts the other.</span> Prediction is allowed. Causation is not.</dd>
+
+      <dt>What it cannot claim</dt>
+      <dd>
+        <span class="claim-no">Causation, for two specific reasons:</span>
+        <ul>
+          <li><strong>The directionality problem:</strong> even if A and B are genuinely related, the correlation cannot tell you which one came first. Does stress cause poor sleep, or does poor sleep cause stress?</li>
+          <li><strong>The third-variable problem:</strong> an unmeasured variable may be causing both. Ice cream sales and drowning rates rise together because both are caused by hot weather.</li>
+        </ul>
+      </dd>
+
+      <dt>Signal phrases</dt>
+      <dd class="signals">related to, associated with, linked to, r = , scatterplot, as one increased the other decreased, predicted, no variables were manipulated</dd>
+
+      <dt>Watch out</dt>
+      <dd>A very strong correlation is still not causal evidence. <code>r = +.92</code> proves nothing about cause. Also watch for <strong>illusory correlation</strong> (seeing a relationship that does not exist) and <strong>regression toward the mean</strong> (extreme scores drifting back to average on their own, which gets mistaken for a treatment working).</dd>
+    </dl>
+  </div>
+</div>
+
+<div class="card">
+  <div class="head"><span class="name">3. Case Study</span><span class="tag">Non-experimental</span></div>
+  <div class="body">
+    <dl>
+      <dt>What it is</dt>
+      <dd>An in-depth investigation of a single individual or a very small group, often over a long period, in the hope of revealing principles that apply more broadly.</dd>
+
+      <dt>When researchers use it</dt>
+      <dd>When the case is rare, extreme, or impossible to create ethically. You cannot randomly assign someone to have a metal rod driven through their frontal lobe, so Phineas Gage taught us about the frontal lobe as a case study. H.M., who lost the ability to form new long-term memories after surgery, opened decades of memory research the same way.</dd>
+
+      <dt>What it can claim</dt>
+      <dd><span class="claim-yes">Rich, detailed description of this case, and a hypothesis worth testing later.</span></dd>
+
+      <dt>What it cannot claim</dt>
+      <dd><span class="claim-no">Anything about people in general.</span> A sample of one cannot be representative. This is the limitation the AP exam tests almost every time a case study appears.</dd>
+
+      <dt>Signal phrases</dt>
+      <dd class="signals">a single patient, one individual, followed one participant, in-depth analysis of one, a rare condition, the researcher documented his case over several years</dd>
+
+      <dt>Watch out</dt>
+      <dd>A case study can be very persuasive because it comes with a story. Vividness is not evidence. If an answer choice generalizes from one case to a population, it is wrong.</dd>
+    </dl>
+  </div>
+</div>
+
+<div class="card">
+  <div class="head"><span class="name">4. Naturalistic Observation</span><span class="tag">Non-experimental</span></div>
+  <div class="body">
+    <dl>
+      <dt>What it is</dt>
+      <dd>Watching and recording behavior in its real-world setting without intervening in any way. The researcher manipulates nothing and gives no instructions.</dd>
+
+      <dt>Examples</dt>
+      <dd>Jane Goodall documenting chimpanzee social behavior in the wild. Researchers coding aggressive and cooperative interactions on a school playground. Analysts studying emotional language patterns across millions of public social media posts.</dd>
+
+      <dt>What it can claim</dt>
+      <dd><span class="claim-yes">That this is how the behavior actually occurs in real life.</span> High ecological validity is the whole point.</dd>
+
+      <dt>What it cannot claim</dt>
+      <dd><span class="claim-no">Causation, and often not generalization either.</span> No variables are controlled, so any number of factors could explain what was seen, and a single setting may not represent others.</dd>
+
+      <dt>Signal phrases</dt>
+      <dd class="signals">observed without intervening, recorded behavior in a natural setting, did not interact with participants, hidden camera, field notes, in their natural habitat</dd>
+
+      <dt>Watch out</dt>
+      <dd>The presence of an observer can change the behavior being observed, which is why researchers stay concealed or blend in. Also note that recording behavior carefully and systematically does not make a study an experiment. Without manipulation and assignment, it stays observational no matter how precise the measurement.</dd>
+    </dl>
+  </div>
+</div>
+
+<div class="card">
+  <div class="head"><span class="name">5. Laboratory Observation</span><span class="tag">Non-experimental</span></div>
+  <div class="body">
+    <dl>
+      <dt>What it is</dt>
+      <dd>Watching and recording behavior in a setting the researcher arranged and controls. The researcher still manipulates no variables and assigns nobody to a condition. Only the environment is controlled, not the behavior.</dd>
+
+      <dt>How it differs from naturalistic observation</dt>
+      <dd>Same activity, different setting. Naturalistic observation takes the researcher to where the behavior already happens. Laboratory observation brings the behavior into a space built for watching it: a playroom with a one-way mirror, a testing suite with cameras, a room wired for physiological recording.</dd>
+
+      <dt>How it differs from an experiment</dt>
+      <dd>This is the distinction the exam tests. A controlled setting is not the same as a manipulated variable. If the researcher arranged the room but gave every participant the same experience and did not sort anyone into groups, it is laboratory observation. The moment there is an independent variable and random assignment, it becomes an experiment.</dd>
+
+      <dt>Examples</dt>
+      <dd>Ainsworth's "strange situation," in which infants are observed in a lab playroom as a stranger enters and the caregiver leaves. Recording how people behave when they believe they are alone versus watched. Measuring heart rate and skin conductance while participants complete a stressful task.</dd>
+
+      <dt>What it can claim</dt>
+      <dd><span class="claim-yes">Precise, well-measured description of behavior.</span> Controlled lighting, controlled timing, and recording equipment make the data far cleaner than field notes taken on a park bench.</dd>
+
+      <dt>What it cannot claim</dt>
+      <dd><span class="claim-no">Causation, and often not real-world validity either.</span> No variable was manipulated, so nothing causal follows. And people who know they are in a study behave differently than they do in daily life, which limits how far the findings generalize.</dd>
+
+      <dt>Signal phrases</dt>
+      <dd class="signals">observed through a one-way mirror, brought participants into the lab and recorded, in a controlled observation room, researchers watched from an adjacent room, every participant experienced the same setup</dd>
+
+      <dt>Watch out</dt>
+      <dd>The word "laboratory" pulls students toward answering "experiment." Ignore the setting and check for the two experimental features instead. No manipulated variable and no assignment to groups means no experiment, wherever the study took place.</dd>
+    </dl>
+  </div>
+</div>
+
+<div class="card">
+  <div class="head"><span class="name">6. Meta-Analysis</span><span class="tag">Non-experimental</span></div>
+  <div class="body">
+    <dl>
+      <dt>What it is</dt>
+      <dd>A statistical analysis that combines the results of many existing studies on the same question to estimate an overall effect. No new participants are tested. The studies themselves are the data.</dd>
+
+      <dt>What it reports</dt>
+      <dd>Usually an overall <strong>effect size</strong>, which indicates the strength of a relationship or the size of a difference between conditions. Roughly: 0.2 and below is small, 0.3 to 0.7 is medium, 0.8 and above is large.</dd>
+
+      <dt>What it can claim</dt>
+      <dd><span class="claim-yes">A far more reliable estimate than any single study, because it draws on many samples.</span> It is excellent evidence that an effect is real and worth taking seriously.</dd>
+
+      <dt>What it cannot claim</dt>
+      <dd><span class="claim-no">More than the studies it contains.</span> If the underlying studies were correlational, the meta-analysis cannot establish causation. If they were biased or poorly designed, the pooled result is biased too.</dd>
+
+      <dt>Signal phrases</dt>
+      <dd class="signals">combined the results of 47 studies, across the existing literature, pooled data from previous research, an overall effect size of, reviewed and statistically analyzed prior findings</dd>
+
+      <dt>Watch out</dt>
+      <dd>Students often confuse meta-analysis with a large survey or with a literature review. A survey collects new data from people. A literature review summarizes studies in words. A meta-analysis combines their results statistically.</dd>
+    </dl>
+  </div>
+</div>
+
+<!-- ============ DESIGNS ============ -->
+<h2 id="designs"><span class="num">5</span>Study Designs: Variations You Also Need to Know</h2>
+
+<p>These are not additional methods. They are arrangements <em>within</em> a method, and the AP exam expects you to name them.</p>
+
+<h3>Developmental designs (you will meet these again in Unit 3)</h3>
+
+<table>
+  <thead>
+    <tr><th>Design</th><th>What the researcher does</th><th>Strength</th><th>Limitation</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Longitudinal</strong></td>
+      <td>Studies the <em>same</em> participants repeatedly over a long period.</td>
+      <td>Shows genuine change within individuals over time.</td>
+      <td>Slow, expensive, and participants drop out (attrition).</td>
+    </tr>
+    <tr>
+      <td><strong>Cross-sectional</strong></td>
+      <td>Compares <em>different</em> age groups at one point in time.</td>
+      <td>Fast and cheap, results available immediately.</td>
+      <td>Cohort effects: the age groups grew up in different eras, so differences may not be developmental at all.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Experimental designs: between-subjects and within-subjects</h3>
+
+<p>Every experiment has to answer one structural question: does each condition get its own participants, or does everybody do everything? Both answers produce a real experiment, and both can establish causation. They just guard against different problems.</p>
+
+<table>
+  <thead>
+    <tr><th style="width:18%">Design</th><th>What the researcher does</th><th>Main advantage</th><th>Main problem and the fix</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Between-subjects</strong></td>
+      <td>Different participants in each condition. Group A reads in silence, Group B reads with music, and the two groups are compared.</td>
+      <td>No practice, fatigue, or carryover, because each person does the task only once.</td>
+      <td><strong>Participant variables:</strong> the groups might differ from the start. <em>The fix is random assignment</em>, which spreads those differences evenly.</td>
+    </tr>
+    <tr>
+      <td><strong>Within-subjects</strong><br>(repeated measures)</td>
+      <td>The same participants complete every condition. Each person reads one passage in silence and one with music, and is compared to themselves.</td>
+      <td>Participant variables are eliminated, since each person is their own control. Needs fewer participants for the same power.</td>
+      <td><strong>Order effects:</strong> practice, fatigue, and carryover from doing the first condition. <em>The fix is counterbalancing</em>, varying the order across participants so order effects spread evenly instead of piling up in one direction.</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="box warn">
+  <span class="label">Why within-subjects confuses people</span>
+  <p>A within-subjects experiment has <strong>no experimental group and no control group</strong>, because there is only one set of participants. Students see this, conclude that nobody was randomly assigned to a group, and decide the study cannot be an experiment. That reasoning is wrong.</p>
+  <p>The manipulated independent variable is what makes a study an experiment. In a within-subjects design chance still does its job, it just governs the <em>order</em> of conditions rather than membership in a group. The phrase to look for is "the order of conditions was counterbalanced" or "participants completed the two tasks in a randomized order." That is the within-subjects equivalent of random assignment.</p>
+  <p>So the control condition is a <em>condition</em>, not a group of people. If the stem says every participant completed both a quiet trial and a noisy trial, the quiet trial is the control condition and the same people provide both sets of scores.</p>
+</div>
+
+<h4>Three studies that all involve "the same people," and how to tell them apart</h4>
+
+<table>
+  <caption>The tell is not whether the same people appear more than once. It is whether the researcher manipulated anything.</caption>
+  <thead>
+    <tr><th style="width:36%">The stem says</th><th>It is</th><th>Why</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Each participant solved puzzles once after 8 hours of sleep and once after 4 hours, with the order counterbalanced.</td>
+      <td><strong>Within-subjects experiment</strong></td>
+      <td>Sleep amount was assigned by the researcher, so it is a manipulated independent variable. Causation is on the table.</td>
+    </tr>
+    <tr>
+      <td>The same 300 children were tested for vocabulary at ages 4, 8, and 12.</td>
+      <td><strong>Longitudinal design</strong> (non-experimental)</td>
+      <td>Nothing was manipulated. The researcher waited for age to happen and measured what changed. No causal claim is available.</td>
+    </tr>
+    <tr>
+      <td>Participants rated their mood, then rated it again a month later after choosing whether to join a gym.</td>
+      <td><strong>Correlational study</strong></td>
+      <td>Participants selected their own condition, so the researcher manipulated nothing and self-selection is a built-in confound.</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="box note">
+  <span class="label">When researchers cannot use within-subjects</span>
+  <p>Some manipulations cannot be undone. If you teach participants a memory strategy, they cannot un-learn it for the next condition, so carryover would ruin the comparison. The same applies to studies involving deception, insight, or lasting learning. In those cases the design has to be between-subjects, and you may see an exam question ask you to explain exactly that.</p>
+</div>
+
+<h3>Sampling terms (these affect generalizability, not the method label)</h3>
+
+<ul>
+  <li><strong>Population:</strong> the entire group the researcher wants to draw conclusions about.</li>
+  <li><strong>Sample:</strong> the subset actually studied.</li>
+  <li><strong>Random sampling:</strong> every member of the population has an equal chance of being selected. This is what produces a representative sample.</li>
+  <li><strong>Convenience sampling:</strong> the researcher uses whoever is easy to reach, such as students in one psychology class.</li>
+  <li><strong>Representative sample:</strong> the sample reflects the characteristics of the population.</li>
+  <li><strong>Sampling bias:</strong> the selection process systematically leaves part of the population out, which undermines generalization.</li>
+</ul>
+
+<div class="box warn">
+  <span class="label">The distinction the exam loves</span>
+  <p><strong>Random sampling</strong> is about who gets into the study and determines whether the results generalize. <strong>Random assignment</strong> is about which group participants land in and determines whether the study can show causation. A badly sampled experiment can still prove cause and effect for its participants. A beautifully sampled correlational study still cannot.</p>
+</div>
+
+<!-- ============ SIGNALS ============ -->
+<h2 id="signals"><span class="num">6</span>Signal Words: What to Look For in the Stem</h2>
+
+<table>
+  <caption>Scan the question stem for these before looking at the answer choices.</caption>
+  <thead>
+    <tr><th style="width:44%">If the stem says something like this</th><th>The method or design is</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>randomly assigned, assigned to one of three conditions, the treatment group received, control group, placebo, double-blind, the researcher varied the amount of</td><td><strong>Experiment</strong></td></tr>
+    <tr><td>related to, associated with, linked to, r = +.62, scatterplot, students who did more of X tended to, predicted, as one increased the other decreased</td><td><strong>Correlational study</strong></td></tr>
+    <tr><td>a single patient, one individual, one family, an in-depth investigation of, a man who suffered a rare injury, documented over seven years</td><td><strong>Case study</strong></td></tr>
+    <tr><td>observed without intervening, recorded behavior in a public park, did not interact with the children, field notes, in the wild, hidden camera</td><td><strong>Naturalistic observation</strong></td></tr>
+    <tr><td>through a one-way mirror, brought into the lab and observed, in a controlled observation room, watched from an adjacent room, all participants experienced the same setup</td><td><strong>Laboratory observation</strong> (only if nothing was manipulated and nobody was assigned to groups)</td></tr>
+    <tr><td>combined the results of 38 previous studies, pooled findings, overall effect size, synthesized the existing research</td><td><strong>Meta-analysis</strong></td></tr>
+    <tr><td>each participant completed both conditions, the order was counterbalanced, participants served as their own control, presented in a randomized order</td><td><strong>Within-subjects experiment</strong> (repeated measures). Still an experiment.</td></tr>
+    <tr><td>followed the same participants from age 5 to age 25, tested the same group again ten years later, with nothing manipulated</td><td><strong>Longitudinal design</strong> (non-experimental)</td></tr>
+    <tr><td>compared 20-year-olds, 40-year-olds, and 60-year-olds in the same month</td><td><strong>Cross-sectional design</strong></td></tr>
+    <tr><td>surveyed, questionnaire, Likert scale, self-reported, interviewed participants, asked them to rate</td><td><span class="no">Not a method.</span> This is data collection. Keep reading the stem to find the design.</td></tr>
+  </tbody>
+</table>
+
+<!-- ============ DRILL ============ -->
+<h2 id="drill"><span class="num">7</span>Quick Drill: Name the Method</h2>
+
+<p>Work down the list and name the method before you check. Click any answer on the right to reveal just that one, or use the button to reveal them all. Each item should take about five seconds.</p>
+
+<div class="controls">
+  <button class="primary" id="drillBtn" type="button">Reveal all answers</button>
+</div>
+
+<div class="drill" id="drillBox">
+  <div class="drill-row"><span class="stem">1. Participants drew a slip of paper to decide whether they drank caffeinated or decaffeinated coffee, then took a reaction time test.</span><span class="ans-slot hidden-ans" role="button" tabindex="0"><span class="ph">Reveal</span><span class="txt">Experiment</span></span></div>
+  <div class="drill-row"><span class="stem">2. A researcher recorded how long shoppers lingered in a store aisle, standing unnoticed at the end of it.</span><span class="ans-slot hidden-ans" role="button" tabindex="0"><span class="ph">Reveal</span><span class="txt">Naturalistic observation</span></span></div>
+  <div class="drill-row"><span class="stem">3. A team measured hours of screen time and grade point average in 900 students and reported r = -.31.</span><span class="ans-slot hidden-ans" role="button" tabindex="0"><span class="ph">Reveal</span><span class="txt">Correlational study</span></span></div>
+  <div class="drill-row"><span class="stem">4. A psychologist published a detailed 40-page account of one woman who cannot recognize her own face in a mirror.</span><span class="ans-slot hidden-ans" role="button" tabindex="0"><span class="ph">Reveal</span><span class="txt">Case study</span></span></div>
+  <div class="drill-row"><span class="stem">5. Researchers gathered 52 published studies on exercise and depression and calculated an overall effect size of 0.6.</span><span class="ans-slot hidden-ans" role="button" tabindex="0"><span class="ph">Reveal</span><span class="txt">Meta-analysis</span></span></div>
+  <div class="drill-row"><span class="stem">6. Toddlers were brought into a university playroom one at a time and watched through a one-way mirror while a stranger entered. Every toddler experienced the same sequence.</span><span class="ans-slot hidden-ans" role="button" tabindex="0"><span class="ph">Reveal</span><span class="txt">Laboratory observation</span></span></div>
+  <div class="drill-row"><span class="stem">7. A researcher gave a 30-item questionnaire to participants after randomly assigning them to sleep either 5 or 8 hours.</span><span class="ans-slot hidden-ans" role="button" tabindex="0"><span class="ph">Reveal</span><span class="txt">Experiment (the questionnaire is the tool)</span></span></div>
+  <div class="drill-row"><span class="stem">8. The same 240 children were tested for vocabulary size at ages 3, 6, and 9.</span><span class="ans-slot hidden-ans" role="button" tabindex="0"><span class="ph">Reveal</span><span class="txt">Longitudinal design</span></span></div>
+  <div class="drill-row"><span class="stem">9. Every participant completed a typing test once in a warm room and once in a cold room, with half doing warm first and half doing cold first.</span><span class="ans-slot hidden-ans" role="button" tabindex="0"><span class="ph">Reveal</span><span class="txt">Within-subjects experiment</span></span></div>
+  <div class="drill-row"><span class="stem">10. A poll of 1,500 adults reported that 61% believe they are above-average drivers.</span><span class="ans-slot hidden-ans" role="button" tabindex="0"><span class="ph">Reveal</span><span class="txt">Survey used for description, not a research method on its own</span></span></div>
+</div>
+
+<!-- ============ PRACTICE ============ -->
+<h2 id="practice"><span class="num">8</span>Practice Questions</h2>
+
+<p>Answer each one before you reveal it. The explanations tell you why the correct answer works <em>and</em> why the tempting wrong answers fail, which is where most of the learning happens.</p>
+
+<div class="controls">
+  <button class="primary" type="button" onclick="setAll(true)">Show all answers</button>
+  <button type="button" onclick="setAll(false)">Hide all answers</button>
+</div>
+
+<div class="q-item">
+  <span class="qnum">Question 1</span>
+  <p class="stem">A researcher recruits 200 volunteers and flips a coin to determine whether each one receives a caffeine tablet or an identical-looking sugar tablet. Neither the participants nor the research assistants know which tablet was given. All participants then complete a memory test.</p>
+  <p class="ask">Which research method is this, and which feature makes it so?</p>
+  <ol class="choices">
+    <li>Correlational study, because caffeine intake and memory performance are being compared</li>
+    <li>Experiment, because participants were randomly assigned to conditions and the independent variable was manipulated</li>
+    <li>Naturalistic observation, because the researcher did not tell participants what they were taking</li>
+    <li>Case study, because a specific group of volunteers was studied closely</li>
+  </ol>
+  <button class="toggle" type="button" onclick="tog(this)">Show answer</button>
+  <div class="reveal">
+    <p class="ans">Answer: B</p>
+    <p class="why">The coin flip is random assignment and the tablet is a manipulated independent variable. Both features together define an experiment. The identical-looking sugar tablet is a placebo, and the fact that neither participants nor assistants knew the condition makes this a double-blind procedure, which controls for experimenter bias and the placebo effect.</p>
+    <ul class="why-not">
+      <li><strong>A is wrong:</strong> caffeine intake was not measured as it naturally occurred, it was assigned by the researcher. Once a variable is assigned rather than measured, the study is no longer correlational.</li>
+      <li><strong>C is wrong:</strong> naturalistic observation requires no intervention at all. Handing someone a tablet is an intervention.</li>
+      <li><strong>D is wrong:</strong> a case study examines one individual or a very small group in depth. Two hundred participants in assigned conditions is the opposite.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="q-item">
+  <span class="qnum">Question 2</span>
+  <p class="stem">A team of psychologists distributes an online questionnaire to 3,400 adults asking how many hours they sleep per night and how satisfied they are with their lives. They report a correlation of <code>r = +.38</code> between sleep hours and life satisfaction.</p>
+  <p class="ask">Which research method did the psychologists use?</p>
+  <ol class="choices">
+    <li>Survey method, because the data came from a questionnaire</li>
+    <li>Experiment, because two variables were measured in a large sample</li>
+    <li>Correlational study, because two existing variables were measured and their relationship reported</li>
+    <li>Meta-analysis, because data from thousands of people were combined</li>
+  </ol>
+  <button class="toggle" type="button" onclick="tog(this)">Show answer</button>
+  <div class="reveal">
+    <p class="ans">Answer: C</p>
+    <p class="why">Neither variable was manipulated and nobody was assigned to a group. The researchers measured sleep and life satisfaction as they already existed and reported how strongly they vary together. That is a correlational study.</p>
+    <ul class="why-not">
+      <li><strong>A is the trap:</strong> the questionnaire is a data collection method, not a research method. It tells you how the data was gathered, not how the study was designed. The same questionnaire could have been used inside an experiment.</li>
+      <li><strong>B is wrong:</strong> there is no manipulated independent variable and no random assignment, so it cannot be an experiment no matter how large the sample.</li>
+      <li><strong>D is wrong:</strong> a meta-analysis combines results from previously published <em>studies</em>, not responses from individual people. These researchers collected new data.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="q-item">
+  <span class="qnum">Question 3</span>
+  <p class="stem">A researcher randomly assigns high school students to study in either a silent room or a room with background music. After 30 minutes, every student completes a 20-item Likert-scale questionnaire rating how focused they felt, and then takes a comprehension quiz.</p>
+  <p class="ask">Which statement best describes this study?</p>
+  <ol class="choices">
+    <li>It is a survey study, because the main instrument was a questionnaire</li>
+    <li>It is a correlational study, because focus ratings and quiz scores can be compared</li>
+    <li>It is an experiment that uses a quantitative measurement instrument</li>
+    <li>It is a naturalistic observation conducted in a school setting</li>
+  </ol>
+  <button class="toggle" type="button" onclick="tog(this)">Show answer</button>
+  <div class="reveal">
+    <p class="ans">Answer: C</p>
+    <p class="why">Random assignment plus a manipulated independent variable (silence versus background music) makes this an experiment. The Likert questionnaire is the measurement instrument, and because it produces numerical ratings it is a quantitative measure. Method and measurement are two separate questions about the same study, and this answer gets both right.</p>
+    <ul class="why-not">
+      <li><strong>A is the trap:</strong> the presence of a questionnaire never determines the method. Look for manipulation and assignment first.</li>
+      <li><strong>B is wrong:</strong> you could calculate a correlation from this data, but the study itself was designed as an experiment. The design is set by what the researcher did, not by what statistics could be run afterward.</li>
+      <li><strong>D is wrong:</strong> the researcher assigned conditions and controlled the environment, which is intervention. Naturalistic observation requires none.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="q-item">
+  <span class="qnum">Question 4</span>
+  <p class="stem">Over four years, a neuropsychologist conducts weekly interviews and brain scans with a single patient who lost the ability to feel fear following damage to her amygdala. The resulting publication runs 60 pages and reshapes how researchers think about fear processing.</p>
+  <p class="ask">What is the greatest limitation of this method?</p>
+  <ol class="choices">
+    <li>The findings cannot be generalized to the wider population</li>
+    <li>The researcher could not measure any quantitative data</li>
+    <li>Interviews are an unreliable form of data collection</li>
+    <li>The absence of a correlation coefficient prevents any conclusion</li>
+  </ol>
+  <button class="toggle" type="button" onclick="tog(this)">Show answer</button>
+  <div class="reveal">
+    <p class="ans">Answer: A</p>
+    <p class="why">This is a case study, and its defining limitation is generalizability. One person is never a representative sample, so findings about this patient are a valuable hypothesis about human fear processing rather than an established fact about people in general. Note the flip side: case studies of rare conditions are often the only ethical way to learn something, since you cannot assign anyone to have amygdala damage.</p>
+    <ul class="why-not">
+      <li><strong>B is wrong:</strong> case studies can and do collect quantitative data. The brain scans here are quantitative. Method and measurement type are independent.</li>
+      <li><strong>C is too broad:</strong> interviews are a legitimate qualitative instrument. The problem is the sample size of one, not the tool.</li>
+      <li><strong>D is wrong:</strong> a correlation coefficient is irrelevant here. Nobody was measuring the relationship between two variables across a group.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="q-item">
+  <span class="qnum">Question 5</span>
+  <p class="stem">Researchers locate 64 published studies examining whether mindfulness training reduces test anxiety in adolescents. They statistically combine the results and report an overall effect size of 0.45.</p>
+  <p class="ask">Which research method is this, and what does the effect size indicate?</p>
+  <ol class="choices">
+    <li>Survey, and the effect size indicates how many students responded</li>
+    <li>Experiment, and the effect size proves mindfulness causes reduced anxiety</li>
+    <li>Meta-analysis, and the effect size indicates a medium-sized difference between conditions</li>
+    <li>Correlational study, and the effect size is equivalent to a correlation coefficient of 0.45</li>
+  </ol>
+  <button class="toggle" type="button" onclick="tog(this)">Show answer</button>
+  <div class="reveal">
+    <p class="ans">Answer: C</p>
+    <p class="why">Combining the results of studies that already exist is a meta-analysis. An effect size of 0.45 falls in the medium range (roughly 0.3 to 0.7), meaning the difference between the mindfulness and comparison conditions across all these studies was moderate in size.</p>
+    <ul class="why-not">
+      <li><strong>A is wrong:</strong> no new people were asked anything. The studies are the data.</li>
+      <li><strong>B is wrong on both counts:</strong> a meta-analysis is not itself an experiment, and effect size describes the magnitude of a difference, not whether it was caused. Whether causal language is justified depends on the design of the studies inside the analysis.</li>
+      <li><strong>D is wrong:</strong> effect size and correlation coefficient are different statistics. Effect size describes the size of a difference or relationship, while r describes the direction and strength of a relationship between two measured variables.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="q-item">
+  <span class="qnum">Question 6</span>
+  <p class="stem">Two researchers sit on a bench in a public playground for three weeks, recording how often children aged 4 to 6 share toys without being prompted. They never speak to the children or their caregivers, and the caregivers are unaware a study is taking place.</p>
+  <p class="ask">Which method is this, and what is a key limitation?</p>
+  <ol class="choices">
+    <li>Laboratory observation, because the researchers controlled the setting</li>
+    <li>Naturalistic observation, and the findings may not generalize beyond this playground</li>
+    <li>Experiment, because sharing behavior was measured systematically</li>
+    <li>Case study, because a small group of children was studied in depth</li>
+  </ol>
+  <button class="toggle" type="button" onclick="tog(this)">Show answer</button>
+  <div class="reveal">
+    <p class="ans">Answer: B</p>
+    <p class="why">Behavior is being recorded in its real setting with no intervention, which is naturalistic observation. Its strength is ecological validity: this is genuine playground behavior, not behavior produced for a researcher. Its limitation is that one playground in one neighborhood over three weeks may not reflect how children elsewhere behave, and no variables were controlled, so nothing causal can be concluded.</p>
+    <ul class="why-not">
+      <li><strong>A is wrong:</strong> a public playground is a natural setting, not a controlled one. Laboratory observation would mean bringing the children into a room the researchers arranged.</li>
+      <li><strong>C is wrong:</strong> careful measurement does not make a study an experiment. There is no manipulated variable and no assignment to groups.</li>
+      <li><strong>D is wrong:</strong> a case study goes deep on one individual or family. Counting a behavior across many children over three weeks is observation, not a case study.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="q-item">
+  <span class="qnum">Question 7</span>
+  <p class="stem">A developmental psychologist invites caregivers and their 14-month-olds to a university playroom she designed. One at a time, each child goes through the same sequence: the caregiver leaves, a stranger enters, and the caregiver returns. Trained coders watch through a one-way mirror and rate the child's distress and reunion behavior. No child receives a different sequence.</p>
+  <p class="ask">Which research method is this?</p>
+  <ol class="choices">
+    <li>Experiment, because the psychologist controlled the room and the sequence of events</li>
+    <li>Naturalistic observation, because the children were behaving spontaneously</li>
+    <li>Laboratory observation, because behavior was recorded in a controlled setting with no variable manipulated</li>
+    <li>Case study, because each child was examined individually and in detail</li>
+  </ol>
+  <button class="toggle" type="button" onclick="tog(this)">Show answer</button>
+  <div class="reveal">
+    <p class="ans">Answer: C</p>
+    <p class="why">The setting is controlled, but nothing was manipulated and nobody was sorted into groups. Every child got the identical sequence, so there is no independent variable and no experimental or control group. Recording behavior in a researcher-built setting without intervening is laboratory observation.</p>
+    <ul class="why-not">
+      <li><strong>A is the trap:</strong> controlling the <em>setting</em> is not the same as manipulating a <em>variable</em>. An experiment requires at least two conditions and a process for assigning participants to them. Because all children experienced the same sequence, there is nothing to compare.</li>
+      <li><strong>B is wrong:</strong> a university playroom the psychologist designed is not a natural setting. Naturalistic observation means going where the behavior already occurs.</li>
+      <li><strong>D is wrong:</strong> observing many children one at a time is not a case study. A case study goes deep on one individual over time, usually because that individual is rare or unique.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="q-item">
+  <span class="qnum">Question 8</span>
+  <p class="stem">A study reports a strong positive correlation between the number of hours teenagers spend on social media and their self-reported levels of loneliness (<code>r = +.71</code>). A news site publishes the headline "Social Media Makes Teens Lonely."</p>
+  <p class="ask">Which response best explains why the headline is not justified?</p>
+  <ol class="choices">
+    <li>The correlation is too weak to support any conclusion</li>
+    <li>The study should have used a larger sample</li>
+    <li>Loneliness may lead to more social media use, or a third variable may cause both</li>
+    <li>Self-reported data is always invalid and cannot be used in research</li>
+  </ol>
+  <button class="toggle" type="button" onclick="tog(this)">Show answer</button>
+  <div class="reveal">
+    <p class="ans">Answer: C</p>
+    <p class="why">This names both reasons a correlation cannot establish causation. The <strong>directionality problem</strong>: lonely teenagers may turn to social media for connection, which reverses the headline's claim. The <strong>third-variable problem</strong>: something unmeasured, such as sleep deprivation or social isolation, may be driving both variables at once. To support a causal claim you would need an experiment with random assignment.</p>
+    <ul class="why-not">
+      <li><strong>A is wrong:</strong> <code>r = +.71</code> is a strong correlation. Strength is not the issue. Even <code>r = +.99</code> would not establish causation, and this is the misconception the question is built to catch.</li>
+      <li><strong>B is wrong:</strong> sample size affects precision and generalizability, not whether a correlation can show causation. A correlational study with a million participants still cannot.</li>
+      <li><strong>D is wrong:</strong> self-report has real weaknesses (social desirability bias, faulty memory) but "always invalid" is far too strong, and it is not the reason the causal headline fails.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="q-item">
+  <span class="qnum">Question 9</span>
+  <p class="stem">A researcher studies whether background noise affects reading comprehension. All 60 participants read one passage in a silent room and a second, equally difficult passage in a room with cafe noise. Half are randomly chosen to do the silent passage first and half do the noisy passage first. Comprehension scores from the two conditions are compared.</p>
+  <p class="ask">Which statement about this study is accurate?</p>
+  <ol class="choices">
+    <li>It is a correlational study, because there is no control group to compare against</li>
+    <li>It is a within-subjects experiment, and splitting the order in half is counterbalancing</li>
+    <li>It is a longitudinal design, because the same participants were measured twice</li>
+    <li>It is not an experiment, because participants were not randomly assigned to groups</li>
+  </ol>
+  <button class="toggle" type="button" onclick="tog(this)">Show answer</button>
+  <div class="reveal">
+    <p class="ans">Answer: B</p>
+    <p class="why">The researcher manipulated an independent variable (silence versus cafe noise) and measured a dependent variable (comprehension score), which makes this an experiment. Because every participant completed both conditions, it is a within-subjects design, and each person serves as their own control. Splitting participants so half start with each condition is counterbalancing, which spreads order effects such as practice and fatigue evenly across the two conditions instead of letting them pile up on the second passage.</p>
+    <ul class="why-not">
+      <li><strong>A is wrong:</strong> the silent condition <em>is</em> the control. In a within-subjects design the control is a condition rather than a separate group of people, and nothing was merely measured as it already existed.</li>
+      <li><strong>C is wrong:</strong> longitudinal means measuring the same people repeatedly over months or years while nothing is manipulated. Here both measurements happen in one session and noise level was assigned by the researcher.</li>
+      <li><strong>D is the trap, and the reason this question exists:</strong> there are no groups to be assigned to, so the absence of group assignment proves nothing. The manipulated independent variable is what makes it an experiment, and chance still operates through the randomized order.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="q-item">
+  <span class="qnum">Question 10</span>
+  <p class="stem">Researchers want to know how vocabulary develops across childhood. Team A tests the same 300 children at ages 4, 8, and 12. Team B tests separate groups of 4-year-olds, 8-year-olds, and 12-year-olds during the same month.</p>
+  <p class="ask">Which statement correctly identifies the designs and one limitation?</p>
+  <ol class="choices">
+    <li>Team A used a cross-sectional design, which is vulnerable to attrition</li>
+    <li>Team A used a longitudinal design, which is vulnerable to participant dropout</li>
+    <li>Team B used a longitudinal design, which is vulnerable to cohort effects</li>
+    <li>Both teams used experiments, since age was the independent variable</li>
+  </ol>
+  <button class="toggle" type="button" onclick="tog(this)">Show answer</button>
+  <div class="reveal">
+    <p class="ans">Answer: B</p>
+    <p class="why">Team A follows the same participants over time, which is longitudinal, and its characteristic weakness is attrition: over eight years, some families move away or withdraw, and those who remain may differ systematically from those who left. Team B compares different age groups at one time, which is cross-sectional, and its characteristic weakness is cohort effects: the 12-year-olds grew up in a different era than the 4-year-olds, so differences between the groups may reflect their generation rather than development.</p>
+    <ul class="why-not">
+      <li><strong>A and C swap the labels.</strong> Same participants over time is longitudinal. Different groups at one time is cross-sectional.</li>
+      <li><strong>D is wrong:</strong> age cannot be manipulated or randomly assigned. Researchers can only measure it as it already exists, so neither study is an experiment.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="q-item">
+  <span class="qnum">Question 11</span>
+  <p class="stem">A researcher posts a survey link in an online gaming forum and receives 42,000 responses. Ninety-one percent of respondents report that video games improve their problem-solving ability. The researcher concludes that most people believe video games improve cognition.</p>
+  <p class="ask">What is the primary methodological problem?</p>
+  <ol class="choices">
+    <li>Sampling bias, because forum members are not representative of the general population</li>
+    <li>The sample was too small to support the conclusion</li>
+    <li>Random assignment was not used, so causation cannot be established</li>
+    <li>The researcher used a survey, which is never an acceptable research tool</li>
+  </ol>
+  <button class="toggle" type="button" onclick="tog(this)">Show answer</button>
+  <div class="reveal">
+    <p class="ans">Answer: A</p>
+    <p class="why">Recruiting from a gaming forum systematically excludes people who do not play video games and over-represents enthusiasts. The sample is not representative of "most people," so the conclusion does not generalize. Notice that self-report bias is also present, since people asked about their own hobby have reason to view it favorably.</p>
+    <ul class="why-not">
+      <li><strong>B is the classic mistake:</strong> bigger is not better if the sample is biased. Forty-two thousand biased responses are less trustworthy than 1,000 randomly sampled ones.</li>
+      <li><strong>C is true but not the problem here:</strong> the researcher's conclusion is about what people <em>believe</em>, which is a descriptive claim, not a causal one. The flaw is who was asked.</li>
+      <li><strong>D is wrong:</strong> surveys are perfectly acceptable for collecting self-report data. The problem is the sampling procedure, not the instrument.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="q-item">
+  <span class="qnum">Question 12</span>
+  <p class="stem">A school counselor notices that students who score unusually low on the first unit test tend to score higher on the second test. She concludes that her after-school tutoring program is effective.</p>
+  <p class="ask">Which concept most directly challenges her conclusion?</p>
+  <ol class="choices">
+    <li>Illusory correlation</li>
+    <li>Sampling bias</li>
+    <li>Regression toward the mean</li>
+    <li>The placebo effect</li>
+  </ol>
+  <button class="toggle" type="button" onclick="tog(this)">Show answer</button>
+  <div class="reveal">
+    <p class="ans">Answer: C</p>
+    <p class="why">Extreme scores tend to move back toward the average when measured again, partly because extremes are produced in part by chance (a bad night's sleep, an unlucky set of questions). Those low scorers were statistically likely to improve with no intervention at all. The fix is a control group of equally low scorers who did not receive tutoring, so the counselor can compare improvement against what would have happened anyway.</p>
+    <ul class="why-not">
+      <li><strong>A is close but not it:</strong> illusory correlation means perceiving a relationship where none exists. Here a real pattern exists (scores did rise), it is just being misattributed to the tutoring.</li>
+      <li><strong>B is wrong:</strong> sampling bias concerns how participants were selected into a study, which is not what is happening here.</li>
+      <li><strong>D is wrong:</strong> the placebo effect involves improvement from the expectation of treatment. The issue here is a statistical pattern that requires no expectation at all.</li>
+    </ul>
+  </div>
+</div>
+
+<h3>Short answer practice</h3>
+
+<p>Answer each in complete sentences. These resemble the reasoning the AP free-response questions require.</p>
+
+<ol>
+  <li>A researcher claims that a study using a survey of 5,000 participants proves that exercise reduces anxiety. Identify two problems with this claim: one about the method and one about the data collection tool.</li>
+  <li>Explain why a meta-analysis of correlational studies cannot establish causation, even though it may include data from 100,000 participants.</li>
+  <li>A study finds that students in schools with later start times have higher grades. Design an experiment that could test whether later start times actually cause higher grades. Identify your independent variable, dependent variable, experimental and control conditions, and how you would assign participants.</li>
+  <li>A researcher wants to test whether chewing gum improves performance on a memory task. Explain how she would run this as a between-subjects experiment and how she would run it as a within-subjects experiment. Identify the main threat to validity in each version and the technique that addresses it.</li>
+  <li>A researcher plans a within-subjects experiment in which participants first learn a mnemonic strategy and then complete a memory test both with and without using it. Explain why this particular manipulation creates a problem that counterbalancing cannot solve, and what design she should use instead.</li>
+</ol>
+
+<!-- ============ TRAPS ============ -->
+<h2 id="traps"><span class="num">9</span>Common Traps, Collected</h2>
+
+<ol>
+  <li><strong>Calling a survey a research method.</strong> It is a data collection method. Keep reading until you find the design.</li>
+  <li><strong>Confusing random sampling with random assignment.</strong> Sampling decides who is in the study and controls generalizability. Assignment decides which group they land in and is what makes an experiment able to show causation.</li>
+  <li><strong>Treating a strong correlation as proof of causation.</strong> The number's size is irrelevant. Only random assignment licenses a causal claim.</li>
+  <li><strong>Generalizing from a case study.</strong> One person is never a representative sample, no matter how compelling the story.</li>
+  <li><strong>Assuming a bigger sample is a better sample.</strong> A huge biased sample is worse than a modest random one.</li>
+  <li><strong>Mistaking regression toward the mean for a treatment effect.</strong> Whenever someone improves after hitting a low point, ask whether they would have improved anyway.</li>
+  <li><strong>Assuming a laboratory setting means an experiment.</strong> Laboratory observation is its own method. If nothing was manipulated and nobody was assigned to groups, a controlled room does not make it an experiment.</li>
+  <li><strong>Calling laboratory observation "naturalistic."</strong> The two differ only in setting: natural and unarranged versus built and controlled by the researcher.</li>
+  <li><strong>Deciding a within-subjects study is not an experiment.</strong> No separate groups does not mean no experiment. Look for the manipulated variable, then look for counterbalancing or randomized order as the sign that chance was still controlling things.</li>
+  <li><strong>Confusing within-subjects with longitudinal.</strong> Both measure the same people more than once. Only the within-subjects design manipulates something, which is why only it can show causation.</li>
+  <li><strong>Forgetting the order-effects question.</strong> Any time a stem describes participants completing multiple conditions, expect to be asked about order effects and counterbalancing.</li>
+  <li><strong>Treating age as an independent variable.</strong> Age cannot be assigned, so age-comparison studies are non-experimental by nature.</li>
+  <li><strong>Reading a meta-analysis as automatically strong evidence for causation.</strong> It is only as good as the studies inside it.</li>
+  <li><strong>Forgetting that qualitative data is legitimate.</strong> Structured interviews and field notes are real measurement instruments, and the exam expects you to recognize them as such.</li>
+</ol>
+
+<div class="box good">
+  <span class="label">Your two-second exam routine</span>
+  <p>Scan the stem for "randomly assigned." Found it: experiment, causation allowed. Missing: check whether every participant completed more than one condition, because that is a within-subjects experiment and causation is still allowed. Nothing manipulated at all: one of the five non-experimental methods, causation forbidden. Then use the decision tree to name which one. Ignore every mention of surveys, questionnaires, rating scales, and laboratory settings until you have settled the design.</p>
+</div>
+
+<footer>
+  <p>AP Psychology, Unit 0: Science Practices. Aligned to the 2024 Course and Exam Description, Science Practice 2 (Research Methods and Design) and Topics 0.2 to 0.4. Effect size and correlation conventions follow the CED.</p>
+  <p>Questions about anything on this page? Message me on Canvas or ask at the start of class.</p>
+</footer>
+
+</div>
+
+<script>
+  function tog(btn) {
+    var box = btn.nextElementSibling;
+    var open = box.classList.toggle('open');
+    btn.textContent = open ? 'Hide answer' : 'Show answer';
+  }
+  function setAll(open) {
+    document.querySelectorAll('.q-item').forEach(function (item) {
+      var box = item.querySelector('.reveal');
+      var btn = item.querySelector('.toggle');
+      if (!box || !btn) return;
+      box.classList.toggle('open', open);
+      btn.textContent = open ? 'Hide answer' : 'Show answer';
+    });
+  }
+  (function () {
+    var btn = document.getElementById('drillBtn');
+    var slots = document.querySelectorAll('#drillBox .ans-slot');
+    function sync() {
+      var anyHidden = Array.prototype.some.call(slots, function (s) {
+        return s.classList.contains('hidden-ans');
+      });
+      btn.textContent = anyHidden ? 'Reveal all answers' : 'Hide all answers';
+    }
+    btn.addEventListener('click', function () {
+      var anyHidden = Array.prototype.some.call(slots, function (s) {
+        return s.classList.contains('hidden-ans');
+      });
+      Array.prototype.forEach.call(slots, function (s) {
+        s.classList.toggle('hidden-ans', !anyHidden);
+      });
+      sync();
+    });
+    Array.prototype.forEach.call(slots, function (s) {
+      s.setAttribute('aria-label', 'Reveal the answer for this item');
+      s.addEventListener('click', function () {
+        s.classList.toggle('hidden-ans');
+        sync();
+      });
+      s.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          s.classList.toggle('hidden-ans');
+          sync();
+        }
+      });
+    });
+    sync();
+  })();
+</script>
+
+</body>
+</html>
