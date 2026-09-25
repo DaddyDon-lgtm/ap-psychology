@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>4.3B/C Group, Cultural, and Prosocial Behavior | AP Psychology</title>
+<style>@font-face{font-family:'APSerif';src:url('../assets/fonts/source-serif-4-latin-400-normal.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'APSerif';src:url('../assets/fonts/source-serif-4-latin-600-normal.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:'APSerif';src:url('../assets/fonts/source-serif-4-latin-700-normal.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'APSans';src:url('../assets/fonts/source-sans-3-latin-400-normal.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'APSans';src:url('../assets/fonts/source-sans-3-latin-400-italic.woff2') format('woff2');font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:'APSans';src:url('../assets/fonts/source-sans-3-latin-600-normal.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:'APSans';src:url('../assets/fonts/source-sans-3-latin-700-normal.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
+
+/* ---------------------------------------------------------------- base */
+:root{
+  --ink:#14293a; --ink-soft:#243c50; --accent:#0f5c5e; --accent-d:#0c4749;
+  --accent2:#a35617; --accent2-d:#8a4a13;
+  --soft:#eef4f4; --soft2:#fdf1e6;
+  --green:#1b6b48; --green-s:#edf5f0; --red:#9c2a2a; --red-s:#faeeee;
+  --line:#dfe4e8; --line-d:#c4ced6; --muted:#5d6b78; --faint:#6b7885; --bg:#fbfbf9; --surface:#ffffff;
+  --blue:#2f5d80;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:APSans,'Segoe UI',-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;font-size:18px;line-height:1.72;
+     color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}
+.wrap{max-width:740px;margin:0 auto;padding:0 24px 80px}
+
+/* ---------------------------------------------------------------- chrome */
+.crumbs{background:var(--surface);border-bottom:1px solid var(--line);font-size:14px}
+.crumbs .inner,.crumbs .wrap{max-width:740px;margin:0 auto;padding:12px 24px}
+.crumbs a{color:var(--accent);text-decoration:none;font-weight:600}
+.crumbs a:hover{text-decoration:underline}
+.crumbs .sep{color:var(--line-d);margin:0 9px}
+.crumbs .here{color:var(--muted)}
+
+header.top,.masthead{background:var(--surface);border-bottom:1px solid var(--line);
+     padding:44px 24px 38px;color:var(--ink)}
+header.top .inner,.masthead .wrap{max-width:740px;margin:0 auto;padding-bottom:0}
+header.top .kicker,header.top .meta,.masthead .course{font-size:12px;letter-spacing:.16em;
+     text-transform:uppercase;color:var(--accent2);font-weight:700;margin:0 0 14px;opacity:1}
+header.top h1,.masthead h1{font-family:APSerif,Georgia,'Times New Roman',serif;font-weight:700;font-size:42px;line-height:1.14;
+     margin:0;letter-spacing:-.015em;color:var(--ink)}
+header.top p.tag,header.top .sub,.masthead p.tag{margin:14px 0 0;font-size:19px;
+     color:var(--muted);line-height:1.55;opacity:1}
+header.top .meta{margin:18px 0 0;letter-spacing:.1em;color:var(--muted);font-size:11.5px}
+.masthead a{color:var(--accent)}
+
+/* Deliberately not sticky: this direction reads as a document, the breadcrumb
+   already says where you are, and a wrapped two-row bar would cover anchored
+   headings as you jump between sections. */
+nav.jump{background:var(--surface);border-bottom:1px solid var(--line)}
+nav.jump ul{max-width:940px;margin:0 auto;padding:0 24px;list-style:none;display:flex;flex-wrap:wrap;
+     gap:0 22px}
+nav.jump a{display:block;padding:13px 0;font-size:14.5px;color:var(--muted);text-decoration:none;
+     border-bottom:2px solid transparent;font-weight:600}
+nav.jump a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+
+main{padding:8px 0 0}
+
+/* ---------------------------------------------------------------- type */
+h2{font-family:APSerif,Georgia,'Times New Roman',serif;font-size:30px;font-weight:700;color:var(--ink);margin:54px 0 14px;
+   letter-spacing:-.01em;line-height:1.24;scroll-margin-top:24px}
+h2 .num{font-family:APSans,'Segoe UI',-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;display:inline-block;font-size:12px;font-weight:700;
+   letter-spacing:.14em;color:var(--accent2);vertical-align:.42em;margin-right:12px}
+h3{font-family:APSerif,Georgia,'Times New Roman',serif;font-size:22px;font-weight:600;margin:34px 0 10px;color:var(--ink)}
+h4{font-family:APSerif,Georgia,'Times New Roman',serif;font-size:18.5px;font-weight:600;margin:24px 0 7px;color:var(--ink)}
+p{margin:16px 0}
+ul,ol{margin:16px 0;padding-left:26px}
+li{margin:6px 0}
+.lede{font-size:19.5px;color:var(--muted);margin:22px 0 4px;line-height:1.6}
+code{background:var(--soft);padding:1px 6px;border-radius:3px;
+     font-family:Consolas,Monaco,monospace;font-size:.9em}
+em{font-style:italic}
+
+/* ---------------------------------------------------------------- boxes */
+.box,.note{border-radius:3px;padding:20px 24px;margin:28px 0;border-left:3px solid var(--accent2);
+     background:var(--soft2)}
+.box p:first-child,.note p:first-child{margin-top:0}
+.box p:last-child,.note p:last-child{margin-bottom:0}
+.box p,.note p{font-size:17.5px}
+.box .label,.note .label{display:block;font-size:11.5px;font-weight:700;letter-spacing:.14em;
+     text-transform:uppercase;color:var(--accent2);margin-bottom:9px}
+.box.key{background:var(--soft2);border-color:var(--accent2)}
+.box.key .label{color:var(--accent2)}
+.box.note{background:var(--soft);border-color:var(--accent)}
+.box.note .label{color:var(--accent)}
+.box.good{background:var(--green-s);border-color:var(--green)}
+.box.good .label{color:var(--green)}
+.box.warn{background:var(--red-s);border-color:var(--red)}
+.box.warn .label{color:var(--red)}
+.pending{background:var(--surface);border:1px dashed var(--line-d);border-radius:3px;
+     padding:30px 20px;text-align:center;color:var(--muted);margin:28px 0}
+.pending strong{display:block;color:var(--ink);margin-bottom:4px;font-size:17px}
+
+/* ---------------------------------------------------------------- table */
+table{border-collapse:collapse;width:100%;margin:30px 0;font-size:17px}
+th,td{border:0;border-bottom:1px solid var(--line);padding:14px 10px 14px 0;
+      text-align:left;vertical-align:top}
+th:last-child,td:last-child{padding-right:0}
+thead th{border-bottom:2px solid var(--ink);font-size:12.5px;letter-spacing:.09em;
+      text-transform:uppercase;color:var(--muted);font-weight:700;padding-bottom:10px}
+tbody tr:last-child td{border-bottom:1px solid var(--line)}
+caption{caption-side:top;text-align:left;font-size:13px;letter-spacing:.1em;text-transform:uppercase;
+      color:var(--muted);font-weight:700;padding-bottom:12px}
+td.center,th.center{text-align:center}
+.term{font-weight:700;color:var(--accent)}
+
+/* ---------------------------------------------------------------- cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1px;
+      background:var(--line);border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+      margin:26px 0}
+.grid .card{display:block;background:var(--surface);padding:24px 26px;text-decoration:none;
+      color:inherit;transition:background .15s}
+a.grid > .card:hover,.grid a.card:hover{background:#f6f9f9}
+.grid .card .kicker{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+      color:var(--accent2);margin:0 0 8px}
+.grid .card .title{font-family:APSerif,Georgia,'Times New Roman',serif;font-size:22px;font-weight:700;margin:0 0 8px;line-height:1.25}
+.grid .card .desc{font-size:16px;color:var(--muted);margin:0;line-height:1.55}
+/* A unit with nothing in it yet is muted by colour, not by opacity: fading the
+   whole tile would grey out its background and checkerboard the grid. */
+.grid .card.empty .kicker{color:var(--faint)}
+.grid .card.empty .title{color:var(--muted);font-weight:700}
+.grid .card.empty .desc{color:var(--faint)}
+
+.resource{display:flex;justify-content:space-between;align-items:center;gap:20px;
+      border:0;border-bottom:1px solid var(--line);padding:22px 0;margin:0;
+      text-decoration:none;color:inherit}
+.resource:first-of-type{border-top:1px solid var(--line)}
+a.resource:hover .title{color:var(--accent)}
+.resource .title{font-family:APSerif,Georgia,'Times New Roman',serif;font-weight:700;font-size:20px;margin:0 0 3px;
+      transition:color .12s}
+.resource .desc{font-size:16px;color:var(--muted);margin:0}
+.resource .go{color:var(--accent);font-weight:600;font-size:15px;white-space:nowrap}
+
+/* ---------------------------------------------------------------- widget */
+.widget{background:var(--surface);border:1px solid var(--line);border-radius:4px;
+        padding:26px 28px;margin:34px 0}
+.widget > h3{margin-top:0;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.widget .tryit{font-family:APSans,'Segoe UI',-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:.14em;
+        text-transform:uppercase;color:var(--accent2);background:none;padding:0}
+.widget svg{display:block;width:100%;height:auto;max-width:100%;touch-action:none}
+svg,canvas{display:block;max-width:100%}
+
+.ctrls{display:flex;flex-wrap:wrap;gap:24px;margin:22px 0 4px;align-items:flex-end}
+.ctrl{flex:1 1 220px;min-width:200px}
+.ctrl label{display:block;font-size:12px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;
+        color:var(--muted);margin-bottom:10px}
+.ctrl .val{color:var(--accent);font-size:15px;letter-spacing:0}
+input[type=range]{width:100%;accent-color:var(--accent);height:26px;cursor:pointer}
+
+.btnrow{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0 0}
+button{font-family:APSans,'Segoe UI',-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;font-size:14.5px;font-weight:600;cursor:pointer;border-radius:3px;
+       padding:10px 18px;border:1px solid var(--accent);background:var(--surface);
+       color:var(--accent);transition:background .12s,color .12s}
+button:hover{background:var(--accent);color:#fff}
+button.primary{background:var(--accent);color:#fff}
+button.primary:hover{background:var(--accent-d)}
+button:disabled{opacity:.45;cursor:not-allowed}
+button:focus-visible,input:focus-visible,a:focus-visible,textarea:focus-visible,
+[tabindex]:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+.readouts{display:flex;flex-wrap:wrap;gap:34px;margin:30px 0 0}
+.ro{flex:0 1 auto;min-width:110px}
+.ro .k{display:block;font-size:11.5px;font-weight:700;letter-spacing:.12em;
+       text-transform:uppercase;color:var(--muted)}
+.ro .v{display:block;font-family:APSerif,Georgia,'Times New Roman',serif;font-size:30px;font-weight:700;color:var(--ink);line-height:1.3}
+.ro.hl .v{color:var(--green)}
+.commentary{margin:20px 0 0;padding:0 0 0 18px;border-left:3px solid var(--line-d);
+       font-size:16.5px;color:var(--ink-soft)}
+.toggle-line{display:flex;align-items:center;gap:10px;margin:18px 0 0;font-size:15.5px}
+.toggle-line input{width:18px;height:18px;accent-color:var(--accent);cursor:pointer}
+.field{display:inline-flex;flex-direction:column;gap:5px;margin:0 14px 12px 0}
+.field label{font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.field input{font-family:inherit;font-size:17px;padding:8px 10px;width:110px;
+       border:1px solid var(--line-d);border-radius:3px;background:var(--surface);color:var(--ink)}
+.field input.ok{border-color:var(--green);background:var(--green-s)}
+.field input.bad{border-color:var(--accent2);background:var(--soft2)}
+.worked{display:none;margin:18px 0 0;padding:16px 18px;background:#f7f9f9;border-radius:3px;
+       font-family:Consolas,Monaco,monospace;font-size:14.5px;line-height:1.75;white-space:pre-wrap}
+.worked.open{display:block}
+.dataset{font-family:APSerif,Georgia,'Times New Roman',serif;font-size:25px;font-weight:700;letter-spacing:.03em;color:var(--ink);
+       background:#f7f9f9;border-radius:3px;padding:15px 18px;margin:8px 0 18px;text-align:center}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------------------------------------------------------------- practice */
+.q-item{border:0;border-top:1px solid var(--line);border-radius:0;background:none;
+        margin:0;padding:26px 0}
+.q-item .qnum{display:inline-block;background:none;color:var(--accent2);font-size:11.5px;
+        font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:0;margin-bottom:10px}
+.q-item .stem{margin:6px 0 12px}
+.q-item .ask{font-weight:600;margin:12px 0}
+.q-item ol.choices{list-style:upper-alpha;padding-left:26px;margin:12px 0 16px}
+.q-item ol.choices li{margin:6px 0}
+.reveal{display:none;border-top:1px dashed var(--line-d);margin-top:16px;padding-top:16px}
+.reveal.open{display:block}
+.reveal .ans{font-weight:700;color:var(--green);font-size:17px;margin:0 0 10px}
+.reveal .why{margin:10px 0 0}
+.reveal .why-not{margin:12px 0 0;font-size:16px}
+.reveal .why-not li{color:var(--muted)}
+.reveal .why-not li strong{color:var(--ink)}
+.toggle{font-size:14.5px}
+
+/* ---------------------------------------------------------------- misc */
+details{border:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+        border-radius:0;padding:16px 0;margin:26px 0;background:none}
+details summary{font-family:APSerif,Georgia,'Times New Roman',serif;font-weight:600;color:var(--accent);cursor:pointer;font-size:18px}
+details[open] summary{margin-bottom:10px}
+
+figure{margin:32px 0}
+figure img{max-width:100%;height:auto;display:block;border:1px solid var(--line);
+      border-radius:3px;background:#fff}
+figure.plain img{border:none}
+figcaption{font-size:15px;color:var(--muted);margin-top:10px;line-height:1.55}
+figure.half{max-width:460px}
+figure.center{margin-left:auto;margin-right:auto}
+.hero{margin:0 0 30px;border-radius:3px;overflow:hidden;border:1px solid var(--line)}
+.hero img{display:block;width:100%;height:auto}
+.img-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin:28px 0}
+.img-row figure{margin:0}
+
+footer{margin-top:62px;padding:26px 0 0;border-top:1px solid var(--line);font-size:15px;color:var(--muted)}
+footer p{margin:5px 0}
+body > footer{background:var(--surface);margin-top:62px;padding:28px 0 34px}
+body > footer .wrap{padding-bottom:0}
+
+.pagenav{display:flex;flex-wrap:wrap;gap:1px;margin:34px 0 0;background:var(--line);
+       border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.pagenav a{flex:1 1 220px;border:0;border-radius:0;padding:18px 20px;text-decoration:none;
+       color:inherit;background:var(--surface)}
+.pagenav a:hover{background:#f6f9f9}
+.pagenav .dir{display:block;font-size:11px;font-weight:700;letter-spacing:.14em;
+       text-transform:uppercase;color:var(--accent2)}
+.pagenav .t{display:block;font-family:APSerif,Georgia,'Times New Roman',serif;font-weight:700;color:var(--ink);margin-top:4px}
+
+/* Any table too wide for the screen scrolls sideways instead of pushing the page. */
+.tscroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:30px 0}
+.tscroll > table{margin-top:0;margin-bottom:0;min-width:520px}
+
+/* ------------------------------------------------- wide break-out on big screens */
+@media (min-width:1040px){
+  .widget,.tscroll:has(table.wide),.grid,.bleed{width:940px;margin-left:-100px;max-width:none}
+  table.wide{min-width:0}
+}
+
+/* ---------------------------------------------------------------- responsive */
+@media (max-width:760px){
+  body{font-size:17px;line-height:1.65}
+  header.top,.masthead{padding:32px 20px 28px}
+  header.top h1,.masthead h1{font-size:30px}
+  header.top p.tag,header.top .sub,.masthead p.tag{font-size:17.5px}
+  h2{font-size:25px;margin:42px 0 12px}
+  h3{font-size:20px}
+  .wrap,.crumbs .inner,.crumbs .wrap,header.top .inner,.masthead .wrap,nav.jump ul{padding-left:20px;padding-right:20px}
+  nav.jump ul{gap:0 16px}
+  nav.jump a{padding:12px 0;font-size:13.5px}
+  .widget{padding:20px 18px}
+  .ro .v{font-size:24px}
+  .readouts{gap:20px}
+  .resource{flex-direction:column;align-items:flex-start;gap:8px}
+  table{font-size:16px}
+}
+
+/* ---------------------------------------------------------------- print */
+@media print{
+  body{background:#fff;font-size:11pt;color:#000}
+  nav.jump,.crumbs,button,.btnrow,input[type=range],.pagenav,.toggle{display:none!important}
+  header.top,.masthead{background:#fff!important;color:var(--ink)!important;padding:0 0 14px;border:0}
+  .widget,.tscroll,.bleed{width:auto!important;margin-left:0!important;overflow:visible!important}
+  .tscroll > table,table.wide{min-width:0!important}
+  .reveal{display:block!important}
+  .worked{display:block!important}
+  .widget,.q-item,.box,.note,table,details,figure,.hero,.img-row,.grid .card{
+     break-inside:avoid;page-break-inside:avoid}
+  h2,h3{break-after:avoid}
+  @page{size:A4;margin:15mm}
+}
+
+/* ------------------------------------------------ research methods page extras */
+.yes{color:var(--green);font-weight:700}
+.no{color:var(--red);font-weight:700}
+.claim-yes{color:var(--green);font-weight:600}
+.claim-no{color:var(--red);font-weight:600}
+.signals{font-style:italic;color:var(--blue)}
+
+.split{display:grid;grid-template-columns:1fr 1fr;gap:1px;margin:30px 0;background:var(--line);
+       border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.panel{background:var(--surface);padding:22px 24px}
+.panel h4{margin-top:0;font-size:18px}
+.panel.is-method h4{color:var(--green)}
+.panel.is-tool h4{color:var(--accent2)}
+.panel ul{padding-left:20px;margin-bottom:0}
+
+.tree{margin:32px 0}
+.step{display:grid;grid-template-columns:34px 1fr;gap:18px;background:var(--surface);
+      border:1px solid var(--line);border-radius:4px;padding:20px 22px;margin-bottom:12px}
+.step .n{font-family:APSerif,Georgia,serif;color:var(--accent2);font-weight:700;font-size:24px;
+      line-height:1.2;text-align:center}
+.step .q{font-weight:600;font-size:18px;margin:0 0 10px}
+.step .out{font-size:16px;padding:0 0 0 16px;border-left:3px solid var(--green);margin:10px 0 0;
+      color:var(--ink-soft)}
+.step .out strong{color:var(--green)}
+.step .nope{font-size:16px;color:var(--muted);margin:10px 0 0;font-style:italic}
+.arrow{text-align:center;color:var(--line-d);font-size:20px;line-height:1;margin:-4px 0 8px}
+
+.mcard{border:1px solid var(--line);border-radius:4px;background:var(--surface);margin:28px 0;
+      overflow:hidden}
+.mcard > .head{border-bottom:2px solid var(--ink);padding:16px 24px;display:flex;
+      justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;background:var(--surface)}
+.mcard > .head .name{font-family:APSerif,Georgia,serif;font-size:23px;font-weight:700;color:var(--ink)}
+.mcard > .head .tag{font-size:11px;text-transform:uppercase;letter-spacing:.14em;font-weight:700;
+      color:var(--accent2);white-space:nowrap}
+.mcard.exp > .head{border-bottom-color:var(--green)}
+.mcard.exp > .head .name{color:var(--green)}
+.mcard.exp > .head .tag{color:var(--green)}
+.mcard > .body{padding:20px 24px 24px}
+.mcard dl{margin:0}
+.mcard dt{font-weight:700;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;
+      color:var(--accent2);margin-top:20px}
+.mcard dt:first-child{margin-top:0}
+.mcard dd{margin:6px 0 0}
+.mcard dd ul{margin:6px 0 0}
+
+.drill{border:0}
+.drill-row{display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;
+      padding:16px 0;border-bottom:1px solid var(--line)}
+.drill-row:first-child{border-top:1px solid var(--line)}
+.drill-row:last-child{border-bottom:1px solid var(--line)}
+.drill-row .stem{font-size:17px}
+.drill-row .ans-slot{min-width:210px;text-align:right;font-weight:700;color:var(--green);
+      font-size:15.5px;cursor:pointer;user-select:none;border-radius:3px;padding:3px 7px}
+.drill-row .ans-slot:hover{background:var(--soft)}
+.drill-row .ans-slot:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.drill-row .ans-slot .ph{display:none;color:var(--muted);font-weight:700;font-size:13px;
+      letter-spacing:.14em;text-transform:uppercase}
+.drill-row .ans-slot.hidden-ans .ph{display:inline}
+.drill-row .ans-slot.hidden-ans .txt{display:none}
+
+@media (max-width:760px){
+  .split{grid-template-columns:1fr}
+  .drill-row{grid-template-columns:1fr;gap:6px}
+  .drill-row .ans-slot{text-align:left;min-width:0;padding-left:0}
+}
+@media print{
+  .split{grid-template-columns:1fr 1fr}
+  .drill-row .ans-slot .txt{display:inline!important}
+  .drill-row .ans-slot .ph{display:none!important}
+  .mcard,.q-item,.panel,.step,.drill,.drill-row{break-inside:avoid;page-break-inside:avoid}
+}
+
+/* ------------------------------------------------ unit 4 topic page extras */
+.eq{list-style:none;padding:0;margin:20px 0}
+.eq li{padding:12px 0 12px 18px;border-left:3px solid var(--accent);margin:10px 0;background:var(--surface);
+      font-family:APSerif,Georgia,serif;font-size:19px}
+.loop{counter-reset:loop;list-style:none;padding:0;margin:24px 0}
+.loop li{counter-increment:loop;position:relative;padding:14px 18px 14px 58px;background:var(--surface);
+      border:1px solid var(--line);border-radius:4px;margin:0 0 10px}
+.loop li::before{content:counter(loop);position:absolute;left:18px;top:12px;font-family:APSerif,Georgia,serif;
+      font-weight:700;font-size:24px;color:var(--accent2)}
+.pair{border:1px solid var(--line);border-radius:4px;background:var(--surface);margin:26px 0;overflow:hidden}
+.pair > .head{padding:14px 22px;border-bottom:2px solid var(--ink);font-family:APSerif,Georgia,serif;
+      font-size:21px;font-weight:700}
+.pair .cols{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line)}
+.pair .cols.three{grid-template-columns:1fr 1fr 1fr}
+.pair .col{background:var(--surface);padding:18px 22px}
+.pair .col h4{margin:0 0 6px;color:var(--accent)}
+.pair .col p{margin:8px 0;font-size:16.5px}
+.pair .col .ex{color:var(--ink-soft);font-style:italic}
+.pair .tell{padding:14px 22px;background:var(--soft2);font-size:16.5px;border-top:1px solid var(--line)}
+.pair .tell strong{color:var(--accent2)}
+
+/* detective + quiz */
+.score{font-size:15px;font-weight:700;color:var(--muted);letter-spacing:.04em}
+.score b{color:var(--green);font-size:18px}
+.case{border-top:1px solid var(--line);padding:20px 0}
+.case:last-of-type{border-bottom:1px solid var(--line)}
+.case .cnum{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent2)}
+.case .ctext{margin:6px 0 12px;font-size:17.5px}
+.opts{display:flex;flex-wrap:wrap;gap:10px}
+.opts button{flex:0 1 auto}
+.opts.stack{flex-direction:column;align-items:stretch}
+.opts.stack button{text-align:left;font-weight:400;font-size:16.5px;color:var(--ink);border-color:var(--line-d);line-height:1.5}
+.opts.stack button:hover{background:var(--soft);color:var(--ink)}
+.opts button.right,.opts button.right:hover{background:var(--green);border-color:var(--green);color:#fff}
+.opts button.wrong,.opts button.wrong:hover{background:var(--red-s);border-color:var(--red);color:var(--red)}
+.opts button:disabled{opacity:1;cursor:default}
+.opts button.dim{opacity:.5}
+.fb{display:none;margin:14px 0 0;padding:12px 16px;border-left:3px solid var(--green);background:var(--green-s);font-size:16.5px}
+.fb.miss{border-left-color:var(--red);background:var(--red-s)}
+.fb.open{display:block}
+.fb strong{display:block;margin-bottom:4px}
+.tabs{display:flex;gap:0;border-bottom:1px solid var(--line);margin:8px 0 6px}
+.tabs button{border:0;border-bottom:2px solid transparent;border-radius:0;background:none;color:var(--muted);padding:10px 16px 10px 0;margin-right:14px}
+.tabs button:hover{background:none;color:var(--accent)}
+.tabs button[aria-selected="true"]{color:var(--accent);border-bottom-color:var(--accent)}
+.done{display:none;margin:20px 0 0;font-weight:600}
+.done.open{display:block}
+
+@media (max-width:760px){
+  .pair .cols,.pair .cols.three{grid-template-columns:1fr}
+}
+@media print{
+  .fb{display:block!important}
+  .case,.pair,.loop li{break-inside:avoid;page-break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<div class="crumbs">
+  <div class="inner">
+    <a href="../index.html">AP Psychology</a>
+    <span class="sep">&rsaquo;</span>
+    <a href="index.html">Unit 4</a>
+    <span class="sep">&rsaquo;</span>
+    <span class="here">4.3B/C Group, Cultural, and Prosocial Behavior</span>
+  </div>
+</div>
+
+<header class="top">
+  <div class="inner">
+    <h1>Group, Cultural, and Prosocial Behavior</h1>
+    <p class="tag">What happens to "you" when you become part of an "us," and when we help strangers or walk past</p>
+    <p class="meta">AP Psychology &bull; Unit 4: Social Psychology and Personality &bull; CED Topic 4.3 (Learning Objectives 4.3.B and 4.3.C)</p>
+  </div>
+</header>
+
+<nav class="jump">
+  <ul>
+    <li><a href="#start">Start Here</a></li>
+    <li><a href="#terms">Key Terms</a></li>
+    <li><a href="#audience">Audiences and Crowds</a></li>
+    <li><a href="#decisions">Group Decisions</a></li>
+    <li><a href="#traps-goals">Traps and Shared Goals</a></li>
+    <li><a href="#culture">Culture</a></li>
+    <li><a href="#helping">Helping</a></li>
+    <li><a href="#mixups">Don't Mix These Up</a></li>
+    <li><a href="#detective">Group Diagnosis</a></li>
+    <li><a href="#quiz">Self-Check Quiz</a></li>
+    <li><a href="#traps">AP Exam Traps</a></li>
+  </ul>
+</nav>
+
+<div class="wrap">
+
+<h2 id="start"><span class="num">1</span>Start Here</h2>
+
+<p class="lede">4.3A was about pressure other people put on you. This page is about what simply being in a group does to you: how an audience lifts or trips your performance, how crowds lower effort and restraint, how groups make surprisingly bad decisions, how the culture you grew up in shapes all of it, and why a crowd of witnesses can make help less likely.</p>
+
+<ul class="eq">
+  <li>Why do we perform, decide, and behave differently when we are part of a group?</li>
+  <li>How does culture shape what feels normal?</li>
+  <li>What makes people help a stranger, and what stops them?</li>
+</ul>
+
+<div class="box note">
+  <span class="label">How to use this page</span>
+  <p>Read the key terms and sections, then try the <a href="#detective">Group Diagnosis</a> activity and the <a href="#quiz">Self-Check Quiz</a>. Nothing you click is recorded or graded.</p>
+</div>
+
+<h2 id="terms"><span class="num">2</span>Key Terms at a Glance</h2>
+
+<div class="tscroll">
+<table class="wide">
+  <thead><tr><th style="width:32%">Term</th><th>What it means</th></tr></thead>
+  <tbody>
+    <tr><td class="term">Social facilitation</td><td>Better performance on simple or well-learned tasks when others are present.</td></tr>
+    <tr><td class="term">Social inhibition</td><td>Worse performance on difficult or new tasks when others are present.</td></tr>
+    <tr><td class="term">Social loafing</td><td>Putting in less effort in a group than when working alone.</td></tr>
+    <tr><td class="term">Deindividuation</td><td>Loss of self-awareness and self-restraint in groups that create arousal and anonymity.</td></tr>
+    <tr><td class="term">Group polarization</td><td>Discussion among like-minded people makes the group's existing views more extreme.</td></tr>
+    <tr><td class="term">Groupthink</td><td>The desire for harmony overrides a realistic look at alternatives, producing bad decisions.</td></tr>
+    <tr><td class="term">False consensus effect</td><td>Overestimating how much others share our beliefs and behaviors.</td></tr>
+    <tr><td class="term">Social trap</td><td>Individuals pursuing self-interest create collective harm.</td></tr>
+    <tr><td class="term">Superordinate goals</td><td>Shared goals that require cooperation and override group differences.</td></tr>
+    <tr><td class="term">I/O psychology</td><td>Psychology applied to workplaces and organizations.</td></tr>
+    <tr><td class="term">Culture</td><td>Enduring behaviors, ideas, attitudes, values, and traditions shared by a group and passed on.</td></tr>
+    <tr><td class="term">Tight / loose culture</td><td>Strict, strongly enforced norms vs. flexible, loosely enforced norms.</td></tr>
+    <tr><td class="term">Individualism / collectivism</td><td>Prioritizing personal goals and identity vs. group goals and belonging.</td></tr>
+    <tr><td class="term">Multiculturalism</td><td>Multiple cultural identities coexisting and valued within one society.</td></tr>
+    <tr><td class="term">Prosocial behavior</td><td>Any action intended to benefit others.</td></tr>
+    <tr><td class="term">Altruism</td><td>Unselfish regard for the welfare of others, with no expected reward.</td></tr>
+    <tr><td class="term">Bystander effect</td><td>The more people present, the less likely any one of them is to help.</td></tr>
+    <tr><td class="term">Diffusion of responsibility</td><td>Feeling less personally responsible to act when others are present.</td></tr>
+    <tr><td class="term">Social exchange theory</td><td>We help when the rewards of helping outweigh the costs.</td></tr>
+    <tr><td class="term">Reciprocity norm</td><td>The expectation that we help those who have helped us.</td></tr>
+    <tr><td class="term">Social-responsibility norm</td><td>The expectation that we help those who need it, even if they cannot repay us.</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2 id="audience"><span class="num">3</span>Audiences and Crowds</h2>
+
+<h3>Social facilitation and social inhibition</h3>
+<p>Being watched raises arousal, and arousal strengthens whatever response is most likely for you (your dominant response). If you have mastered a task, your dominant response is the right one, so an audience helps. If the task is hard or new, your dominant response is often wrong, so an audience hurts.</p>
+<div class="split">
+  <div class="panel is-method">
+    <h4>Social facilitation</h4>
+    <p>Easy or well-practiced task + audience = <strong>better</strong>.</p>
+    <p><em>An experienced pianist plays her best at the recital.</em></p>
+  </div>
+  <div class="panel is-tool">
+    <h4>Social inhibition</h4>
+    <p>Hard or new task + audience = <strong>worse</strong>.</p>
+    <p><em>A beginner who plays fine alone stumbles when classmates watch.</em></p>
+  </div>
+</div>
+<p>Study tip that falls straight out of this research: practice a new skill alone until it is solid, then perform it in front of others. By then the audience works for you.</p>
+
+<h3>Social loafing</h3>
+<p>Imagine a tug-of-war. If one person pulls at 100 percent, how hard does each person pull in a group of eight? In classic studies, blindfolded people who believed others were pulling with them gave only about <strong>82 percent</strong> of their solo effort. When individual contributions cannot be identified, effort quietly drops. Sound like any group project you have been part of? The fix is accountability: make each person's contribution visible.</p>
+
+<h3>Deindividuation</h3>
+<p>When we feel anonymous and aroused in a crowd (at a concert, a protest, behind a screen name), self-awareness and self-restraint loosen, and people may do things they never would alone. Masks, uniforms, darkness, and anonymous accounts all increase it. It fuels riots and online mobs, but it can also be joyful, like losing yourself in a stadium singing together.</p>
+
+<h2 id="decisions"><span class="num">4</span>How Groups Decide</h2>
+
+<h3>Group polarization</h3>
+<p>When like-minded people discuss an issue, their shared view gets <strong>stronger and more extreme</strong>, not more moderate. You and your friends are mildly annoyed about a new school rule; after twenty minutes of agreeing with each other, you are furious. Online echo chambers supercharge this. The antidote is real contact with people who see things differently.</p>
+
+<h3>Groupthink</h3>
+<p>Groupthink happens when a group's desire for harmony overrides a realistic look at the alternatives. Doubters stay silent, the group feels falsely confident, and warning signs get ignored. Irving Janis coined the term after studying the failed 1961 Bay of Pigs invasion; other decisions blamed on groupthink include the lack of preparation at Pearl Harbor and the 1986 Challenger launch.</p>
+<div class="box key">
+  <span class="label">How to prevent groupthink</span>
+  <ul>
+    <li>Assign a "devil's advocate" whose job is to argue against the plan.</li>
+    <li>Have leaders welcome dissent and hold back their own opinion early.</li>
+    <li>Invite outside experts to critique the plan.</li>
+  </ul>
+  <p>After the Bay of Pigs, President Kennedy deliberately invited disagreement during the Cuban Missile Crisis, and the outcome was far better.</p>
+</div>
+
+<h3>The false consensus effect</h3>
+<p>We overestimate how many people share our opinions and habits: "everyone thinks this," "most people would do the same." It feeds both polarization and groupthink, because if you believe everyone already agrees, you never question the group.</p>
+
+<h2 id="traps-goals"><span class="num">5</span>Social Traps, Shared Goals, and the Workplace</h2>
+<p>A <span class="term">social trap</span> is a situation where each person, sensibly pursuing their own interest, helps create harm for everyone. Each person drives alone for convenience, and everyone sits in gridlock. Each fishing boat catches all it can, and the fishery collapses. Climate change and antibiotic resistance are social traps on a global scale.</p>
+<p><span class="term">Superordinate goals</span> are the opposite: shared goals that no group can reach alone. In Muzafer Sherif's <strong>Robbers Cave</strong> study, two rival groups of boys at a summer camp became hostile through competition. The hostility faded only when the groups had to work together to fix a broken water supply and move a stuck supply truck.</p>
+<p><span class="term">Industrial-organizational (I/O) psychology</span> puts this unit to work: it studies hiring, training, motivation, leadership, and teamwork in organizations, including how to reduce social loafing and groupthink on real teams.</p>
+
+<h2 id="culture"><span class="num">6</span>Culture</h2>
+<p><span class="term">Culture</span> is the set of behaviors, ideas, values, and traditions a group shares and passes on: the food at your table, the rules about eye contact and personal space, how loudly you talk on the MRT. Like water to a fish, your own culture is mostly invisible until you meet a different one. Cultures also change over time through immigration, technology, and contact.</p>
+
+<div class="tscroll">
+<table class="wide">
+  <caption>Two separate dimensions of culture</caption>
+  <thead><tr><th>Dimension</th><th>One end</th><th>Other end</th></tr></thead>
+  <tbody>
+    <tr><td class="term">How strictly are norms enforced?</td><td><strong>Tight:</strong> clear rules, strongly enforced. Waiting for the "walk" signal at an empty intersection.</td><td><strong>Loose:</strong> flexible rules, tolerated rule-bending. Jaywalking is common and ignored.</td></tr>
+    <tr><td class="term">Whose goals come first?</td><td><strong>Individualist:</strong> personal goals, independence, "I." Many Western cultures lean this way.</td><td><strong>Collectivist:</strong> group goals, harmony, belonging, "we." Many Asian, African, and Latin American cultures lean this way.</td></tr>
+  </tbody>
+</table>
+</div>
+
+<p><span class="term">Multiculturalism</span> means multiple cultural groups coexist within one society and their distinct identities are recognized and valued. It contrasts with <strong>assimilation</strong>, where minority cultures are expected to blend into the dominant one. Think about Taiwan: where would you place it on each dimension, and how has it changed over your parents' and grandparents' lifetimes?</p>
+
+<h2 id="helping"><span class="num">7</span>Prosocial Behavior: When We Help</h2>
+
+<p><span class="term">Prosocial behavior</span> is any action meant to benefit others. <span class="term">Altruism</span> is helping with no expectation of personal gain, sometimes at real cost to yourself.</p>
+
+<h3>The bystander effect</h3>
+<p>The more people who witness an emergency, the <strong>less</strong> likely any one of them is to help. Research on this began after the 1964 murder of Kitty Genovese in New York. The original newspaper story claimed 38 neighbors watched and did nothing; that account turned out to be heavily exaggerated, and some neighbors did try to help. But the story sent psychologists John Darley and Bibb Latané into the lab, where they showed the effect in controlled experiments: participants who believed they were the only one hearing someone having a seizure helped far more often and faster than those who believed others were listening too.</p>
+
+<p>The main reason is <span class="term">diffusion of responsibility</span>: with others present, each person feels less responsible ("someone else will handle it"). We are most likely to help when we <strong>notice</strong> the event, <strong>interpret</strong> it as an emergency, and <strong>assume responsibility</strong>.</p>
+
+<div class="box good">
+  <span class="label">Use this if you ever need help</span>
+  <p>Do not shout "someone call for help!" to a crowd. Point to one person and give them a job: "You, in the red jacket, call 119." Assigning responsibility to one person defeats diffusion of responsibility. (In Taiwan, 119 is for ambulance and fire, 110 for police.)</p>
+</div>
+
+<h3>Why we help</h3>
+<div class="tscroll">
+<table class="wide">
+  <thead><tr><th style="width:30%">Explanation</th><th>The logic</th><th>Example</th></tr></thead>
+  <tbody>
+    <tr><td class="term">Social exchange theory</td><td>Helping as a cost-benefit calculation: help when rewards (gratitude, reputation, good feelings) outweigh costs.</td><td>Helping a classmate study because it will look good to the teacher.</td></tr>
+    <tr><td class="term">Reciprocity norm</td><td>Help those who have helped you.</td><td>Helping a neighbor move because they fed your cat last month.</td></tr>
+    <tr><td class="term">Social-responsibility norm</td><td>Help those who need it, even if they can never repay.</td><td>Giving your seat on the bus to an elderly passenger.</td></tr>
+    <tr><td class="term">Altruism</td><td>Help with no expected reward, even at personal cost.</td><td>Stepping in to stop bullies, knowing you might get hurt.</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2 id="mixups"><span class="num">8</span>Don't Mix These Up</h2>
+
+<div class="pair">
+  <div class="head">Social facilitation vs. social inhibition vs. social loafing</div>
+  <div class="cols three">
+    <div class="col"><h4>Facilitation</h4><p>Audience + <strong>easy</strong> task = better.</p></div>
+    <div class="col"><h4>Inhibition</h4><p>Audience + <strong>hard</strong> task = worse.</p></div>
+    <div class="col"><h4>Loafing</h4><p>Working <strong>with</strong> a group, effort drops because no one can tell who did what.</p></div>
+  </div>
+  <div class="tell"><strong>The tell:</strong> facilitation and inhibition are about being <em>watched</em>. Loafing is about <em>pooled</em> work where individual effort is hidden.</div>
+</div>
+
+<div class="pair">
+  <div class="head">Social loafing vs. deindividuation</div>
+  <div class="cols">
+    <div class="col"><h4>Social loafing</h4><p>Less <strong>effort</strong>.</p><p class="ex">One member of the group project does almost nothing.</p></div>
+    <div class="col"><h4>Deindividuation</h4><p>Less <strong>self-restraint</strong>, from anonymity and arousal.</p><p class="ex">Anonymous accounts pile hateful comments on a stranger.</p></div>
+  </div>
+  <div class="tell"><strong>The tell:</strong> slacking off is loafing. Doing something you normally would not do, under cover of a crowd or anonymity, is deindividuation.</div>
+</div>
+
+<div class="pair">
+  <div class="head">Group polarization vs. groupthink</div>
+  <div class="cols">
+    <div class="col"><h4>Group polarization</h4><p>The group's <strong>existing view gets more extreme</strong> after discussion.</p></div>
+    <div class="col"><h4>Groupthink</h4><p>The desire for <strong>harmony silences doubts</strong>, producing a bad decision.</p></div>
+  </div>
+  <div class="tell"><strong>The tell:</strong> look for "more extreme after discussion" (polarization) versus "no one spoke up, and the plan failed" (groupthink).</div>
+</div>
+
+<div class="pair">
+  <div class="head">Social trap vs. superordinate goal</div>
+  <div class="cols">
+    <div class="col"><h4>Social trap</h4><p>Self-interest creates <strong>shared harm</strong>.</p></div>
+    <div class="col"><h4>Superordinate goal</h4><p>A shared goal forces <strong>cooperation</strong>.</p></div>
+  </div>
+  <div class="tell"><strong>The tell:</strong> they are opposites. A trap ends badly for everyone; a superordinate goal brings rival groups together.</div>
+</div>
+
+<div class="pair">
+  <div class="head">Tight/loose vs. individualist/collectivist</div>
+  <div class="cols">
+    <div class="col"><h4>Tight / loose</h4><p>How <strong>strictly</strong> norms are enforced.</p></div>
+    <div class="col"><h4>Individualist / collectivist</h4><p><strong>Whose goals</strong> come first: mine or the group's.</p></div>
+  </div>
+  <div class="tell"><strong>The tell:</strong> these are two separate dimensions. A scenario about punishing rule-breakers is tight/loose. A scenario about family duty versus personal ambition is individualism/collectivism.</div>
+</div>
+
+<div class="pair">
+  <div class="head">Altruism vs. social exchange vs. the two norms</div>
+  <div class="cols">
+    <div class="col"><h4>Expects something back</h4><p><strong>Social exchange</strong> (rewards outweigh costs) and the <strong>reciprocity norm</strong> (repaying past help).</p></div>
+    <div class="col"><h4>Expects nothing back</h4><p><strong>Altruism</strong> (unselfish, often costly) and the <strong>social-responsibility norm</strong> (helping those who cannot repay).</p></div>
+  </div>
+  <div class="tell"><strong>The tell:</strong> ask whether the helper expects anything in return, and whether the person being helped has helped them before.</div>
+</div>
+
+<h2 id="detective"><span class="num">9</span>Group Diagnosis</h2>
+<p>Three rounds. Diagnose what the group is doing to the individual, what went wrong in the group's decision, and what explains the helping (or not helping).</p>
+
+<div class="widget" id="det">
+  <h3>Diagnose the group <span class="tryit">Try it</span></h3>
+  <div class="tabs" role="tablist"></div>
+  <p class="score" aria-live="polite">Score: <b id="detScore">0</b> / <span id="detTotal">0</span> answered</p>
+  <div id="detCases"></div>
+  <p class="done" id="detDone"></p>
+  <div class="btnrow"><button type="button" id="detReset">Start this round over</button></div>
+</div>
+
+<h2 id="quiz"><span class="num">10</span>Self-Check Quiz</h2>
+<p>Ten AP-style questions. Click an answer to see whether you were right and why. Your score stays on this screen only.</p>
+
+<div class="widget" id="quizBox">
+  <h3>Check yourself <span class="tryit">Four choices each</span></h3>
+  <p class="score" aria-live="polite">Score: <b id="qScore">0</b> / <span id="qDone">0</span> answered of <span id="qTotal">0</span></p>
+  <div id="quizList"></div>
+  <p class="done" id="qFinal"></p>
+  <div class="btnrow"><button type="button" id="qReset">Start the quiz over</button></div>
+</div>
+
+<h2 id="traps"><span class="num">11</span>AP Exam Traps</h2>
+<div class="box warn">
+  <span class="label">Watch for these</span>
+  <ul>
+    <li><strong>Facilitation vs. inhibition depends on the task,</strong> not the audience. Same crowd, opposite effect.</li>
+    <li><strong>Loafing = less effort. Deindividuation = less self-restraint.</strong> Do not mix them up.</li>
+    <li><strong>Group polarization makes views more extreme,</strong> not more moderate. Groupthink is about silenced dissent and bad decisions.</li>
+    <li><strong>Tight/loose and individualism/collectivism are separate dimensions.</strong></li>
+    <li><strong>The bystander effect: more people, less help.</strong> The mechanism to name is diffusion of responsibility.</li>
+    <li><strong>Altruism expects nothing back.</strong> Social exchange and reciprocity both involve a return.</li>
+    <li><strong>Find the trigger</strong> in each scenario: an audience, anonymity, like-minded discussion, suppressed dissent, number of bystanders, or an expected reward.</li>
+  </ul>
+</div>
+
+<div class="box note">
+  <span class="label">Connections across the course</span>
+  <p><strong>Topic 4.1:</strong> collectivist cultures lean toward situational attributions. <strong>Topic 4.2:</strong> in-group bias and scapegoating are what polarization and deindividuation can amplify. <strong>Topic 4.3A:</strong> Zimbardo's uniforms and number cards are deindividuation in action. <strong>Topic 4.6, Motivation:</strong> the arousal behind social facilitation connects to the Yerkes-Dodson law.</p>
+</div>
+
+<div class="pagenav">
+  <a href="social-influence.html"><span class="dir">&larr; Previous</span><span class="t">4.3A Social Influence</span></a>
+  <a href="psychodynamic-and-humanistic.html"><span class="dir">Next &rarr;</span><span class="t">4.4 Psychodynamic and Humanistic Theories</span></a>
+</div>
+
+<footer>
+  <p>AP Psychology, Unit 4: Social Psychology and Personality. Topic 4.3 (4.3.B and 4.3.C), aligned to the 2024 Course and Exam Description.</p>
+  <p>Don West, AP Psychology Teacher. Questions? Message me on Canvas or ask at the start of class.</p>
+</footer>
+
+</div>
+
+<script>
+window.PAGE = {
+  reviewHint: 'Review sections 3 to 7, then start the round over.',
+  rounds: [
+    { tab: 'Round 1: Audiences and crowds',
+      options: ['Social facilitation', 'Social inhibition', 'Social loafing', 'Deindividuation'],
+      cases: [
+        ['A varsity basketball player who has made thousands of free throws sinks every one in front of a packed gym.', 0, 'A well-practiced skill plus an audience produces better performance. That is social facilitation.'],
+        ['A student who just started learning to code makes more mistakes when the teacher stands behind her watching.', 1, 'A new, difficult task gets worse with an audience. That is social inhibition.'],
+        ['In a five-person group presentation, two members barely prepare, assuming the grade will be shared anyway.', 2, 'Effort drops because individual contributions are hidden in the group. That is social loafing.'],
+        ['Sports fans in matching face paint and team shirts start throwing bottles at the opposing team\'s bus after a loss.', 3, 'Anonymity (face paint, matching shirts) plus crowd arousal lowers self-restraint. That is deindividuation.'],
+        ['Workers clapping in a large group clap less loudly than when they are asked to clap alone.', 2, 'Individual effort drops when it is pooled with others. Classic social loafing.'],
+        ['Hiding behind anonymous usernames, people in a comment section post cruel insults they would never say face to face.', 3, 'Anonymity reduces self-awareness and restraint. That is deindividuation, even online.'],
+        ['A cyclist rides noticeably faster in a race with other riders beside her than when training alone on the same route.', 0, 'For a well-learned task, the presence of others boosts performance. This is the original social facilitation finding (Triplett, 1898).'],
+        ['During his first public speech, Wei-Lun forgets lines he had memorized perfectly the night before in his room.', 1, 'Public speaking is new and difficult for him, so the audience hurts performance. Social inhibition.']
+      ]},
+    { tab: 'Round 2: What went wrong in the group?',
+      options: ['Group polarization', 'Groupthink', 'False consensus effect', 'Social trap', 'Superordinate goal'],
+      cases: [
+        ['A group of friends who each slightly dislike a new teacher talk about her for an hour and end up convinced she is the worst teacher in the school.', 0, 'Discussion among like-minded people pushed an existing view to an extreme. That is group polarization.'],
+        ['A company\'s leadership team approves a risky product launch. Several members have doubts but stay quiet so they will not seem disloyal. The product fails.', 1, 'Harmony won out over a realistic look at the risks, and the decision failed. That is groupthink.'],
+        ['Kai assumes almost all of his classmates also think the school uniform should be abolished. A survey shows only 30 percent agree.', 2, 'Overestimating how many others share your view is the false consensus effect.'],
+        ['Every family in a drought-hit town keeps watering its lawn, reasoning that one household makes no difference. The reservoir runs dry.', 3, 'Individually reasonable choices add up to harm for everyone. That is a social trap.'],
+        ['Two rival clubs that have been feuding all year must work together to organize the school fair, and their hostility fades.', 4, 'A shared goal that neither group can reach alone reduced the conflict. That is a superordinate goal, as in Robbers Cave.'],
+        ['In an online forum where everyone already opposes a policy, members\' posts become angrier and more extreme over several months.', 0, 'Like-minded discussion pushed the group further in the direction it already leaned. Group polarization.']
+      ]},
+    { tab: 'Round 3: Who helps, and why?',
+      options: ['Altruism', 'Social exchange theory', 'Reciprocity norm', 'Social-responsibility norm', 'Bystander effect'],
+      cases: [
+        ['A man collapses on a busy MRT platform. Dozens of people see him, but for almost a minute nobody moves, each glancing at the others.', 4, 'With many witnesses, each person feels less responsible. That is the bystander effect, driven by diffusion of responsibility.'],
+        ['Jia helps a classmate with homework mainly because the teacher will notice and it may help her recommendation letter.', 1, 'Helping because the rewards outweigh the costs is social exchange theory.'],
+        ['Ethan helps his neighbor carry groceries because she watered his plants while his family was away.', 2, 'Helping someone who helped you first is the reciprocity norm.'],
+        ['A volunteer spends weekends tutoring children from low-income families who will never be able to repay him.', 3, 'Helping those who need it and cannot repay reflects the social-responsibility norm.'],
+        ['A stranger jumps into a flooded river to pull out a child, risking his own life, then leaves before anyone can thank him.', 0, 'Helping at great personal cost with no expected reward is altruism.'],
+        ['A student gives her umbrella to an elderly man waiting in the rain, knowing she will get soaked walking home.', 0, 'She accepts a real cost and expects nothing back. That is altruism. (You could also argue the social-responsibility norm, but the personal cost with no reward points to altruism.)']
+      ]}
+  ],
+  quiz: [
+    ['Maggie, an experienced hockey player, plays the best game of her life in front of a packed arena. This best illustrates:',
+      ['social loafing', 'deindividuation', 'social facilitation', 'groupthink'], 2,
+      'An audience improved performance on a well-learned skill. If she were a beginner, the same crowd would more likely cause social inhibition.'],
+    ['Which factor determines whether an audience helps or hurts performance?',
+      ['The size of the audience', 'Whether the task is easy or well-learned versus difficult or new', 'Whether the audience is friendly', 'Whether the performer is extraverted'], 1,
+      'The same audience improves performance on mastered tasks (facilitation) and hurts performance on hard or new ones (inhibition).'],
+    ['A teacher who wants to reduce social loafing in group projects should:',
+      ['make the groups larger', 'give one shared grade with no individual component', 'make each member\'s contribution identifiable and evaluated', 'let students work anonymously'], 2,
+      'Loafing happens when individual effort is hidden. Making contributions visible and accountable reduces it. Larger groups and anonymity make it worse.'],
+    ['After a natural disaster, large anonymous crowds sometimes loot stores and behave in ways individuals never would alone. This is best explained by:',
+      ['social facilitation', 'deindividuation', 'group polarization', 'the social-responsibility norm'], 1,
+      'Anonymity plus crowd arousal lowers self-awareness and restraint. That is deindividuation.'],
+    ['A student council, all close friends, plans an event. No one voices doubts, everyone assumes the others are on board, and they ignore warning signs. The event flops. This best illustrates:',
+      ['social facilitation', 'groupthink', 'social loafing', 'deindividuation'], 1,
+      'Suppressing doubts to keep harmony, with false confidence and ignored warnings, is groupthink.'],
+    ['Students who are moderately in favor of a longer lunch break discuss the issue together. Afterward they are strongly in favor. This is:',
+      ['groupthink', 'group polarization', 'the false consensus effect', 'social facilitation'], 1,
+      'Like-minded discussion strengthened the group\'s existing view. That is group polarization.'],
+    ['Each fishing crew on a lake catches as many fish as possible to maximize its own profit. Within a few years the fish population collapses and every crew is worse off. This is an example of:',
+      ['a superordinate goal', 'groupthink', 'a social trap', 'the reciprocity norm'], 2,
+      'Individually rational self-interest produced collective ruin. That is a social trap.'],
+    ['A culture in which people prioritize family obligations and group harmony over personal achievement is best described as:',
+      ['individualist', 'loose', 'collectivist', 'multicultural'], 2,
+      'Prioritizing group goals and belonging is collectivism. Tight and loose describe how strictly norms are enforced, a separate dimension.'],
+    ['According to research on the bystander effect, a person who collapses on a sidewalk is most likely to get help when:',
+      ['many people are walking by', 'only one other person is present', 'the area is noisy and crowded', 'witnesses assume someone else has called for help'], 1,
+      'With only one witness, there is no one to share responsibility with. More bystanders lead to diffusion of responsibility and less help.'],
+    ['Nish puts himself in danger to stand up to bullies who are beating up a classmate, expecting nothing in return. His behavior is best described as:',
+      ['social exchange', 'the reciprocity norm', 'altruism', 'deindividuation'], 2,
+      'Helping at personal cost with no expected reward is altruism. Social exchange and the reciprocity norm both involve some return.']
+  ]
+};
+</script>
+<script>
+(function () {
+  var P = window.PAGE || {};
+
+  function markChoice(opts, fbEl, chosen, correct, head, why) {
+    var btns = opts.querySelectorAll('button');
+    btns.forEach(function (x, k) {
+      x.disabled = true;
+      if (k === correct) x.classList.add('right');
+      else if (k === chosen) x.classList.add('wrong');
+      else x.classList.add('dim');
+    });
+    fbEl.className = 'fb open' + (chosen === correct ? '' : ' miss');
+    fbEl.innerHTML = '<strong></strong>';
+    fbEl.firstChild.textContent = head;
+    fbEl.appendChild(document.createTextNode(why));
+  }
+
+  /* ---------------- sorting activity (tabs of rounds) ---------------- */
+  if (P.rounds && document.getElementById('det')) {
+    var round = 0, score = 0, answered = 0;
+    var casesEl = document.getElementById('detCases');
+    var tabsEl = document.querySelector('#det .tabs');
+    P.rounds.forEach(function (r, i) {
+      var t = document.createElement('button');
+      t.type = 'button'; t.setAttribute('role', 'tab');
+      t.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
+      t.textContent = r.tab;
+      t.addEventListener('click', function () {
+        round = i;
+        tabsEl.querySelectorAll('button').forEach(function (x) { x.setAttribute('aria-selected', x === t ? 'true' : 'false'); });
+        renderRound();
+      });
+      tabsEl.appendChild(t);
+    });
+    if (P.rounds.length < 2) tabsEl.style.display = 'none';
+
+    var renderRound = function () {
+      score = 0; answered = 0;
+      var r = P.rounds[round];
+      casesEl.innerHTML = '';
+      if (r.intro) {
+        var ip = document.createElement('p');
+        ip.className = 'commentary'; ip.textContent = r.intro;
+        casesEl.appendChild(ip);
+      }
+      r.cases.forEach(function (c, i) {
+        var options = c[3] || r.options;
+        var d = document.createElement('div');
+        d.className = 'case';
+        d.innerHTML = '<span class="cnum">Case ' + (i + 1) + '</span><p class="ctext"></p><div class="opts' + (r.stack ? ' stack' : '') + '"></div><div class="fb" aria-live="polite"></div>';
+        d.querySelector('.ctext').textContent = c[0];
+        var opts = d.querySelector('.opts');
+        options.forEach(function (label, j) {
+          var b = document.createElement('button');
+          b.type = 'button'; b.textContent = label;
+          b.addEventListener('click', function () {
+            var right = j === c[1];
+            markChoice(opts, d.querySelector('.fb'), j, c[1],
+              (right ? 'Correct: ' : 'Not quite. Correct answer: ') + options[c[1]] + '.', c[2]);
+            answered++; if (right) score++;
+            update();
+            if (answered === r.cases.length) {
+              var done = document.getElementById('detDone');
+              var last = round === P.rounds.length - 1;
+              done.textContent = 'Round complete: ' + score + ' of ' + r.cases.length + '. ' +
+                (!last ? 'Ready for the next round? Use the tabs at the top of the box.' :
+                 score >= Math.ceil(r.cases.length * 0.75) ? 'Strong work. Now try the Self-Check Quiz below.' :
+                 (P.reviewHint || 'Review the sections above, then start the round over.'));
+              done.className = 'done open';
+            }
+          });
+          opts.appendChild(b);
+        });
+        casesEl.appendChild(d);
+      });
+      document.getElementById('detDone').className = 'done';
+      update();
+    };
+    var update = function () {
+      document.getElementById('detScore').textContent = score;
+      document.getElementById('detTotal').textContent = answered;
+    };
+    document.getElementById('detReset').addEventListener('click', renderRound);
+    renderRound();
+  }
+
+  /* ---------------- self-check quiz ---------------- */
+  if (P.quiz && document.getElementById('quizList')) {
+    var qEl = document.getElementById('quizList');
+    var qScore = 0, qDone = 0, LET = ['A', 'B', 'C', 'D'];
+    var n = P.quiz.length;
+    var updateQ = function () {
+      document.getElementById('qScore').textContent = qScore;
+      document.getElementById('qDone').textContent = qDone;
+    };
+    var renderQuiz = function () {
+      qScore = 0; qDone = 0; qEl.innerHTML = '';
+      P.quiz.forEach(function (q, i) {
+        var d = document.createElement('div');
+        d.className = 'case';
+        d.innerHTML = '<span class="cnum">Question ' + (i + 1) + '</span><p class="ctext"></p><div class="opts stack"></div><div class="fb" aria-live="polite"></div>';
+        d.querySelector('.ctext').textContent = q[0];
+        var opts = d.querySelector('.opts');
+        q[1].forEach(function (txt, j) {
+          var b = document.createElement('button');
+          b.type = 'button'; b.textContent = LET[j] + '.  ' + txt;
+          b.addEventListener('click', function () {
+            var right = j === q[2];
+            markChoice(opts, d.querySelector('.fb'), j, q[2],
+              right ? 'Correct.' : 'Not quite. The answer is ' + LET[q[2]] + '.', q[3]);
+            qDone++; if (right) qScore++;
+            updateQ();
+            if (qDone === n) {
+              var f = document.getElementById('qFinal');
+              f.textContent = 'Final score: ' + qScore + ' of ' + n + '. ' +
+                (qScore >= Math.ceil(n * 0.8) ? 'You are in good shape for this topic.' :
+                 qScore >= Math.ceil(n * 0.55) ? 'Solid. Reread the explanations for the ones you missed, then check Don\'t Mix These Up.' :
+                 'Go back through the sections above, then start the quiz over.');
+              f.className = 'done open';
+            }
+          });
+          opts.appendChild(b);
+        });
+        qEl.appendChild(d);
+      });
+      document.getElementById('qTotal').textContent = n;
+      document.getElementById('qFinal').className = 'done';
+      updateQ();
+    };
+    document.getElementById('qReset').addEventListener('click', renderQuiz);
+    renderQuiz();
+  }
+})();
+</script>
+
+</body>
+</html>

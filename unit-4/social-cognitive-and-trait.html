@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>4.5 Social-Cognitive and Trait Theories of Personality | AP Psychology</title>
+<style>@font-face{font-family:'APSerif';src:url('../assets/fonts/source-serif-4-latin-400-normal.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'APSerif';src:url('../assets/fonts/source-serif-4-latin-600-normal.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:'APSerif';src:url('../assets/fonts/source-serif-4-latin-700-normal.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'APSans';src:url('../assets/fonts/source-sans-3-latin-400-normal.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'APSans';src:url('../assets/fonts/source-sans-3-latin-400-italic.woff2') format('woff2');font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:'APSans';src:url('../assets/fonts/source-sans-3-latin-600-normal.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:'APSans';src:url('../assets/fonts/source-sans-3-latin-700-normal.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
+
+/* ---------------------------------------------------------------- base */
+:root{
+  --ink:#14293a; --ink-soft:#243c50; --accent:#0f5c5e; --accent-d:#0c4749;
+  --accent2:#a35617; --accent2-d:#8a4a13;
+  --soft:#eef4f4; --soft2:#fdf1e6;
+  --green:#1b6b48; --green-s:#edf5f0; --red:#9c2a2a; --red-s:#faeeee;
+  --line:#dfe4e8; --line-d:#c4ced6; --muted:#5d6b78; --faint:#6b7885; --bg:#fbfbf9; --surface:#ffffff;
+  --blue:#2f5d80;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:APSans,'Segoe UI',-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;font-size:18px;line-height:1.72;
+     color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}
+.wrap{max-width:740px;margin:0 auto;padding:0 24px 80px}
+
+/* ---------------------------------------------------------------- chrome */
+.crumbs{background:var(--surface);border-bottom:1px solid var(--line);font-size:14px}
+.crumbs .inner,.crumbs .wrap{max-width:740px;margin:0 auto;padding:12px 24px}
+.crumbs a{color:var(--accent);text-decoration:none;font-weight:600}
+.crumbs a:hover{text-decoration:underline}
+.crumbs .sep{color:var(--line-d);margin:0 9px}
+.crumbs .here{color:var(--muted)}
+
+header.top,.masthead{background:var(--surface);border-bottom:1px solid var(--line);
+     padding:44px 24px 38px;color:var(--ink)}
+header.top .inner,.masthead .wrap{max-width:740px;margin:0 auto;padding-bottom:0}
+header.top .kicker,header.top .meta,.masthead .course{font-size:12px;letter-spacing:.16em;
+     text-transform:uppercase;color:var(--accent2);font-weight:700;margin:0 0 14px;opacity:1}
+header.top h1,.masthead h1{font-family:APSerif,Georgia,'Times New Roman',serif;font-weight:700;font-size:42px;line-height:1.14;
+     margin:0;letter-spacing:-.015em;color:var(--ink)}
+header.top p.tag,header.top .sub,.masthead p.tag{margin:14px 0 0;font-size:19px;
+     color:var(--muted);line-height:1.55;opacity:1}
+header.top .meta{margin:18px 0 0;letter-spacing:.1em;color:var(--muted);font-size:11.5px}
+.masthead a{color:var(--accent)}
+
+/* Deliberately not sticky: this direction reads as a document, the breadcrumb
+   already says where you are, and a wrapped two-row bar would cover anchored
+   headings as you jump between sections. */
+nav.jump{background:var(--surface);border-bottom:1px solid var(--line)}
+nav.jump ul{max-width:940px;margin:0 auto;padding:0 24px;list-style:none;display:flex;flex-wrap:wrap;
+     gap:0 22px}
+nav.jump a{display:block;padding:13px 0;font-size:14.5px;color:var(--muted);text-decoration:none;
+     border-bottom:2px solid transparent;font-weight:600}
+nav.jump a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+
+main{padding:8px 0 0}
+
+/* ---------------------------------------------------------------- type */
+h2{font-family:APSerif,Georgia,'Times New Roman',serif;font-size:30px;font-weight:700;color:var(--ink);margin:54px 0 14px;
+   letter-spacing:-.01em;line-height:1.24;scroll-margin-top:24px}
+h2 .num{font-family:APSans,'Segoe UI',-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;display:inline-block;font-size:12px;font-weight:700;
+   letter-spacing:.14em;color:var(--accent2);vertical-align:.42em;margin-right:12px}
+h3{font-family:APSerif,Georgia,'Times New Roman',serif;font-size:22px;font-weight:600;margin:34px 0 10px;color:var(--ink)}
+h4{font-family:APSerif,Georgia,'Times New Roman',serif;font-size:18.5px;font-weight:600;margin:24px 0 7px;color:var(--ink)}
+p{margin:16px 0}
+ul,ol{margin:16px 0;padding-left:26px}
+li{margin:6px 0}
+.lede{font-size:19.5px;color:var(--muted);margin:22px 0 4px;line-height:1.6}
+code{background:var(--soft);padding:1px 6px;border-radius:3px;
+     font-family:Consolas,Monaco,monospace;font-size:.9em}
+em{font-style:italic}
+
+/* ---------------------------------------------------------------- boxes */
+.box,.note{border-radius:3px;padding:20px 24px;margin:28px 0;border-left:3px solid var(--accent2);
+     background:var(--soft2)}
+.box p:first-child,.note p:first-child{margin-top:0}
+.box p:last-child,.note p:last-child{margin-bottom:0}
+.box p,.note p{font-size:17.5px}
+.box .label,.note .label{display:block;font-size:11.5px;font-weight:700;letter-spacing:.14em;
+     text-transform:uppercase;color:var(--accent2);margin-bottom:9px}
+.box.key{background:var(--soft2);border-color:var(--accent2)}
+.box.key .label{color:var(--accent2)}
+.box.note{background:var(--soft);border-color:var(--accent)}
+.box.note .label{color:var(--accent)}
+.box.good{background:var(--green-s);border-color:var(--green)}
+.box.good .label{color:var(--green)}
+.box.warn{background:var(--red-s);border-color:var(--red)}
+.box.warn .label{color:var(--red)}
+.pending{background:var(--surface);border:1px dashed var(--line-d);border-radius:3px;
+     padding:30px 20px;text-align:center;color:var(--muted);margin:28px 0}
+.pending strong{display:block;color:var(--ink);margin-bottom:4px;font-size:17px}
+
+/* ---------------------------------------------------------------- table */
+table{border-collapse:collapse;width:100%;margin:30px 0;font-size:17px}
+th,td{border:0;border-bottom:1px solid var(--line);padding:14px 10px 14px 0;
+      text-align:left;vertical-align:top}
+th:last-child,td:last-child{padding-right:0}
+thead th{border-bottom:2px solid var(--ink);font-size:12.5px;letter-spacing:.09em;
+      text-transform:uppercase;color:var(--muted);font-weight:700;padding-bottom:10px}
+tbody tr:last-child td{border-bottom:1px solid var(--line)}
+caption{caption-side:top;text-align:left;font-size:13px;letter-spacing:.1em;text-transform:uppercase;
+      color:var(--muted);font-weight:700;padding-bottom:12px}
+td.center,th.center{text-align:center}
+.term{font-weight:700;color:var(--accent)}
+
+/* ---------------------------------------------------------------- cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1px;
+      background:var(--line);border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+      margin:26px 0}
+.grid .card{display:block;background:var(--surface);padding:24px 26px;text-decoration:none;
+      color:inherit;transition:background .15s}
+a.grid > .card:hover,.grid a.card:hover{background:#f6f9f9}
+.grid .card .kicker{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+      color:var(--accent2);margin:0 0 8px}
+.grid .card .title{font-family:APSerif,Georgia,'Times New Roman',serif;font-size:22px;font-weight:700;margin:0 0 8px;line-height:1.25}
+.grid .card .desc{font-size:16px;color:var(--muted);margin:0;line-height:1.55}
+/* A unit with nothing in it yet is muted by colour, not by opacity: fading the
+   whole tile would grey out its background and checkerboard the grid. */
+.grid .card.empty .kicker{color:var(--faint)}
+.grid .card.empty .title{color:var(--muted);font-weight:700}
+.grid .card.empty .desc{color:var(--faint)}
+
+.resource{display:flex;justify-content:space-between;align-items:center;gap:20px;
+      border:0;border-bottom:1px solid var(--line);padding:22px 0;margin:0;
+      text-decoration:none;color:inherit}
+.resource:first-of-type{border-top:1px solid var(--line)}
+a.resource:hover .title{color:var(--accent)}
+.resource .title{font-family:APSerif,Georgia,'Times New Roman',serif;font-weight:700;font-size:20px;margin:0 0 3px;
+      transition:color .12s}
+.resource .desc{font-size:16px;color:var(--muted);margin:0}
+.resource .go{color:var(--accent);font-weight:600;font-size:15px;white-space:nowrap}
+
+/* ---------------------------------------------------------------- widget */
+.widget{background:var(--surface);border:1px solid var(--line);border-radius:4px;
+        padding:26px 28px;margin:34px 0}
+.widget > h3{margin-top:0;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.widget .tryit{font-family:APSans,'Segoe UI',-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:.14em;
+        text-transform:uppercase;color:var(--accent2);background:none;padding:0}
+.widget svg{display:block;width:100%;height:auto;max-width:100%;touch-action:none}
+svg,canvas{display:block;max-width:100%}
+
+.ctrls{display:flex;flex-wrap:wrap;gap:24px;margin:22px 0 4px;align-items:flex-end}
+.ctrl{flex:1 1 220px;min-width:200px}
+.ctrl label{display:block;font-size:12px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;
+        color:var(--muted);margin-bottom:10px}
+.ctrl .val{color:var(--accent);font-size:15px;letter-spacing:0}
+input[type=range]{width:100%;accent-color:var(--accent);height:26px;cursor:pointer}
+
+.btnrow{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0 0}
+button{font-family:APSans,'Segoe UI',-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;font-size:14.5px;font-weight:600;cursor:pointer;border-radius:3px;
+       padding:10px 18px;border:1px solid var(--accent);background:var(--surface);
+       color:var(--accent);transition:background .12s,color .12s}
+button:hover{background:var(--accent);color:#fff}
+button.primary{background:var(--accent);color:#fff}
+button.primary:hover{background:var(--accent-d)}
+button:disabled{opacity:.45;cursor:not-allowed}
+button:focus-visible,input:focus-visible,a:focus-visible,textarea:focus-visible,
+[tabindex]:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+.readouts{display:flex;flex-wrap:wrap;gap:34px;margin:30px 0 0}
+.ro{flex:0 1 auto;min-width:110px}
+.ro .k{display:block;font-size:11.5px;font-weight:700;letter-spacing:.12em;
+       text-transform:uppercase;color:var(--muted)}
+.ro .v{display:block;font-family:APSerif,Georgia,'Times New Roman',serif;font-size:30px;font-weight:700;color:var(--ink);line-height:1.3}
+.ro.hl .v{color:var(--green)}
+.commentary{margin:20px 0 0;padding:0 0 0 18px;border-left:3px solid var(--line-d);
+       font-size:16.5px;color:var(--ink-soft)}
+.toggle-line{display:flex;align-items:center;gap:10px;margin:18px 0 0;font-size:15.5px}
+.toggle-line input{width:18px;height:18px;accent-color:var(--accent);cursor:pointer}
+.field{display:inline-flex;flex-direction:column;gap:5px;margin:0 14px 12px 0}
+.field label{font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.field input{font-family:inherit;font-size:17px;padding:8px 10px;width:110px;
+       border:1px solid var(--line-d);border-radius:3px;background:var(--surface);color:var(--ink)}
+.field input.ok{border-color:var(--green);background:var(--green-s)}
+.field input.bad{border-color:var(--accent2);background:var(--soft2)}
+.worked{display:none;margin:18px 0 0;padding:16px 18px;background:#f7f9f9;border-radius:3px;
+       font-family:Consolas,Monaco,monospace;font-size:14.5px;line-height:1.75;white-space:pre-wrap}
+.worked.open{display:block}
+.dataset{font-family:APSerif,Georgia,'Times New Roman',serif;font-size:25px;font-weight:700;letter-spacing:.03em;color:var(--ink);
+       background:#f7f9f9;border-radius:3px;padding:15px 18px;margin:8px 0 18px;text-align:center}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------------------------------------------------------------- practice */
+.q-item{border:0;border-top:1px solid var(--line);border-radius:0;background:none;
+        margin:0;padding:26px 0}
+.q-item .qnum{display:inline-block;background:none;color:var(--accent2);font-size:11.5px;
+        font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:0;margin-bottom:10px}
+.q-item .stem{margin:6px 0 12px}
+.q-item .ask{font-weight:600;margin:12px 0}
+.q-item ol.choices{list-style:upper-alpha;padding-left:26px;margin:12px 0 16px}
+.q-item ol.choices li{margin:6px 0}
+.reveal{display:none;border-top:1px dashed var(--line-d);margin-top:16px;padding-top:16px}
+.reveal.open{display:block}
+.reveal .ans{font-weight:700;color:var(--green);font-size:17px;margin:0 0 10px}
+.reveal .why{margin:10px 0 0}
+.reveal .why-not{margin:12px 0 0;font-size:16px}
+.reveal .why-not li{color:var(--muted)}
+.reveal .why-not li strong{color:var(--ink)}
+.toggle{font-size:14.5px}
+
+/* ---------------------------------------------------------------- misc */
+details{border:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+        border-radius:0;padding:16px 0;margin:26px 0;background:none}
+details summary{font-family:APSerif,Georgia,'Times New Roman',serif;font-weight:600;color:var(--accent);cursor:pointer;font-size:18px}
+details[open] summary{margin-bottom:10px}
+
+figure{margin:32px 0}
+figure img{max-width:100%;height:auto;display:block;border:1px solid var(--line);
+      border-radius:3px;background:#fff}
+figure.plain img{border:none}
+figcaption{font-size:15px;color:var(--muted);margin-top:10px;line-height:1.55}
+figure.half{max-width:460px}
+figure.center{margin-left:auto;margin-right:auto}
+.hero{margin:0 0 30px;border-radius:3px;overflow:hidden;border:1px solid var(--line)}
+.hero img{display:block;width:100%;height:auto}
+.img-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin:28px 0}
+.img-row figure{margin:0}
+
+footer{margin-top:62px;padding:26px 0 0;border-top:1px solid var(--line);font-size:15px;color:var(--muted)}
+footer p{margin:5px 0}
+body > footer{background:var(--surface);margin-top:62px;padding:28px 0 34px}
+body > footer .wrap{padding-bottom:0}
+
+.pagenav{display:flex;flex-wrap:wrap;gap:1px;margin:34px 0 0;background:var(--line);
+       border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.pagenav a{flex:1 1 220px;border:0;border-radius:0;padding:18px 20px;text-decoration:none;
+       color:inherit;background:var(--surface)}
+.pagenav a:hover{background:#f6f9f9}
+.pagenav .dir{display:block;font-size:11px;font-weight:700;letter-spacing:.14em;
+       text-transform:uppercase;color:var(--accent2)}
+.pagenav .t{display:block;font-family:APSerif,Georgia,'Times New Roman',serif;font-weight:700;color:var(--ink);margin-top:4px}
+
+/* Any table too wide for the screen scrolls sideways instead of pushing the page. */
+.tscroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:30px 0}
+.tscroll > table{margin-top:0;margin-bottom:0;min-width:520px}
+
+/* ------------------------------------------------- wide break-out on big screens */
+@media (min-width:1040px){
+  .widget,.tscroll:has(table.wide),.grid,.bleed{width:940px;margin-left:-100px;max-width:none}
+  table.wide{min-width:0}
+}
+
+/* ---------------------------------------------------------------- responsive */
+@media (max-width:760px){
+  body{font-size:17px;line-height:1.65}
+  header.top,.masthead{padding:32px 20px 28px}
+  header.top h1,.masthead h1{font-size:30px}
+  header.top p.tag,header.top .sub,.masthead p.tag{font-size:17.5px}
+  h2{font-size:25px;margin:42px 0 12px}
+  h3{font-size:20px}
+  .wrap,.crumbs .inner,.crumbs .wrap,header.top .inner,.masthead .wrap,nav.jump ul{padding-left:20px;padding-right:20px}
+  nav.jump ul{gap:0 16px}
+  nav.jump a{padding:12px 0;font-size:13.5px}
+  .widget{padding:20px 18px}
+  .ro .v{font-size:24px}
+  .readouts{gap:20px}
+  .resource{flex-direction:column;align-items:flex-start;gap:8px}
+  table{font-size:16px}
+}
+
+/* ---------------------------------------------------------------- print */
+@media print{
+  body{background:#fff;font-size:11pt;color:#000}
+  nav.jump,.crumbs,button,.btnrow,input[type=range],.pagenav,.toggle{display:none!important}
+  header.top,.masthead{background:#fff!important;color:var(--ink)!important;padding:0 0 14px;border:0}
+  .widget,.tscroll,.bleed{width:auto!important;margin-left:0!important;overflow:visible!important}
+  .tscroll > table,table.wide{min-width:0!important}
+  .reveal{display:block!important}
+  .worked{display:block!important}
+  .widget,.q-item,.box,.note,table,details,figure,.hero,.img-row,.grid .card{
+     break-inside:avoid;page-break-inside:avoid}
+  h2,h3{break-after:avoid}
+  @page{size:A4;margin:15mm}
+}
+
+/* ------------------------------------------------ research methods page extras */
+.yes{color:var(--green);font-weight:700}
+.no{color:var(--red);font-weight:700}
+.claim-yes{color:var(--green);font-weight:600}
+.claim-no{color:var(--red);font-weight:600}
+.signals{font-style:italic;color:var(--blue)}
+
+.split{display:grid;grid-template-columns:1fr 1fr;gap:1px;margin:30px 0;background:var(--line);
+       border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.panel{background:var(--surface);padding:22px 24px}
+.panel h4{margin-top:0;font-size:18px}
+.panel.is-method h4{color:var(--green)}
+.panel.is-tool h4{color:var(--accent2)}
+.panel ul{padding-left:20px;margin-bottom:0}
+
+.tree{margin:32px 0}
+.step{display:grid;grid-template-columns:34px 1fr;gap:18px;background:var(--surface);
+      border:1px solid var(--line);border-radius:4px;padding:20px 22px;margin-bottom:12px}
+.step .n{font-family:APSerif,Georgia,serif;color:var(--accent2);font-weight:700;font-size:24px;
+      line-height:1.2;text-align:center}
+.step .q{font-weight:600;font-size:18px;margin:0 0 10px}
+.step .out{font-size:16px;padding:0 0 0 16px;border-left:3px solid var(--green);margin:10px 0 0;
+      color:var(--ink-soft)}
+.step .out strong{color:var(--green)}
+.step .nope{font-size:16px;color:var(--muted);margin:10px 0 0;font-style:italic}
+.arrow{text-align:center;color:var(--line-d);font-size:20px;line-height:1;margin:-4px 0 8px}
+
+.mcard{border:1px solid var(--line);border-radius:4px;background:var(--surface);margin:28px 0;
+      overflow:hidden}
+.mcard > .head{border-bottom:2px solid var(--ink);padding:16px 24px;display:flex;
+      justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;background:var(--surface)}
+.mcard > .head .name{font-family:APSerif,Georgia,serif;font-size:23px;font-weight:700;color:var(--ink)}
+.mcard > .head .tag{font-size:11px;text-transform:uppercase;letter-spacing:.14em;font-weight:700;
+      color:var(--accent2);white-space:nowrap}
+.mcard.exp > .head{border-bottom-color:var(--green)}
+.mcard.exp > .head .name{color:var(--green)}
+.mcard.exp > .head .tag{color:var(--green)}
+.mcard > .body{padding:20px 24px 24px}
+.mcard dl{margin:0}
+.mcard dt{font-weight:700;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;
+      color:var(--accent2);margin-top:20px}
+.mcard dt:first-child{margin-top:0}
+.mcard dd{margin:6px 0 0}
+.mcard dd ul{margin:6px 0 0}
+
+.drill{border:0}
+.drill-row{display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;
+      padding:16px 0;border-bottom:1px solid var(--line)}
+.drill-row:first-child{border-top:1px solid var(--line)}
+.drill-row:last-child{border-bottom:1px solid var(--line)}
+.drill-row .stem{font-size:17px}
+.drill-row .ans-slot{min-width:210px;text-align:right;font-weight:700;color:var(--green);
+      font-size:15.5px;cursor:pointer;user-select:none;border-radius:3px;padding:3px 7px}
+.drill-row .ans-slot:hover{background:var(--soft)}
+.drill-row .ans-slot:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.drill-row .ans-slot .ph{display:none;color:var(--muted);font-weight:700;font-size:13px;
+      letter-spacing:.14em;text-transform:uppercase}
+.drill-row .ans-slot.hidden-ans .ph{display:inline}
+.drill-row .ans-slot.hidden-ans .txt{display:none}
+
+@media (max-width:760px){
+  .split{grid-template-columns:1fr}
+  .drill-row{grid-template-columns:1fr;gap:6px}
+  .drill-row .ans-slot{text-align:left;min-width:0;padding-left:0}
+}
+@media print{
+  .split{grid-template-columns:1fr 1fr}
+  .drill-row .ans-slot .txt{display:inline!important}
+  .drill-row .ans-slot .ph{display:none!important}
+  .mcard,.q-item,.panel,.step,.drill,.drill-row{break-inside:avoid;page-break-inside:avoid}
+}
+
+/* ------------------------------------------------ unit 4 topic page extras */
+.eq{list-style:none;padding:0;margin:20px 0}
+.eq li{padding:12px 0 12px 18px;border-left:3px solid var(--accent);margin:10px 0;background:var(--surface);
+      font-family:APSerif,Georgia,serif;font-size:19px}
+.loop{counter-reset:loop;list-style:none;padding:0;margin:24px 0}
+.loop li{counter-increment:loop;position:relative;padding:14px 18px 14px 58px;background:var(--surface);
+      border:1px solid var(--line);border-radius:4px;margin:0 0 10px}
+.loop li::before{content:counter(loop);position:absolute;left:18px;top:12px;font-family:APSerif,Georgia,serif;
+      font-weight:700;font-size:24px;color:var(--accent2)}
+.pair{border:1px solid var(--line);border-radius:4px;background:var(--surface);margin:26px 0;overflow:hidden}
+.pair > .head{padding:14px 22px;border-bottom:2px solid var(--ink);font-family:APSerif,Georgia,serif;
+      font-size:21px;font-weight:700}
+.pair .cols{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line)}
+.pair .cols.three{grid-template-columns:1fr 1fr 1fr}
+.pair .col{background:var(--surface);padding:18px 22px}
+.pair .col h4{margin:0 0 6px;color:var(--accent)}
+.pair .col p{margin:8px 0;font-size:16.5px}
+.pair .col .ex{color:var(--ink-soft);font-style:italic}
+.pair .tell{padding:14px 22px;background:var(--soft2);font-size:16.5px;border-top:1px solid var(--line)}
+.pair .tell strong{color:var(--accent2)}
+
+/* detective + quiz */
+.score{font-size:15px;font-weight:700;color:var(--muted);letter-spacing:.04em}
+.score b{color:var(--green);font-size:18px}
+.case{border-top:1px solid var(--line);padding:20px 0}
+.case:last-of-type{border-bottom:1px solid var(--line)}
+.case .cnum{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent2)}
+.case .ctext{margin:6px 0 12px;font-size:17.5px}
+.opts{display:flex;flex-wrap:wrap;gap:10px}
+.opts button{flex:0 1 auto}
+.opts.stack{flex-direction:column;align-items:stretch}
+.opts.stack button{text-align:left;font-weight:400;font-size:16.5px;color:var(--ink);border-color:var(--line-d);line-height:1.5}
+.opts.stack button:hover{background:var(--soft);color:var(--ink)}
+.opts button.right,.opts button.right:hover{background:var(--green);border-color:var(--green);color:#fff}
+.opts button.wrong,.opts button.wrong:hover{background:var(--red-s);border-color:var(--red);color:var(--red)}
+.opts button:disabled{opacity:1;cursor:default}
+.opts button.dim{opacity:.5}
+.fb{display:none;margin:14px 0 0;padding:12px 16px;border-left:3px solid var(--green);background:var(--green-s);font-size:16.5px}
+.fb.miss{border-left-color:var(--red);background:var(--red-s)}
+.fb.open{display:block}
+.fb strong{display:block;margin-bottom:4px}
+.tabs{display:flex;gap:0;border-bottom:1px solid var(--line);margin:8px 0 6px}
+.tabs button{border:0;border-bottom:2px solid transparent;border-radius:0;background:none;color:var(--muted);padding:10px 16px 10px 0;margin-right:14px}
+.tabs button:hover{background:none;color:var(--accent)}
+.tabs button[aria-selected="true"]{color:var(--accent);border-bottom-color:var(--accent)}
+.done{display:none;margin:20px 0 0;font-weight:600}
+.done.open{display:block}
+
+@media (max-width:760px){
+  .pair .cols,.pair .cols.three{grid-template-columns:1fr}
+}
+@media print{
+  .fb{display:block!important}
+  .case,.pair,.loop li{break-inside:avoid;page-break-inside:avoid}
+}
+
+.bf-item{display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center;padding:12px 0;border-top:1px solid var(--line)}
+.bf-item:first-child{border-top:0}
+.bf-item .stmt{font-size:17px}
+.bf-item .stmt .n{color:var(--accent2);font-weight:700;font-size:13px;margin-right:8px}
+.likert{display:flex;gap:4px}
+.likert label{display:flex;flex-direction:column;align-items:center;font-size:11px;color:var(--muted);width:46px;cursor:pointer;text-align:center;line-height:1.2}
+.likert input{width:20px;height:20px;accent-color:var(--accent);cursor:pointer;margin:0 0 4px}
+.scalekey{display:flex;justify-content:flex-end;gap:4px;font-size:11px;color:var(--muted);font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin:0 0 4px}
+.scalekey span{width:46px;text-align:center}
+.bf-prog{font-size:14px;color:var(--muted);font-weight:600;margin:14px 0 0}
+#bfResults{display:none;margin:24px 0 0}
+#bfResults.open{display:block}
+.trait{margin:0 0 22px}
+.trait .tname{font-family:APSerif,Georgia,serif;font-weight:700;font-size:19px;margin:0 0 6px}
+.trait .ends{display:flex;justify-content:space-between;font-size:13px;color:var(--muted);margin:4px 0 0;gap:12px}
+.trait .ends span:last-child{text-align:right}
+.trait .line{position:relative;height:10px;background:linear-gradient(90deg,var(--soft) 0%,var(--line-d) 100%);border-radius:5px}
+.trait .dot{position:absolute;top:50%;width:20px;height:20px;border-radius:50%;background:var(--accent);border:3px solid #fff;
+  box-shadow:0 0 0 1px var(--accent);transform:translate(-50%,-50%)}
+.trait .desc{font-size:15.5px;color:var(--ink-soft);margin:8px 0 0}
+@media (max-width:760px){
+  .bf-item{grid-template-columns:1fr}
+  .scalekey{justify-content:flex-start}
+  .likert label,.scalekey span{width:auto;flex:1}
+}
+
+</style>
+</head>
+
+<body>
+<div class="crumbs">
+  <div class="inner">
+    <a href="../index.html">AP Psychology</a>
+    <span class="sep">&rsaquo;</span>
+    <a href="index.html">Unit 4</a>
+    <span class="sep">&rsaquo;</span>
+    <span class="here">4.5 Social-Cognitive and Trait Theories</span>
+  </div>
+</div>
+
+<header class="top">
+  <div class="inner">
+    <h1>Social-Cognitive and Trait Theories of Personality</h1>
+    <p class="tag">You, your situations, and the traits that travel with you</p>
+    <p class="meta">AP Psychology &bull; Unit 4: Social Psychology and Personality &bull; CED Topic 4.5</p>
+  </div>
+</header>
+
+<nav class="jump">
+  <ul>
+    <li><a href="#start">Start Here</a></li>
+    <li><a href="#terms">Key Terms</a></li>
+    <li><a href="#socialcog">Social-Cognitive Theory</a></li>
+    <li><a href="#self">The Self</a></li>
+    <li><a href="#traits">Trait Theory</a></li>
+    <li><a href="#assess">Measuring Traits</a></li>
+    <li><a href="#mixups">Don't Mix These Up</a></li>
+    <li><a href="#bigfive">Big Five Mini-Profile</a></li>
+    <li><a href="#detective">Personality Sorter</a></li>
+    <li><a href="#quiz">Self-Check Quiz</a></li>
+    <li><a href="#traps">AP Exam Traps</a></li>
+  </ul>
+</nav>
+
+<div class="wrap">
+
+<h2 id="start"><span class="num">1</span>Start Here</h2>
+
+<p class="lede">Think about how you act with your closest friends, then with a teacher, then at a family dinner. Are you the same person in all three? This page completes the four lenses on personality. The <strong>social-cognitive</strong> view says personality is a constant back-and-forth between you and your situations. The <strong>trait</strong> view describes the stable patterns that travel with you from one situation to the next.</p>
+
+<ul class="eq">
+  <li>How do we shape our situations, and how do they shape us?</li>
+  <li>Why do we see ourselves less clearly than we think?</li>
+  <li>Can a handful of traits really describe a whole personality, and how would we measure them?</li>
+</ul>
+
+<div class="box note">
+  <span class="label">How to use this page</span>
+  <p>Read the key terms and sections, then take the <a href="#bigfive">Big Five Mini-Profile</a>, try the <a href="#detective">Personality Sorter</a>, and finish with the <a href="#quiz">Self-Check Quiz</a>. Nothing you click, including your profile answers, is recorded, saved, or sent anywhere.</p>
+</div>
+
+<h2 id="terms"><span class="num">2</span>Key Terms at a Glance</h2>
+
+<div class="tscroll">
+<table class="wide">
+  <thead><tr><th style="width:32%">Term</th><th>What it means</th></tr></thead>
+  <tbody>
+    <tr><td class="term">Social-cognitive theory</td><td>Personality comes from the interaction of our thoughts, behavior, and environment (Bandura).</td></tr>
+    <tr><td class="term">Behavioral approach</td><td>Explains personality through learned responses and conditioning from the environment.</td></tr>
+    <tr><td class="term">Reciprocal determinism</td><td>Behavior, personal/cognitive factors, and environment all influence one another.</td></tr>
+    <tr><td class="term">Self-concept</td><td>Our overall sense of who we are: our answer to "Who am I?"</td></tr>
+    <tr><td class="term">Self-esteem</td><td>Our overall feeling of self-worth.</td></tr>
+    <tr><td class="term">Self-efficacy</td><td>Our belief that we can succeed at a specific task.</td></tr>
+    <tr><td class="term">Spotlight effect</td><td>Overestimating how much others notice and judge us.</td></tr>
+    <tr><td class="term">Self-serving bias</td><td>Our readiness to see ourselves favorably: credit for success, excuses for failure.</td></tr>
+    <tr><td class="term">Trait</td><td>A characteristic, relatively stable pattern of behaving, feeling, and thinking.</td></tr>
+    <tr><td class="term">Factor analysis</td><td>A statistical method that finds clusters of related items, used to identify basic trait dimensions.</td></tr>
+    <tr><td class="term">Big Five</td><td>Five broad trait dimensions: openness, conscientiousness, extraversion, agreeableness, emotional stability.</td></tr>
+    <tr><td class="term">Personality inventory</td><td>A long questionnaire that assesses many traits at once.</td></tr>
+    <tr><td class="term">MMPI</td><td>The most researched personality inventory, originally built to identify psychological disorders.</td></tr>
+    <tr><td class="term">Empirically derived test</td><td>A test whose items were kept because they actually distinguish groups, not because of a theory.</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2 id="socialcog"><span class="num">3</span>The Social-Cognitive Perspective</h2>
+
+<p><span class="term">Social-cognitive theory</span> (Albert Bandura) says personality emerges from the interplay of what we think, what we do, and where we are. It grows out of the <span class="term">behavioral approach</span>, which explains personality through conditioning and observational learning, but adds <strong>cognition</strong>: our beliefs, expectations, and interpretations. The key move: we are shaped by our environment, and we help shape it.</p>
+
+<h3>Reciprocal determinism</h3>
+<p><span class="term">Reciprocal determinism</span> means behavior, personal/cognitive factors, and environment all influence one another. It is a three-way street:</p>
+<ul>
+  <li>Different people <strong>choose</strong> different environments. A shy person picks quieter settings.</li>
+  <li>Our personalities shape how we <strong>interpret</strong> and react to events.</li>
+  <li>Our personalities help <strong>create</strong> the situations we then react to.</li>
+</ul>
+
+<div class="split">
+  <div class="panel is-tool">
+    <h4>The loop spinning one way</h4>
+    <p><strong>Personal:</strong> Lisa is shy. <strong>Behavior:</strong> she avoids clubs and parties. <strong>Environment:</strong> she meets fewer people and gets little social practice, which keeps her feeling shy.</p>
+  </div>
+  <div class="panel is-method">
+    <h4>The loop spinning the other way</h4>
+    <p><strong>Personal:</strong> Rosa is confident. <strong>Behavior:</strong> she joins teams and speaks up. <strong>Environment:</strong> she lands in supportive, social settings that build even more confidence.</p>
+  </div>
+</div>
+
+<h2 id="self"><span class="num">4</span>The Self</h2>
+<p>The self is the organizing center of personality, and one of the most researched topics in psychology. Your <span class="term">self-concept</span> is everything you think and feel in answer to "Who am I?" (the same idea at the heart of Rogers's humanistic theory in 4.4).</p>
+
+<div class="split">
+  <div class="panel is-method">
+    <h4>Self-esteem: "I am worthy."</h4>
+    <p>Your <strong>overall</strong> sense of self-worth. High self-esteem is linked to persistence and resilience. "Secure" self-esteem that does not depend on constant praise is healthiest.</p>
+  </div>
+  <div class="panel is-tool">
+    <h4>Self-efficacy: "I can do <em>this</em>."</h4>
+    <p>Your belief that you can succeed at a <strong>specific</strong> task (Bandura). You might have high self-efficacy for math and low self-efficacy for public speaking. Past success is its biggest builder.</p>
+  </div>
+</div>
+
+<h3>When the self distorts</h3>
+<p>The <span class="term">spotlight effect</span> is overestimating how much others notice and judge us, as if a spotlight follows us around. In one well-known study, students asked to wear an embarrassing T-shirt into a room guessed that about half the people there would notice it; in reality, far fewer did. The good news: everyone else is too busy worrying about their own spotlight.</p>
+<p>The <span class="term">self-serving bias</span> first appeared in 4.1 as an attribution bias: credit for wins, excuses for losses. Here it returns as a distortion of the self-concept that protects self-esteem. Most people rate themselves as above-average drivers, friends, and students, which cannot be true for everyone.</p>
+
+<h2 id="traits"><span class="num">5</span>Trait Theory</h2>
+
+<p>Trait theorists, beginning with Gordon Allport, set aside hidden causes like Freud's unconscious and focus on <strong>describing and measuring</strong> how people consistently differ. A <span class="term">trait</span> is a relatively stable pattern of behaving, feeling, and thinking. The problem: English has thousands of trait words. How do you boil them down?</p>
+
+<h3>Factor analysis</h3>
+<p><span class="term">Factor analysis</span> is a statistical technique that finds clusters of items people tend to answer the same way. If people who call themselves "talkative" also call themselves "outgoing" and "energetic," those items cluster into one underlying factor, extraversion. Factor analysis is how thousands of trait words were reduced to a few core dimensions.</p>
+
+<h3>The Big Five (OCEAN)</h3>
+<div class="tscroll">
+<table class="wide">
+  <thead><tr><th style="width:26%">Factor</th><th>Higher end</th><th>Lower end</th></tr></thead>
+  <tbody>
+    <tr><td class="term">Openness to experience</td><td>Curious, imaginative, drawn to new ideas and experiences</td><td>Conventional, practical, prefers the familiar</td></tr>
+    <tr><td class="term">Conscientiousness</td><td>Organized, disciplined, dependable</td><td>Spontaneous, careless, impulsive</td></tr>
+    <tr><td class="term">Extraversion</td><td>Outgoing, talkative, energized by others</td><td>Reserved, quiet, energized by time alone</td></tr>
+    <tr><td class="term">Agreeableness</td><td>Compassionate, trusting, cooperative</td><td>Critical, skeptical, competitive</td></tr>
+    <tr><td class="term">Emotional stability</td><td>Calm, secure, even-tempered</td><td>Anxious, moody, easily upset (neuroticism)</td></tr>
+  </tbody>
+</table>
+</div>
+<p>Each factor is a <strong>spectrum</strong>, not a box, and neither end is simply "good" or "bad." The Big Five are fairly stable in adulthood, show up across cultures, and are partly heritable. Note the label: many textbooks use <strong>neuroticism</strong> for the fifth factor, while the CED names the calm end, <strong>emotional stability</strong>. It is the same dimension.</p>
+
+<div class="box warn">
+  <span class="label">What about the Myers-Briggs (MBTI)?</span>
+  <p>The MBTI ("I'm an INFP!") sorts people into 16 types. It is popular, but research psychologists rarely use it: many people get a different type when they retake it (weak reliability), and it forces spectrums into either/or boxes. Treat it as pop psychology. The Big Five is the scientifically supported model.</p>
+</div>
+
+<h3>Do traits predict behavior?</h3>
+<p>Critics in the <strong>person-situation controversy</strong> point out that behavior varies a lot from one situation to the next, so a single trait does not predict any one act very well. The resolution: traits predict your <strong>average</strong> behavior across many situations. Your extraversion will not predict whether you are quiet at one particular meeting, but it will predict how sociable you are over months.</p>
+
+<div class="box note">
+  <span class="label">Are traits in your genes? Data interpretation practice</span>
+  <p>Researchers compare identical twins (nearly 100 percent shared genes) with fraternal twins (about 50 percent). Representative correlations for extraversion: <strong>identical twins 0.51, fraternal twins 0.18.</strong> Identical twins are far more alike, which suggests a genetic influence. But 0.51 is well below 1.0, so environment clearly matters too, and because twin studies are correlational, they cannot prove exactly how genes cause a trait. The Big Five are estimated to be roughly 40 to 50 percent heritable.</p>
+</div>
+
+<h2 id="assess"><span class="num">6</span>Measuring Traits</h2>
+<p>A <span class="term">personality inventory</span> is a long questionnaire asking about behaviors and feelings to measure many traits at once. The <span class="term">MMPI</span> (Minnesota Multiphasic Personality Inventory) is the most researched. It was originally designed to identify psychological disorders, and it is an <span class="term">empirically derived test</span>: its items were kept only if they actually distinguished groups, such as people with and without a particular disorder, whether or not the item seemed to make sense in theory.</p>
+
+<div class="split">
+  <div class="panel is-method">
+    <h4>Strengths of inventories</h4>
+    <p>Objective and standardized: everyone answers the same items, scored the same way. Much more reliable than projective tests.</p>
+  </div>
+  <div class="panel is-tool">
+    <h4>Weaknesses of inventories</h4>
+    <p>Self-report: people can fake answers or respond in socially desirable ways. The results are only as honest and self-aware as the test-taker.</p>
+  </div>
+</div>
+
+<h2 id="mixups"><span class="num">7</span>Don't Mix These Up</h2>
+
+<div class="pair">
+  <div class="head">Self-esteem vs. self-efficacy vs. self-concept</div>
+  <div class="cols three">
+    <div class="col"><h4>Self-concept</h4><p><strong>Who am I?</strong> Your overall picture of yourself.</p></div>
+    <div class="col"><h4>Self-esteem</h4><p><strong>How much am I worth?</strong> Global self-worth.</p></div>
+    <div class="col"><h4>Self-efficacy</h4><p><strong>Can I do this?</strong> Task-specific confidence.</p></div>
+  </div>
+  <div class="tell"><strong>The tell:</strong> if the scenario names a specific task (a driving test, a free throw, a calculus exam), think self-efficacy.</div>
+</div>
+
+<div class="pair">
+  <div class="head">Spotlight effect vs. self-serving bias</div>
+  <div class="cols">
+    <div class="col"><h4>Spotlight effect</h4><p>"Everyone is <strong>noticing</strong> me."</p><p class="ex">Sure the whole class saw you trip on the stairs.</p></div>
+    <div class="col"><h4>Self-serving bias</h4><p>"I deserve <strong>credit</strong>, not blame."</p><p class="ex">"I aced it because I'm smart. I failed because it was unfair."</p></div>
+  </div>
+  <div class="tell"><strong>The tell:</strong> the spotlight effect is about attention from others. The self-serving bias is about explaining your own outcomes.</div>
+</div>
+
+<div class="pair">
+  <div class="head">Reciprocal determinism vs. the behavioral approach</div>
+  <div class="cols">
+    <div class="col"><h4>Behavioral approach</h4><p>The environment shapes you through conditioning. <strong>One-way.</strong></p></div>
+    <div class="col"><h4>Reciprocal determinism</h4><p>Person, behavior, and environment shape <strong>each other</strong>. Three-way, with thoughts included.</p></div>
+  </div>
+  <div class="tell"><strong>The tell:</strong> if the person's own traits or beliefs choose or change the environment, the answer is reciprocal determinism.</div>
+</div>
+
+<div class="pair">
+  <div class="head">Objective inventories vs. projective tests</div>
+  <div class="cols">
+    <div class="col"><h4>Objective (trait)</h4><p>Standard questions and scoring: MMPI, Big Five inventories. More reliable, but open to faking.</p></div>
+    <div class="col"><h4>Projective (psychodynamic, 4.4)</h4><p>Ambiguous stimuli: Rorschach, TAT. Harder to fake, but weak reliability and validity.</p></div>
+  </div>
+  <div class="tell"><strong>The tell:</strong> "empirically derived" and "standardized" point to the MMPI. "Ambiguous" points to a projective test.</div>
+</div>
+
+<div class="pair">
+  <div class="head">The four lenses, side by side</div>
+  <div class="cols">
+    <div class="col"><h4>4.4</h4><p><strong>Psychodynamic:</strong> unconscious forces and childhood. <strong>Humanistic:</strong> growth, free will, the self.</p></div>
+    <div class="col"><h4>4.5</h4><p><strong>Social-cognitive:</strong> person, behavior, and environment interacting. <strong>Trait:</strong> stable, measurable dimensions.</p></div>
+  </div>
+  <div class="tell"><strong>The tell:</strong> ask what the explanation focuses on: hidden conflict, potential, interaction with the environment, or measurable consistency.</div>
+</div>
+
+<h2 id="bigfive"><span class="num">8</span>Big Five Mini-Profile</h2>
+<p>Rate how accurately each statement describes you as you generally are now, not as you wish to be. There are 20 statements, four for each factor. Your answers stay in this browser tab and disappear when you close it.</p>
+
+<div class="widget" id="bfBox">
+  <h3>Describe yourself <span class="tryit">20 items</span></h3>
+  <div class="scalekey" aria-hidden="true"><span>Very inaccurate</span><span></span><span>Neutral</span><span></span><span>Very accurate</span></div>
+  <div id="bfItems"></div>
+  <p class="bf-prog" id="bfProg" aria-live="polite"></p>
+  <div class="btnrow">
+    <button type="button" class="primary" id="bfScore" disabled>Show my profile</button>
+    <button type="button" id="bfClear">Clear my answers</button>
+  </div>
+  <div id="bfResults" aria-live="polite">
+    <h3>Your profile</h3>
+    <div id="bfBars"></div>
+    <div class="box warn">
+      <span class="label">Before you take this too seriously</span>
+      <p>This is a 20-item snapshot, not a diagnosis. Short scales are less <strong>reliable</strong> than full inventories, so your results could shift if you retake it next month. It is a <strong>self-report</strong> measure, so it can only reflect how you see yourself, and how honest you were. And nothing here is "good" or "bad": every point on each spectrum has strengths.</p>
+    </div>
+    <div class="box note">
+      <span class="label">Reflect like a psychologist</span>
+      <ul>
+        <li><strong>Validity:</strong> would a close friend rate you the same way? What would it mean if they did not?</li>
+        <li><strong>Reliability:</strong> how could you check whether this short test gives consistent results?</li>
+        <li><strong>Reciprocal determinism:</strong> pick your highest trait. How has it shaped the situations you choose, and how have those situations strengthened it?</li>
+        <li><strong>Barnum effect check:</strong> did any description feel true simply because it is vague enough to fit almost anyone?</li>
+      </ul>
+    </div>
+  </div>
+</div>
+<p style="font-size:14.5px;color:var(--muted)">Items from the Mini-IPIP (Donnellan, Oswald, Baird, and Lucas, 2006), drawn from the International Personality Item Pool, which is in the public domain.</p>
+
+<h2 id="detective"><span class="num">9</span>Personality Sorter</h2>
+<p>Three rounds. Name the self term, spot the Big Five trait, and identify which piece of reciprocal determinism a scenario describes.</p>
+
+<div class="widget" id="det">
+  <h3>Sort it out <span class="tryit">Try it</span></h3>
+  <div class="tabs" role="tablist"></div>
+  <p class="score" aria-live="polite">Score: <b id="detScore">0</b> / <span id="detTotal">0</span> answered</p>
+  <div id="detCases"></div>
+  <p class="done" id="detDone"></p>
+  <div class="btnrow"><button type="button" id="detReset">Start this round over</button></div>
+</div>
+
+<h2 id="quiz"><span class="num">10</span>Self-Check Quiz</h2>
+<p>Ten AP-style questions. Click an answer to see whether you were right and why. Your score stays on this screen only.</p>
+
+<div class="widget" id="quizBox">
+  <h3>Check yourself <span class="tryit">Four choices each</span></h3>
+  <p class="score" aria-live="polite">Score: <b id="qScore">0</b> / <span id="qDone">0</span> answered of <span id="qTotal">0</span></p>
+  <div id="quizList"></div>
+  <p class="done" id="qFinal"></p>
+  <div class="btnrow"><button type="button" id="qReset">Start the quiz over</button></div>
+</div>
+
+<h2 id="traps"><span class="num">11</span>AP Exam Traps</h2>
+<div class="box warn">
+  <span class="label">Watch for these</span>
+  <ul>
+    <li><strong>Reciprocal determinism is a three-way loop.</strong> On free-response prompts, label the personal, behavioral, and environmental pieces explicitly.</li>
+    <li><strong>Self-esteem ("I am worthy") vs. self-efficacy ("I can do this task").</strong> The exam loves this distinction.</li>
+    <li><strong>Know the Big Five cold</strong> and recognize each one from a scenario. The CED calls the fifth factor emotional stability; its low end is neuroticism.</li>
+    <li><strong>Factor analysis</strong> is the statistical tool that found the Big Five.</li>
+    <li><strong>MMPI = objective, empirically derived inventory.</strong> Contrast it with projective tests from 4.4.</li>
+    <li><strong>Traits predict average behavior across situations,</strong> not every single act.</li>
+    <li><strong>Social-cognitive theory is not pure behaviorism.</strong> It adds thoughts and beliefs to learning.</li>
+  </ul>
+</div>
+
+<div class="box note">
+  <span class="label">Connections across the course</span>
+  <p><strong>Topic 4.4:</strong> this completes the four personality lenses. <strong>Topic 4.1:</strong> the self-serving bias first appeared as an attribution bias, and locus of control is closely related to self-efficacy. <strong>Topic 4.3B:</strong> individualism and collectivism shape how the self is defined. <strong>Unit 3:</strong> Bandura's observational learning is the root of social-cognitive theory. <strong>Unit 1 and Unit 0:</strong> twin studies, heritability, and factor analysis.</p>
+</div>
+
+<div class="pagenav">
+  <a href="psychodynamic-and-humanistic.html"><span class="dir">&larr; Previous</span><span class="t">4.4 Psychodynamic and Humanistic Theories</span></a>
+  <a href="index.html"><span class="dir">Back to</span><span class="t">Unit 4 Resources</span></a>
+</div>
+
+<footer>
+  <p>AP Psychology, Unit 4: Social Psychology and Personality. Topic 4.5, aligned to the 2024 Course and Exam Description.</p>
+  <p>Don West, AP Psychology Teacher. Questions? Message me on Canvas or ask at the start of class.</p>
+</footer>
+
+</div>
+
+<script>
+(function () {
+  /* Mini-IPIP. f: factor key, r: reverse-keyed */
+  var ITEMS = [
+    ['Am the life of the party.', 'E', 0], ['Sympathize with others\' feelings.', 'A', 0], ['Get chores done right away.', 'C', 0], ['Have frequent mood swings.', 'N', 0], ['Have a vivid imagination.', 'O', 0],
+    ['Don\'t talk a lot.', 'E', 1], ['Am not interested in other people\'s problems.', 'A', 1], ['Often forget to put things back in their proper place.', 'C', 1], ['Am relaxed most of the time.', 'N', 1], ['Am not interested in abstract ideas.', 'O', 1],
+    ['Talk to a lot of different people at parties.', 'E', 0], ['Feel others\' emotions.', 'A', 0], ['Like order.', 'C', 0], ['Get upset easily.', 'N', 0], ['Have difficulty understanding abstract ideas.', 'O', 1],
+    ['Keep in the background.', 'E', 1], ['Am not really interested in others.', 'A', 1], ['Make a mess of things.', 'C', 1], ['Seldom feel blue.', 'N', 1], ['Do not have a good imagination.', 'O', 1]
+  ];
+  var FACTORS = [
+    { k: 'O', name: 'Openness to experience', lo: 'Conventional, practical', hi: 'Curious, imaginative',
+      hiT: 'You describe yourself as drawn to new ideas, imagination, and abstract thinking.', loT: 'You describe yourself as practical and grounded, preferring the concrete and familiar.' },
+    { k: 'C', name: 'Conscientiousness', lo: 'Spontaneous, flexible', hi: 'Organized, disciplined',
+      hiT: 'You describe yourself as orderly and quick to get things done.', loT: 'You describe yourself as more spontaneous and flexible than structured.' },
+    { k: 'E', name: 'Extraversion', lo: 'Reserved, quiet', hi: 'Outgoing, talkative',
+      hiT: 'You describe yourself as energized by people and comfortable in the center of things.', loT: 'You describe yourself as more reserved, likely recharging with quieter time.' },
+    { k: 'A', name: 'Agreeableness', lo: 'Skeptical, competitive', hi: 'Compassionate, cooperative',
+      hiT: 'You describe yourself as tuned in to other people\'s feelings and problems.', loT: 'You describe yourself as more independent and less focused on others\' feelings.' },
+    { k: 'S', name: 'Emotional stability', lo: 'Reactive, easily upset', hi: 'Calm, even-tempered',
+      hiT: 'You describe yourself as mostly relaxed and slow to get upset.', loT: 'You describe yourself as feeling emotions strongly and shifting moods more often.' }
+  ];
+  var LABELS = ['Very inaccurate', 'Moderately inaccurate', 'Neither', 'Moderately accurate', 'Very accurate'];
+  var box = document.getElementById('bfItems');
+  var answers = new Array(ITEMS.length);
+  ITEMS.forEach(function (it, i) {
+    var row = document.createElement('div');
+    row.className = 'bf-item';
+    var s = document.createElement('div'); s.className = 'stmt';
+    s.innerHTML = '<span class="n">' + (i + 1) + '</span>';
+    s.appendChild(document.createTextNode(it[0]));
+    var lk = document.createElement('div'); lk.className = 'likert'; lk.setAttribute('role', 'radiogroup');
+    lk.setAttribute('aria-label', 'Statement ' + (i + 1));
+    for (var v = 1; v <= 5; v++) {
+      var lab = document.createElement('label');
+      lab.innerHTML = '<input type="radio" name="bf' + i + '" value="' + v + '"><span>' + v + '</span>';
+      lab.title = LABELS[v - 1];
+      lab.querySelector('input').setAttribute('aria-label', LABELS[v - 1]);
+      lk.appendChild(lab);
+    }
+    lk.addEventListener('change', function (e) { answers[i] = +e.target.value; prog(); });
+    row.appendChild(s); row.appendChild(lk); box.appendChild(row);
+  });
+  var btn = document.getElementById('bfScore');
+  function prog() {
+    var n = answers.filter(function (a) { return a; }).length;
+    document.getElementById('bfProg').textContent = n + ' of ' + ITEMS.length + ' answered' + (n === ITEMS.length ? '. Ready.' : '');
+    btn.disabled = n !== ITEMS.length;
+  }
+  prog();
+  btn.addEventListener('click', function () {
+    var sum = { O: 0, C: 0, E: 0, A: 0, N: 0 };
+    ITEMS.forEach(function (it, i) { sum[it[1]] += it[2] ? 6 - answers[i] : answers[i]; });
+    sum.S = 24 - sum.N; /* emotional stability = reverse of neuroticism, range 4-20 */
+    var bars = document.getElementById('bfBars'); bars.innerHTML = '';
+    FACTORS.forEach(function (f) {
+      var pct = (sum[f.k] - 4) / 16 * 100;
+      var d = document.createElement('div'); d.className = 'trait';
+      d.innerHTML = '<p class="tname"></p><div class="line"><span class="dot" style="left:' + pct + '%"></span></div>' +
+        '<div class="ends"><span></span><span></span></div><p class="desc"></p>';
+      d.querySelector('.tname').textContent = f.name + ': ' + sum[f.k] + ' out of 20';
+      var e = d.querySelectorAll('.ends span'); e[0].textContent = f.lo; e[1].textContent = f.hi;
+      d.querySelector('.desc').textContent = pct >= 62.5 ? f.hiT : pct <= 37.5 ? f.loT :
+        'You land near the middle, which is where most people fall on most traits. You likely show both ends depending on the situation.';
+      bars.appendChild(d);
+    });
+    document.getElementById('bfResults').classList.add('open');
+    document.getElementById('bfResults').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+  document.getElementById('bfClear').addEventListener('click', function () {
+    box.querySelectorAll('input').forEach(function (x) { x.checked = false; });
+    for (var i = 0; i < answers.length; i++) answers[i] = undefined;
+    document.getElementById('bfResults').classList.remove('open');
+    prog();
+  });
+})();
+
+window.PAGE = {
+  reviewHint: 'Review sections 3 to 5, then start the round over.',
+  rounds: [
+    { tab: 'Round 1: Name the self term',
+      options: ['Self-concept', 'Self-esteem', 'Self-efficacy', 'Spotlight effect', 'Self-serving bias'],
+      cases: [
+        ['Ethan has never gone rock climbing, but he is confident that with practice he can master it.', 2, 'A confident belief about succeeding at a specific task is self-efficacy.'],
+        ['Mei spills bubble tea on her shirt before first period and is convinced everyone in class is staring at the stain all day.', 3, 'Overestimating how much others notice you is the spotlight effect. Most classmates probably never saw it.'],
+        ['After the team wins, Jack says, "We won because I played great." After a loss: "The refs were terrible."', 4, 'Credit for success, blame on the situation for failure: the self-serving bias protecting his self-image.'],
+        ['Asked to describe himself, Leo says, "I\'m a musician, a big brother, a night owl, and kind of a perfectionist."', 0, 'His overall set of beliefs about who he is makes up his self-concept.'],
+        ['Despite some bad grades this year, Ana still generally feels like a worthwhile, likable person.', 1, 'A global sense of self-worth that is not tied to one task is self-esteem.'],
+        ['Having passed three practice driving tests, Kai feels sure he will pass the real road test next week.', 2, 'Task-specific confidence built on past success is self-efficacy. Past success is its strongest source.']
+      ]},
+    { tab: 'Round 2: Which Big Five trait?',
+      options: ['Openness', 'Conscientiousness', 'Extraversion', 'Agreeableness', 'Emotional stability'],
+      cases: [
+        ['Sarah loves trying new foods, traveling to unfamiliar places, and reading about strange ideas in physics.', 0, 'Curiosity and seeking new experiences define high openness to experience.'],
+        ['Tom color-codes his notes, starts assignments the day they are given, and never misses a deadline.', 1, 'Organized, disciplined, and dependable describe high conscientiousness.'],
+        ['At every party, Rina ends up talking to almost everyone and leaves feeling energized.', 2, 'Seeking out people and gaining energy from them describes high extraversion.'],
+        ['Chen stays calm when the fire alarm goes off mid-exam and rarely feels anxious before tests.', 4, 'Calm and secure under stress is high emotional stability (low neuroticism).'],
+        ['Priya is the friend everyone goes to with problems. She is patient, trusting, and hates conflict.', 3, 'Compassion, trust, and cooperation describe high agreeableness.'],
+        ['Max worries constantly about small things and his mood swings from great to awful several times a day.', 4, 'This describes the low end of emotional stability, which many textbooks call high neuroticism.'],
+        ['Yu-Ting prefers the same routine every day and finds abstract discussions pointless.', 0, 'Preferring the familiar and concrete describes the low end of openness to experience.']
+      ]},
+    { tab: 'Round 3: Which piece of the loop?',
+      intro: 'Each case describes one piece of a reciprocal determinism loop. Is it a personal/cognitive factor, a behavior, or the environment?',
+      options: ['Personal/cognitive factor', 'Behavior', 'Environment'],
+      cases: [
+        ['Maya believes she is a strong athlete.', 0, 'A belief about herself is a personal/cognitive factor.'],
+        ['Maya tries out for the school basketball team.', 1, 'Trying out is an action she takes: behavior.'],
+        ['Maya now spends every afternoon with teammates and a coach who push her to improve.', 2, 'The people and setting around her are her environment, which her behavior helped create.'],
+        ['Lisa feels nervous around new people.', 0, 'A feeling and expectation inside Lisa is a personal factor.'],
+        ['Lisa\'s family moves to a busy city apartment building full of other teenagers.', 2, 'Where she lives and who is around her is the environment.'],
+        ['Lisa starts saying hello to neighbors in the elevator.', 1, 'Greeting people is behavior, which could now start to change both her environment and her nervousness.']
+      ]}
+  ],
+  quiz: [
+    ['Jake is naturally outgoing, so he joins the debate team, which surrounds him with confident speakers who make him even more outgoing. This best illustrates:',
+      ['the spotlight effect', 'reciprocal determinism', 'an empirically derived test', 'unconditional positive regard'], 1,
+      'His trait, his behavior, and his environment all influence one another. That is reciprocal determinism.'],
+    ['Which statement best describes how social-cognitive theory differs from a purely behavioral approach?',
+      ['It ignores the environment.', 'It adds thoughts, beliefs, and expectations to learning from the environment.', 'It focuses on unconscious conflict.', 'It says personality is entirely inherited.'], 1,
+      'Social-cognitive theory keeps learning from the environment but adds cognition. Option C describes psychodynamic theory.'],
+    ['Ethan has never gone rock climbing, but he is confident that with practice he can master it. This belief is:',
+      ['self-esteem', 'self-concept', 'self-efficacy', 'the self-serving bias'], 2,
+      'Confidence about succeeding at a specific task is self-efficacy. Self-esteem is global self-worth.'],
+    ['Nina is sure everyone at the assembly noticed that she mispronounced a word during her speech. Afterward, almost no one remembers it. Nina experienced:',
+      ['the spotlight effect', 'the self-serving bias', 'low self-efficacy', 'reciprocal determinism'], 0,
+      'Overestimating how much others notice and judge you is the spotlight effect.'],
+    ['Psychologists used which statistical technique to reduce thousands of trait words to the Big Five?',
+      ['correlation', 'factor analysis', 'meta-analysis', 'random assignment'], 1,
+      'Factor analysis identifies clusters of items that are answered together, revealing underlying dimensions.'],
+    ['Sarah loves trying new foods, traveling to unfamiliar places, and exploring new ideas. She scores highest on:',
+      ['conscientiousness', 'openness to experience', 'agreeableness', 'emotional stability'], 1,
+      'Curiosity and seeking new experiences define openness to experience.'],
+    ['A clinician wants an objective, standardized questionnaire whose items were chosen because they reliably distinguish groups, to screen for psychological disorders. The best tool is:',
+      ['the Rorschach inkblot test', 'the Thematic Apperception Test', 'the MMPI', 'free association'], 2,
+      'The MMPI is an objective, empirically derived inventory. The Rorschach and TAT are projective tests.'],
+    ['Which is the main weakness of personality inventories such as the MMPI?',
+      ['They cannot be scored consistently.', 'People may fake answers or respond in socially desirable ways.', 'They rely on ambiguous stimuli.', 'They measure only one trait at a time.'], 1,
+      'Because inventories rely on self-report, test-takers can present themselves falsely. Inconsistent scoring and ambiguous stimuli are problems with projective tests.'],
+    ['Twin studies report extraversion correlations of 0.51 for identical twins and 0.18 for fraternal twins. Which conclusion is best supported?',
+      ['Extraversion is determined entirely by the environment.', 'Identical twins are more similar in extraversion, suggesting a genetic influence.', 'Fraternal twins are more alike than identical twins.', 'Genes have no measurable effect on extraversion.'], 1,
+      'Identical twins share more genes and are more alike, which points to a genetic influence. The correlation is well below 1.0, so environment matters too.'],
+    ['A critic points out that a student rated highly extraverted is sometimes quiet in class. A trait theorist would most likely respond that:',
+      ['traits do not exist', 'traits predict average behavior across many situations, not every single act', 'the student must be repressing her true personality', 'the student has low self-efficacy'], 1,
+      'This is the person-situation controversy. Traits describe tendencies across situations, not certainties in any one moment.']
+  ]
+};
+</script>
+<script>
+(function () {
+  var P = window.PAGE || {};
+
+  function markChoice(opts, fbEl, chosen, correct, head, why) {
+    var btns = opts.querySelectorAll('button');
+    btns.forEach(function (x, k) {
+      x.disabled = true;
+      if (k === correct) x.classList.add('right');
+      else if (k === chosen) x.classList.add('wrong');
+      else x.classList.add('dim');
+    });
+    fbEl.className = 'fb open' + (chosen === correct ? '' : ' miss');
+    fbEl.innerHTML = '<strong></strong>';
+    fbEl.firstChild.textContent = head;
+    fbEl.appendChild(document.createTextNode(why));
+  }
+
+  /* ---------------- sorting activity (tabs of rounds) ---------------- */
+  if (P.rounds && document.getElementById('det')) {
+    var round = 0, score = 0, answered = 0;
+    var casesEl = document.getElementById('detCases');
+    var tabsEl = document.querySelector('#det .tabs');
+    P.rounds.forEach(function (r, i) {
+      var t = document.createElement('button');
+      t.type = 'button'; t.setAttribute('role', 'tab');
+      t.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
+      t.textContent = r.tab;
+      t.addEventListener('click', function () {
+        round = i;
+        tabsEl.querySelectorAll('button').forEach(function (x) { x.setAttribute('aria-selected', x === t ? 'true' : 'false'); });
+        renderRound();
+      });
+      tabsEl.appendChild(t);
+    });
+    if (P.rounds.length < 2) tabsEl.style.display = 'none';
+
+    var renderRound = function () {
+      score = 0; answered = 0;
+      var r = P.rounds[round];
+      casesEl.innerHTML = '';
+      if (r.intro) {
+        var ip = document.createElement('p');
+        ip.className = 'commentary'; ip.textContent = r.intro;
+        casesEl.appendChild(ip);
+      }
+      r.cases.forEach(function (c, i) {
+        var options = c[3] || r.options;
+        var d = document.createElement('div');
+        d.className = 'case';
+        d.innerHTML = '<span class="cnum">Case ' + (i + 1) + '</span><p class="ctext"></p><div class="opts' + (r.stack ? ' stack' : '') + '"></div><div class="fb" aria-live="polite"></div>';
+        d.querySelector('.ctext').textContent = c[0];
+        var opts = d.querySelector('.opts');
+        options.forEach(function (label, j) {
+          var b = document.createElement('button');
+          b.type = 'button'; b.textContent = label;
+          b.addEventListener('click', function () {
+            var right = j === c[1];
+            markChoice(opts, d.querySelector('.fb'), j, c[1],
+              (right ? 'Correct: ' : 'Not quite. Correct answer: ') + options[c[1]] + '.', c[2]);
+            answered++; if (right) score++;
+            update();
+            if (answered === r.cases.length) {
+              var done = document.getElementById('detDone');
+              var last = round === P.rounds.length - 1;
+              done.textContent = 'Round complete: ' + score + ' of ' + r.cases.length + '. ' +
+                (!last ? 'Ready for the next round? Use the tabs at the top of the box.' :
+                 score >= Math.ceil(r.cases.length * 0.75) ? 'Strong work. Now try the Self-Check Quiz below.' :
+                 (P.reviewHint || 'Review the sections above, then start the round over.'));
+              done.className = 'done open';
+            }
+          });
+          opts.appendChild(b);
+        });
+        casesEl.appendChild(d);
+      });
+      document.getElementById('detDone').className = 'done';
+      update();
+    };
+    var update = function () {
+      document.getElementById('detScore').textContent = score;
+      document.getElementById('detTotal').textContent = answered;
+    };
+    document.getElementById('detReset').addEventListener('click', renderRound);
+    renderRound();
+  }
+
+  /* ---------------- self-check quiz ---------------- */
+  if (P.quiz && document.getElementById('quizList')) {
+    var qEl = document.getElementById('quizList');
+    var qScore = 0, qDone = 0, LET = ['A', 'B', 'C', 'D'];
+    var n = P.quiz.length;
+    var updateQ = function () {
+      document.getElementById('qScore').textContent = qScore;
+      document.getElementById('qDone').textContent = qDone;
+    };
+    var renderQuiz = function () {
+      qScore = 0; qDone = 0; qEl.innerHTML = '';
+      P.quiz.forEach(function (q, i) {
+        var d = document.createElement('div');
+        d.className = 'case';
+        d.innerHTML = '<span class="cnum">Question ' + (i + 1) + '</span><p class="ctext"></p><div class="opts stack"></div><div class="fb" aria-live="polite"></div>';
+        d.querySelector('.ctext').textContent = q[0];
+        var opts = d.querySelector('.opts');
+        q[1].forEach(function (txt, j) {
+          var b = document.createElement('button');
+          b.type = 'button'; b.textContent = LET[j] + '.  ' + txt;
+          b.addEventListener('click', function () {
+            var right = j === q[2];
+            markChoice(opts, d.querySelector('.fb'), j, q[2],
+              right ? 'Correct.' : 'Not quite. The answer is ' + LET[q[2]] + '.', q[3]);
+            qDone++; if (right) qScore++;
+            updateQ();
+            if (qDone === n) {
+              var f = document.getElementById('qFinal');
+              f.textContent = 'Final score: ' + qScore + ' of ' + n + '. ' +
+                (qScore >= Math.ceil(n * 0.8) ? 'You are in good shape for this topic.' :
+                 qScore >= Math.ceil(n * 0.55) ? 'Solid. Reread the explanations for the ones you missed, then check Don\'t Mix These Up.' :
+                 'Go back through the sections above, then start the quiz over.');
+              f.className = 'done open';
+            }
+          });
+          opts.appendChild(b);
+        });
+        qEl.appendChild(d);
+      });
+      document.getElementById('qTotal').textContent = n;
+      document.getElementById('qFinal').className = 'done';
+      updateQ();
+    };
+    document.getElementById('qReset').addEventListener('click', renderQuiz);
+    renderQuiz();
+  }
+})();
+</script>
+
+</body>
+</html>

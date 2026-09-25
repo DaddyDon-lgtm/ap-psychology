@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>4.1 Attribution Theory and Person Perception | AP Psychology</title>
+<style>@font-face{font-family:'APSerif';src:url('../assets/fonts/source-serif-4-latin-400-normal.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'APSerif';src:url('../assets/fonts/source-serif-4-latin-600-normal.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:'APSerif';src:url('../assets/fonts/source-serif-4-latin-700-normal.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'APSans';src:url('../assets/fonts/source-sans-3-latin-400-normal.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'APSans';src:url('../assets/fonts/source-sans-3-latin-400-italic.woff2') format('woff2');font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:'APSans';src:url('../assets/fonts/source-sans-3-latin-600-normal.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:'APSans';src:url('../assets/fonts/source-sans-3-latin-700-normal.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
+
+/* ---------------------------------------------------------------- base */
+:root{
+  --ink:#14293a; --ink-soft:#243c50; --accent:#0f5c5e; --accent-d:#0c4749;
+  --accent2:#a35617; --accent2-d:#8a4a13;
+  --soft:#eef4f4; --soft2:#fdf1e6;
+  --green:#1b6b48; --green-s:#edf5f0; --red:#9c2a2a; --red-s:#faeeee;
+  --line:#dfe4e8; --line-d:#c4ced6; --muted:#5d6b78; --faint:#6b7885; --bg:#fbfbf9; --surface:#ffffff;
+  --blue:#2f5d80;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:APSans,'Segoe UI',-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;font-size:18px;line-height:1.72;
+     color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}
+.wrap{max-width:740px;margin:0 auto;padding:0 24px 80px}
+
+/* ---------------------------------------------------------------- chrome */
+.crumbs{background:var(--surface);border-bottom:1px solid var(--line);font-size:14px}
+.crumbs .inner,.crumbs .wrap{max-width:740px;margin:0 auto;padding:12px 24px}
+.crumbs a{color:var(--accent);text-decoration:none;font-weight:600}
+.crumbs a:hover{text-decoration:underline}
+.crumbs .sep{color:var(--line-d);margin:0 9px}
+.crumbs .here{color:var(--muted)}
+
+header.top,.masthead{background:var(--surface);border-bottom:1px solid var(--line);
+     padding:44px 24px 38px;color:var(--ink)}
+header.top .inner,.masthead .wrap{max-width:740px;margin:0 auto;padding-bottom:0}
+header.top .kicker,header.top .meta,.masthead .course{font-size:12px;letter-spacing:.16em;
+     text-transform:uppercase;color:var(--accent2);font-weight:700;margin:0 0 14px;opacity:1}
+header.top h1,.masthead h1{font-family:APSerif,Georgia,'Times New Roman',serif;font-weight:700;font-size:42px;line-height:1.14;
+     margin:0;letter-spacing:-.015em;color:var(--ink)}
+header.top p.tag,header.top .sub,.masthead p.tag{margin:14px 0 0;font-size:19px;
+     color:var(--muted);line-height:1.55;opacity:1}
+header.top .meta{margin:18px 0 0;letter-spacing:.1em;color:var(--muted);font-size:11.5px}
+.masthead a{color:var(--accent)}
+
+/* Deliberately not sticky: this direction reads as a document, the breadcrumb
+   already says where you are, and a wrapped two-row bar would cover anchored
+   headings as you jump between sections. */
+nav.jump{background:var(--surface);border-bottom:1px solid var(--line)}
+nav.jump ul{max-width:940px;margin:0 auto;padding:0 24px;list-style:none;display:flex;flex-wrap:wrap;
+     gap:0 22px}
+nav.jump a{display:block;padding:13px 0;font-size:14.5px;color:var(--muted);text-decoration:none;
+     border-bottom:2px solid transparent;font-weight:600}
+nav.jump a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+
+main{padding:8px 0 0}
+
+/* ---------------------------------------------------------------- type */
+h2{font-family:APSerif,Georgia,'Times New Roman',serif;font-size:30px;font-weight:700;color:var(--ink);margin:54px 0 14px;
+   letter-spacing:-.01em;line-height:1.24;scroll-margin-top:24px}
+h2 .num{font-family:APSans,'Segoe UI',-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;display:inline-block;font-size:12px;font-weight:700;
+   letter-spacing:.14em;color:var(--accent2);vertical-align:.42em;margin-right:12px}
+h3{font-family:APSerif,Georgia,'Times New Roman',serif;font-size:22px;font-weight:600;margin:34px 0 10px;color:var(--ink)}
+h4{font-family:APSerif,Georgia,'Times New Roman',serif;font-size:18.5px;font-weight:600;margin:24px 0 7px;color:var(--ink)}
+p{margin:16px 0}
+ul,ol{margin:16px 0;padding-left:26px}
+li{margin:6px 0}
+.lede{font-size:19.5px;color:var(--muted);margin:22px 0 4px;line-height:1.6}
+code{background:var(--soft);padding:1px 6px;border-radius:3px;
+     font-family:Consolas,Monaco,monospace;font-size:.9em}
+em{font-style:italic}
+
+/* ---------------------------------------------------------------- boxes */
+.box,.note{border-radius:3px;padding:20px 24px;margin:28px 0;border-left:3px solid var(--accent2);
+     background:var(--soft2)}
+.box p:first-child,.note p:first-child{margin-top:0}
+.box p:last-child,.note p:last-child{margin-bottom:0}
+.box p,.note p{font-size:17.5px}
+.box .label,.note .label{display:block;font-size:11.5px;font-weight:700;letter-spacing:.14em;
+     text-transform:uppercase;color:var(--accent2);margin-bottom:9px}
+.box.key{background:var(--soft2);border-color:var(--accent2)}
+.box.key .label{color:var(--accent2)}
+.box.note{background:var(--soft);border-color:var(--accent)}
+.box.note .label{color:var(--accent)}
+.box.good{background:var(--green-s);border-color:var(--green)}
+.box.good .label{color:var(--green)}
+.box.warn{background:var(--red-s);border-color:var(--red)}
+.box.warn .label{color:var(--red)}
+.pending{background:var(--surface);border:1px dashed var(--line-d);border-radius:3px;
+     padding:30px 20px;text-align:center;color:var(--muted);margin:28px 0}
+.pending strong{display:block;color:var(--ink);margin-bottom:4px;font-size:17px}
+
+/* ---------------------------------------------------------------- table */
+table{border-collapse:collapse;width:100%;margin:30px 0;font-size:17px}
+th,td{border:0;border-bottom:1px solid var(--line);padding:14px 10px 14px 0;
+      text-align:left;vertical-align:top}
+th:last-child,td:last-child{padding-right:0}
+thead th{border-bottom:2px solid var(--ink);font-size:12.5px;letter-spacing:.09em;
+      text-transform:uppercase;color:var(--muted);font-weight:700;padding-bottom:10px}
+tbody tr:last-child td{border-bottom:1px solid var(--line)}
+caption{caption-side:top;text-align:left;font-size:13px;letter-spacing:.1em;text-transform:uppercase;
+      color:var(--muted);font-weight:700;padding-bottom:12px}
+td.center,th.center{text-align:center}
+.term{font-weight:700;color:var(--accent)}
+
+/* ---------------------------------------------------------------- cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1px;
+      background:var(--line);border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+      margin:26px 0}
+.grid .card{display:block;background:var(--surface);padding:24px 26px;text-decoration:none;
+      color:inherit;transition:background .15s}
+a.grid > .card:hover,.grid a.card:hover{background:#f6f9f9}
+.grid .card .kicker{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+      color:var(--accent2);margin:0 0 8px}
+.grid .card .title{font-family:APSerif,Georgia,'Times New Roman',serif;font-size:22px;font-weight:700;margin:0 0 8px;line-height:1.25}
+.grid .card .desc{font-size:16px;color:var(--muted);margin:0;line-height:1.55}
+/* A unit with nothing in it yet is muted by colour, not by opacity: fading the
+   whole tile would grey out its background and checkerboard the grid. */
+.grid .card.empty .kicker{color:var(--faint)}
+.grid .card.empty .title{color:var(--muted);font-weight:700}
+.grid .card.empty .desc{color:var(--faint)}
+
+.resource{display:flex;justify-content:space-between;align-items:center;gap:20px;
+      border:0;border-bottom:1px solid var(--line);padding:22px 0;margin:0;
+      text-decoration:none;color:inherit}
+.resource:first-of-type{border-top:1px solid var(--line)}
+a.resource:hover .title{color:var(--accent)}
+.resource .title{font-family:APSerif,Georgia,'Times New Roman',serif;font-weight:700;font-size:20px;margin:0 0 3px;
+      transition:color .12s}
+.resource .desc{font-size:16px;color:var(--muted);margin:0}
+.resource .go{color:var(--accent);font-weight:600;font-size:15px;white-space:nowrap}
+
+/* ---------------------------------------------------------------- widget */
+.widget{background:var(--surface);border:1px solid var(--line);border-radius:4px;
+        padding:26px 28px;margin:34px 0}
+.widget > h3{margin-top:0;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.widget .tryit{font-family:APSans,'Segoe UI',-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:.14em;
+        text-transform:uppercase;color:var(--accent2);background:none;padding:0}
+.widget svg{display:block;width:100%;height:auto;max-width:100%;touch-action:none}
+svg,canvas{display:block;max-width:100%}
+
+.ctrls{display:flex;flex-wrap:wrap;gap:24px;margin:22px 0 4px;align-items:flex-end}
+.ctrl{flex:1 1 220px;min-width:200px}
+.ctrl label{display:block;font-size:12px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;
+        color:var(--muted);margin-bottom:10px}
+.ctrl .val{color:var(--accent);font-size:15px;letter-spacing:0}
+input[type=range]{width:100%;accent-color:var(--accent);height:26px;cursor:pointer}
+
+.btnrow{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0 0}
+button{font-family:APSans,'Segoe UI',-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;font-size:14.5px;font-weight:600;cursor:pointer;border-radius:3px;
+       padding:10px 18px;border:1px solid var(--accent);background:var(--surface);
+       color:var(--accent);transition:background .12s,color .12s}
+button:hover{background:var(--accent);color:#fff}
+button.primary{background:var(--accent);color:#fff}
+button.primary:hover{background:var(--accent-d)}
+button:disabled{opacity:.45;cursor:not-allowed}
+button:focus-visible,input:focus-visible,a:focus-visible,textarea:focus-visible,
+[tabindex]:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+.readouts{display:flex;flex-wrap:wrap;gap:34px;margin:30px 0 0}
+.ro{flex:0 1 auto;min-width:110px}
+.ro .k{display:block;font-size:11.5px;font-weight:700;letter-spacing:.12em;
+       text-transform:uppercase;color:var(--muted)}
+.ro .v{display:block;font-family:APSerif,Georgia,'Times New Roman',serif;font-size:30px;font-weight:700;color:var(--ink);line-height:1.3}
+.ro.hl .v{color:var(--green)}
+.commentary{margin:20px 0 0;padding:0 0 0 18px;border-left:3px solid var(--line-d);
+       font-size:16.5px;color:var(--ink-soft)}
+.toggle-line{display:flex;align-items:center;gap:10px;margin:18px 0 0;font-size:15.5px}
+.toggle-line input{width:18px;height:18px;accent-color:var(--accent);cursor:pointer}
+.field{display:inline-flex;flex-direction:column;gap:5px;margin:0 14px 12px 0}
+.field label{font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.field input{font-family:inherit;font-size:17px;padding:8px 10px;width:110px;
+       border:1px solid var(--line-d);border-radius:3px;background:var(--surface);color:var(--ink)}
+.field input.ok{border-color:var(--green);background:var(--green-s)}
+.field input.bad{border-color:var(--accent2);background:var(--soft2)}
+.worked{display:none;margin:18px 0 0;padding:16px 18px;background:#f7f9f9;border-radius:3px;
+       font-family:Consolas,Monaco,monospace;font-size:14.5px;line-height:1.75;white-space:pre-wrap}
+.worked.open{display:block}
+.dataset{font-family:APSerif,Georgia,'Times New Roman',serif;font-size:25px;font-weight:700;letter-spacing:.03em;color:var(--ink);
+       background:#f7f9f9;border-radius:3px;padding:15px 18px;margin:8px 0 18px;text-align:center}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------------------------------------------------------------- practice */
+.q-item{border:0;border-top:1px solid var(--line);border-radius:0;background:none;
+        margin:0;padding:26px 0}
+.q-item .qnum{display:inline-block;background:none;color:var(--accent2);font-size:11.5px;
+        font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:0;margin-bottom:10px}
+.q-item .stem{margin:6px 0 12px}
+.q-item .ask{font-weight:600;margin:12px 0}
+.q-item ol.choices{list-style:upper-alpha;padding-left:26px;margin:12px 0 16px}
+.q-item ol.choices li{margin:6px 0}
+.reveal{display:none;border-top:1px dashed var(--line-d);margin-top:16px;padding-top:16px}
+.reveal.open{display:block}
+.reveal .ans{font-weight:700;color:var(--green);font-size:17px;margin:0 0 10px}
+.reveal .why{margin:10px 0 0}
+.reveal .why-not{margin:12px 0 0;font-size:16px}
+.reveal .why-not li{color:var(--muted)}
+.reveal .why-not li strong{color:var(--ink)}
+.toggle{font-size:14.5px}
+
+/* ---------------------------------------------------------------- misc */
+details{border:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+        border-radius:0;padding:16px 0;margin:26px 0;background:none}
+details summary{font-family:APSerif,Georgia,'Times New Roman',serif;font-weight:600;color:var(--accent);cursor:pointer;font-size:18px}
+details[open] summary{margin-bottom:10px}
+
+figure{margin:32px 0}
+figure img{max-width:100%;height:auto;display:block;border:1px solid var(--line);
+      border-radius:3px;background:#fff}
+figure.plain img{border:none}
+figcaption{font-size:15px;color:var(--muted);margin-top:10px;line-height:1.55}
+figure.half{max-width:460px}
+figure.center{margin-left:auto;margin-right:auto}
+.hero{margin:0 0 30px;border-radius:3px;overflow:hidden;border:1px solid var(--line)}
+.hero img{display:block;width:100%;height:auto}
+.img-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin:28px 0}
+.img-row figure{margin:0}
+
+footer{margin-top:62px;padding:26px 0 0;border-top:1px solid var(--line);font-size:15px;color:var(--muted)}
+footer p{margin:5px 0}
+body > footer{background:var(--surface);margin-top:62px;padding:28px 0 34px}
+body > footer .wrap{padding-bottom:0}
+
+.pagenav{display:flex;flex-wrap:wrap;gap:1px;margin:34px 0 0;background:var(--line);
+       border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.pagenav a{flex:1 1 220px;border:0;border-radius:0;padding:18px 20px;text-decoration:none;
+       color:inherit;background:var(--surface)}
+.pagenav a:hover{background:#f6f9f9}
+.pagenav .dir{display:block;font-size:11px;font-weight:700;letter-spacing:.14em;
+       text-transform:uppercase;color:var(--accent2)}
+.pagenav .t{display:block;font-family:APSerif,Georgia,'Times New Roman',serif;font-weight:700;color:var(--ink);margin-top:4px}
+
+/* Any table too wide for the screen scrolls sideways instead of pushing the page. */
+.tscroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:30px 0}
+.tscroll > table{margin-top:0;margin-bottom:0;min-width:520px}
+
+/* ------------------------------------------------- wide break-out on big screens */
+@media (min-width:1040px){
+  .widget,.tscroll:has(table.wide),.grid,.bleed{width:940px;margin-left:-100px;max-width:none}
+  table.wide{min-width:0}
+}
+
+/* ---------------------------------------------------------------- responsive */
+@media (max-width:760px){
+  body{font-size:17px;line-height:1.65}
+  header.top,.masthead{padding:32px 20px 28px}
+  header.top h1,.masthead h1{font-size:30px}
+  header.top p.tag,header.top .sub,.masthead p.tag{font-size:17.5px}
+  h2{font-size:25px;margin:42px 0 12px}
+  h3{font-size:20px}
+  .wrap,.crumbs .inner,.crumbs .wrap,header.top .inner,.masthead .wrap,nav.jump ul{padding-left:20px;padding-right:20px}
+  nav.jump ul{gap:0 16px}
+  nav.jump a{padding:12px 0;font-size:13.5px}
+  .widget{padding:20px 18px}
+  .ro .v{font-size:24px}
+  .readouts{gap:20px}
+  .resource{flex-direction:column;align-items:flex-start;gap:8px}
+  table{font-size:16px}
+}
+
+/* ---------------------------------------------------------------- print */
+@media print{
+  body{background:#fff;font-size:11pt;color:#000}
+  nav.jump,.crumbs,button,.btnrow,input[type=range],.pagenav,.toggle{display:none!important}
+  header.top,.masthead{background:#fff!important;color:var(--ink)!important;padding:0 0 14px;border:0}
+  .widget,.tscroll,.bleed{width:auto!important;margin-left:0!important;overflow:visible!important}
+  .tscroll > table,table.wide{min-width:0!important}
+  .reveal{display:block!important}
+  .worked{display:block!important}
+  .widget,.q-item,.box,.note,table,details,figure,.hero,.img-row,.grid .card{
+     break-inside:avoid;page-break-inside:avoid}
+  h2,h3{break-after:avoid}
+  @page{size:A4;margin:15mm}
+}
+
+/* ------------------------------------------------ research methods page extras */
+.yes{color:var(--green);font-weight:700}
+.no{color:var(--red);font-weight:700}
+.claim-yes{color:var(--green);font-weight:600}
+.claim-no{color:var(--red);font-weight:600}
+.signals{font-style:italic;color:var(--blue)}
+
+.split{display:grid;grid-template-columns:1fr 1fr;gap:1px;margin:30px 0;background:var(--line);
+       border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.panel{background:var(--surface);padding:22px 24px}
+.panel h4{margin-top:0;font-size:18px}
+.panel.is-method h4{color:var(--green)}
+.panel.is-tool h4{color:var(--accent2)}
+.panel ul{padding-left:20px;margin-bottom:0}
+
+.tree{margin:32px 0}
+.step{display:grid;grid-template-columns:34px 1fr;gap:18px;background:var(--surface);
+      border:1px solid var(--line);border-radius:4px;padding:20px 22px;margin-bottom:12px}
+.step .n{font-family:APSerif,Georgia,serif;color:var(--accent2);font-weight:700;font-size:24px;
+      line-height:1.2;text-align:center}
+.step .q{font-weight:600;font-size:18px;margin:0 0 10px}
+.step .out{font-size:16px;padding:0 0 0 16px;border-left:3px solid var(--green);margin:10px 0 0;
+      color:var(--ink-soft)}
+.step .out strong{color:var(--green)}
+.step .nope{font-size:16px;color:var(--muted);margin:10px 0 0;font-style:italic}
+.arrow{text-align:center;color:var(--line-d);font-size:20px;line-height:1;margin:-4px 0 8px}
+
+.mcard{border:1px solid var(--line);border-radius:4px;background:var(--surface);margin:28px 0;
+      overflow:hidden}
+.mcard > .head{border-bottom:2px solid var(--ink);padding:16px 24px;display:flex;
+      justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;background:var(--surface)}
+.mcard > .head .name{font-family:APSerif,Georgia,serif;font-size:23px;font-weight:700;color:var(--ink)}
+.mcard > .head .tag{font-size:11px;text-transform:uppercase;letter-spacing:.14em;font-weight:700;
+      color:var(--accent2);white-space:nowrap}
+.mcard.exp > .head{border-bottom-color:var(--green)}
+.mcard.exp > .head .name{color:var(--green)}
+.mcard.exp > .head .tag{color:var(--green)}
+.mcard > .body{padding:20px 24px 24px}
+.mcard dl{margin:0}
+.mcard dt{font-weight:700;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;
+      color:var(--accent2);margin-top:20px}
+.mcard dt:first-child{margin-top:0}
+.mcard dd{margin:6px 0 0}
+.mcard dd ul{margin:6px 0 0}
+
+.drill{border:0}
+.drill-row{display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;
+      padding:16px 0;border-bottom:1px solid var(--line)}
+.drill-row:first-child{border-top:1px solid var(--line)}
+.drill-row:last-child{border-bottom:1px solid var(--line)}
+.drill-row .stem{font-size:17px}
+.drill-row .ans-slot{min-width:210px;text-align:right;font-weight:700;color:var(--green);
+      font-size:15.5px;cursor:pointer;user-select:none;border-radius:3px;padding:3px 7px}
+.drill-row .ans-slot:hover{background:var(--soft)}
+.drill-row .ans-slot:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.drill-row .ans-slot .ph{display:none;color:var(--muted);font-weight:700;font-size:13px;
+      letter-spacing:.14em;text-transform:uppercase}
+.drill-row .ans-slot.hidden-ans .ph{display:inline}
+.drill-row .ans-slot.hidden-ans .txt{display:none}
+
+@media (max-width:760px){
+  .split{grid-template-columns:1fr}
+  .drill-row{grid-template-columns:1fr;gap:6px}
+  .drill-row .ans-slot{text-align:left;min-width:0;padding-left:0}
+}
+@media print{
+  .split{grid-template-columns:1fr 1fr}
+  .drill-row .ans-slot .txt{display:inline!important}
+  .drill-row .ans-slot .ph{display:none!important}
+  .mcard,.q-item,.panel,.step,.drill,.drill-row{break-inside:avoid;page-break-inside:avoid}
+}
+
+/* ------------------------------------------------ unit 4 topic page extras */
+.eq{list-style:none;padding:0;margin:20px 0}
+.eq li{padding:12px 0 12px 18px;border-left:3px solid var(--accent);margin:10px 0;background:var(--surface);
+      font-family:APSerif,Georgia,serif;font-size:19px}
+.loop{counter-reset:loop;list-style:none;padding:0;margin:24px 0}
+.loop li{counter-increment:loop;position:relative;padding:14px 18px 14px 58px;background:var(--surface);
+      border:1px solid var(--line);border-radius:4px;margin:0 0 10px}
+.loop li::before{content:counter(loop);position:absolute;left:18px;top:12px;font-family:APSerif,Georgia,serif;
+      font-weight:700;font-size:24px;color:var(--accent2)}
+.pair{border:1px solid var(--line);border-radius:4px;background:var(--surface);margin:26px 0;overflow:hidden}
+.pair > .head{padding:14px 22px;border-bottom:2px solid var(--ink);font-family:APSerif,Georgia,serif;
+      font-size:21px;font-weight:700}
+.pair .cols{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line)}
+.pair .cols.three{grid-template-columns:1fr 1fr 1fr}
+.pair .col{background:var(--surface);padding:18px 22px}
+.pair .col h4{margin:0 0 6px;color:var(--accent)}
+.pair .col p{margin:8px 0;font-size:16.5px}
+.pair .col .ex{color:var(--ink-soft);font-style:italic}
+.pair .tell{padding:14px 22px;background:var(--soft2);font-size:16.5px;border-top:1px solid var(--line)}
+.pair .tell strong{color:var(--accent2)}
+
+/* detective + quiz */
+.score{font-size:15px;font-weight:700;color:var(--muted);letter-spacing:.04em}
+.score b{color:var(--green);font-size:18px}
+.case{border-top:1px solid var(--line);padding:20px 0}
+.case:last-of-type{border-bottom:1px solid var(--line)}
+.case .cnum{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent2)}
+.case .ctext{margin:6px 0 12px;font-size:17.5px}
+.opts{display:flex;flex-wrap:wrap;gap:10px}
+.opts button{flex:0 1 auto}
+.opts.stack{flex-direction:column;align-items:stretch}
+.opts.stack button{text-align:left;font-weight:400;font-size:16.5px;color:var(--ink);border-color:var(--line-d);line-height:1.5}
+.opts.stack button:hover{background:var(--soft);color:var(--ink)}
+.opts button.right,.opts button.right:hover{background:var(--green);border-color:var(--green);color:#fff}
+.opts button.wrong,.opts button.wrong:hover{background:var(--red-s);border-color:var(--red);color:var(--red)}
+.opts button:disabled{opacity:1;cursor:default}
+.opts button.dim{opacity:.5}
+.fb{display:none;margin:14px 0 0;padding:12px 16px;border-left:3px solid var(--green);background:var(--green-s);font-size:16.5px}
+.fb.miss{border-left-color:var(--red);background:var(--red-s)}
+.fb.open{display:block}
+.fb strong{display:block;margin-bottom:4px}
+.tabs{display:flex;gap:0;border-bottom:1px solid var(--line);margin:8px 0 6px}
+.tabs button{border:0;border-bottom:2px solid transparent;border-radius:0;background:none;color:var(--muted);padding:10px 16px 10px 0;margin-right:14px}
+.tabs button:hover{background:none;color:var(--accent)}
+.tabs button[aria-selected="true"]{color:var(--accent);border-bottom-color:var(--accent)}
+.done{display:none;margin:20px 0 0;font-weight:600}
+.done.open{display:block}
+
+@media (max-width:760px){
+  .pair .cols,.pair .cols.three{grid-template-columns:1fr}
+}
+@media print{
+  .fb{display:block!important}
+  .case,.pair,.loop li{break-inside:avoid;page-break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<div class="crumbs">
+  <div class="inner">
+    <a href="../index.html">AP Psychology</a>
+    <span class="sep">&rsaquo;</span>
+    <a href="index.html">Unit 4</a>
+    <span class="sep">&rsaquo;</span>
+    <span class="here">4.1 Attribution and Person Perception</span>
+  </div>
+</div>
+
+<header class="top">
+  <div class="inner">
+    <h1>Attribution Theory and Person Perception</h1>
+    <p class="tag">Reading people, misreading people, and the stories we tell about why they do what they do</p>
+    <p class="meta">AP Psychology &bull; Unit 4: Social Psychology and Personality &bull; CED Topic 4.1</p>
+  </div>
+</header>
+
+<nav class="jump">
+  <ul>
+    <li><a href="#start">Start Here</a></li>
+    <li><a href="#terms">Key Terms</a></li>
+    <li><a href="#attribution">Attribution</a></li>
+    <li><a href="#biases">Three Biases</a></li>
+    <li><a href="#style">Style and Control</a></li>
+    <li><a href="#perception">Perception in Action</a></li>
+    <li><a href="#comparison">Comparison</a></li>
+    <li><a href="#mixups">Don't Mix These Up</a></li>
+    <li><a href="#detective">Attribution Detective</a></li>
+    <li><a href="#quiz">Self-Check Quiz</a></li>
+    <li><a href="#traps">AP Exam Traps</a></li>
+  </ul>
+</nav>
+
+<div class="wrap">
+
+<!-- ============ START HERE ============ -->
+<h2 id="start"><span class="num">1</span>Start Here</h2>
+
+<p class="lede">Every time you see someone do something, your brain answers a question you never asked out loud: <em>why did they do that?</em> This topic is about how we answer that question, the predictable ways we get it wrong, and how our expectations and comparisons bend what we see in other people and in ourselves.</p>
+
+<ul class="eq">
+  <li>How do we decide whether someone's behavior comes from who they are or from the situation they are in?</li>
+  <li>Why are we so generous explaining our own failures and so harsh explaining everyone else's?</li>
+  <li>How do our expectations of people quietly shape the way those people actually behave?</li>
+</ul>
+
+<div class="box note">
+  <span class="label">How to use this page</span>
+  <p>Read the key terms first, then work through each section. When you feel ready, try <a href="#detective">Attribution Detective</a> and the <a href="#quiz">Self-Check Quiz</a>. Nothing you click on this page is recorded or graded. It is here so you can find out what you know before a test does.</p>
+</div>
+
+<!-- ============ KEY TERMS ============ -->
+<h2 id="terms"><span class="num">2</span>Key Terms at a Glance</h2>
+
+<div class="tscroll">
+<table class="wide">
+  <thead><tr><th style="width:30%">Term</th><th>What it means</th></tr></thead>
+  <tbody>
+    <tr><td class="term">Person perception</td><td>The mental processes we use to form impressions and judgments of other people.</td></tr>
+    <tr><td class="term">Attribution</td><td>The explanation we give for the cause of a behavior or event.</td></tr>
+    <tr><td class="term">Attribution theory</td><td>Fritz Heider's idea that we explain behavior by crediting either the person's disposition or the situation.</td></tr>
+    <tr><td class="term">Dispositional attribution</td><td>Explaining behavior by internal causes: personality, ability, effort, character.</td></tr>
+    <tr><td class="term">Situational attribution</td><td>Explaining behavior by external causes: circumstances, pressure, environment, luck.</td></tr>
+    <tr><td class="term">Fundamental attribution error</td><td>When judging <strong>others</strong>, overestimating their disposition and underestimating their situation.</td></tr>
+    <tr><td class="term">Actor-observer bias</td><td>Explaining <strong>my</strong> behavior by the situation but <strong>your</strong> same behavior by your disposition.</td></tr>
+    <tr><td class="term">Self-serving bias</td><td>Crediting <strong>my successes</strong> to me, and blaming <strong>my failures</strong> on the situation.</td></tr>
+    <tr><td class="term">Explanatory style</td><td>A person's habitual optimistic or pessimistic way of explaining events.</td></tr>
+    <tr><td class="term">Locus of control</td><td>How much control a person believes they have over their own outcomes (internal or external).</td></tr>
+    <tr><td class="term">Mere exposure effect</td><td>Liking something or someone more simply because we have been exposed to it repeatedly.</td></tr>
+    <tr><td class="term">Self-fulfilling prophecy</td><td>An expectation that changes behavior in a way that makes the expectation come true.</td></tr>
+    <tr><td class="term">Mirror-image perceptions</td><td>Two sides in a conflict each see themselves as good and the other as the threat.</td></tr>
+    <tr><td class="term">Social comparison</td><td>Judging our own abilities and traits by measuring them against other people (Leon Festinger).</td></tr>
+    <tr><td class="term">Upward / downward comparison</td><td>Comparing ourselves to someone better off (upward) or worse off (downward).</td></tr>
+    <tr><td class="term">Relative deprivation</td><td>Feeling worse off because of a comparison, even when our actual situation has not changed.</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- ============ ATTRIBUTION ============ -->
+<h2 id="attribution"><span class="num">3</span>Person Perception and Attribution</h2>
+
+<h3>Your brain writes a biography before they say a word</h3>
+<p><span class="term">Person perception</span> is how we form impressions of other people: their traits, their intentions, and what they are likely to do next. We do it fast, automatically, and often before anyone speaks. First impressions form within seconds and are surprisingly hard to shake, because we fill the gaps with assumptions drawn from past experience, culture, and media.</p>
+<p>That speed is useful. Nobody can stop to gather full data on every stranger on the MRT. But speed costs accuracy, and the costs are real: who gets hired in the first minute of an interview, whose idea gets taken seriously in a group project, which student a teacher assumes already understands. The judgment feels like observation. It is actually interpretation.</p>
+
+<h3>Heider's big question: the person or the situation?</h3>
+<p><span class="term">Attribution theory</span> (Fritz Heider, 1958) says we explain behavior by crediting one of two kinds of cause.</p>
+
+<div class="split">
+  <div class="panel is-method">
+    <h4>Dispositional (internal)</h4>
+    <p>The behavior reflects <strong>who they are</strong>: personality, attitude, ability, effort.</p>
+    <p><em>"She failed the test because she's lazy."</em></p>
+  </div>
+  <div class="panel is-tool">
+    <h4>Situational (external)</h4>
+    <p>The behavior reflects <strong>where they are</strong>: circumstances, pressure, luck.</p>
+    <p><em>"She failed because she was sick all week and the test was brutal."</em></p>
+  </div>
+</div>
+
+<p>The behavior is identical. The explanation is a choice, and that choice drives how we feel about the person and how we treat them. A driver cuts you off: "reckless jerk" makes you angry; "maybe they're rushing someone to the hospital" lets it go.</p>
+
+<div class="box key">
+  <span class="label">Culture shapes the default</span>
+  <p>People raised in more individualist cultures (often Western) lean toward dispositional explanations: "it's who they are." People raised in more collectivist cultures (often East Asian, including Taiwan) pay more attention to the situation and context. The "obvious" explanation depends partly on the culture you learned to explain things in.</p>
+</div>
+
+<!-- ============ BIASES ============ -->
+<h2 id="biases"><span class="num">4</span>When Attribution Goes Sideways: Three Biases</h2>
+
+<h3>Fundamental attribution error</h3>
+<p>When explaining <strong>other people's</strong> behavior, we overestimate their disposition and underestimate their situation. The waiter is rude, so "he's a rude person," not "he has twelve tables and hasn't had a break in five hours."</p>
+<p>Why it happens: when you watch someone act, the person is front and center on your mental screen. The deadlines, bad news, and rough morning pushing on them are off-screen. The easiest explanation to reach is "that's just how they are." Psychologist Lee Ross named it "fundamental" in 1977 because he thought it sits underneath so many everyday misjudgments.</p>
+
+<h3>Self-serving bias</h3>
+<p>We credit <strong>our successes</strong> to ourselves and blame <strong>our failures</strong> on the situation. Aced the test: "I'm smart and I studied." Failed the test: "The teacher writes trick questions." It protects self-esteem by quietly rewriting the scoreboard so we always look good. You see it in sports interviews and company reports all the time: wins come from "our preparation," losses from "the referees" or "market conditions."</p>
+
+<h3>Actor-observer bias</h3>
+<p>We explain <strong>our own</strong> behavior situationally, but <strong>other people's</strong> identical behavior dispositionally. The explanation flips depending on whose shoes you are in. You trip on a cracked sidewalk: "that crack is dangerous." Someone else trips on the same crack: "klutz."</p>
+
+<div class="tscroll">
+<table class="wide">
+  <caption>The filter: three questions that separate the biases</caption>
+  <thead><tr><th>Bias</th><th>Whose behavior?</th><th>What is being compared?</th><th>Signature line</th></tr></thead>
+  <tbody>
+    <tr><td class="term">Fundamental attribution error</td><td>Someone else's</td><td>Nothing. One judgment of one person that ignores the situation.</td><td><em>"He's just a rude person."</em></td></tr>
+    <tr><td class="term">Actor-observer bias</td><td>Mine and yours</td><td>Me vs. you, doing the same thing</td><td><em>"I was late because of traffic. You were late because you're careless."</em></td></tr>
+    <tr><td class="term">Self-serving bias</td><td>Mine</td><td>My success vs. my failure</td><td><em>"I won because I'm good. I lost because it was rigged."</em></td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- ============ STYLE AND CONTROL ============ -->
+<h2 id="style"><span class="num">5</span>Explanatory Style and Locus of Control</h2>
+
+<h3>Explanatory style: "I'm doomed" vs. "I'll fix it"</h3>
+<p><span class="term">Explanatory style</span> is your habitual way of explaining what happens to you, broadly optimistic or pessimistic. It runs along three dimensions: <strong>internal vs. external</strong> (my fault, or outside forces?), <strong>stable vs. unstable</strong> (permanent, or temporary?), and <strong>global vs. specific</strong> (affects everything, or just this one thing?).</p>
+
+<div class="tscroll">
+<table class="wide">
+  <caption>Two students, one failed math test</caption>
+  <thead><tr><th>Dimension</th><th>Alex (pessimistic)</th><th>Jamie (optimistic)</th></tr></thead>
+  <tbody>
+    <tr><td class="term">Internal / external</td><td>"I'm not smart enough."</td><td>"That test was really hard."</td></tr>
+    <tr><td class="term">Stable / unstable</td><td>"I'll never get math."</td><td>"I didn't study enough this time."</td></tr>
+    <tr><td class="term">Global / specific</td><td>"I'm a failure at everything."</td><td>"I'm doing fine in my other classes."</td></tr>
+    <tr><td class="term">Likely result</td><td>Gives up</td><td>Studies differently and stays motivated</td></tr>
+  </tbody>
+</table>
+</div>
+<p>A pessimistic style is linked to lower motivation, learned helplessness, and depression. An optimistic style supports resilience. Notice that Jamie still takes some responsibility ("I didn't study enough"), but frames it as temporary and fixable.</p>
+
+<h3>Locus of control: who's holding the steering wheel?</h3>
+<p><span class="term">Locus of control</span> (Julian Rotter) is a person's general belief about how much control they have over the outcomes in their life.</p>
+<div class="split">
+  <div class="panel is-method">
+    <h4>Internal locus of control</h4>
+    <p>"My choices and effort shape what happens to me."</p>
+    <p><em>Failed an exam: "I'll change how I study."</em></p>
+  </div>
+  <div class="panel is-tool">
+    <h4>External locus of control</h4>
+    <p>"Luck, fate, and other people decide my outcomes."</p>
+    <p><em>Failed an exam: "The teacher has it out for me. Why bother?"</em></p>
+  </div>
+</div>
+<p>An internal locus is generally linked to better grades, health, and persistence. You will meet locus of control again when we study personality, stress, and health.</p>
+
+<!-- ============ PERCEPTION IN ACTION ============ -->
+<h2 id="perception"><span class="num">6</span>Perception in Action</h2>
+
+<h3>The mere exposure effect</h3>
+<p>Repeated exposure to something (a song, a face, a brand, an idea) tends to increase how much we like it, even with no real interaction and no new information. The song you skipped in September is your favorite by November. The classmate you had no opinion about becomes a friend just by sitting near you all semester. Advertisers repeat the same jingle until the brand simply feels trustworthy, and in elections, name recognition alone moves votes. The effect works below awareness, so you usually cannot feel it happening.</p>
+
+<h3>The self-fulfilling prophecy</h3>
+<p>A <span class="term">self-fulfilling prophecy</span> is an expectation that causes itself to come true. It always runs as a loop:</p>
+<ol class="loop">
+  <li>You form an expectation about someone. It may be completely wrong.</li>
+  <li>You act differently toward them because of that expectation.</li>
+  <li>Your behavior nudges them to act in line with your expectation, which "confirms" it.</li>
+</ol>
+<p>The classic example is <strong>Rosenthal and Jacobson's Pygmalion study</strong>. Teachers were told that certain students were "intellectual bloomers" about to take off academically. In fact those students had been chosen at random. Expecting more, teachers gave them more attention, warmth, and challenging work, and by the end of the year those students showed greater gains. The expectation manufactured its own evidence.</p>
+
+<div class="box note">
+  <span class="label">Research methods link</span>
+  <p>Because the "bloomers" were selected at random, the only systematic difference between them and their classmates was what the teachers believed. That is exactly why researchers use double-blind procedures: an experimenter's expectations can change participants' behavior.</p>
+</div>
+
+<h3>Mirror-image perceptions</h3>
+<p>In a conflict, both sides often hold matching, opposite views: each sees itself as reasonable and peaceful and the other as hostile and untrustworthy. Rival schools, feuding friend groups, and opposing governments all say the same thing about each other: "We're the reasonable ones. They started it." Because each side reads the other's defensive moves as proof of hostility, the conflict feeds itself.</p>
+
+<!-- ============ COMPARISON ============ -->
+<h2 id="comparison"><span class="num">7</span>Social Comparison and Relative Deprivation</h2>
+
+<h3>Measuring ourselves against others</h3>
+<p><span class="term">Social comparison</span> (Leon Festinger) is judging our own abilities, achievements, and traits by comparing them to other people's. We rarely judge ourselves in a vacuum.</p>
+<ul>
+  <li><strong>Upward comparison:</strong> measuring against someone better off. It can motivate ("I want to get there") or discourage ("I'll never get there").</li>
+  <li><strong>Downward comparison:</strong> measuring against someone worse off. It can boost self-esteem, or breed complacency.</li>
+</ul>
+<p>Social media is a comparison machine: you compare your ordinary Tuesday to everyone else's highlight reel. That is almost always an upward comparison against a curated version of reality, which is one reason heavy social media use is linked to lower mood and self-esteem.</p>
+
+<h3>Relative deprivation: how a raise can make you feel poorer</h3>
+<p>Your manager surprises you with a $100 bonus, and you feel great. On your way out, you overhear a coworker doing the same job say they got $400. Suddenly the same $100 feels like an insult. Nothing about your situation changed. Only the comparison did.</p>
+<p>That is <span class="term">relative deprivation</span>: feeling deprived because of a comparison, not because of an actual loss. It explains a strange pattern in whole societies too: people can become objectively better off and still feel more discontented when the people around them are advancing faster.</p>
+
+<!-- ============ MIXUPS ============ -->
+<h2 id="mixups"><span class="num">8</span>Don't Mix These Up</h2>
+<p>These are the pairs the AP exam loves to put side by side as answer choices.</p>
+
+<div class="pair">
+  <div class="head">Fundamental attribution error vs. actor-observer bias vs. self-serving bias</div>
+  <div class="cols three">
+    <div class="col"><h4>FAE</h4><p>One judgment of <strong>another person</strong> that ignores their situation.</p><p class="ex">A fan decides a player who missed a shot "has no mental toughness."</p></div>
+    <div class="col"><h4>Actor-observer</h4><p><strong>Me vs. you</strong> for the same behavior.</p><p class="ex">"I missed because of the glare. You missed because you choke."</p></div>
+    <div class="col"><h4>Self-serving</h4><p><strong>My win vs. my loss.</strong></p><p class="ex">"I scored because I'm skilled. I missed because of the glare."</p></div>
+  </div>
+  <div class="tell"><strong>The tell:</strong> if the scenario compares two different people, think actor-observer. If it compares one person's success and failure, think self-serving. If there is only one judgment of someone else, think FAE.</div>
+</div>
+
+<div class="pair">
+  <div class="head">Explanatory style vs. locus of control</div>
+  <div class="cols">
+    <div class="col"><h4>Explanatory style</h4><p>How you <strong>explain events after they happen</strong>, along three dimensions (internal/external, stable/unstable, global/specific).</p><p class="ex">"I failed because I'm hopeless at everything." (internal, stable, global)</p></div>
+    <div class="col"><h4>Locus of control</h4><p>A general <strong>belief about how much control you have</strong> over future outcomes.</p><p class="ex">"There's no point trying. It's all luck anyway." (external)</p></div>
+  </div>
+  <div class="tell"><strong>The tell:</strong> look for the three dimensions (permanent? everything?) for explanatory style. Look for "can I change this?" for locus of control. They often travel together, so read the question to see which one it asks about.</div>
+</div>
+
+<div class="pair">
+  <div class="head">Dispositional attribution vs. internal locus of control</div>
+  <div class="cols">
+    <div class="col"><h4>Dispositional attribution</h4><p>An explanation of <strong>one behavior</strong> (anyone's) as caused by traits.</p><p class="ex">"He cheated because he's dishonest."</p></div>
+    <div class="col"><h4>Internal locus of control</h4><p>A person's <strong>belief about themselves</strong>: my effort controls my outcomes.</p><p class="ex">"If I practice more, I'll make the team."</p></div>
+  </div>
+  <div class="tell"><strong>The tell:</strong> both use the word "internal," which is the trap. Attribution is about explaining a behavior; locus of control is about believing you can steer your own life.</div>
+</div>
+
+<div class="pair">
+  <div class="head">Mere exposure effect vs. self-fulfilling prophecy</div>
+  <div class="cols">
+    <div class="col"><h4>Mere exposure</h4><p><strong>Your liking</strong> changes because of repetition alone.</p><p class="ex">You grow to love a song the café plays every day.</p></div>
+    <div class="col"><h4>Self-fulfilling prophecy</h4><p><strong>Someone else's behavior</strong> changes because of how your expectation made you treat them.</p><p class="ex">A coach expects a player to be lazy, gives her less playing time, and she stops trying.</p></div>
+  </div>
+  <div class="tell"><strong>The tell:</strong> mere exposure needs repetition with no new information. A self-fulfilling prophecy needs the full loop: expectation, changed behavior, confirmation.</div>
+</div>
+
+<div class="pair">
+  <div class="head">Social comparison vs. relative deprivation</div>
+  <div class="cols">
+    <div class="col"><h4>Social comparison</h4><p>The <strong>act</strong> of measuring yourself against others, upward or downward.</p><p class="ex">Checking your classmates' scores to see how you did.</p></div>
+    <div class="col"><h4>Relative deprivation</h4><p>The <strong>negative feeling</strong> of being worse off that can follow an upward comparison.</p><p class="ex">Feeling like a failure with a B+ once you learn your friends all got A's.</p></div>
+  </div>
+  <div class="tell"><strong>The tell:</strong> if the scenario stresses that nothing actually got worse but the person now feels worse, the answer is relative deprivation.</div>
+</div>
+
+<!-- ============ DETECTIVE ============ -->
+<h2 id="detective"><span class="num">9</span>Attribution Detective</h2>
+<p>Read each case and make the call. You get instant feedback and an explanation. Round 1 is about the <em>type</em> of attribution. Round 2 asks you to name the <em>bias</em>.</p>
+
+<div class="widget" id="det">
+  <h3>Make the call <span class="tryit">Try it</span></h3>
+  <div class="tabs" role="tablist">
+    <button type="button" role="tab" aria-selected="true" data-round="0">Round 1: Person or situation?</button>
+    <button type="button" role="tab" aria-selected="false" data-round="1">Round 2: Name the bias</button>
+  </div>
+  <p class="score" aria-live="polite">Score: <b id="detScore">0</b> / <span id="detTotal">0</span> answered</p>
+  <div id="detCases"></div>
+  <p class="done" id="detDone"></p>
+  <div class="btnrow"><button type="button" id="detReset">Start this round over</button></div>
+</div>
+
+<!-- ============ QUIZ ============ -->
+<h2 id="quiz"><span class="num">10</span>Self-Check Quiz</h2>
+<p>Eleven AP-style questions. Click an answer to see whether you were right and why. Your score stays on this screen only.</p>
+
+<div class="widget" id="quizBox">
+  <h3>Check yourself <span class="tryit">Four choices each</span></h3>
+  <p class="score" aria-live="polite">Score: <b id="qScore">0</b> / <span id="qDone">0</span> answered of <span id="qTotal">0</span></p>
+  <div id="quizList"></div>
+  <p class="done" id="qFinal"></p>
+  <div class="btnrow"><button type="button" id="qReset">Start the quiz over</button></div>
+</div>
+
+<!-- ============ TRAPS ============ -->
+<h2 id="traps"><span class="num">11</span>AP Exam Traps</h2>
+<div class="box warn">
+  <span class="label">Watch for these</span>
+  <ul>
+    <li><strong>Separating the three biases</strong> is the most common 4.1 question. Use the filter: whose behavior, win or loss, compared to whom?</li>
+    <li><strong>Wording swaps.</strong> The exam may say "internal" instead of "dispositional," or "external" instead of "situational." They mean the same thing in attribution questions.</li>
+    <li><strong>Mere exposure means no new information.</strong> If the scenario adds good experiences with the person or thing, it is not pure mere exposure.</li>
+    <li><strong>A self-fulfilling prophecy needs the loop.</strong> If the expectation does not change anyone's behavior, it is not a self-fulfilling prophecy.</li>
+    <li><strong>Comparison is the act; relative deprivation is the feeling.</strong> Name the direction (upward or downward) and connect it to the emotional result.</li>
+    <li><strong>On free-response "apply" prompts, never just define.</strong> Name the person, the behavior, and the attribution, then explain the direction of the bias in that scenario.</li>
+    <li><strong>Stay in 4.1.</strong> Prejudice, stereotypes, in-group bias, and the just-world phenomenon belong to Topic 4.2. Do not use them in a 4.1 answer unless the prompt asks.</li>
+  </ul>
+</div>
+
+<div class="box note">
+  <span class="label">Connections across the course</span>
+  <p><strong>Topic 4.2:</strong> these biases scale up into stereotypes and prejudice about whole groups. <strong>Unit 3:</strong> a pessimistic explanatory style links to learned helplessness (Seligman). <strong>Unit 5:</strong> locus of control and explanatory style predict stress, coping, and risk for depression. <strong>Unit 0:</strong> the Pygmalion study shows why double-blind designs matter.</p>
+</div>
+
+<div class="pagenav">
+  <a href="index.html"><span class="dir">&larr; Back to</span><span class="t">Unit 4 Resources</span></a>
+</div>
+
+<footer>
+  <p>AP Psychology, Unit 4: Social Psychology and Personality. Topic 4.1, aligned to the 2024 Course and Exam Description.</p>
+  <p>Don West, AP Psychology Teacher. Questions? Message me on Canvas or ask at the start of class.</p>
+</footer>
+
+</div>
+
+<script>
+(function () {
+  /* ---------------- Attribution Detective ---------------- */
+  var ROUNDS = [
+    {
+      options: ['Dispositional', 'Situational'],
+      cases: [
+        ['Wei-Ting got the top score on the chemistry quiz. Her friend says, "She\'s just naturally brilliant at science."', 0, 'The success is credited to a trait inside Wei-Ting (natural ability), so this is a dispositional attribution.'],
+        ['Jason missed first period. His mom explains that the bus route was closed because of a typhoon warning.', 1, 'The cause is outside Jason (a road closure), so this is a situational attribution.'],
+        ['A sports commentator says a striker missed a penalty kick because he "crumbles under pressure, always has."', 0, 'The miss is blamed on the player\'s character ("crumbles," "always has"), which makes it dispositional.'],
+        ['A restaurant\'s online ratings dropped the same month its kitchen lost half its staff. A food blogger blames the staff shortage.', 1, 'The blogger explains the drop with circumstances (short staffing), not with the owners\' character. That is situational.'],
+        ['"My cousin only won the scholarship because the two strongest applicants withdrew."', 1, 'The win is credited to luck and circumstances, not to the cousin\'s ability or effort. Situational.'],
+        ['After a product recall, a news columnist writes that the company\'s CEO is "careless and arrogant."', 0, 'The columnist blames the recall on the CEO\'s personality traits. Dispositional.'],
+        ['Your friend didn\'t answer your message for three hours. Later you learn her phone died on the MRT.', 1, 'The delay came from an external circumstance (a dead phone), so the correct explanation is situational.'],
+        ['"Kevin volunteers at the animal shelter every weekend because he\'s a genuinely kind person."', 0, 'The behavior is explained by a trait (kindness). Dispositional attributions can be positive too.']
+      ]
+    },
+    {
+      options: ['Fundamental attribution error', 'Actor-observer bias', 'Self-serving bias'],
+      cases: [
+        ['Sara wins the debate final: "I prepared harder than anyone." She loses the next tournament: "The judges obviously favored the other school."', 2, 'Sara compares her own success (credit to herself) with her own failure (blame on the judges). My win vs. my loss is the self-serving bias.'],
+        ['Scrolling online, you watch a short clip of a stranger yelling at a delivery driver. Your reaction: "Some people are just horrible."', 0, 'One judgment of another person that ignores anything about their situation (you saw 15 seconds of their day). That is the fundamental attribution error.'],
+        ['When you snap at your younger brother, it\'s because you\'re exhausted from exams. When he snaps at you, it\'s because he\'s rude.', 1, 'Same behavior, two people, opposite explanations: situation for you, character for him. That is the actor-observer bias.'],
+        ['A company\'s annual report credits a record year to "our leadership\'s vision." The next year\'s losses are blamed on "global market conditions."', 2, 'The same group takes credit for success and blames the situation for failure. Self-serving bias works for organizations too.'],
+        ['A teacher decides that a student who keeps falling asleep in class is lazy. She doesn\'t know he works late every night at his family\'s shop.', 0, 'The teacher over-blames the student\'s character and misses a powerful situational cause. There is no me-vs-you comparison, so this is the fundamental attribution error.'],
+        ['You forget your teammate\'s birthday: "It\'s been a crazy week." Your teammate forgets yours: "They just don\'t care about me."', 1, 'Your lapse gets a situational excuse; the identical lapse by someone else gets a dispositional one. Actor-observer bias.'],
+        ['A tennis player after a win: "My serve was unstoppable today." After a loss the next day: "The wind made it impossible to play."', 2, 'Credit to self for the win, blame on the wind for the loss. That is the self-serving bias.'],
+        ['Viewers decide a reality-show contestant who cried on camera is "fake and dramatic," never considering the 18-hour filming days and producers pushing for emotional moments.', 0, 'The viewers attribute the behavior to her character and ignore strong situational pressures. Fundamental attribution error.']
+      ]
+    }
+  ];
+
+  var round = 0, score = 0, answered = 0;
+  var casesEl = document.getElementById('detCases');
+  var tabs = document.querySelectorAll('#det .tabs button');
+
+  function renderRound() {
+    score = 0; answered = 0;
+    var r = ROUNDS[round];
+    casesEl.innerHTML = '';
+    r.cases.forEach(function (c, i) {
+      var d = document.createElement('div');
+      d.className = 'case';
+      d.innerHTML = '<span class="cnum">Case ' + (i + 1) + '</span><p class="ctext"></p><div class="opts"></div><div class="fb" aria-live="polite"></div>';
+      d.querySelector('.ctext').textContent = c[0];
+      var opts = d.querySelector('.opts');
+      r.options.forEach(function (label, j) {
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.textContent = label;
+        b.addEventListener('click', function () { pick(d, c, j, r.options); });
+        opts.appendChild(b);
+      });
+      casesEl.appendChild(d);
+    });
+    document.getElementById('detTotal').textContent = r.cases.length;
+    document.getElementById('detDone').className = 'done';
+    updateScore();
+  }
+
+  function pick(d, c, j, options) {
+    var btns = d.querySelectorAll('.opts button');
+    var right = j === c[1];
+    btns.forEach(function (b, k) {
+      b.disabled = true;
+      if (k === c[1]) b.classList.add('right');
+      else if (k === j) b.classList.add('wrong');
+      else b.classList.add('dim');
+    });
+    var fb = d.querySelector('.fb');
+    fb.className = 'fb open' + (right ? '' : ' miss');
+    fb.innerHTML = '<strong>' + (right ? 'Correct: ' : 'Not quite. The answer is ') + options[c[1]] + '.</strong>';
+    fb.appendChild(document.createTextNode(c[2]));
+    answered++; if (right) score++;
+    updateScore();
+    var total = ROUNDS[round].cases.length;
+    if (answered === total) {
+      var done = document.getElementById('detDone');
+      done.textContent = 'Round complete: ' + score + ' of ' + total + '. ' +
+        (round === 0 ? 'Ready for Round 2? Use the tab at the top of the box.' :
+         score >= 7 ? 'Strong work. Now try the Self-Check Quiz below.' :
+         'Review the filter table in section 4, then start the round over.');
+      done.className = 'done open';
+    }
+  }
+
+  function updateScore() {
+    document.getElementById('detScore').textContent = score;
+    document.getElementById('detTotal').textContent = answered;
+  }
+
+  tabs.forEach(function (t) {
+    t.addEventListener('click', function () {
+      round = +t.getAttribute('data-round');
+      tabs.forEach(function (x) { x.setAttribute('aria-selected', x === t ? 'true' : 'false'); });
+      renderRound();
+    });
+  });
+  document.getElementById('detReset').addEventListener('click', renderRound);
+  renderRound();
+
+  /* ---------------- Self-Check Quiz ---------------- */
+  var QUIZ = [
+    ['A hiring manager decides within the first minute that a candidate is "not a good fit," then spends the rest of the interview noticing only evidence that confirms it. The first-minute judgment is an example of:',
+      ['a situational attribution', 'person perception', 'relative deprivation', 'the mere exposure effect'], 1,
+      'Forming a fast impression of someone from very little information is person perception. The situational attribution would explain a behavior by circumstances, and nothing here involves repetition (mere exposure) or comparison (relative deprivation).'],
+    ['"Mei aced the interview because the questions happened to be on topics she had just studied for another class." This explanation is:',
+      ['a dispositional attribution', 'a situational attribution', 'the self-serving bias', 'an internal locus of control'], 1,
+      'The success is credited to lucky circumstances, not to Mei\'s ability or effort. It would be the self-serving bias only if Mei were explaining her own success and failure differently.'],
+    ['Daniel forgets his lines in the school play and thinks, "The director barely gave us rehearsal time." The next week his castmate forgets her lines and Daniel thinks, "She just didn\'t take it seriously." Daniel is displaying:',
+      ['the self-serving bias', 'the mere exposure effect', 'the actor-observer bias', 'an external locus of control'], 2,
+      'Daniel explains his own mistake by the situation and his castmate\'s identical mistake by her character. Me vs. you is actor-observer. It is not self-serving, because that compares Daniel\'s own success with his own failure.'],
+    ['A basketball coach watches a referee make a bad call and immediately concludes the ref is biased and incompetent, never considering that the play was fast and the angle was blocked. This is the clearest example of:',
+      ['the fundamental attribution error', 'the self-serving bias', 'an external locus of control', 'a downward social comparison'], 0,
+      'The coach over-attributes one behavior of another person to character and ignores the situation. There is no comparison between two people, so it is the FAE rather than actor-observer.'],
+    ['Priya doesn\'t get an internship and concludes, "There\'s no point applying again. These things are all about who you know." Priya is showing:',
+      ['an internal locus of control', 'an external locus of control', 'the fundamental attribution error', 'the mere exposure effect'], 1,
+      'Priya believes outside forces control her outcomes and that her effort cannot change them. That belief is an external locus of control.'],
+    ['After failing a test, a student thinks, "I failed because I\'m stupid, I\'ll never be good at school, and I mess up everything I try." In terms of explanatory style, this explanation is:',
+      ['internal, unstable, and specific', 'external, stable, and global', 'internal, stable, and global', 'external, unstable, and specific'], 2,
+      '"I\'m stupid" is internal, "never" is stable, and "everything" is global. Internal, stable, and global together make the pessimistic explanatory style linked to learned helplessness.'],
+    ['A streaming app keeps autoplaying the same new artist. At first you are indifferent, but after two weeks of hearing them constantly you decide you love their music. This best illustrates:',
+      ['the self-fulfilling prophecy', 'social comparison', 'the mere exposure effect', 'relative deprivation'], 2,
+      'Your liking grew from repetition alone, with no new information about the music. That is the mere exposure effect.'],
+    ['A teacher assumes a transfer student is a troublemaker, so she watches him closely, corrects him harshly, and rarely praises him. Frustrated, he begins acting out, and the teacher concludes she was right all along. This is:',
+      ['mirror-image perceptions', 'the self-fulfilling prophecy', 'the self-serving bias', 'a downward social comparison'], 1,
+      'The full loop is here: expectation, changed treatment, and behavior that confirms the expectation. That is the self-fulfilling prophecy.'],
+    ['Lena is happy with her exam score until she learns most of her friends scored higher. Now she feels like a failure, even though her score did not change. Lena is experiencing:',
+      ['the mere exposure effect', 'relative deprivation following an upward comparison', 'the self-serving bias', 'mirror-image perceptions'], 1,
+      'Her situation is unchanged, but comparing upward to higher-scoring friends makes her feel worse off. The feeling is relative deprivation; the comparison that triggered it was upward.'],
+    ['The student councils of two rival schools each post that the other school started an online feud, and that their own posts were only defending their students. This pattern best illustrates:',
+      ['mirror-image perceptions', 'the self-serving bias', 'the mere exposure effect', 'an internal locus of control'], 0,
+      'Each side sees itself as reasonable and defensive and the other as the aggressor, with matching, opposite views. That is mirror-image perceptions. The self-serving bias is about how one party explains its own success and failure.'],
+    ['In Rosenthal and Jacobson\'s Pygmalion study, why was it important that the "intellectual bloomers" were chosen at random?',
+      ['It ensured that the teachers knew which students were truly gifted.', 'It meant later differences could be attributed to teacher expectations rather than to pre-existing ability.', 'It made the study a naturalistic observation instead of an experiment.', 'It allowed researchers to measure the students\' locus of control.'], 1,
+      'Random selection meant the "bloomers" were no different from their classmates at the start. So the only systematic difference was what teachers expected, which lets researchers conclude the expectation caused the gains.']
+  ];
+
+  var qEl = document.getElementById("quizList");
+  var qScore = 0, qDone = 0;
+  var LET = ['A', 'B', 'C', 'D'];
+
+  function renderQuiz() {
+    qScore = 0; qDone = 0;
+    qEl.innerHTML = '';
+    QUIZ.forEach(function (q, i) {
+      var d = document.createElement('div');
+      d.className = 'case';
+      d.innerHTML = '<span class="cnum">Question ' + (i + 1) + '</span><p class="ctext"></p><div class="opts stack"></div><div class="fb" aria-live="polite"></div>';
+      d.querySelector('.ctext').textContent = q[0];
+      var opts = d.querySelector('.opts');
+      q[1].forEach(function (txt, j) {
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.textContent = LET[j] + '.  ' + txt;
+        b.addEventListener('click', function () {
+          var btns = opts.querySelectorAll('button');
+          var right = j === q[2];
+          btns.forEach(function (x, k) {
+            x.disabled = true;
+            if (k === q[2]) x.classList.add('right');
+            else if (k === j) x.classList.add('wrong');
+            else x.classList.add('dim');
+          });
+          var fb = d.querySelector('.fb');
+          fb.className = 'fb open' + (right ? '' : ' miss');
+          fb.innerHTML = '<strong>' + (right ? 'Correct.' : 'Not quite. The answer is ' + LET[q[2]] + '.') + '</strong>';
+          fb.appendChild(document.createTextNode(q[3]));
+          qDone++; if (right) qScore++;
+          updateQ();
+          if (qDone === QUIZ.length) {
+            var f = document.getElementById('qFinal');
+            f.textContent = 'Final score: ' + qScore + ' of ' + QUIZ.length + '. ' +
+              (qScore >= 9 ? 'You are in good shape for 4.1.' :
+               qScore >= 6 ? 'Solid. Reread the explanations for the ones you missed, then check Don\'t Mix These Up.' :
+               'Go back through sections 3 to 8, then start the quiz over.');
+            f.className = 'done open';
+          }
+        });
+        opts.appendChild(b);
+      });
+      qEl.appendChild(d);
+    });
+    document.getElementById('qTotal').textContent = QUIZ.length;
+    document.getElementById('qFinal').className = 'done';
+    updateQ();
+  }
+  function updateQ() {
+    document.getElementById('qScore').textContent = qScore;
+    document.getElementById('qDone').textContent = qDone;
+  }
+  document.getElementById('qReset').addEventListener('click', renderQuiz);
+  renderQuiz();
+})();
+</script>
+
+</body>
+</html>

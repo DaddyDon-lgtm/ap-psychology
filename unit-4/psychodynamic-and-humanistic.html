@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>4.4 Psychodynamic and Humanistic Theories of Personality | AP Psychology</title>
+<style>@font-face{font-family:'APSerif';src:url('../assets/fonts/source-serif-4-latin-400-normal.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'APSerif';src:url('../assets/fonts/source-serif-4-latin-600-normal.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:'APSerif';src:url('../assets/fonts/source-serif-4-latin-700-normal.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'APSans';src:url('../assets/fonts/source-sans-3-latin-400-normal.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'APSans';src:url('../assets/fonts/source-sans-3-latin-400-italic.woff2') format('woff2');font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:'APSans';src:url('../assets/fonts/source-sans-3-latin-600-normal.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:'APSans';src:url('../assets/fonts/source-sans-3-latin-700-normal.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
+
+/* ---------------------------------------------------------------- base */
+:root{
+  --ink:#14293a; --ink-soft:#243c50; --accent:#0f5c5e; --accent-d:#0c4749;
+  --accent2:#a35617; --accent2-d:#8a4a13;
+  --soft:#eef4f4; --soft2:#fdf1e6;
+  --green:#1b6b48; --green-s:#edf5f0; --red:#9c2a2a; --red-s:#faeeee;
+  --line:#dfe4e8; --line-d:#c4ced6; --muted:#5d6b78; --faint:#6b7885; --bg:#fbfbf9; --surface:#ffffff;
+  --blue:#2f5d80;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:APSans,'Segoe UI',-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;font-size:18px;line-height:1.72;
+     color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}
+.wrap{max-width:740px;margin:0 auto;padding:0 24px 80px}
+
+/* ---------------------------------------------------------------- chrome */
+.crumbs{background:var(--surface);border-bottom:1px solid var(--line);font-size:14px}
+.crumbs .inner,.crumbs .wrap{max-width:740px;margin:0 auto;padding:12px 24px}
+.crumbs a{color:var(--accent);text-decoration:none;font-weight:600}
+.crumbs a:hover{text-decoration:underline}
+.crumbs .sep{color:var(--line-d);margin:0 9px}
+.crumbs .here{color:var(--muted)}
+
+header.top,.masthead{background:var(--surface);border-bottom:1px solid var(--line);
+     padding:44px 24px 38px;color:var(--ink)}
+header.top .inner,.masthead .wrap{max-width:740px;margin:0 auto;padding-bottom:0}
+header.top .kicker,header.top .meta,.masthead .course{font-size:12px;letter-spacing:.16em;
+     text-transform:uppercase;color:var(--accent2);font-weight:700;margin:0 0 14px;opacity:1}
+header.top h1,.masthead h1{font-family:APSerif,Georgia,'Times New Roman',serif;font-weight:700;font-size:42px;line-height:1.14;
+     margin:0;letter-spacing:-.015em;color:var(--ink)}
+header.top p.tag,header.top .sub,.masthead p.tag{margin:14px 0 0;font-size:19px;
+     color:var(--muted);line-height:1.55;opacity:1}
+header.top .meta{margin:18px 0 0;letter-spacing:.1em;color:var(--muted);font-size:11.5px}
+.masthead a{color:var(--accent)}
+
+/* Deliberately not sticky: this direction reads as a document, the breadcrumb
+   already says where you are, and a wrapped two-row bar would cover anchored
+   headings as you jump between sections. */
+nav.jump{background:var(--surface);border-bottom:1px solid var(--line)}
+nav.jump ul{max-width:940px;margin:0 auto;padding:0 24px;list-style:none;display:flex;flex-wrap:wrap;
+     gap:0 22px}
+nav.jump a{display:block;padding:13px 0;font-size:14.5px;color:var(--muted);text-decoration:none;
+     border-bottom:2px solid transparent;font-weight:600}
+nav.jump a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+
+main{padding:8px 0 0}
+
+/* ---------------------------------------------------------------- type */
+h2{font-family:APSerif,Georgia,'Times New Roman',serif;font-size:30px;font-weight:700;color:var(--ink);margin:54px 0 14px;
+   letter-spacing:-.01em;line-height:1.24;scroll-margin-top:24px}
+h2 .num{font-family:APSans,'Segoe UI',-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;display:inline-block;font-size:12px;font-weight:700;
+   letter-spacing:.14em;color:var(--accent2);vertical-align:.42em;margin-right:12px}
+h3{font-family:APSerif,Georgia,'Times New Roman',serif;font-size:22px;font-weight:600;margin:34px 0 10px;color:var(--ink)}
+h4{font-family:APSerif,Georgia,'Times New Roman',serif;font-size:18.5px;font-weight:600;margin:24px 0 7px;color:var(--ink)}
+p{margin:16px 0}
+ul,ol{margin:16px 0;padding-left:26px}
+li{margin:6px 0}
+.lede{font-size:19.5px;color:var(--muted);margin:22px 0 4px;line-height:1.6}
+code{background:var(--soft);padding:1px 6px;border-radius:3px;
+     font-family:Consolas,Monaco,monospace;font-size:.9em}
+em{font-style:italic}
+
+/* ---------------------------------------------------------------- boxes */
+.box,.note{border-radius:3px;padding:20px 24px;margin:28px 0;border-left:3px solid var(--accent2);
+     background:var(--soft2)}
+.box p:first-child,.note p:first-child{margin-top:0}
+.box p:last-child,.note p:last-child{margin-bottom:0}
+.box p,.note p{font-size:17.5px}
+.box .label,.note .label{display:block;font-size:11.5px;font-weight:700;letter-spacing:.14em;
+     text-transform:uppercase;color:var(--accent2);margin-bottom:9px}
+.box.key{background:var(--soft2);border-color:var(--accent2)}
+.box.key .label{color:var(--accent2)}
+.box.note{background:var(--soft);border-color:var(--accent)}
+.box.note .label{color:var(--accent)}
+.box.good{background:var(--green-s);border-color:var(--green)}
+.box.good .label{color:var(--green)}
+.box.warn{background:var(--red-s);border-color:var(--red)}
+.box.warn .label{color:var(--red)}
+.pending{background:var(--surface);border:1px dashed var(--line-d);border-radius:3px;
+     padding:30px 20px;text-align:center;color:var(--muted);margin:28px 0}
+.pending strong{display:block;color:var(--ink);margin-bottom:4px;font-size:17px}
+
+/* ---------------------------------------------------------------- table */
+table{border-collapse:collapse;width:100%;margin:30px 0;font-size:17px}
+th,td{border:0;border-bottom:1px solid var(--line);padding:14px 10px 14px 0;
+      text-align:left;vertical-align:top}
+th:last-child,td:last-child{padding-right:0}
+thead th{border-bottom:2px solid var(--ink);font-size:12.5px;letter-spacing:.09em;
+      text-transform:uppercase;color:var(--muted);font-weight:700;padding-bottom:10px}
+tbody tr:last-child td{border-bottom:1px solid var(--line)}
+caption{caption-side:top;text-align:left;font-size:13px;letter-spacing:.1em;text-transform:uppercase;
+      color:var(--muted);font-weight:700;padding-bottom:12px}
+td.center,th.center{text-align:center}
+.term{font-weight:700;color:var(--accent)}
+
+/* ---------------------------------------------------------------- cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1px;
+      background:var(--line);border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+      margin:26px 0}
+.grid .card{display:block;background:var(--surface);padding:24px 26px;text-decoration:none;
+      color:inherit;transition:background .15s}
+a.grid > .card:hover,.grid a.card:hover{background:#f6f9f9}
+.grid .card .kicker{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+      color:var(--accent2);margin:0 0 8px}
+.grid .card .title{font-family:APSerif,Georgia,'Times New Roman',serif;font-size:22px;font-weight:700;margin:0 0 8px;line-height:1.25}
+.grid .card .desc{font-size:16px;color:var(--muted);margin:0;line-height:1.55}
+/* A unit with nothing in it yet is muted by colour, not by opacity: fading the
+   whole tile would grey out its background and checkerboard the grid. */
+.grid .card.empty .kicker{color:var(--faint)}
+.grid .card.empty .title{color:var(--muted);font-weight:700}
+.grid .card.empty .desc{color:var(--faint)}
+
+.resource{display:flex;justify-content:space-between;align-items:center;gap:20px;
+      border:0;border-bottom:1px solid var(--line);padding:22px 0;margin:0;
+      text-decoration:none;color:inherit}
+.resource:first-of-type{border-top:1px solid var(--line)}
+a.resource:hover .title{color:var(--accent)}
+.resource .title{font-family:APSerif,Georgia,'Times New Roman',serif;font-weight:700;font-size:20px;margin:0 0 3px;
+      transition:color .12s}
+.resource .desc{font-size:16px;color:var(--muted);margin:0}
+.resource .go{color:var(--accent);font-weight:600;font-size:15px;white-space:nowrap}
+
+/* ---------------------------------------------------------------- widget */
+.widget{background:var(--surface);border:1px solid var(--line);border-radius:4px;
+        padding:26px 28px;margin:34px 0}
+.widget > h3{margin-top:0;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.widget .tryit{font-family:APSans,'Segoe UI',-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:.14em;
+        text-transform:uppercase;color:var(--accent2);background:none;padding:0}
+.widget svg{display:block;width:100%;height:auto;max-width:100%;touch-action:none}
+svg,canvas{display:block;max-width:100%}
+
+.ctrls{display:flex;flex-wrap:wrap;gap:24px;margin:22px 0 4px;align-items:flex-end}
+.ctrl{flex:1 1 220px;min-width:200px}
+.ctrl label{display:block;font-size:12px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;
+        color:var(--muted);margin-bottom:10px}
+.ctrl .val{color:var(--accent);font-size:15px;letter-spacing:0}
+input[type=range]{width:100%;accent-color:var(--accent);height:26px;cursor:pointer}
+
+.btnrow{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0 0}
+button{font-family:APSans,'Segoe UI',-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;font-size:14.5px;font-weight:600;cursor:pointer;border-radius:3px;
+       padding:10px 18px;border:1px solid var(--accent);background:var(--surface);
+       color:var(--accent);transition:background .12s,color .12s}
+button:hover{background:var(--accent);color:#fff}
+button.primary{background:var(--accent);color:#fff}
+button.primary:hover{background:var(--accent-d)}
+button:disabled{opacity:.45;cursor:not-allowed}
+button:focus-visible,input:focus-visible,a:focus-visible,textarea:focus-visible,
+[tabindex]:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+.readouts{display:flex;flex-wrap:wrap;gap:34px;margin:30px 0 0}
+.ro{flex:0 1 auto;min-width:110px}
+.ro .k{display:block;font-size:11.5px;font-weight:700;letter-spacing:.12em;
+       text-transform:uppercase;color:var(--muted)}
+.ro .v{display:block;font-family:APSerif,Georgia,'Times New Roman',serif;font-size:30px;font-weight:700;color:var(--ink);line-height:1.3}
+.ro.hl .v{color:var(--green)}
+.commentary{margin:20px 0 0;padding:0 0 0 18px;border-left:3px solid var(--line-d);
+       font-size:16.5px;color:var(--ink-soft)}
+.toggle-line{display:flex;align-items:center;gap:10px;margin:18px 0 0;font-size:15.5px}
+.toggle-line input{width:18px;height:18px;accent-color:var(--accent);cursor:pointer}
+.field{display:inline-flex;flex-direction:column;gap:5px;margin:0 14px 12px 0}
+.field label{font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.field input{font-family:inherit;font-size:17px;padding:8px 10px;width:110px;
+       border:1px solid var(--line-d);border-radius:3px;background:var(--surface);color:var(--ink)}
+.field input.ok{border-color:var(--green);background:var(--green-s)}
+.field input.bad{border-color:var(--accent2);background:var(--soft2)}
+.worked{display:none;margin:18px 0 0;padding:16px 18px;background:#f7f9f9;border-radius:3px;
+       font-family:Consolas,Monaco,monospace;font-size:14.5px;line-height:1.75;white-space:pre-wrap}
+.worked.open{display:block}
+.dataset{font-family:APSerif,Georgia,'Times New Roman',serif;font-size:25px;font-weight:700;letter-spacing:.03em;color:var(--ink);
+       background:#f7f9f9;border-radius:3px;padding:15px 18px;margin:8px 0 18px;text-align:center}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------------------------------------------------------------- practice */
+.q-item{border:0;border-top:1px solid var(--line);border-radius:0;background:none;
+        margin:0;padding:26px 0}
+.q-item .qnum{display:inline-block;background:none;color:var(--accent2);font-size:11.5px;
+        font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:0;margin-bottom:10px}
+.q-item .stem{margin:6px 0 12px}
+.q-item .ask{font-weight:600;margin:12px 0}
+.q-item ol.choices{list-style:upper-alpha;padding-left:26px;margin:12px 0 16px}
+.q-item ol.choices li{margin:6px 0}
+.reveal{display:none;border-top:1px dashed var(--line-d);margin-top:16px;padding-top:16px}
+.reveal.open{display:block}
+.reveal .ans{font-weight:700;color:var(--green);font-size:17px;margin:0 0 10px}
+.reveal .why{margin:10px 0 0}
+.reveal .why-not{margin:12px 0 0;font-size:16px}
+.reveal .why-not li{color:var(--muted)}
+.reveal .why-not li strong{color:var(--ink)}
+.toggle{font-size:14.5px}
+
+/* ---------------------------------------------------------------- misc */
+details{border:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+        border-radius:0;padding:16px 0;margin:26px 0;background:none}
+details summary{font-family:APSerif,Georgia,'Times New Roman',serif;font-weight:600;color:var(--accent);cursor:pointer;font-size:18px}
+details[open] summary{margin-bottom:10px}
+
+figure{margin:32px 0}
+figure img{max-width:100%;height:auto;display:block;border:1px solid var(--line);
+      border-radius:3px;background:#fff}
+figure.plain img{border:none}
+figcaption{font-size:15px;color:var(--muted);margin-top:10px;line-height:1.55}
+figure.half{max-width:460px}
+figure.center{margin-left:auto;margin-right:auto}
+.hero{margin:0 0 30px;border-radius:3px;overflow:hidden;border:1px solid var(--line)}
+.hero img{display:block;width:100%;height:auto}
+.img-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin:28px 0}
+.img-row figure{margin:0}
+
+footer{margin-top:62px;padding:26px 0 0;border-top:1px solid var(--line);font-size:15px;color:var(--muted)}
+footer p{margin:5px 0}
+body > footer{background:var(--surface);margin-top:62px;padding:28px 0 34px}
+body > footer .wrap{padding-bottom:0}
+
+.pagenav{display:flex;flex-wrap:wrap;gap:1px;margin:34px 0 0;background:var(--line);
+       border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.pagenav a{flex:1 1 220px;border:0;border-radius:0;padding:18px 20px;text-decoration:none;
+       color:inherit;background:var(--surface)}
+.pagenav a:hover{background:#f6f9f9}
+.pagenav .dir{display:block;font-size:11px;font-weight:700;letter-spacing:.14em;
+       text-transform:uppercase;color:var(--accent2)}
+.pagenav .t{display:block;font-family:APSerif,Georgia,'Times New Roman',serif;font-weight:700;color:var(--ink);margin-top:4px}
+
+/* Any table too wide for the screen scrolls sideways instead of pushing the page. */
+.tscroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:30px 0}
+.tscroll > table{margin-top:0;margin-bottom:0;min-width:520px}
+
+/* ------------------------------------------------- wide break-out on big screens */
+@media (min-width:1040px){
+  .widget,.tscroll:has(table.wide),.grid,.bleed{width:940px;margin-left:-100px;max-width:none}
+  table.wide{min-width:0}
+}
+
+/* ---------------------------------------------------------------- responsive */
+@media (max-width:760px){
+  body{font-size:17px;line-height:1.65}
+  header.top,.masthead{padding:32px 20px 28px}
+  header.top h1,.masthead h1{font-size:30px}
+  header.top p.tag,header.top .sub,.masthead p.tag{font-size:17.5px}
+  h2{font-size:25px;margin:42px 0 12px}
+  h3{font-size:20px}
+  .wrap,.crumbs .inner,.crumbs .wrap,header.top .inner,.masthead .wrap,nav.jump ul{padding-left:20px;padding-right:20px}
+  nav.jump ul{gap:0 16px}
+  nav.jump a{padding:12px 0;font-size:13.5px}
+  .widget{padding:20px 18px}
+  .ro .v{font-size:24px}
+  .readouts{gap:20px}
+  .resource{flex-direction:column;align-items:flex-start;gap:8px}
+  table{font-size:16px}
+}
+
+/* ---------------------------------------------------------------- print */
+@media print{
+  body{background:#fff;font-size:11pt;color:#000}
+  nav.jump,.crumbs,button,.btnrow,input[type=range],.pagenav,.toggle{display:none!important}
+  header.top,.masthead{background:#fff!important;color:var(--ink)!important;padding:0 0 14px;border:0}
+  .widget,.tscroll,.bleed{width:auto!important;margin-left:0!important;overflow:visible!important}
+  .tscroll > table,table.wide{min-width:0!important}
+  .reveal{display:block!important}
+  .worked{display:block!important}
+  .widget,.q-item,.box,.note,table,details,figure,.hero,.img-row,.grid .card{
+     break-inside:avoid;page-break-inside:avoid}
+  h2,h3{break-after:avoid}
+  @page{size:A4;margin:15mm}
+}
+
+/* ------------------------------------------------ research methods page extras */
+.yes{color:var(--green);font-weight:700}
+.no{color:var(--red);font-weight:700}
+.claim-yes{color:var(--green);font-weight:600}
+.claim-no{color:var(--red);font-weight:600}
+.signals{font-style:italic;color:var(--blue)}
+
+.split{display:grid;grid-template-columns:1fr 1fr;gap:1px;margin:30px 0;background:var(--line);
+       border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.panel{background:var(--surface);padding:22px 24px}
+.panel h4{margin-top:0;font-size:18px}
+.panel.is-method h4{color:var(--green)}
+.panel.is-tool h4{color:var(--accent2)}
+.panel ul{padding-left:20px;margin-bottom:0}
+
+.tree{margin:32px 0}
+.step{display:grid;grid-template-columns:34px 1fr;gap:18px;background:var(--surface);
+      border:1px solid var(--line);border-radius:4px;padding:20px 22px;margin-bottom:12px}
+.step .n{font-family:APSerif,Georgia,serif;color:var(--accent2);font-weight:700;font-size:24px;
+      line-height:1.2;text-align:center}
+.step .q{font-weight:600;font-size:18px;margin:0 0 10px}
+.step .out{font-size:16px;padding:0 0 0 16px;border-left:3px solid var(--green);margin:10px 0 0;
+      color:var(--ink-soft)}
+.step .out strong{color:var(--green)}
+.step .nope{font-size:16px;color:var(--muted);margin:10px 0 0;font-style:italic}
+.arrow{text-align:center;color:var(--line-d);font-size:20px;line-height:1;margin:-4px 0 8px}
+
+.mcard{border:1px solid var(--line);border-radius:4px;background:var(--surface);margin:28px 0;
+      overflow:hidden}
+.mcard > .head{border-bottom:2px solid var(--ink);padding:16px 24px;display:flex;
+      justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;background:var(--surface)}
+.mcard > .head .name{font-family:APSerif,Georgia,serif;font-size:23px;font-weight:700;color:var(--ink)}
+.mcard > .head .tag{font-size:11px;text-transform:uppercase;letter-spacing:.14em;font-weight:700;
+      color:var(--accent2);white-space:nowrap}
+.mcard.exp > .head{border-bottom-color:var(--green)}
+.mcard.exp > .head .name{color:var(--green)}
+.mcard.exp > .head .tag{color:var(--green)}
+.mcard > .body{padding:20px 24px 24px}
+.mcard dl{margin:0}
+.mcard dt{font-weight:700;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;
+      color:var(--accent2);margin-top:20px}
+.mcard dt:first-child{margin-top:0}
+.mcard dd{margin:6px 0 0}
+.mcard dd ul{margin:6px 0 0}
+
+.drill{border:0}
+.drill-row{display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;
+      padding:16px 0;border-bottom:1px solid var(--line)}
+.drill-row:first-child{border-top:1px solid var(--line)}
+.drill-row:last-child{border-bottom:1px solid var(--line)}
+.drill-row .stem{font-size:17px}
+.drill-row .ans-slot{min-width:210px;text-align:right;font-weight:700;color:var(--green);
+      font-size:15.5px;cursor:pointer;user-select:none;border-radius:3px;padding:3px 7px}
+.drill-row .ans-slot:hover{background:var(--soft)}
+.drill-row .ans-slot:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.drill-row .ans-slot .ph{display:none;color:var(--muted);font-weight:700;font-size:13px;
+      letter-spacing:.14em;text-transform:uppercase}
+.drill-row .ans-slot.hidden-ans .ph{display:inline}
+.drill-row .ans-slot.hidden-ans .txt{display:none}
+
+@media (max-width:760px){
+  .split{grid-template-columns:1fr}
+  .drill-row{grid-template-columns:1fr;gap:6px}
+  .drill-row .ans-slot{text-align:left;min-width:0;padding-left:0}
+}
+@media print{
+  .split{grid-template-columns:1fr 1fr}
+  .drill-row .ans-slot .txt{display:inline!important}
+  .drill-row .ans-slot .ph{display:none!important}
+  .mcard,.q-item,.panel,.step,.drill,.drill-row{break-inside:avoid;page-break-inside:avoid}
+}
+
+/* ------------------------------------------------ unit 4 topic page extras */
+.eq{list-style:none;padding:0;margin:20px 0}
+.eq li{padding:12px 0 12px 18px;border-left:3px solid var(--accent);margin:10px 0;background:var(--surface);
+      font-family:APSerif,Georgia,serif;font-size:19px}
+.loop{counter-reset:loop;list-style:none;padding:0;margin:24px 0}
+.loop li{counter-increment:loop;position:relative;padding:14px 18px 14px 58px;background:var(--surface);
+      border:1px solid var(--line);border-radius:4px;margin:0 0 10px}
+.loop li::before{content:counter(loop);position:absolute;left:18px;top:12px;font-family:APSerif,Georgia,serif;
+      font-weight:700;font-size:24px;color:var(--accent2)}
+.pair{border:1px solid var(--line);border-radius:4px;background:var(--surface);margin:26px 0;overflow:hidden}
+.pair > .head{padding:14px 22px;border-bottom:2px solid var(--ink);font-family:APSerif,Georgia,serif;
+      font-size:21px;font-weight:700}
+.pair .cols{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line)}
+.pair .cols.three{grid-template-columns:1fr 1fr 1fr}
+.pair .col{background:var(--surface);padding:18px 22px}
+.pair .col h4{margin:0 0 6px;color:var(--accent)}
+.pair .col p{margin:8px 0;font-size:16.5px}
+.pair .col .ex{color:var(--ink-soft);font-style:italic}
+.pair .tell{padding:14px 22px;background:var(--soft2);font-size:16.5px;border-top:1px solid var(--line)}
+.pair .tell strong{color:var(--accent2)}
+
+/* detective + quiz */
+.score{font-size:15px;font-weight:700;color:var(--muted);letter-spacing:.04em}
+.score b{color:var(--green);font-size:18px}
+.case{border-top:1px solid var(--line);padding:20px 0}
+.case:last-of-type{border-bottom:1px solid var(--line)}
+.case .cnum{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent2)}
+.case .ctext{margin:6px 0 12px;font-size:17.5px}
+.opts{display:flex;flex-wrap:wrap;gap:10px}
+.opts button{flex:0 1 auto}
+.opts.stack{flex-direction:column;align-items:stretch}
+.opts.stack button{text-align:left;font-weight:400;font-size:16.5px;color:var(--ink);border-color:var(--line-d);line-height:1.5}
+.opts.stack button:hover{background:var(--soft);color:var(--ink)}
+.opts button.right,.opts button.right:hover{background:var(--green);border-color:var(--green);color:#fff}
+.opts button.wrong,.opts button.wrong:hover{background:var(--red-s);border-color:var(--red);color:var(--red)}
+.opts button:disabled{opacity:1;cursor:default}
+.opts button.dim{opacity:.5}
+.fb{display:none;margin:14px 0 0;padding:12px 16px;border-left:3px solid var(--green);background:var(--green-s);font-size:16.5px}
+.fb.miss{border-left-color:var(--red);background:var(--red-s)}
+.fb.open{display:block}
+.fb strong{display:block;margin-bottom:4px}
+.tabs{display:flex;gap:0;border-bottom:1px solid var(--line);margin:8px 0 6px}
+.tabs button{border:0;border-bottom:2px solid transparent;border-radius:0;background:none;color:var(--muted);padding:10px 16px 10px 0;margin-right:14px}
+.tabs button:hover{background:none;color:var(--accent)}
+.tabs button[aria-selected="true"]{color:var(--accent);border-bottom-color:var(--accent)}
+.done{display:none;margin:20px 0 0;font-weight:600}
+.done.open{display:block}
+
+@media (max-width:760px){
+  .pair .cols,.pair .cols.three{grid-template-columns:1fr}
+}
+@media print{
+  .fb{display:block!important}
+  .case,.pair,.loop li{break-inside:avoid;page-break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<div class="crumbs">
+  <div class="inner">
+    <a href="../index.html">AP Psychology</a>
+    <span class="sep">&rsaquo;</span>
+    <a href="index.html">Unit 4</a>
+    <span class="sep">&rsaquo;</span>
+    <span class="here">4.4 Psychodynamic and Humanistic Theories</span>
+  </div>
+</div>
+
+<header class="top">
+  <div class="inner">
+    <h1>Psychodynamic and Humanistic Theories of Personality</h1>
+    <p class="tag">The hidden mind and the striving self: two classic answers to "Who are you?"</p>
+    <p class="meta">AP Psychology &bull; Unit 4: Social Psychology and Personality &bull; CED Topic 4.4</p>
+  </div>
+</header>
+
+<nav class="jump">
+  <ul>
+    <li><a href="#start">Start Here</a></li>
+    <li><a href="#terms">Key Terms</a></li>
+    <li><a href="#freud">Freud and the Unconscious</a></li>
+    <li><a href="#structure">Id, Ego, Superego</a></li>
+    <li><a href="#defenses">Defense Mechanisms</a></li>
+    <li><a href="#assess">Projective Tests</a></li>
+    <li><a href="#humanistic">Humanistic Theory</a></li>
+    <li><a href="#mixups">Don't Mix These Up</a></li>
+    <li><a href="#detective">Defense Mechanism Match</a></li>
+    <li><a href="#quiz">Self-Check Quiz</a></li>
+    <li><a href="#traps">AP Exam Traps</a></li>
+  </ul>
+</nav>
+
+<div class="wrap">
+
+<h2 id="start"><span class="num">1</span>Start Here</h2>
+
+<p class="lede"><span class="term">Personality</span> is your characteristic pattern of thinking, feeling, and behaving. Psychologists explain it through four lenses. This page covers the two oldest and most provocative: the <strong>psychodynamic</strong> view, where hidden forces steer you, and the <strong>humanistic</strong> view, where you are driven to grow. Topic 4.5 covers the other two, the social-cognitive and trait views.</p>
+
+<ul class="eq">
+  <li>How much of who you are operates below your awareness?</li>
+  <li>How do we protect ourselves from anxiety without realizing it?</li>
+  <li>What conditions help a person grow toward their full potential?</li>
+</ul>
+
+<div class="box note">
+  <span class="label">How to use this page</span>
+  <p>Read the key terms and sections, then try <a href="#detective">Defense Mechanism Match</a> and the <a href="#quiz">Self-Check Quiz</a>. Nothing you click is recorded or graded.</p>
+</div>
+
+<h2 id="terms"><span class="num">2</span>Key Terms at a Glance</h2>
+
+<div class="tscroll">
+<table class="wide">
+  <thead><tr><th style="width:32%">Term</th><th>What it means</th></tr></thead>
+  <tbody>
+    <tr><td class="term">Psychodynamic theory</td><td>Personality is shaped by unconscious forces and early experience.</td></tr>
+    <tr><td class="term">Psychoanalysis</td><td>Freud's theory and therapy aimed at uncovering unconscious conflicts.</td></tr>
+    <tr><td class="term">Unconscious</td><td>Thoughts, wishes, and memories we are largely unaware of.</td></tr>
+    <tr><td class="term">Preconscious</td><td>Information not in awareness right now but easily retrieved.</td></tr>
+    <tr><td class="term">Free association</td><td>Saying whatever comes to mind, without filtering, to explore the unconscious.</td></tr>
+    <tr><td class="term">Id</td><td>Unconscious, pleasure-seeking part of personality (pleasure principle).</td></tr>
+    <tr><td class="term">Ego</td><td>Realistic mediator between id, superego, and reality (reality principle).</td></tr>
+    <tr><td class="term">Superego</td><td>The moral conscience: internalized rules and ideals.</td></tr>
+    <tr><td class="term">Defense mechanisms</td><td>The ego's unconscious tactics for reducing anxiety by distorting reality.</td></tr>
+    <tr><td class="term">Collective unconscious</td><td>Carl Jung's idea of a shared, inherited reservoir of images and memory traces common to all humans.</td></tr>
+    <tr><td class="term">Projective tests</td><td>Tests using ambiguous stimuli so people "project" unconscious thoughts (Rorschach, TAT).</td></tr>
+    <tr><td class="term">Humanistic psychology</td><td>An approach emphasizing human potential, growth, and free will.</td></tr>
+    <tr><td class="term">Self-actualizing tendency</td><td>The inborn drive to grow and reach one's full potential.</td></tr>
+    <tr><td class="term">Unconditional positive regard</td><td>Total, nonjudgmental acceptance of another person.</td></tr>
+    <tr><td class="term">Self-concept</td><td>All our thoughts and feelings in answer to "Who am I?"</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2 id="freud"><span class="num">3</span>Freud and the Unconscious</h2>
+
+<p>Sigmund Freud developed <span class="term">psychoanalysis</span>, both a theory of personality and a method of therapy, while treating patients whose physical symptoms had no medical cause. His central claim was unsettling: much of who you are operates below your awareness. ("Psychoanalytic" and "psychodynamic" are often used interchangeably; modern psychodynamic psychologists keep the unconscious but drop many of Freud's specific claims.)</p>
+
+<h3>The mind as an iceberg</h3>
+<ol class="loop">
+  <li><strong>Conscious:</strong> what you are aware of right now. The tip above the water.</li>
+  <li><strong>Preconscious:</strong> not in awareness now, but easy to recall, like your phone number.</li>
+  <li><strong>Unconscious:</strong> hidden wishes, fears, and memories you cannot easily reach, which Freud argued steer your behavior. Most of the iceberg.</li>
+</ol>
+
+<p>Freud believed the unconscious leaks out. In <span class="term">free association</span>, a patient relaxes and says whatever comes to mind so buried material can surface. He called dreams "the royal road to the unconscious," and he read slips of the tongue ("Freudian slips") as hidden wishes breaking through.</p>
+
+<h2 id="structure"><span class="num">4</span>Id, Ego, and Superego</h2>
+<p>Freud divided personality into three systems in constant negotiation.</p>
+
+<div class="tscroll">
+<table class="wide">
+  <thead><tr><th>System</th><th>Operates on</th><th>Voice</th></tr></thead>
+  <tbody>
+    <tr><td class="term">Id</td><td>The <strong>pleasure principle</strong>. Unconscious, present from birth, wants immediate gratification.</td><td><em>"I want it now."</em></td></tr>
+    <tr><td class="term">Superego</td><td><strong>Morality</strong>. The internalized conscience from parents and society; can produce guilt.</td><td><em>"That's wrong. You should be better."</em></td></tr>
+    <tr><td class="term">Ego</td><td>The <strong>reality principle</strong>. The mediator that finds realistic ways to satisfy the id that the superego can accept.</td><td><em>"Let's find a workable way."</em></td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="box key">
+  <span class="label">The bubble tea test</span>
+  <p>You promised yourself no more sugary drinks this week, and you walk past your favorite bubble tea shop. <strong>Id:</strong> "Large, full sugar, extra pearls, right now." <strong>Superego:</strong> "You made a commitment. Giving in means you have no willpower." <strong>Ego:</strong> "Not today. I'll get one Saturday with friends, half sugar."</p>
+</div>
+
+<div class="box note">
+  <span class="label">Background only: psychosexual stages</span>
+  <p>Freud also proposed that children pass through psychosexual stages (oral, anal, phallic, latency, genital) and that getting "stuck" at a stage (fixation) shapes adult personality. You will hear these terms in pop culture, but they are not a focus of the current AP exam.</p>
+</div>
+
+<h2 id="defenses"><span class="num">5</span>Defense Mechanisms</h2>
+<p>When impulses or painful realities threaten to overwhelm us, Freud said the ego protects itself, <strong>unconsciously</strong>, by distorting reality. Like cognitive biases, defense mechanisms operate automatically; we rarely catch ourselves using them.</p>
+
+<div class="tscroll">
+<table class="wide">
+  <thead><tr><th style="width:22%">Mechanism</th><th style="width:36%">What the ego does</th><th>Example</th></tr></thead>
+  <tbody>
+    <tr><td class="term">Repression</td><td>Pushes anxiety-arousing thoughts and memories out of awareness. Freud saw it as the basis of the others.</td><td>An adult has no memory of a frightening childhood event.</td></tr>
+    <tr><td class="term">Denial</td><td>Refuses to accept a painful reality.</td><td>A heavy smoker insists the health risks are "overblown."</td></tr>
+    <tr><td class="term">Regression</td><td>Retreats to an earlier, more childlike stage.</td><td>A stressed teenager starts sucking his thumb or throws a tantrum.</td></tr>
+    <tr><td class="term">Rationalization</td><td>Invents self-justifying explanations to hide the real reasons.</td><td>"I didn't get the part because the director plays favorites."</td></tr>
+    <tr><td class="term">Projection</td><td>Attributes your own unacceptable feelings to others.</td><td>A student who wants to cheat accuses everyone else of cheating.</td></tr>
+    <tr><td class="term">Reaction formation</td><td>Acts the opposite of your true feelings.</td><td>Being overly sweet to a coworker you secretly resent.</td></tr>
+    <tr><td class="term">Displacement</td><td>Redirects an impulse onto a safer target.</td><td>Yelling at your little brother after your coach yells at you.</td></tr>
+    <tr><td class="term">Sublimation</td><td>Channels unacceptable impulses into a socially valued activity.</td><td>Turning aggressive urges into success as a boxer.</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h3>A neo-Freudian idea: the collective unconscious</h3>
+<p>Freud's followers, the neo-Freudians, accepted the unconscious but revised much of his theory. The one you need is <strong>Carl Jung</strong>, who proposed the <span class="term">collective unconscious</span>: a shared, inherited reservoir of images and memory traces from our species' history. Jung used it to explain why similar myths, symbols, and fears (the hero, the flood, the monster in the dark) show up across cultures that never met.</p>
+
+<h2 id="assess"><span class="num">6</span>Assessing the Unconscious: Projective Tests</h2>
+<p><span class="term">Projective tests</span> present ambiguous stimuli and ask people to respond. With no clear "right answer," the theory goes, hidden needs and conflicts slip out.</p>
+<div class="split">
+  <div class="panel is-method">
+    <h4>Rorschach inkblot test</h4>
+    <p>People describe what they see in ten symmetrical inkblots.</p>
+  </div>
+  <div class="panel is-tool">
+    <h4>Thematic Apperception Test (TAT)</h4>
+    <p>People make up stories about ambiguous pictures of people and scenes.</p>
+  </div>
+</div>
+<p>Critics argue projective tests have weak <strong>reliability</strong> (different scorers reach different conclusions) and weak <strong>validity</strong> (they do not predict behavior well). Defenders see them as a way to open conversation in therapy.</p>
+
+<div class="box note">
+  <span class="label">Data interpretation practice</span>
+  <p>Researchers compared inter-scorer agreement (how often two trained scorers reach the same conclusion) for two tests. Representative values: <strong>MMPI (objective trait inventory): 0.85. Rorschach (projective): 0.45.</strong> The best-supported conclusion is that the MMPI is scored far more consistently, meaning it has higher reliability. It would be an overreach to say the Rorschach cannot be scored reliably "at all": 0.45 is moderate, not zero. You will meet the MMPI in Topic 4.5.</p>
+</div>
+
+<div class="box warn">
+  <span class="label">Freud's scorecard</span>
+  <p><strong>What did not hold up:</strong> many specific claims are hard or impossible to test, and the theory often "explains" behavior only after the fact. Freud built it mostly from case studies of a small number of his own patients, many of them wealthy women in Vienna, which limits generalizability and cannot establish cause and effect. <strong>What lasted:</strong> the idea that much of mental life is unconscious, that childhood shapes us, and that we defend ourselves against anxiety, plus a vocabulary ("ego," "denial," "Freudian slip") woven into everyday language.</p>
+</div>
+
+<h2 id="humanistic"><span class="num">7</span>The Humanistic Theory</h2>
+
+<p>By the mid-1900s, some psychologists rejected both Freud's focus on dark, hidden conflicts and behaviorism's view of people as products of conditioning. <span class="term">Humanistic psychology</span> focuses instead on healthy people, free will, and our built-in drive to grow. Its two best-known figures are Abraham Maslow and Carl Rogers.</p>
+
+<h3>Maslow: the self-actualizing person</h3>
+<p>Abraham Maslow studied healthy, fulfilled people, such as Abraham Lincoln and Eleanor Roosevelt, and described them as <strong>self-actualizing</strong>: living up to their full potential. He is famous for his hierarchy of needs, which the CED places in <strong>Topic 4.6, Motivation</strong>. For personality, the key idea is the upward drive toward becoming your best self.</p>
+
+<h3>Rogers: the person-centered view</h3>
+<p>Carl Rogers believed people are like plants: given the right conditions, they naturally grow toward their potential. He called this the <span class="term">self-actualizing tendency</span>. Like a potato sprouting toward a sliver of light in a dark cellar, a person pushes toward growth even in poor conditions.</p>
+<p>The most important growth condition is <span class="term">unconditional positive regard</span>: accepting and valuing a person no matter what they do or reveal. Rogers added <strong>genuineness</strong> (being open and honest) and <strong>empathy</strong> (truly understanding the other person's feelings). A parent who says "I'm disappointed in what you did, but I love you no matter what" is showing unconditional positive regard.</p>
+
+<h3>The self-concept</h3>
+<p>For both Maslow and Rogers, the center of personality is the <span class="term">self-concept</span>: all your thoughts and feelings in answer to "Who am I?" Rogers held that we thrive when our self-concept is realistic and accepted, and we struggle when there is a wide gap between who we are and who we think we should be.</p>
+
+<div class="box note">
+  <span class="label">Beyond the core: real self and ideal self</span>
+  <p>Rogers described a <strong>real self</strong> (who you believe you are) and an <strong>ideal self</strong> (who you wish you were). When they closely match (<strong>congruence</strong>), people tend to feel healthy and free to grow. A wide gap (<strong>incongruence</strong>) is linked to anxiety and low self-worth. Unconditional positive regard helps people accept their real self and shrink the gap.</p>
+</div>
+
+<p><strong>Evaluating the humanistic approach.</strong> It renewed interest in healthy growth, the self, and free will, and it shaped modern counseling and later positive psychology. Critics say its concepts, like self-actualization, are vague and hard to measure, and that its focus on the self can encourage self-centeredness.</p>
+
+<h2 id="mixups"><span class="num">8</span>Don't Mix These Up</h2>
+
+<div class="pair">
+  <div class="head">Displacement vs. sublimation</div>
+  <div class="cols">
+    <div class="col"><h4>Displacement</h4><p>Impulse goes to a <strong>safer target</strong>. Usually still harmful.</p><p class="ex">Kicking the dog after a bad day at work.</p></div>
+    <div class="col"><h4>Sublimation</h4><p>Impulse goes into a <strong>socially valued activity</strong>.</p><p class="ex">Channeling anger into hours at the boxing gym.</p></div>
+  </div>
+  <div class="tell"><strong>The tell:</strong> ask whether the result is productive and admired (sublimation) or just aimed at someone less threatening (displacement).</div>
+</div>
+
+<div class="pair">
+  <div class="head">Projection vs. reaction formation</div>
+  <div class="cols">
+    <div class="col"><h4>Projection</h4><p>"<strong>You</strong> have the feeling I can't accept in myself."</p><p class="ex">A jealous boyfriend accuses his girlfriend of being jealous.</p></div>
+    <div class="col"><h4>Reaction formation</h4><p>"I act the <strong>opposite</strong> of what I feel."</p><p class="ex">Showering an unwanted new sibling with exaggerated affection.</p></div>
+  </div>
+  <div class="tell"><strong>The tell:</strong> projection moves the feeling onto someone else. Reaction formation flips the feeling into its opposite.</div>
+</div>
+
+<div class="pair">
+  <div class="head">Rationalization vs. denial</div>
+  <div class="cols">
+    <div class="col"><h4>Rationalization</h4><p>Admits the event happened, but gives a <strong>self-justifying excuse</strong>.</p><p class="ex">"I only failed because the test was unfair."</p></div>
+    <div class="col"><h4>Denial</h4><p>Refuses to accept that the <strong>reality exists</strong>.</p><p class="ex">"I don't have a gaming problem," after gaming 10 hours a day.</p></div>
+  </div>
+  <div class="tell"><strong>The tell:</strong> rationalization explains the problem away. Denial says there is no problem.</div>
+</div>
+
+<div class="pair">
+  <div class="head">Unconditional positive regard vs. the self-actualizing tendency</div>
+  <div class="cols">
+    <div class="col"><h4>Unconditional positive regard</h4><p>An attitude <strong>others give you</strong>: total acceptance.</p></div>
+    <div class="col"><h4>Self-actualizing tendency</h4><p>Your <strong>own inner drive</strong> to grow.</p></div>
+  </div>
+  <div class="tell"><strong>The tell:</strong> if the scenario describes how a counselor, parent, or friend treats someone, it is unconditional positive regard. If it describes the person's own push to grow, it is the self-actualizing tendency.</div>
+</div>
+
+<div class="pair">
+  <div class="head">Projective tests vs. objective inventories</div>
+  <div class="cols">
+    <div class="col"><h4>Projective (psychodynamic)</h4><p>Ambiguous stimuli, open responses: Rorschach, TAT. Weaker reliability.</p></div>
+    <div class="col"><h4>Objective (trait, Topic 4.5)</h4><p>Standard questions, scored the same way every time: MMPI, Big Five inventories. Stronger reliability.</p></div>
+  </div>
+  <div class="tell"><strong>The tell:</strong> the MMPI is <em>not</em> a projective test, even though it is used in clinical settings.</div>
+</div>
+
+<h2 id="detective"><span class="num">9</span>Defense Mechanism Match</h2>
+<p>Round 1: which part of Freud's personality structure is talking? Round 2: name the defense mechanism. There are eight choices, so read carefully.</p>
+
+<div class="widget" id="det">
+  <h3>Match the mechanism <span class="tryit">Try it</span></h3>
+  <div class="tabs" role="tablist"></div>
+  <p class="score" aria-live="polite">Score: <b id="detScore">0</b> / <span id="detTotal">0</span> answered</p>
+  <div id="detCases"></div>
+  <p class="done" id="detDone"></p>
+  <div class="btnrow"><button type="button" id="detReset">Start this round over</button></div>
+</div>
+
+<h2 id="quiz"><span class="num">10</span>Self-Check Quiz</h2>
+<p>Ten AP-style questions. Click an answer to see whether you were right and why. Your score stays on this screen only.</p>
+
+<div class="widget" id="quizBox">
+  <h3>Check yourself <span class="tryit">Four choices each</span></h3>
+  <p class="score" aria-live="polite">Score: <b id="qScore">0</b> / <span id="qDone">0</span> answered of <span id="qTotal">0</span></p>
+  <div id="quizList"></div>
+  <p class="done" id="qFinal"></p>
+  <div class="btnrow"><button type="button" id="qReset">Start the quiz over</button></div>
+</div>
+
+<h2 id="traps"><span class="num">11</span>AP Exam Traps</h2>
+<div class="box warn">
+  <span class="label">Watch for these</span>
+  <ul>
+    <li><strong>Match the principle to the structure:</strong> id = pleasure principle, ego = reality principle, superego = morality.</li>
+    <li><strong>Tell the close mechanisms apart:</strong> displacement (safe target) vs. sublimation (productive outlet); projection (others have my feeling) vs. reaction formation (I act the opposite).</li>
+    <li><strong>Defense mechanisms are unconscious.</strong> A person deliberately choosing to vent at the gym to calm down is coping, not a defense mechanism in Freud's sense.</li>
+    <li><strong>Projective tests (Rorschach, TAT) are the psychodynamic tool,</strong> and their reliability and validity are weak. The MMPI is not projective.</li>
+    <li><strong>Collective unconscious = Jung.</strong> Psychosexual stages are background only.</li>
+    <li><strong>Humanistic = growth and free will.</strong> Know unconditional positive regard (Rogers) and self-actualization (Maslow and Rogers). Maslow's hierarchy belongs to Motivation.</li>
+    <li><strong>On free-response prompts,</strong> apply the exact mechanism: name the impulse and where it goes in the scenario.</li>
+  </ul>
+</div>
+
+<div class="box note">
+  <span class="label">Connections across the course</span>
+  <p><strong>Topic 4.5:</strong> the social-cognitive and trait theories complete the four lenses, and the "self" terms (self-efficacy, self-esteem) live there. <strong>Topic 4.6:</strong> Maslow's hierarchy of needs. <strong>Unit 5:</strong> psychodynamic therapy and person-centered therapy are major treatment approaches, and unconditional positive regard returns there. <strong>Unit 0:</strong> Freud's reliance on case studies and the weak reliability of projective tests are built-in research-evaluation examples.</p>
+</div>
+
+<div class="pagenav">
+  <a href="group-cultural-prosocial-behavior.html"><span class="dir">&larr; Previous</span><span class="t">4.3B/C Group, Cultural, and Prosocial Behavior</span></a>
+  <a href="social-cognitive-and-trait.html"><span class="dir">Next &rarr;</span><span class="t">4.5 Social-Cognitive and Trait Theories</span></a>
+</div>
+
+<footer>
+  <p>AP Psychology, Unit 4: Social Psychology and Personality. Topic 4.4, aligned to the 2024 Course and Exam Description.</p>
+  <p>Don West, AP Psychology Teacher. Questions? Message me on Canvas or ask at the start of class.</p>
+</footer>
+
+</div>
+
+<script>
+window.PAGE = {
+  reviewHint: 'Review the defense mechanisms table in section 5 and the pairs in section 8, then start the round over.',
+  rounds: [
+    { tab: 'Round 1: Id, ego, or superego?',
+      options: ['Id', 'Ego', 'Superego'],
+      cases: [
+        ['"Skip the homework and play games all night. You deserve it."', 0, 'Demanding immediate pleasure with no thought of consequences is the id, operating on the pleasure principle.'],
+        ['"If you copy your friend\'s answers, you are a cheater and you should feel ashamed."', 2, 'Moral judgment and the threat of guilt come from the superego, the internalized conscience.'],
+        ['"Play for one hour, then finish the homework before bed."', 1, 'A realistic compromise that satisfies the id\'s desire within the limits of reality is the ego, operating on the reality principle.'],
+        ['A toddler grabs a cookie from another child\'s hand the second he sees it.', 0, 'Grabbing what you want immediately is pure id. Freud said infants start out as almost all id.'],
+        ['"You should visit Grandma this weekend. Good grandchildren don\'t make excuses."', 2, 'The voice of "should," duty, and ideals is the superego.'],
+        ['"I\'m furious at my teammate, but yelling at her before the final will hurt the team. I\'ll talk to her after the game."', 1, 'Delaying the angry impulse to find a workable, realistic solution is the ego\'s job.']
+      ]},
+    { tab: 'Round 2: Name the defense',
+      stack: false,
+      options: ['Repression', 'Denial', 'Regression', 'Rationalization', 'Projection', 'Reaction formation', 'Displacement', 'Sublimation'],
+      cases: [
+        ['After being criticized by her coach, Tara goes home and snaps angrily at her little brother, who did nothing wrong.', 6, 'Anger at a threatening target (the coach) is redirected onto a safer one (her brother). That is displacement.'],
+        ['A man with strong aggressive urges becomes a champion kickboxer and is praised for his discipline.', 7, 'Channeling an unacceptable impulse into a socially valued activity is sublimation.'],
+        ['A student who failed the midterm tells everyone the teacher "writes trick questions on purpose."', 3, 'He invents a self-justifying explanation that hides the real reason (not studying). That is rationalization.'],
+        ['Kevin secretly resents his new stepfather but is always extremely polite and complimentary to him.', 5, 'Behaving in the opposite way from his true feelings is reaction formation.'],
+        ['A woman who is attracted to her best friend\'s partner keeps accusing her friend of flirting with other people.', 4, 'She attributes her own unacceptable feelings to someone else. That is projection.'],
+        ['After his parents\' divorce, a ten-year-old starts wetting the bed and talking in baby talk again.', 2, 'Retreating to behavior from an earlier stage of development is regression.'],
+        ['Despite three warnings from his doctor, a man with dangerously high blood pressure insists, "I\'m perfectly healthy."', 1, 'Refusing to accept a painful reality is denial.'],
+        ['An adult who was in a serious car accident as a child has no memory of the crash, though her family remembers it clearly.', 0, 'Pushing an anxiety-arousing memory out of awareness is repression. (Many modern researchers question how often true repression happens, but this is the Freudian label.)'],
+        ['A student who desperately wants to be popular claims, "I don\'t care about being popular. The popular crowd is boring anyway."', 3, 'He offers a self-serving justification to hide his disappointment. That is rationalization (a "sour grapes" rationalization).'],
+        ['A manager who is angry at her boss comes home and picks a fight with her roommate over the dishes.', 6, 'Anger moves from a powerful target (the boss) to a safer one (the roommate). Displacement.']
+      ]}
+  ],
+  quiz: [
+    ['Which part of personality operates on the "pleasure principle," demanding immediate gratification?',
+      ['the ego', 'the superego', 'the id', 'the preconscious'], 2,
+      'The id is the unconscious, pleasure-seeking system. The ego works on the reality principle; the superego is the moral conscience.'],
+    ['According to Freud, the ego\'s main role is to:',
+      ['seek immediate pleasure', 'enforce moral standards learned from parents', 'mediate between the demands of the id, the superego, and reality', 'store inherited memories shared by all humans'], 2,
+      'The ego is the realistic mediator. Option A is the id, B is the superego, and D is Jung\'s collective unconscious.'],
+    ['After being criticized by her coach, Tara goes home and snaps at her little brother, who did nothing wrong. This best illustrates:',
+      ['projection', 'displacement', 'sublimation', 'reaction formation'], 1,
+      'She redirects anger from a threatening target to a safer one. Sublimation would channel it into something productive; projection would attribute her anger to others.'],
+    ['A person who is deeply insecure about his own intelligence frequently calls other people "stupid." Freud would most likely identify this as:',
+      ['projection', 'sublimation', 'regression', 'repression'], 0,
+      'He attributes his own threatening feelings about himself to other people. That is projection.'],
+    ['A psychologist shows a client a series of ambiguous pictures and asks the client to invent a story about each one. The psychologist is using:',
+      ['an objective personality inventory', 'the Thematic Apperception Test', 'free association', 'the Rorschach inkblot test'], 1,
+      'Making up stories about ambiguous pictures is the TAT. The Rorschach uses inkblots, and free association does not use pictures at all.'],
+    ['Researchers found that two trained scorers agreed about 85 percent of the time on MMPI results but only about 45 percent of the time on Rorschach results. Which conclusion is best supported?',
+      ['The Rorschach is scored more consistently than the MMPI.', 'The MMPI shows higher inter-scorer reliability than the Rorschach.', 'The two tests are equally reliable.', 'The Rorschach cannot be scored reliably at all.'], 1,
+      'The MMPI shows much higher agreement between scorers. D overstates the data: 45 percent agreement is moderate, not zero.'],
+    ['Carl Jung\'s concept of the collective unconscious refers to:',
+      ['memories a person has repressed since childhood', 'a shared, inherited reservoir of images and memory traces common to all humans', 'the part of the mind that stores easily retrieved information', 'the tendency of groups to think alike'], 1,
+      'The collective unconscious is shared across humanity, which Jung used to explain similar myths and symbols across cultures. Option C describes the preconscious.'],
+    ['Freud built his theory largely from in-depth case studies of a small number of his own patients. Which is the most important limitation of this method for his theory?',
+      ['Case studies cannot provide any detailed information.', 'The findings may not generalize to other people and cannot show cause and effect.', 'Case studies always use random assignment.', 'Case studies require very large samples.'], 1,
+      'A small, unrepresentative group of patients limits generalizability, and case studies cannot isolate causes. Case studies are detailed by design, so A is wrong.'],
+    ['A counselor fully accepts and values a client no matter what the client reveals, creating a safe climate for growth. The counselor is showing:',
+      ['the self-actualizing tendency', 'reaction formation', 'unconditional positive regard', 'free association'], 2,
+      'Total, nonjudgmental acceptance of a person is unconditional positive regard (Rogers). The self-actualizing tendency is the client\'s own inner drive to grow.'],
+    ['Which statement best contrasts the humanistic and psychodynamic perspectives on personality?',
+      ['Humanistic theory emphasizes unconscious conflict; psychodynamic theory emphasizes free will.', 'Humanistic theory emphasizes growth and free will; psychodynamic theory emphasizes unconscious forces and early experience.', 'Both theories rely mainly on objective personality inventories.', 'Both theories focus mainly on measurable, stable traits.'], 1,
+      'Humanists focus on potential and choice; psychodynamic theorists focus on hidden conflicts rooted in childhood. Measurable traits belong to the trait perspective in 4.5.']
+  ]
+};
+</script>
+<script>
+(function () {
+  var P = window.PAGE || {};
+
+  function markChoice(opts, fbEl, chosen, correct, head, why) {
+    var btns = opts.querySelectorAll('button');
+    btns.forEach(function (x, k) {
+      x.disabled = true;
+      if (k === correct) x.classList.add('right');
+      else if (k === chosen) x.classList.add('wrong');
+      else x.classList.add('dim');
+    });
+    fbEl.className = 'fb open' + (chosen === correct ? '' : ' miss');
+    fbEl.innerHTML = '<strong></strong>';
+    fbEl.firstChild.textContent = head;
+    fbEl.appendChild(document.createTextNode(why));
+  }
+
+  /* ---------------- sorting activity (tabs of rounds) ---------------- */
+  if (P.rounds && document.getElementById('det')) {
+    var round = 0, score = 0, answered = 0;
+    var casesEl = document.getElementById('detCases');
+    var tabsEl = document.querySelector('#det .tabs');
+    P.rounds.forEach(function (r, i) {
+      var t = document.createElement('button');
+      t.type = 'button'; t.setAttribute('role', 'tab');
+      t.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
+      t.textContent = r.tab;
+      t.addEventListener('click', function () {
+        round = i;
+        tabsEl.querySelectorAll('button').forEach(function (x) { x.setAttribute('aria-selected', x === t ? 'true' : 'false'); });
+        renderRound();
+      });
+      tabsEl.appendChild(t);
+    });
+    if (P.rounds.length < 2) tabsEl.style.display = 'none';
+
+    var renderRound = function () {
+      score = 0; answered = 0;
+      var r = P.rounds[round];
+      casesEl.innerHTML = '';
+      if (r.intro) {
+        var ip = document.createElement('p');
+        ip.className = 'commentary'; ip.textContent = r.intro;
+        casesEl.appendChild(ip);
+      }
+      r.cases.forEach(function (c, i) {
+        var options = c[3] || r.options;
+        var d = document.createElement('div');
+        d.className = 'case';
+        d.innerHTML = '<span class="cnum">Case ' + (i + 1) + '</span><p class="ctext"></p><div class="opts' + (r.stack ? ' stack' : '') + '"></div><div class="fb" aria-live="polite"></div>';
+        d.querySelector('.ctext').textContent = c[0];
+        var opts = d.querySelector('.opts');
+        options.forEach(function (label, j) {
+          var b = document.createElement('button');
+          b.type = 'button'; b.textContent = label;
+          b.addEventListener('click', function () {
+            var right = j === c[1];
+            markChoice(opts, d.querySelector('.fb'), j, c[1],
+              (right ? 'Correct: ' : 'Not quite. Correct answer: ') + options[c[1]] + '.', c[2]);
+            answered++; if (right) score++;
+            update();
+            if (answered === r.cases.length) {
+              var done = document.getElementById('detDone');
+              var last = round === P.rounds.length - 1;
+              done.textContent = 'Round complete: ' + score + ' of ' + r.cases.length + '. ' +
+                (!last ? 'Ready for the next round? Use the tabs at the top of the box.' :
+                 score >= Math.ceil(r.cases.length * 0.75) ? 'Strong work. Now try the Self-Check Quiz below.' :
+                 (P.reviewHint || 'Review the sections above, then start the round over.'));
+              done.className = 'done open';
+            }
+          });
+          opts.appendChild(b);
+        });
+        casesEl.appendChild(d);
+      });
+      document.getElementById('detDone').className = 'done';
+      update();
+    };
+    var update = function () {
+      document.getElementById('detScore').textContent = score;
+      document.getElementById('detTotal').textContent = answered;
+    };
+    document.getElementById('detReset').addEventListener('click', renderRound);
+    renderRound();
+  }
+
+  /* ---------------- self-check quiz ---------------- */
+  if (P.quiz && document.getElementById('quizList')) {
+    var qEl = document.getElementById('quizList');
+    var qScore = 0, qDone = 0, LET = ['A', 'B', 'C', 'D'];
+    var n = P.quiz.length;
+    var updateQ = function () {
+      document.getElementById('qScore').textContent = qScore;
+      document.getElementById('qDone').textContent = qDone;
+    };
+    var renderQuiz = function () {
+      qScore = 0; qDone = 0; qEl.innerHTML = '';
+      P.quiz.forEach(function (q, i) {
+        var d = document.createElement('div');
+        d.className = 'case';
+        d.innerHTML = '<span class="cnum">Question ' + (i + 1) + '</span><p class="ctext"></p><div class="opts stack"></div><div class="fb" aria-live="polite"></div>';
+        d.querySelector('.ctext').textContent = q[0];
+        var opts = d.querySelector('.opts');
+        q[1].forEach(function (txt, j) {
+          var b = document.createElement('button');
+          b.type = 'button'; b.textContent = LET[j] + '.  ' + txt;
+          b.addEventListener('click', function () {
+            var right = j === q[2];
+            markChoice(opts, d.querySelector('.fb'), j, q[2],
+              right ? 'Correct.' : 'Not quite. The answer is ' + LET[q[2]] + '.', q[3]);
+            qDone++; if (right) qScore++;
+            updateQ();
+            if (qDone === n) {
+              var f = document.getElementById('qFinal');
+              f.textContent = 'Final score: ' + qScore + ' of ' + n + '. ' +
+                (qScore >= Math.ceil(n * 0.8) ? 'You are in good shape for this topic.' :
+                 qScore >= Math.ceil(n * 0.55) ? 'Solid. Reread the explanations for the ones you missed, then check Don\'t Mix These Up.' :
+                 'Go back through the sections above, then start the quiz over.');
+              f.className = 'done open';
+            }
+          });
+          opts.appendChild(b);
+        });
+        qEl.appendChild(d);
+      });
+      document.getElementById('qTotal').textContent = n;
+      document.getElementById('qFinal').className = 'done';
+      updateQ();
+    };
+    document.getElementById('qReset').addEventListener('click', renderQuiz);
+    renderQuiz();
+  }
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>4.2 Attitude Formation and Attitude Change | AP Psychology</title>
+<style>@font-face{font-family:'APSerif';src:url('../assets/fonts/source-serif-4-latin-400-normal.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'APSerif';src:url('../assets/fonts/source-serif-4-latin-600-normal.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:'APSerif';src:url('../assets/fonts/source-serif-4-latin-700-normal.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'APSans';src:url('../assets/fonts/source-sans-3-latin-400-normal.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'APSans';src:url('../assets/fonts/source-sans-3-latin-400-italic.woff2') format('woff2');font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:'APSans';src:url('../assets/fonts/source-sans-3-latin-600-normal.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:'APSans';src:url('../assets/fonts/source-sans-3-latin-700-normal.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
+
+/* ---------------------------------------------------------------- base */
+:root{
+  --ink:#14293a; --ink-soft:#243c50; --accent:#0f5c5e; --accent-d:#0c4749;
+  --accent2:#a35617; --accent2-d:#8a4a13;
+  --soft:#eef4f4; --soft2:#fdf1e6;
+  --green:#1b6b48; --green-s:#edf5f0; --red:#9c2a2a; --red-s:#faeeee;
+  --line:#dfe4e8; --line-d:#c4ced6; --muted:#5d6b78; --faint:#6b7885; --bg:#fbfbf9; --surface:#ffffff;
+  --blue:#2f5d80;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:APSans,'Segoe UI',-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;font-size:18px;line-height:1.72;
+     color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}
+.wrap{max-width:740px;margin:0 auto;padding:0 24px 80px}
+
+/* ---------------------------------------------------------------- chrome */
+.crumbs{background:var(--surface);border-bottom:1px solid var(--line);font-size:14px}
+.crumbs .inner,.crumbs .wrap{max-width:740px;margin:0 auto;padding:12px 24px}
+.crumbs a{color:var(--accent);text-decoration:none;font-weight:600}
+.crumbs a:hover{text-decoration:underline}
+.crumbs .sep{color:var(--line-d);margin:0 9px}
+.crumbs .here{color:var(--muted)}
+
+header.top,.masthead{background:var(--surface);border-bottom:1px solid var(--line);
+     padding:44px 24px 38px;color:var(--ink)}
+header.top .inner,.masthead .wrap{max-width:740px;margin:0 auto;padding-bottom:0}
+header.top .kicker,header.top .meta,.masthead .course{font-size:12px;letter-spacing:.16em;
+     text-transform:uppercase;color:var(--accent2);font-weight:700;margin:0 0 14px;opacity:1}
+header.top h1,.masthead h1{font-family:APSerif,Georgia,'Times New Roman',serif;font-weight:700;font-size:42px;line-height:1.14;
+     margin:0;letter-spacing:-.015em;color:var(--ink)}
+header.top p.tag,header.top .sub,.masthead p.tag{margin:14px 0 0;font-size:19px;
+     color:var(--muted);line-height:1.55;opacity:1}
+header.top .meta{margin:18px 0 0;letter-spacing:.1em;color:var(--muted);font-size:11.5px}
+.masthead a{color:var(--accent)}
+
+/* Deliberately not sticky: this direction reads as a document, the breadcrumb
+   already says where you are, and a wrapped two-row bar would cover anchored
+   headings as you jump between sections. */
+nav.jump{background:var(--surface);border-bottom:1px solid var(--line)}
+nav.jump ul{max-width:940px;margin:0 auto;padding:0 24px;list-style:none;display:flex;flex-wrap:wrap;
+     gap:0 22px}
+nav.jump a{display:block;padding:13px 0;font-size:14.5px;color:var(--muted);text-decoration:none;
+     border-bottom:2px solid transparent;font-weight:600}
+nav.jump a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+
+main{padding:8px 0 0}
+
+/* ---------------------------------------------------------------- type */
+h2{font-family:APSerif,Georgia,'Times New Roman',serif;font-size:30px;font-weight:700;color:var(--ink);margin:54px 0 14px;
+   letter-spacing:-.01em;line-height:1.24;scroll-margin-top:24px}
+h2 .num{font-family:APSans,'Segoe UI',-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;display:inline-block;font-size:12px;font-weight:700;
+   letter-spacing:.14em;color:var(--accent2);vertical-align:.42em;margin-right:12px}
+h3{font-family:APSerif,Georgia,'Times New Roman',serif;font-size:22px;font-weight:600;margin:34px 0 10px;color:var(--ink)}
+h4{font-family:APSerif,Georgia,'Times New Roman',serif;font-size:18.5px;font-weight:600;margin:24px 0 7px;color:var(--ink)}
+p{margin:16px 0}
+ul,ol{margin:16px 0;padding-left:26px}
+li{margin:6px 0}
+.lede{font-size:19.5px;color:var(--muted);margin:22px 0 4px;line-height:1.6}
+code{background:var(--soft);padding:1px 6px;border-radius:3px;
+     font-family:Consolas,Monaco,monospace;font-size:.9em}
+em{font-style:italic}
+
+/* ---------------------------------------------------------------- boxes */
+.box,.note{border-radius:3px;padding:20px 24px;margin:28px 0;border-left:3px solid var(--accent2);
+     background:var(--soft2)}
+.box p:first-child,.note p:first-child{margin-top:0}
+.box p:last-child,.note p:last-child{margin-bottom:0}
+.box p,.note p{font-size:17.5px}
+.box .label,.note .label{display:block;font-size:11.5px;font-weight:700;letter-spacing:.14em;
+     text-transform:uppercase;color:var(--accent2);margin-bottom:9px}
+.box.key{background:var(--soft2);border-color:var(--accent2)}
+.box.key .label{color:var(--accent2)}
+.box.note{background:var(--soft);border-color:var(--accent)}
+.box.note .label{color:var(--accent)}
+.box.good{background:var(--green-s);border-color:var(--green)}
+.box.good .label{color:var(--green)}
+.box.warn{background:var(--red-s);border-color:var(--red)}
+.box.warn .label{color:var(--red)}
+.pending{background:var(--surface);border:1px dashed var(--line-d);border-radius:3px;
+     padding:30px 20px;text-align:center;color:var(--muted);margin:28px 0}
+.pending strong{display:block;color:var(--ink);margin-bottom:4px;font-size:17px}
+
+/* ---------------------------------------------------------------- table */
+table{border-collapse:collapse;width:100%;margin:30px 0;font-size:17px}
+th,td{border:0;border-bottom:1px solid var(--line);padding:14px 10px 14px 0;
+      text-align:left;vertical-align:top}
+th:last-child,td:last-child{padding-right:0}
+thead th{border-bottom:2px solid var(--ink);font-size:12.5px;letter-spacing:.09em;
+      text-transform:uppercase;color:var(--muted);font-weight:700;padding-bottom:10px}
+tbody tr:last-child td{border-bottom:1px solid var(--line)}
+caption{caption-side:top;text-align:left;font-size:13px;letter-spacing:.1em;text-transform:uppercase;
+      color:var(--muted);font-weight:700;padding-bottom:12px}
+td.center,th.center{text-align:center}
+.term{font-weight:700;color:var(--accent)}
+
+/* ---------------------------------------------------------------- cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1px;
+      background:var(--line);border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+      margin:26px 0}
+.grid .card{display:block;background:var(--surface);padding:24px 26px;text-decoration:none;
+      color:inherit;transition:background .15s}
+a.grid > .card:hover,.grid a.card:hover{background:#f6f9f9}
+.grid .card .kicker{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+      color:var(--accent2);margin:0 0 8px}
+.grid .card .title{font-family:APSerif,Georgia,'Times New Roman',serif;font-size:22px;font-weight:700;margin:0 0 8px;line-height:1.25}
+.grid .card .desc{font-size:16px;color:var(--muted);margin:0;line-height:1.55}
+/* A unit with nothing in it yet is muted by colour, not by opacity: fading the
+   whole tile would grey out its background and checkerboard the grid. */
+.grid .card.empty .kicker{color:var(--faint)}
+.grid .card.empty .title{color:var(--muted);font-weight:700}
+.grid .card.empty .desc{color:var(--faint)}
+
+.resource{display:flex;justify-content:space-between;align-items:center;gap:20px;
+      border:0;border-bottom:1px solid var(--line);padding:22px 0;margin:0;
+      text-decoration:none;color:inherit}
+.resource:first-of-type{border-top:1px solid var(--line)}
+a.resource:hover .title{color:var(--accent)}
+.resource .title{font-family:APSerif,Georgia,'Times New Roman',serif;font-weight:700;font-size:20px;margin:0 0 3px;
+      transition:color .12s}
+.resource .desc{font-size:16px;color:var(--muted);margin:0}
+.resource .go{color:var(--accent);font-weight:600;font-size:15px;white-space:nowrap}
+
+/* ---------------------------------------------------------------- widget */
+.widget{background:var(--surface);border:1px solid var(--line);border-radius:4px;
+        padding:26px 28px;margin:34px 0}
+.widget > h3{margin-top:0;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.widget .tryit{font-family:APSans,'Segoe UI',-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:.14em;
+        text-transform:uppercase;color:var(--accent2);background:none;padding:0}
+.widget svg{display:block;width:100%;height:auto;max-width:100%;touch-action:none}
+svg,canvas{display:block;max-width:100%}
+
+.ctrls{display:flex;flex-wrap:wrap;gap:24px;margin:22px 0 4px;align-items:flex-end}
+.ctrl{flex:1 1 220px;min-width:200px}
+.ctrl label{display:block;font-size:12px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;
+        color:var(--muted);margin-bottom:10px}
+.ctrl .val{color:var(--accent);font-size:15px;letter-spacing:0}
+input[type=range]{width:100%;accent-color:var(--accent);height:26px;cursor:pointer}
+
+.btnrow{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0 0}
+button{font-family:APSans,'Segoe UI',-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;font-size:14.5px;font-weight:600;cursor:pointer;border-radius:3px;
+       padding:10px 18px;border:1px solid var(--accent);background:var(--surface);
+       color:var(--accent);transition:background .12s,color .12s}
+button:hover{background:var(--accent);color:#fff}
+button.primary{background:var(--accent);color:#fff}
+button.primary:hover{background:var(--accent-d)}
+button:disabled{opacity:.45;cursor:not-allowed}
+button:focus-visible,input:focus-visible,a:focus-visible,textarea:focus-visible,
+[tabindex]:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+.readouts{display:flex;flex-wrap:wrap;gap:34px;margin:30px 0 0}
+.ro{flex:0 1 auto;min-width:110px}
+.ro .k{display:block;font-size:11.5px;font-weight:700;letter-spacing:.12em;
+       text-transform:uppercase;color:var(--muted)}
+.ro .v{display:block;font-family:APSerif,Georgia,'Times New Roman',serif;font-size:30px;font-weight:700;color:var(--ink);line-height:1.3}
+.ro.hl .v{color:var(--green)}
+.commentary{margin:20px 0 0;padding:0 0 0 18px;border-left:3px solid var(--line-d);
+       font-size:16.5px;color:var(--ink-soft)}
+.toggle-line{display:flex;align-items:center;gap:10px;margin:18px 0 0;font-size:15.5px}
+.toggle-line input{width:18px;height:18px;accent-color:var(--accent);cursor:pointer}
+.field{display:inline-flex;flex-direction:column;gap:5px;margin:0 14px 12px 0}
+.field label{font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.field input{font-family:inherit;font-size:17px;padding:8px 10px;width:110px;
+       border:1px solid var(--line-d);border-radius:3px;background:var(--surface);color:var(--ink)}
+.field input.ok{border-color:var(--green);background:var(--green-s)}
+.field input.bad{border-color:var(--accent2);background:var(--soft2)}
+.worked{display:none;margin:18px 0 0;padding:16px 18px;background:#f7f9f9;border-radius:3px;
+       font-family:Consolas,Monaco,monospace;font-size:14.5px;line-height:1.75;white-space:pre-wrap}
+.worked.open{display:block}
+.dataset{font-family:APSerif,Georgia,'Times New Roman',serif;font-size:25px;font-weight:700;letter-spacing:.03em;color:var(--ink);
+       background:#f7f9f9;border-radius:3px;padding:15px 18px;margin:8px 0 18px;text-align:center}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------------------------------------------------------------- practice */
+.q-item{border:0;border-top:1px solid var(--line);border-radius:0;background:none;
+        margin:0;padding:26px 0}
+.q-item .qnum{display:inline-block;background:none;color:var(--accent2);font-size:11.5px;
+        font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:0;margin-bottom:10px}
+.q-item .stem{margin:6px 0 12px}
+.q-item .ask{font-weight:600;margin:12px 0}
+.q-item ol.choices{list-style:upper-alpha;padding-left:26px;margin:12px 0 16px}
+.q-item ol.choices li{margin:6px 0}
+.reveal{display:none;border-top:1px dashed var(--line-d);margin-top:16px;padding-top:16px}
+.reveal.open{display:block}
+.reveal .ans{font-weight:700;color:var(--green);font-size:17px;margin:0 0 10px}
+.reveal .why{margin:10px 0 0}
+.reveal .why-not{margin:12px 0 0;font-size:16px}
+.reveal .why-not li{color:var(--muted)}
+.reveal .why-not li strong{color:var(--ink)}
+.toggle{font-size:14.5px}
+
+/* ---------------------------------------------------------------- misc */
+details{border:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+        border-radius:0;padding:16px 0;margin:26px 0;background:none}
+details summary{font-family:APSerif,Georgia,'Times New Roman',serif;font-weight:600;color:var(--accent);cursor:pointer;font-size:18px}
+details[open] summary{margin-bottom:10px}
+
+figure{margin:32px 0}
+figure img{max-width:100%;height:auto;display:block;border:1px solid var(--line);
+      border-radius:3px;background:#fff}
+figure.plain img{border:none}
+figcaption{font-size:15px;color:var(--muted);margin-top:10px;line-height:1.55}
+figure.half{max-width:460px}
+figure.center{margin-left:auto;margin-right:auto}
+.hero{margin:0 0 30px;border-radius:3px;overflow:hidden;border:1px solid var(--line)}
+.hero img{display:block;width:100%;height:auto}
+.img-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin:28px 0}
+.img-row figure{margin:0}
+
+footer{margin-top:62px;padding:26px 0 0;border-top:1px solid var(--line);font-size:15px;color:var(--muted)}
+footer p{margin:5px 0}
+body > footer{background:var(--surface);margin-top:62px;padding:28px 0 34px}
+body > footer .wrap{padding-bottom:0}
+
+.pagenav{display:flex;flex-wrap:wrap;gap:1px;margin:34px 0 0;background:var(--line);
+       border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.pagenav a{flex:1 1 220px;border:0;border-radius:0;padding:18px 20px;text-decoration:none;
+       color:inherit;background:var(--surface)}
+.pagenav a:hover{background:#f6f9f9}
+.pagenav .dir{display:block;font-size:11px;font-weight:700;letter-spacing:.14em;
+       text-transform:uppercase;color:var(--accent2)}
+.pagenav .t{display:block;font-family:APSerif,Georgia,'Times New Roman',serif;font-weight:700;color:var(--ink);margin-top:4px}
+
+/* Any table too wide for the screen scrolls sideways instead of pushing the page. */
+.tscroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:30px 0}
+.tscroll > table{margin-top:0;margin-bottom:0;min-width:520px}
+
+/* ------------------------------------------------- wide break-out on big screens */
+@media (min-width:1040px){
+  .widget,.tscroll:has(table.wide),.grid,.bleed{width:940px;margin-left:-100px;max-width:none}
+  table.wide{min-width:0}
+}
+
+/* ---------------------------------------------------------------- responsive */
+@media (max-width:760px){
+  body{font-size:17px;line-height:1.65}
+  header.top,.masthead{padding:32px 20px 28px}
+  header.top h1,.masthead h1{font-size:30px}
+  header.top p.tag,header.top .sub,.masthead p.tag{font-size:17.5px}
+  h2{font-size:25px;margin:42px 0 12px}
+  h3{font-size:20px}
+  .wrap,.crumbs .inner,.crumbs .wrap,header.top .inner,.masthead .wrap,nav.jump ul{padding-left:20px;padding-right:20px}
+  nav.jump ul{gap:0 16px}
+  nav.jump a{padding:12px 0;font-size:13.5px}
+  .widget{padding:20px 18px}
+  .ro .v{font-size:24px}
+  .readouts{gap:20px}
+  .resource{flex-direction:column;align-items:flex-start;gap:8px}
+  table{font-size:16px}
+}
+
+/* ---------------------------------------------------------------- print */
+@media print{
+  body{background:#fff;font-size:11pt;color:#000}
+  nav.jump,.crumbs,button,.btnrow,input[type=range],.pagenav,.toggle{display:none!important}
+  header.top,.masthead{background:#fff!important;color:var(--ink)!important;padding:0 0 14px;border:0}
+  .widget,.tscroll,.bleed{width:auto!important;margin-left:0!important;overflow:visible!important}
+  .tscroll > table,table.wide{min-width:0!important}
+  .reveal{display:block!important}
+  .worked{display:block!important}
+  .widget,.q-item,.box,.note,table,details,figure,.hero,.img-row,.grid .card{
+     break-inside:avoid;page-break-inside:avoid}
+  h2,h3{break-after:avoid}
+  @page{size:A4;margin:15mm}
+}
+
+/* ------------------------------------------------ research methods page extras */
+.yes{color:var(--green);font-weight:700}
+.no{color:var(--red);font-weight:700}
+.claim-yes{color:var(--green);font-weight:600}
+.claim-no{color:var(--red);font-weight:600}
+.signals{font-style:italic;color:var(--blue)}
+
+.split{display:grid;grid-template-columns:1fr 1fr;gap:1px;margin:30px 0;background:var(--line);
+       border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.panel{background:var(--surface);padding:22px 24px}
+.panel h4{margin-top:0;font-size:18px}
+.panel.is-method h4{color:var(--green)}
+.panel.is-tool h4{color:var(--accent2)}
+.panel ul{padding-left:20px;margin-bottom:0}
+
+.tree{margin:32px 0}
+.step{display:grid;grid-template-columns:34px 1fr;gap:18px;background:var(--surface);
+      border:1px solid var(--line);border-radius:4px;padding:20px 22px;margin-bottom:12px}
+.step .n{font-family:APSerif,Georgia,serif;color:var(--accent2);font-weight:700;font-size:24px;
+      line-height:1.2;text-align:center}
+.step .q{font-weight:600;font-size:18px;margin:0 0 10px}
+.step .out{font-size:16px;padding:0 0 0 16px;border-left:3px solid var(--green);margin:10px 0 0;
+      color:var(--ink-soft)}
+.step .out strong{color:var(--green)}
+.step .nope{font-size:16px;color:var(--muted);margin:10px 0 0;font-style:italic}
+.arrow{text-align:center;color:var(--line-d);font-size:20px;line-height:1;margin:-4px 0 8px}
+
+.mcard{border:1px solid var(--line);border-radius:4px;background:var(--surface);margin:28px 0;
+      overflow:hidden}
+.mcard > .head{border-bottom:2px solid var(--ink);padding:16px 24px;display:flex;
+      justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;background:var(--surface)}
+.mcard > .head .name{font-family:APSerif,Georgia,serif;font-size:23px;font-weight:700;color:var(--ink)}
+.mcard > .head .tag{font-size:11px;text-transform:uppercase;letter-spacing:.14em;font-weight:700;
+      color:var(--accent2);white-space:nowrap}
+.mcard.exp > .head{border-bottom-color:var(--green)}
+.mcard.exp > .head .name{color:var(--green)}
+.mcard.exp > .head .tag{color:var(--green)}
+.mcard > .body{padding:20px 24px 24px}
+.mcard dl{margin:0}
+.mcard dt{font-weight:700;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;
+      color:var(--accent2);margin-top:20px}
+.mcard dt:first-child{margin-top:0}
+.mcard dd{margin:6px 0 0}
+.mcard dd ul{margin:6px 0 0}
+
+.drill{border:0}
+.drill-row{display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;
+      padding:16px 0;border-bottom:1px solid var(--line)}
+.drill-row:first-child{border-top:1px solid var(--line)}
+.drill-row:last-child{border-bottom:1px solid var(--line)}
+.drill-row .stem{font-size:17px}
+.drill-row .ans-slot{min-width:210px;text-align:right;font-weight:700;color:var(--green);
+      font-size:15.5px;cursor:pointer;user-select:none;border-radius:3px;padding:3px 7px}
+.drill-row .ans-slot:hover{background:var(--soft)}
+.drill-row .ans-slot:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.drill-row .ans-slot .ph{display:none;color:var(--muted);font-weight:700;font-size:13px;
+      letter-spacing:.14em;text-transform:uppercase}
+.drill-row .ans-slot.hidden-ans .ph{display:inline}
+.drill-row .ans-slot.hidden-ans .txt{display:none}
+
+@media (max-width:760px){
+  .split{grid-template-columns:1fr}
+  .drill-row{grid-template-columns:1fr;gap:6px}
+  .drill-row .ans-slot{text-align:left;min-width:0;padding-left:0}
+}
+@media print{
+  .split{grid-template-columns:1fr 1fr}
+  .drill-row .ans-slot .txt{display:inline!important}
+  .drill-row .ans-slot .ph{display:none!important}
+  .mcard,.q-item,.panel,.step,.drill,.drill-row{break-inside:avoid;page-break-inside:avoid}
+}
+
+/* ------------------------------------------------ unit 4 topic page extras */
+.eq{list-style:none;padding:0;margin:20px 0}
+.eq li{padding:12px 0 12px 18px;border-left:3px solid var(--accent);margin:10px 0;background:var(--surface);
+      font-family:APSerif,Georgia,serif;font-size:19px}
+.loop{counter-reset:loop;list-style:none;padding:0;margin:24px 0}
+.loop li{counter-increment:loop;position:relative;padding:14px 18px 14px 58px;background:var(--surface);
+      border:1px solid var(--line);border-radius:4px;margin:0 0 10px}
+.loop li::before{content:counter(loop);position:absolute;left:18px;top:12px;font-family:APSerif,Georgia,serif;
+      font-weight:700;font-size:24px;color:var(--accent2)}
+.pair{border:1px solid var(--line);border-radius:4px;background:var(--surface);margin:26px 0;overflow:hidden}
+.pair > .head{padding:14px 22px;border-bottom:2px solid var(--ink);font-family:APSerif,Georgia,serif;
+      font-size:21px;font-weight:700}
+.pair .cols{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line)}
+.pair .cols.three{grid-template-columns:1fr 1fr 1fr}
+.pair .col{background:var(--surface);padding:18px 22px}
+.pair .col h4{margin:0 0 6px;color:var(--accent)}
+.pair .col p{margin:8px 0;font-size:16.5px}
+.pair .col .ex{color:var(--ink-soft);font-style:italic}
+.pair .tell{padding:14px 22px;background:var(--soft2);font-size:16.5px;border-top:1px solid var(--line)}
+.pair .tell strong{color:var(--accent2)}
+
+/* detective + quiz */
+.score{font-size:15px;font-weight:700;color:var(--muted);letter-spacing:.04em}
+.score b{color:var(--green);font-size:18px}
+.case{border-top:1px solid var(--line);padding:20px 0}
+.case:last-of-type{border-bottom:1px solid var(--line)}
+.case .cnum{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent2)}
+.case .ctext{margin:6px 0 12px;font-size:17.5px}
+.opts{display:flex;flex-wrap:wrap;gap:10px}
+.opts button{flex:0 1 auto}
+.opts.stack{flex-direction:column;align-items:stretch}
+.opts.stack button{text-align:left;font-weight:400;font-size:16.5px;color:var(--ink);border-color:var(--line-d);line-height:1.5}
+.opts.stack button:hover{background:var(--soft);color:var(--ink)}
+.opts button.right,.opts button.right:hover{background:var(--green);border-color:var(--green);color:#fff}
+.opts button.wrong,.opts button.wrong:hover{background:var(--red-s);border-color:var(--red);color:var(--red)}
+.opts button:disabled{opacity:1;cursor:default}
+.opts button.dim{opacity:.5}
+.fb{display:none;margin:14px 0 0;padding:12px 16px;border-left:3px solid var(--green);background:var(--green-s);font-size:16.5px}
+.fb.miss{border-left-color:var(--red);background:var(--red-s)}
+.fb.open{display:block}
+.fb strong{display:block;margin-bottom:4px}
+.tabs{display:flex;gap:0;border-bottom:1px solid var(--line);margin:8px 0 6px}
+.tabs button{border:0;border-bottom:2px solid transparent;border-radius:0;background:none;color:var(--muted);padding:10px 16px 10px 0;margin-right:14px}
+.tabs button:hover{background:none;color:var(--accent)}
+.tabs button[aria-selected="true"]{color:var(--accent);border-bottom-color:var(--accent)}
+.done{display:none;margin:20px 0 0;font-weight:600}
+.done.open{display:block}
+
+@media (max-width:760px){
+  .pair .cols,.pair .cols.three{grid-template-columns:1fr}
+}
+@media print{
+  .fb{display:block!important}
+  .case,.pair,.loop li{break-inside:avoid;page-break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<div class="crumbs">
+  <div class="inner">
+    <a href="../index.html">AP Psychology</a>
+    <span class="sep">&rsaquo;</span>
+    <a href="index.html">Unit 4</a>
+    <span class="sep">&rsaquo;</span>
+    <span class="here">4.2 Attitude Formation and Attitude Change</span>
+  </div>
+</div>
+
+<header class="top">
+  <div class="inner">
+    <h1>Attitude Formation and Attitude Change</h1>
+    <p class="tag">Where snap judgments harden into beliefs, and what it takes to change them</p>
+    <p class="meta">AP Psychology &bull; Unit 4: Social Psychology and Personality &bull; CED Topic 4.2</p>
+  </div>
+</header>
+
+<nav class="jump">
+  <ul>
+    <li><a href="#start">Start Here</a></li>
+    <li><a href="#terms">Key Terms</a></li>
+    <li><a href="#attitudes">Attitudes</a></li>
+    <li><a href="#prejudice">Prejudice</a></li>
+    <li><a href="#roots">Roots of Prejudice</a></li>
+    <li><a href="#change">Attitude Change</a></li>
+    <li><a href="#mixups">Don't Mix These Up</a></li>
+    <li><a href="#detective">Bias Spotter</a></li>
+    <li><a href="#quiz">Self-Check Quiz</a></li>
+    <li><a href="#traps">AP Exam Traps</a></li>
+  </ul>
+</nav>
+
+<div class="wrap">
+
+<h2 id="start"><span class="num">1</span>Start Here</h2>
+
+<p class="lede">In 4.1 you saw how we misread individual people. This topic scales that up: how quick judgments about groups become stereotypes, prejudice, and discrimination, where those biases come from, and why a mind, once made up, is so hard to change.</p>
+
+<ul class="eq">
+  <li>How do stereotypes and attitudes we are not even aware of turn into prejudice and discrimination?</li>
+  <li>Where do the social, emotional, and cognitive roots of prejudice come from?</li>
+  <li>Why is it so hard to change our minds, even when the evidence says we should?</li>
+</ul>
+
+<div class="box note">
+  <span class="label">How to use this page</span>
+  <p>Read the key terms, then work through each section. When you feel ready, try the <a href="#detective">Bias Spotter</a> and the <a href="#quiz">Self-Check Quiz</a>. Nothing you click on this page is recorded or graded.</p>
+</div>
+
+<h2 id="terms"><span class="num">2</span>Key Terms at a Glance</h2>
+
+<div class="tscroll">
+<table class="wide">
+  <thead><tr><th style="width:30%">Term</th><th>What it means</th></tr></thead>
+  <tbody>
+    <tr><td class="term">Attitude</td><td>A feeling, often shaped by a belief, that predisposes us to respond in a particular way to people, objects, and events.</td></tr>
+    <tr><td class="term">Stereotype</td><td>An overgeneralized belief about a group, applied to its members regardless of individual differences.</td></tr>
+    <tr><td class="term">Prejudice</td><td>An unjustified, usually negative <strong>attitude</strong> toward a group and its members.</td></tr>
+    <tr><td class="term">Discrimination</td><td>Unjustified negative <strong>behavior</strong> toward a group or its members.</td></tr>
+    <tr><td class="term">Explicit attitudes</td><td>Conscious attitudes we are aware of and can report.</td></tr>
+    <tr><td class="term">Implicit attitudes</td><td>Automatic, unconscious evaluations that can influence behavior without our awareness.</td></tr>
+    <tr><td class="term">Social identity</td><td>The "we" part of our self-concept that comes from our group memberships.</td></tr>
+    <tr><td class="term">Ingroup / outgroup</td><td>"Us," the groups we belong to, and "them," the groups we see ourselves as outside of.</td></tr>
+    <tr><td class="term">In-group bias</td><td>The tendency to favor our own group.</td></tr>
+    <tr><td class="term">Out-group homogeneity bias</td><td>Seeing outgroup members as "all alike" while seeing our own group as varied individuals.</td></tr>
+    <tr><td class="term">Ethnocentrism</td><td>Judging other cultures by the standards of our own and assuming our group is superior.</td></tr>
+    <tr><td class="term">Just-world phenomenon</td><td>Believing people get what they deserve and deserve what they get.</td></tr>
+    <tr><td class="term">Scapegoat theory</td><td>Prejudice gives an outlet for anger and frustration by providing someone to blame.</td></tr>
+    <tr><td class="term">Other-race effect</td><td>Recognizing and remembering faces of our own race more accurately than faces of other races.</td></tr>
+    <tr><td class="term">Cognitive load</td><td>The amount of mental effort in use. When it is high, we lean harder on stereotypes as shortcuts.</td></tr>
+    <tr><td class="term">Cognitive dissonance</td><td>The discomfort we feel when our behavior and our attitudes do not match.</td></tr>
+    <tr><td class="term">Belief perseverance</td><td>Holding on to a belief even after the evidence for it has been discredited.</td></tr>
+    <tr><td class="term">Confirmation bias</td><td>Seeking out and favoring information that supports what we already believe.</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2 id="attitudes"><span class="num">3</span>What an Attitude Is</h2>
+
+<p>An <span class="term">attitude</span> is a feeling, often influenced by a belief, that predisposes you to respond in a particular way. It bundles three pieces: a <strong>belief</strong> (often a stereotype), an <strong>emotion</strong>, and a <strong>readiness to act</strong>. If you believe a dog is dangerous, you feel afraid and you cross the street.</p>
+
+<p>Attitudes shape behavior, but the situation can override them. You may be firmly against bullying, and still laugh along when everyone in the group is mocking someone. Attitudes predict behavior best when:</p>
+<ul>
+  <li>outside pressures are weak,</li>
+  <li>the attitude is specific to the behavior (an attitude about recycling predicts recycling better than a general attitude about "the environment"), and</li>
+  <li>the attitude is strong and easy to bring to mind.</li>
+</ul>
+
+<h2 id="prejudice"><span class="num">4</span>Stereotypes, Prejudice, and Discrimination</h2>
+
+<h3>From belief to feeling to action</h3>
+<p>A <span class="term">stereotype</span> is a belief about a group. It can be negative or positive, false or containing a kernel of truth, and it comes from a normal mental habit: we sort the world into categories to simplify it. <span class="term">Prejudice</span> (literally "prejudgment") adds emotion to that belief. <span class="term">Discrimination</span> is what happens when the attitude becomes behavior.</p>
+
+<ol class="loop">
+  <li><strong>Stereotype (belief):</strong> "Elderly people are forgetful."</li>
+  <li><strong>Prejudice (attitude):</strong> feeling impatient with Jan and assuming she will forget things, because she is 85.</li>
+  <li><strong>Discrimination (behavior):</strong> refusing to hire Jan because of her age.</li>
+</ol>
+<p>You can hold a prejudice without acting on it, and laws can limit discrimination without erasing prejudice. The two do not always move together.</p>
+
+<h3>Two tracks: explicit and implicit</h3>
+<div class="split">
+  <div class="panel is-method">
+    <h4>Explicit attitudes</h4>
+    <p>Conscious, deliberate, and reportable. What you would say you believe on a survey.</p>
+  </div>
+  <div class="panel is-tool">
+    <h4>Implicit attitudes</h4>
+    <p>Automatic, unconscious, knee-jerk evaluations operating below awareness.</p>
+  </div>
+</div>
+<p>Because implicit attitudes hide below awareness, psychologists measure them indirectly. The <strong>Implicit Association Test (IAT)</strong> measures how quickly people pair faces from different groups with positive or negative words. Many people who sincerely deny any prejudice still show faster negative pairings for some groups.</p>
+<p>Implicit associations can shape split-second decisions. In experiments by Keith Payne (2006), participants briefly saw a Black or White face, then an object. After a Black face, they were more likely to misperceive a harmless tool as a gun. That is why researchers worry about implicit bias in fast, high-pressure decisions like policing.</p>
+
+<div class="box key">
+  <span class="label">The trend lines diverge</span>
+  <p>Openly stated (explicit) prejudice in North America has dropped sharply. In 1937 only about a third of Americans said they would vote for a qualified woman for president; by 2012 about 95 percent said they would. Implicit prejudice has not faded at the same pace. For the exam: <strong>explicit prejudice has decreased more than implicit prejudice.</strong></p>
+</div>
+
+<p>Prejudice attaches to many targets (race, gender, class, disability, religion, sexual orientation, nationality), but the machinery is the same: categorize, stereotype, feel, act. According to the United Nations, about one in two people worldwide hold moderately or highly <strong>ageist</strong> attitudes, which makes ageism one of the most widespread and most socially accepted forms. Subtle forms matter too: <strong>microaggressions</strong> such as "Where are you <em>really</em> from?" can signal that someone is seen as an outsider, and their cumulative weight wears people down.</p>
+
+<h2 id="roots"><span class="num">5</span>The Roots of Prejudice</h2>
+<p>Prejudice grows from three kinds of soil. The exam may ask you to identify which kind of root a scenario shows.</p>
+
+<div class="tscroll">
+<table class="wide">
+  <thead><tr><th style="width:18%">Root</th><th style="width:28%">Concept</th><th>What it looks like</th></tr></thead>
+  <tbody>
+    <tr><td rowspan="3"><strong>Social</strong></td><td class="term">Social identity and in-group bias</td><td>Our groups give us belonging and self-esteem, so we favor "us." Harmless as school spirit; harmful when it excludes "them."</td></tr>
+    <tr><td class="term">Just-world phenomenon</td><td>"They must have done something to deserve it." Comforting, because it means bad things will not randomly happen to me. It leads to victim-blaming.</td></tr>
+    <tr><td class="term">Ingroup vs. outgroup</td><td>Even random, meaningless groups trigger favoritism within minutes.</td></tr>
+    <tr><td><strong>Emotional</strong></td><td class="term">Scapegoat theory</td><td>When people are frustrated or afraid, blaming a less powerful group gives the anger a target and restores a sense of control. During COVID-19, Asian and Asian American people were harassed and blamed for the virus.</td></tr>
+    <tr><td rowspan="4"><strong>Cognitive</strong></td><td class="term">Categorization and cognitive load</td><td>Sorting people saves effort. When we are tired, rushed, or stressed, we lean harder on stereotypes.</td></tr>
+    <tr><td class="term">Out-group homogeneity</td><td>"They're all the same. We're all different."</td></tr>
+    <tr><td class="term">Ethnocentrism</td><td>Judging other cultures by our own standards: "Our way is the normal, right way."</td></tr>
+    <tr><td class="term">Other-race effect</td><td>Own-race faces are easier to recognize. It comes from exposure, not hostility, but it causes real eyewitness errors.</td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="box note">
+  <span class="label">A group you joined one minute ago</span>
+  <p>In classic "minimal group" studies, people are split into groups on a meaningless basis, such as which of two paintings they prefer, or a coin flip. Even then, they give more rewards to their own group and rate it more positively. You do not need history, conflict, or even a real difference to trigger in-group bias. You just need a label.</p>
+</div>
+
+<h2 id="change"><span class="num">6</span>Changing Attitudes, and Why Minds Resist</h2>
+
+<h3>Cognitive dissonance</h3>
+<p><span class="term">Cognitive dissonance</span> (Leon Festinger, 1957) is the discomfort we feel when our behavior clashes with our attitudes. We want our beliefs and actions to agree, so we relieve the tension in one of three ways:</p>
+<ol class="loop">
+  <li><strong>Change the behavior.</strong> You care about the environment but grabbed a stack of plastic bags at the market, so you start keeping a reusable bag in your backpack.</li>
+  <li><strong>Change the attitude.</strong> "Honestly, a few bags is not a big deal."</li>
+  <li><strong>Add a justifying thought.</strong> "I recycle everything at home, so it balances out."</li>
+</ol>
+<p>Because the behavior has already happened, the easiest path is often to quietly change the attitude. That is how dissonance steers belief.</p>
+
+<div class="box key">
+  <span class="label">The classic study: the $1 liars</span>
+  <p>Festinger and Carlsmith (1959) had students do a mind-numbingly boring task, then paid them either $1 or $20 to tell the next participant it was fun. Later, the students paid <strong>$1</strong> rated the task as more enjoyable. Why? The $20 group had a good reason for lying. The $1 group did not, so the clash between "I said it was fun" and "it was boring" was uncomfortable, and they resolved it by changing the attitude: "maybe it wasn't that bad."</p>
+</div>
+
+<h3>Belief perseverance and confirmation bias</h3>
+<p><span class="term">Belief perseverance</span> is clinging to a belief even after the evidence that created it has been discredited. Once we build reasons for a belief, the reasons survive even when the original basis is knocked out. The remedy the exam likes: <strong>consider the opposite</strong>. Ask yourself, "What is the best case that I am wrong?"</p>
+<p><span class="term">Confirmation bias</span> is seeking out and favoring information that supports what we already believe. It is why two people can watch the same debate, or scroll the same feed, and each walk away "proven right." It feeds belief perseverance, because we keep finding the evidence we are looking for.</p>
+
+<div class="box note">
+  <span class="label">How they work together</span>
+  <p>You buy a phone and believe it is the best. A credible review shows your model has worse battery life than a rival. <strong>Dissonance:</strong> the facts clash with your choice, and that feels bad. <strong>Confirmation bias:</strong> you go looking for positive reviews and reasons the test was unfair. <strong>Belief perseverance:</strong> you keep believing "still the best." That is why changing a mind takes far more than presenting the facts.</p>
+</div>
+
+<h2 id="mixups"><span class="num">7</span>Don't Mix These Up</h2>
+
+<div class="pair">
+  <div class="head">Stereotype vs. prejudice vs. discrimination</div>
+  <div class="cols three">
+    <div class="col"><h4>Stereotype</h4><p>A <strong>belief</strong> about a group.</p><p class="ex">"Gamers are antisocial."</p></div>
+    <div class="col"><h4>Prejudice</h4><p>An <strong>attitude</strong>: belief plus negative feeling.</p><p class="ex">Feeling irritated by gamers and assuming the worst about them.</p></div>
+    <div class="col"><h4>Discrimination</h4><p>A <strong>behavior</strong> toward the group.</p><p class="ex">Refusing to let a gamer join your project group.</p></div>
+  </div>
+  <div class="tell"><strong>The tell:</strong> if someone <em>does</em> something to a person because of their group, it is discrimination. If it only happens in someone's head, it is a stereotype or prejudice.</div>
+</div>
+
+<div class="pair">
+  <div class="head">Just-world phenomenon vs. scapegoat theory</div>
+  <div class="cols">
+    <div class="col"><h4>Just-world phenomenon</h4><p>Blaming the <strong>victim</strong> for their own misfortune.</p><p class="ex">"If he's homeless, he must have made bad choices."</p></div>
+    <div class="col"><h4>Scapegoat theory</h4><p>Blaming an <strong>outgroup</strong> for <em>your own</em> problems, to vent frustration.</p><p class="ex">"We lost our jobs because of those immigrants."</p></div>
+  </div>
+  <div class="tell"><strong>The tell:</strong> just-world explains someone else's bad outcome as deserved. Scapegoating shifts blame for my group's bad outcome onto someone else.</div>
+</div>
+
+<div class="pair">
+  <div class="head">In-group bias vs. out-group homogeneity bias</div>
+  <div class="cols">
+    <div class="col"><h4>In-group bias</h4><p>"<strong>We are better.</strong>"</p><p class="ex">Rating your own school's team as more talented and more fair.</p></div>
+    <div class="col"><h4>Out-group homogeneity</h4><p>"<strong>They are all the same.</strong>"</p><p class="ex">"Students from that school are all stuck-up."</p></div>
+  </div>
+  <div class="tell"><strong>The tell:</strong> in-group bias is about favoring us. Out-group homogeneity is about how varied (or not) we think they are.</div>
+</div>
+
+<div class="pair">
+  <div class="head">Belief perseverance vs. confirmation bias</div>
+  <div class="cols">
+    <div class="col"><h4>Belief perseverance</h4><p>A belief <strong>survives after its evidence is discredited</strong>.</p><p class="ex">Still believing a supplement works after the study behind it was retracted.</p></div>
+    <div class="col"><h4>Confirmation bias</h4><p>Actively <strong>seeking and favoring</strong> evidence that fits.</p><p class="ex">Only clicking on videos that praise the supplement.</p></div>
+  </div>
+  <div class="tell"><strong>The tell:</strong> look for the word "discredited" or "debunked" for belief perseverance. Look for searching, noticing, or ignoring information for confirmation bias.</div>
+</div>
+
+<div class="pair">
+  <div class="head">Implicit vs. explicit attitudes</div>
+  <div class="cols">
+    <div class="col"><h4>Explicit</h4><p>Conscious and reportable, measured by <strong>self-report</strong> (surveys, interviews).</p></div>
+    <div class="col"><h4>Implicit</h4><p>Automatic and unconscious, measured <strong>indirectly</strong> (reaction times on the IAT).</p></div>
+  </div>
+  <div class="tell"><strong>The tell:</strong> "sincerely says they are not biased, but..." signals implicit attitudes.</div>
+</div>
+
+<h2 id="detective"><span class="num">8</span>Bias Spotter</h2>
+<p>Three rounds. Round 1: belief, attitude, or action? Round 2: name the root of prejudice. Round 3: how did the person resolve their dissonance?</p>
+
+<div class="widget" id="det">
+  <h3>Spot the bias <span class="tryit">Try it</span></h3>
+  <div class="tabs" role="tablist"></div>
+  <p class="score" aria-live="polite">Score: <b id="detScore">0</b> / <span id="detTotal">0</span> answered</p>
+  <div id="detCases"></div>
+  <p class="done" id="detDone"></p>
+  <div class="btnrow"><button type="button" id="detReset">Start this round over</button></div>
+</div>
+
+<h2 id="quiz"><span class="num">9</span>Self-Check Quiz</h2>
+<p>Ten AP-style questions. Click an answer to see whether you were right and why. Your score stays on this screen only.</p>
+
+<div class="widget" id="quizBox">
+  <h3>Check yourself <span class="tryit">Four choices each</span></h3>
+  <p class="score" aria-live="polite">Score: <b id="qScore">0</b> / <span id="qDone">0</span> answered of <span id="qTotal">0</span></p>
+  <div id="quizList"></div>
+  <p class="done" id="qFinal"></p>
+  <div class="btnrow"><button type="button" id="qReset">Start the quiz over</button></div>
+</div>
+
+<h2 id="traps"><span class="num">10</span>AP Exam Traps</h2>
+<div class="box warn">
+  <span class="label">Watch for these</span>
+  <ul>
+    <li><strong>Prejudice is an attitude; discrimination is a behavior.</strong> The exam tests this split constantly.</li>
+    <li><strong>Explicit prejudice has dropped more than implicit prejudice.</strong> Know the direction of that gap.</li>
+    <li><strong>Just-world = victim-blaming. Scapegoat = blame-shifting</strong> onto an outgroup. Do not swap them.</li>
+    <li><strong>The other-race effect is about face recognition,</strong> not about liking or disliking a group.</li>
+    <li><strong>Dissonance has three exits:</strong> change the behavior, change the attitude, or add a justifying thought. Expect a scenario asking which one.</li>
+    <li><strong>Persuasion is not in 4.2.</strong> Central and peripheral routes, foot-in-the-door, and door-in-the-face are Topic 4.3.</li>
+    <li><strong>On "apply" free-response prompts,</strong> say whether the scenario shows a belief, an attitude, or a behavior, and explain why using the details given.</li>
+  </ul>
+</div>
+
+<div class="box note">
+  <span class="label">Connections across the course</span>
+  <p><strong>Topic 4.1:</strong> attribution errors about individuals grow into group-level prejudice here. <strong>Topic 4.3:</strong> persuasion, conformity, and obedience show how social pressure forms and changes attitudes. <strong>Unit 2:</strong> confirmation bias and belief perseverance are the same thinking shortcuts from cognition. <strong>Unit 5:</strong> the chronic stress of discrimination affects health. <strong>Unit 0:</strong> the IAT is a clever way to measure what people will not, or cannot, self-report.</p>
+</div>
+
+<div class="pagenav">
+  <a href="attribution-and-person-perception.html"><span class="dir">&larr; Previous</span><span class="t">4.1 Attribution and Person Perception</span></a>
+  <a href="social-influence.html"><span class="dir">Next &rarr;</span><span class="t">4.3A Social Influence</span></a>
+</div>
+
+<footer>
+  <p>AP Psychology, Unit 4: Social Psychology and Personality. Topic 4.2, aligned to the 2024 Course and Exam Description.</p>
+  <p>Don West, AP Psychology Teacher. Questions? Message me on Canvas or ask at the start of class.</p>
+</footer>
+
+</div>
+
+<script>
+window.PAGE = {
+  reviewHint: 'Review sections 5 and 6, then start the round over.',
+  rounds: [
+    { tab: 'Round 1: Belief, attitude, or action?',
+      options: ['Stereotype', 'Prejudice', 'Discrimination'],
+      cases: [
+        ['"Engineering students are all bad at writing." Nothing more is said or done.', 0, 'This is a generalized belief about a group, with no strong feeling and no action. That is a stereotype.'],
+        ['A landlord refuses to rent an apartment to a family after learning they are from a particular country.', 2, 'The landlord acts against people because of their group. Unjustified negative behavior is discrimination.'],
+        ['Mia feels uneasy and suspicious whenever older relatives talk about technology, and assumes they will get everything wrong.', 1, 'Mia has a negative feeling and a prejudgment about a group (older people). It stays in her head, so it is prejudice, an attitude.'],
+        ['A club leader quietly skips over applicants with "foreign-sounding" names when choosing who to interview.', 2, 'Skipping applicants is an action taken against them because of their group. That is discrimination, even if it is quiet.'],
+        ['"Rich kids are all spoiled." Tom says it with real resentment and assumes the worst about every new classmate who seems wealthy.', 1, 'There is a stereotype here, but Tom adds strong negative emotion and prejudgment of individuals. Belief plus feeling makes it prejudice.'],
+        ['An online store shows higher prices to shoppers from certain neighborhoods.', 2, 'Treating people worse because of their group membership is discrimination, whether a person or a system does it.']
+      ]},
+    { tab: 'Round 2: Name the root',
+      stack: false,
+      options: ['Just-world phenomenon', 'Scapegoat theory', 'In-group bias', 'Out-group homogeneity', 'Other-race effect', 'Ethnocentrism'],
+      cases: [
+        ['After a flood destroys a poor neighborhood, a commenter writes, "People who live there should have known better. They made their choice."', 0, 'The commenter assumes the victims deserved their misfortune. That is the just-world phenomenon.'],
+        ['During an economic downturn, a politician blames a small immigrant community for "stealing jobs," and support for him rises.', 1, 'Frustration about the economy is redirected onto a less powerful group. That is scapegoating, an emotional root of prejudice.'],
+        ['Students randomly assigned to the "blue team" on sports day rate blue team members as more fair and more talented than the red team.', 2, 'Favoring your own group, even one assigned at random, is in-group bias.'],
+        ['"People from the south of the country are all the same: loud and lazy. People from my city, though, are all so different from each other."', 3, 'Seeing the outgroup as uniform and your own group as varied is out-group homogeneity bias.'],
+        ['A Taiwanese tourist in another country has trouble telling apart the faces of the local tour guides, but easily remembers the faces of the other Taiwanese tourists.', 4, 'Recognizing own-race faces more easily than other-race faces is the other-race effect. It comes from exposure, not dislike.'],
+        ['An exchange student is told her family\'s way of eating dinner is "weird and wrong" because it is not how things are done here.', 5, 'Judging another culture by your own culture\'s standards, and assuming yours is correct, is ethnocentrism.'],
+        ['A crime victim is asked, "Well, why were you walking alone at night?"', 0, 'The question implies the victim brought it on themselves. That is the just-world phenomenon behind victim-blaming.'],
+        ['Fans of one baseball team insist every call that goes against them is biased, while calls against the rival team are fair.', 2, 'This is favoritism toward your own group. It is in-group bias, with a side of confirmation bias.']
+      ]},
+    { tab: 'Round 3: Resolve the dissonance',
+      options: ['Changed the behavior', 'Changed the attitude', 'Added a justifying thought'],
+      cases: [
+        ['Ken believes cheating is wrong, but he copied a friend\'s homework. Afterward he decides, "Copying homework isn\'t really cheating. It\'s just collaborating."', 1, 'Ken changed his attitude about what counts as cheating so it fits what he already did.'],
+        ['Priya cares about her health but has been skipping sleep to game. She sets a hard stop at 11 p.m. and sticks to it.', 0, 'Priya brought her behavior into line with her attitude. Changing the behavior is the hardest, but most direct, exit.'],
+        ['Leo says he supports animal welfare but buys cheap fast-fashion leather. He tells himself, "One jacket won\'t change anything, and I donate to a shelter."', 2, 'Leo keeps both the attitude and the behavior, but adds new thoughts that shrink the conflict. That is adding a justifying cognition.'],
+        ['A student who said she hated the new school uniform had to wear it for a month. By the end she says, "Honestly, it\'s kind of nice not deciding what to wear."', 1, 'She could not change the behavior (the uniform is required), so her attitude shifted to match it.'],
+        ['Chen believes in reducing plastic waste but keeps buying bottled water. He buys a reusable bottle and brings it every day.', 0, 'Chen changed what he does so it matches what he believes.'],
+        ['After paying a lot for a concert that turned out to be disappointing, Mei tells her friends it was "totally worth it for the experience."', 1, 'Mei cannot undo the spending, so she raises her opinion of the concert to reduce the discomfort. Like the $1 liars, the effort or cost gets justified by changing the attitude.']
+      ]}
+  ],
+  quiz: [
+    ['A feeling, often influenced by a belief, that predisposes someone to respond in a particular way to people and events is:',
+      ['a stereotype', 'discrimination', 'an attitude', 'a role'], 2,
+      'That is the definition of an attitude. A stereotype is only the belief piece, and discrimination is a behavior.'],
+    ['The primary distinction between prejudice and discrimination is that:',
+      ['prejudice is an attitude and discrimination is a behavior', 'prejudice is based on anger and discrimination on fear', 'prejudice is a legal term and discrimination is a psychological term', 'prejudice develops in childhood and discrimination in adolescence'], 0,
+      'Prejudice lives in thoughts and feelings. Discrimination is the action that can follow. The other options invent distinctions that do not exist.'],
+    ['People who say they hold no racial prejudice may still show faster negative associations with some groups on a reaction-time test. This best illustrates:',
+      ['explicit attitudes', 'implicit attitudes', 'belief perseverance', 'the just-world phenomenon'], 1,
+      'Automatic evaluations that operate below awareness, measured indirectly by reaction times, are implicit attitudes.'],
+    ['Which statement best describes trends in prejudice in North America in recent decades?',
+      ['Both explicit and implicit prejudice have increased.', 'Explicit prejudice has decreased, but implicit prejudice has lingered.', 'Implicit prejudice has decreased more than explicit prejudice.', 'Neither explicit nor implicit prejudice has changed.'], 1,
+      'Openly stated prejudice has dropped substantially, while unconscious associations have been slower to change.'],
+    ['Carl, who is African American, could describe the African American man who robbed his store far better than the White man who was with him. The best explanation is:',
+      ['scapegoat theory', 'the other-race effect', 'in-group bias', 'ethnocentrism'], 1,
+      'Recognizing own-race faces more accurately than other-race faces is the other-race effect. It is about perception and exposure, not favoritism.'],
+    ['After a factory closes, some residents blame a nearby refugee community for the town\'s problems, even though the refugees had nothing to do with the closure. This is best explained by:',
+      ['the just-world phenomenon', 'scapegoat theory', 'out-group homogeneity bias', 'the other-race effect'], 1,
+      'Frustration is redirected onto a less powerful outgroup. The just-world phenomenon would instead blame the people who lost their jobs.'],
+    ['Hearing that a classmate failed a class, Ana immediately says, "He must not have tried. People get the grades they earn." Ana\'s reaction best reflects:',
+      ['the just-world phenomenon', 'scapegoat theory', 'in-group bias', 'cognitive dissonance'], 0,
+      'Assuming people deserve what happens to them is the just-world phenomenon. Ana ignores possible situational causes entirely.'],
+    ['In Festinger and Carlsmith\'s classic study, students paid $1 to say a boring task was fun later rated the task as more enjoyable than students paid $20. This result is best explained by:',
+      ['confirmation bias', 'cognitive dissonance', 'belief perseverance', 'the mere exposure effect'], 1,
+      'The $1 group had no good external reason for lying, so the clash between words and belief was uncomfortable. They reduced it by changing their attitude toward the task.'],
+    ['A study linking a food additive to hyperactivity is retracted for faulty data. Years later, many parents still believe the additive causes hyperactivity. This best illustrates:',
+      ['belief perseverance', 'the other-race effect', 'scapegoat theory', 'implicit attitudes'], 0,
+      'The belief survives even though its original evidence was discredited. That is belief perseverance.'],
+    ['Two friends who disagree about a government policy watch the same news report. Each one remembers mainly the facts that supported their own view. This is best explained by:',
+      ['the just-world phenomenon', 'out-group homogeneity bias', 'confirmation bias', 'cognitive dissonance'], 2,
+      'Noticing and remembering information that supports what you already believe is confirmation bias.']
+  ]
+};
+</script>
+<script>
+(function () {
+  var P = window.PAGE || {};
+
+  function markChoice(opts, fbEl, chosen, correct, head, why) {
+    var btns = opts.querySelectorAll('button');
+    btns.forEach(function (x, k) {
+      x.disabled = true;
+      if (k === correct) x.classList.add('right');
+      else if (k === chosen) x.classList.add('wrong');
+      else x.classList.add('dim');
+    });
+    fbEl.className = 'fb open' + (chosen === correct ? '' : ' miss');
+    fbEl.innerHTML = '<strong></strong>';
+    fbEl.firstChild.textContent = head;
+    fbEl.appendChild(document.createTextNode(why));
+  }
+
+  /* ---------------- sorting activity (tabs of rounds) ---------------- */
+  if (P.rounds && document.getElementById('det')) {
+    var round = 0, score = 0, answered = 0;
+    var casesEl = document.getElementById('detCases');
+    var tabsEl = document.querySelector('#det .tabs');
+    P.rounds.forEach(function (r, i) {
+      var t = document.createElement('button');
+      t.type = 'button'; t.setAttribute('role', 'tab');
+      t.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
+      t.textContent = r.tab;
+      t.addEventListener('click', function () {
+        round = i;
+        tabsEl.querySelectorAll('button').forEach(function (x) { x.setAttribute('aria-selected', x === t ? 'true' : 'false'); });
+        renderRound();
+      });
+      tabsEl.appendChild(t);
+    });
+    if (P.rounds.length < 2) tabsEl.style.display = 'none';
+
+    var renderRound = function () {
+      score = 0; answered = 0;
+      var r = P.rounds[round];
+      casesEl.innerHTML = '';
+      if (r.intro) {
+        var ip = document.createElement('p');
+        ip.className = 'commentary'; ip.textContent = r.intro;
+        casesEl.appendChild(ip);
+      }
+      r.cases.forEach(function (c, i) {
+        var options = c[3] || r.options;
+        var d = document.createElement('div');
+        d.className = 'case';
+        d.innerHTML = '<span class="cnum">Case ' + (i + 1) + '</span><p class="ctext"></p><div class="opts' + (r.stack ? ' stack' : '') + '"></div><div class="fb" aria-live="polite"></div>';
+        d.querySelector('.ctext').textContent = c[0];
+        var opts = d.querySelector('.opts');
+        options.forEach(function (label, j) {
+          var b = document.createElement('button');
+          b.type = 'button'; b.textContent = label;
+          b.addEventListener('click', function () {
+            var right = j === c[1];
+            markChoice(opts, d.querySelector('.fb'), j, c[1],
+              (right ? 'Correct: ' : 'Not quite. Correct answer: ') + options[c[1]] + '.', c[2]);
+            answered++; if (right) score++;
+            update();
+            if (answered === r.cases.length) {
+              var done = document.getElementById('detDone');
+              var last = round === P.rounds.length - 1;
+              done.textContent = 'Round complete: ' + score + ' of ' + r.cases.length + '. ' +
+                (!last ? 'Ready for the next round? Use the tabs at the top of the box.' :
+                 score >= Math.ceil(r.cases.length * 0.75) ? 'Strong work. Now try the Self-Check Quiz below.' :
+                 (P.reviewHint || 'Review the sections above, then start the round over.'));
+              done.className = 'done open';
+            }
+          });
+          opts.appendChild(b);
+        });
+        casesEl.appendChild(d);
+      });
+      document.getElementById('detDone').className = 'done';
+      update();
+    };
+    var update = function () {
+      document.getElementById('detScore').textContent = score;
+      document.getElementById('detTotal').textContent = answered;
+    };
+    document.getElementById('detReset').addEventListener('click', renderRound);
+    renderRound();
+  }
+
+  /* ---------------- self-check quiz ---------------- */
+  if (P.quiz && document.getElementById('quizList')) {
+    var qEl = document.getElementById('quizList');
+    var qScore = 0, qDone = 0, LET = ['A', 'B', 'C', 'D'];
+    var n = P.quiz.length;
+    var updateQ = function () {
+      document.getElementById('qScore').textContent = qScore;
+      document.getElementById('qDone').textContent = qDone;
+    };
+    var renderQuiz = function () {
+      qScore = 0; qDone = 0; qEl.innerHTML = '';
+      P.quiz.forEach(function (q, i) {
+        var d = document.createElement('div');
+        d.className = 'case';
+        d.innerHTML = '<span class="cnum">Question ' + (i + 1) + '</span><p class="ctext"></p><div class="opts stack"></div><div class="fb" aria-live="polite"></div>';
+        d.querySelector('.ctext').textContent = q[0];
+        var opts = d.querySelector('.opts');
+        q[1].forEach(function (txt, j) {
+          var b = document.createElement('button');
+          b.type = 'button'; b.textContent = LET[j] + '.  ' + txt;
+          b.addEventListener('click', function () {
+            var right = j === q[2];
+            markChoice(opts, d.querySelector('.fb'), j, q[2],
+              right ? 'Correct.' : 'Not quite. The answer is ' + LET[q[2]] + '.', q[3]);
+            qDone++; if (right) qScore++;
+            updateQ();
+            if (qDone === n) {
+              var f = document.getElementById('qFinal');
+              f.textContent = 'Final score: ' + qScore + ' of ' + n + '. ' +
+                (qScore >= Math.ceil(n * 0.8) ? 'You are in good shape for this topic.' :
+                 qScore >= Math.ceil(n * 0.55) ? 'Solid. Reread the explanations for the ones you missed, then check Don\'t Mix These Up.' :
+                 'Go back through the sections above, then start the quiz over.');
+              f.className = 'done open';
+            }
+          });
+          opts.appendChild(b);
+        });
+        qEl.appendChild(d);
+      });
+      document.getElementById('qTotal').textContent = n;
+      document.getElementById('qFinal').className = 'done';
+      updateQ();
+    };
+    document.getElementById('qReset').addEventListener('click', renderQuiz);
+    renderQuiz();
+  }
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>4.3A Social Influence | AP Psychology</title>
+<style>@font-face{font-family:'APSerif';src:url('../assets/fonts/source-serif-4-latin-400-normal.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'APSerif';src:url('../assets/fonts/source-serif-4-latin-600-normal.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:'APSerif';src:url('../assets/fonts/source-serif-4-latin-700-normal.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'APSans';src:url('../assets/fonts/source-sans-3-latin-400-normal.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'APSans';src:url('../assets/fonts/source-sans-3-latin-400-italic.woff2') format('woff2');font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:'APSans';src:url('../assets/fonts/source-sans-3-latin-600-normal.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:'APSans';src:url('../assets/fonts/source-sans-3-latin-700-normal.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
+
+/* ---------------------------------------------------------------- base */
+:root{
+  --ink:#14293a; --ink-soft:#243c50; --accent:#0f5c5e; --accent-d:#0c4749;
+  --accent2:#a35617; --accent2-d:#8a4a13;
+  --soft:#eef4f4; --soft2:#fdf1e6;
+  --green:#1b6b48; --green-s:#edf5f0; --red:#9c2a2a; --red-s:#faeeee;
+  --line:#dfe4e8; --line-d:#c4ced6; --muted:#5d6b78; --faint:#6b7885; --bg:#fbfbf9; --surface:#ffffff;
+  --blue:#2f5d80;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:APSans,'Segoe UI',-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;font-size:18px;line-height:1.72;
+     color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}
+.wrap{max-width:740px;margin:0 auto;padding:0 24px 80px}
+
+/* ---------------------------------------------------------------- chrome */
+.crumbs{background:var(--surface);border-bottom:1px solid var(--line);font-size:14px}
+.crumbs .inner,.crumbs .wrap{max-width:740px;margin:0 auto;padding:12px 24px}
+.crumbs a{color:var(--accent);text-decoration:none;font-weight:600}
+.crumbs a:hover{text-decoration:underline}
+.crumbs .sep{color:var(--line-d);margin:0 9px}
+.crumbs .here{color:var(--muted)}
+
+header.top,.masthead{background:var(--surface);border-bottom:1px solid var(--line);
+     padding:44px 24px 38px;color:var(--ink)}
+header.top .inner,.masthead .wrap{max-width:740px;margin:0 auto;padding-bottom:0}
+header.top .kicker,header.top .meta,.masthead .course{font-size:12px;letter-spacing:.16em;
+     text-transform:uppercase;color:var(--accent2);font-weight:700;margin:0 0 14px;opacity:1}
+header.top h1,.masthead h1{font-family:APSerif,Georgia,'Times New Roman',serif;font-weight:700;font-size:42px;line-height:1.14;
+     margin:0;letter-spacing:-.015em;color:var(--ink)}
+header.top p.tag,header.top .sub,.masthead p.tag{margin:14px 0 0;font-size:19px;
+     color:var(--muted);line-height:1.55;opacity:1}
+header.top .meta{margin:18px 0 0;letter-spacing:.1em;color:var(--muted);font-size:11.5px}
+.masthead a{color:var(--accent)}
+
+/* Deliberately not sticky: this direction reads as a document, the breadcrumb
+   already says where you are, and a wrapped two-row bar would cover anchored
+   headings as you jump between sections. */
+nav.jump{background:var(--surface);border-bottom:1px solid var(--line)}
+nav.jump ul{max-width:940px;margin:0 auto;padding:0 24px;list-style:none;display:flex;flex-wrap:wrap;
+     gap:0 22px}
+nav.jump a{display:block;padding:13px 0;font-size:14.5px;color:var(--muted);text-decoration:none;
+     border-bottom:2px solid transparent;font-weight:600}
+nav.jump a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+
+main{padding:8px 0 0}
+
+/* ---------------------------------------------------------------- type */
+h2{font-family:APSerif,Georgia,'Times New Roman',serif;font-size:30px;font-weight:700;color:var(--ink);margin:54px 0 14px;
+   letter-spacing:-.01em;line-height:1.24;scroll-margin-top:24px}
+h2 .num{font-family:APSans,'Segoe UI',-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;display:inline-block;font-size:12px;font-weight:700;
+   letter-spacing:.14em;color:var(--accent2);vertical-align:.42em;margin-right:12px}
+h3{font-family:APSerif,Georgia,'Times New Roman',serif;font-size:22px;font-weight:600;margin:34px 0 10px;color:var(--ink)}
+h4{font-family:APSerif,Georgia,'Times New Roman',serif;font-size:18.5px;font-weight:600;margin:24px 0 7px;color:var(--ink)}
+p{margin:16px 0}
+ul,ol{margin:16px 0;padding-left:26px}
+li{margin:6px 0}
+.lede{font-size:19.5px;color:var(--muted);margin:22px 0 4px;line-height:1.6}
+code{background:var(--soft);padding:1px 6px;border-radius:3px;
+     font-family:Consolas,Monaco,monospace;font-size:.9em}
+em{font-style:italic}
+
+/* ---------------------------------------------------------------- boxes */
+.box,.note{border-radius:3px;padding:20px 24px;margin:28px 0;border-left:3px solid var(--accent2);
+     background:var(--soft2)}
+.box p:first-child,.note p:first-child{margin-top:0}
+.box p:last-child,.note p:last-child{margin-bottom:0}
+.box p,.note p{font-size:17.5px}
+.box .label,.note .label{display:block;font-size:11.5px;font-weight:700;letter-spacing:.14em;
+     text-transform:uppercase;color:var(--accent2);margin-bottom:9px}
+.box.key{background:var(--soft2);border-color:var(--accent2)}
+.box.key .label{color:var(--accent2)}
+.box.note{background:var(--soft);border-color:var(--accent)}
+.box.note .label{color:var(--accent)}
+.box.good{background:var(--green-s);border-color:var(--green)}
+.box.good .label{color:var(--green)}
+.box.warn{background:var(--red-s);border-color:var(--red)}
+.box.warn .label{color:var(--red)}
+.pending{background:var(--surface);border:1px dashed var(--line-d);border-radius:3px;
+     padding:30px 20px;text-align:center;color:var(--muted);margin:28px 0}
+.pending strong{display:block;color:var(--ink);margin-bottom:4px;font-size:17px}
+
+/* ---------------------------------------------------------------- table */
+table{border-collapse:collapse;width:100%;margin:30px 0;font-size:17px}
+th,td{border:0;border-bottom:1px solid var(--line);padding:14px 10px 14px 0;
+      text-align:left;vertical-align:top}
+th:last-child,td:last-child{padding-right:0}
+thead th{border-bottom:2px solid var(--ink);font-size:12.5px;letter-spacing:.09em;
+      text-transform:uppercase;color:var(--muted);font-weight:700;padding-bottom:10px}
+tbody tr:last-child td{border-bottom:1px solid var(--line)}
+caption{caption-side:top;text-align:left;font-size:13px;letter-spacing:.1em;text-transform:uppercase;
+      color:var(--muted);font-weight:700;padding-bottom:12px}
+td.center,th.center{text-align:center}
+.term{font-weight:700;color:var(--accent)}
+
+/* ---------------------------------------------------------------- cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1px;
+      background:var(--line);border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+      margin:26px 0}
+.grid .card{display:block;background:var(--surface);padding:24px 26px;text-decoration:none;
+      color:inherit;transition:background .15s}
+a.grid > .card:hover,.grid a.card:hover{background:#f6f9f9}
+.grid .card .kicker{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+      color:var(--accent2);margin:0 0 8px}
+.grid .card .title{font-family:APSerif,Georgia,'Times New Roman',serif;font-size:22px;font-weight:700;margin:0 0 8px;line-height:1.25}
+.grid .card .desc{font-size:16px;color:var(--muted);margin:0;line-height:1.55}
+/* A unit with nothing in it yet is muted by colour, not by opacity: fading the
+   whole tile would grey out its background and checkerboard the grid. */
+.grid .card.empty .kicker{color:var(--faint)}
+.grid .card.empty .title{color:var(--muted);font-weight:700}
+.grid .card.empty .desc{color:var(--faint)}
+
+.resource{display:flex;justify-content:space-between;align-items:center;gap:20px;
+      border:0;border-bottom:1px solid var(--line);padding:22px 0;margin:0;
+      text-decoration:none;color:inherit}
+.resource:first-of-type{border-top:1px solid var(--line)}
+a.resource:hover .title{color:var(--accent)}
+.resource .title{font-family:APSerif,Georgia,'Times New Roman',serif;font-weight:700;font-size:20px;margin:0 0 3px;
+      transition:color .12s}
+.resource .desc{font-size:16px;color:var(--muted);margin:0}
+.resource .go{color:var(--accent);font-weight:600;font-size:15px;white-space:nowrap}
+
+/* ---------------------------------------------------------------- widget */
+.widget{background:var(--surface);border:1px solid var(--line);border-radius:4px;
+        padding:26px 28px;margin:34px 0}
+.widget > h3{margin-top:0;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.widget .tryit{font-family:APSans,'Segoe UI',-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:.14em;
+        text-transform:uppercase;color:var(--accent2);background:none;padding:0}
+.widget svg{display:block;width:100%;height:auto;max-width:100%;touch-action:none}
+svg,canvas{display:block;max-width:100%}
+
+.ctrls{display:flex;flex-wrap:wrap;gap:24px;margin:22px 0 4px;align-items:flex-end}
+.ctrl{flex:1 1 220px;min-width:200px}
+.ctrl label{display:block;font-size:12px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;
+        color:var(--muted);margin-bottom:10px}
+.ctrl .val{color:var(--accent);font-size:15px;letter-spacing:0}
+input[type=range]{width:100%;accent-color:var(--accent);height:26px;cursor:pointer}
+
+.btnrow{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0 0}
+button{font-family:APSans,'Segoe UI',-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;font-size:14.5px;font-weight:600;cursor:pointer;border-radius:3px;
+       padding:10px 18px;border:1px solid var(--accent);background:var(--surface);
+       color:var(--accent);transition:background .12s,color .12s}
+button:hover{background:var(--accent);color:#fff}
+button.primary{background:var(--accent);color:#fff}
+button.primary:hover{background:var(--accent-d)}
+button:disabled{opacity:.45;cursor:not-allowed}
+button:focus-visible,input:focus-visible,a:focus-visible,textarea:focus-visible,
+[tabindex]:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+.readouts{display:flex;flex-wrap:wrap;gap:34px;margin:30px 0 0}
+.ro{flex:0 1 auto;min-width:110px}
+.ro .k{display:block;font-size:11.5px;font-weight:700;letter-spacing:.12em;
+       text-transform:uppercase;color:var(--muted)}
+.ro .v{display:block;font-family:APSerif,Georgia,'Times New Roman',serif;font-size:30px;font-weight:700;color:var(--ink);line-height:1.3}
+.ro.hl .v{color:var(--green)}
+.commentary{margin:20px 0 0;padding:0 0 0 18px;border-left:3px solid var(--line-d);
+       font-size:16.5px;color:var(--ink-soft)}
+.toggle-line{display:flex;align-items:center;gap:10px;margin:18px 0 0;font-size:15.5px}
+.toggle-line input{width:18px;height:18px;accent-color:var(--accent);cursor:pointer}
+.field{display:inline-flex;flex-direction:column;gap:5px;margin:0 14px 12px 0}
+.field label{font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.field input{font-family:inherit;font-size:17px;padding:8px 10px;width:110px;
+       border:1px solid var(--line-d);border-radius:3px;background:var(--surface);color:var(--ink)}
+.field input.ok{border-color:var(--green);background:var(--green-s)}
+.field input.bad{border-color:var(--accent2);background:var(--soft2)}
+.worked{display:none;margin:18px 0 0;padding:16px 18px;background:#f7f9f9;border-radius:3px;
+       font-family:Consolas,Monaco,monospace;font-size:14.5px;line-height:1.75;white-space:pre-wrap}
+.worked.open{display:block}
+.dataset{font-family:APSerif,Georgia,'Times New Roman',serif;font-size:25px;font-weight:700;letter-spacing:.03em;color:var(--ink);
+       background:#f7f9f9;border-radius:3px;padding:15px 18px;margin:8px 0 18px;text-align:center}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------------------------------------------------------------- practice */
+.q-item{border:0;border-top:1px solid var(--line);border-radius:0;background:none;
+        margin:0;padding:26px 0}
+.q-item .qnum{display:inline-block;background:none;color:var(--accent2);font-size:11.5px;
+        font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:0;margin-bottom:10px}
+.q-item .stem{margin:6px 0 12px}
+.q-item .ask{font-weight:600;margin:12px 0}
+.q-item ol.choices{list-style:upper-alpha;padding-left:26px;margin:12px 0 16px}
+.q-item ol.choices li{margin:6px 0}
+.reveal{display:none;border-top:1px dashed var(--line-d);margin-top:16px;padding-top:16px}
+.reveal.open{display:block}
+.reveal .ans{font-weight:700;color:var(--green);font-size:17px;margin:0 0 10px}
+.reveal .why{margin:10px 0 0}
+.reveal .why-not{margin:12px 0 0;font-size:16px}
+.reveal .why-not li{color:var(--muted)}
+.reveal .why-not li strong{color:var(--ink)}
+.toggle{font-size:14.5px}
+
+/* ---------------------------------------------------------------- misc */
+details{border:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+        border-radius:0;padding:16px 0;margin:26px 0;background:none}
+details summary{font-family:APSerif,Georgia,'Times New Roman',serif;font-weight:600;color:var(--accent);cursor:pointer;font-size:18px}
+details[open] summary{margin-bottom:10px}
+
+figure{margin:32px 0}
+figure img{max-width:100%;height:auto;display:block;border:1px solid var(--line);
+      border-radius:3px;background:#fff}
+figure.plain img{border:none}
+figcaption{font-size:15px;color:var(--muted);margin-top:10px;line-height:1.55}
+figure.half{max-width:460px}
+figure.center{margin-left:auto;margin-right:auto}
+.hero{margin:0 0 30px;border-radius:3px;overflow:hidden;border:1px solid var(--line)}
+.hero img{display:block;width:100%;height:auto}
+.img-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin:28px 0}
+.img-row figure{margin:0}
+
+footer{margin-top:62px;padding:26px 0 0;border-top:1px solid var(--line);font-size:15px;color:var(--muted)}
+footer p{margin:5px 0}
+body > footer{background:var(--surface);margin-top:62px;padding:28px 0 34px}
+body > footer .wrap{padding-bottom:0}
+
+.pagenav{display:flex;flex-wrap:wrap;gap:1px;margin:34px 0 0;background:var(--line);
+       border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.pagenav a{flex:1 1 220px;border:0;border-radius:0;padding:18px 20px;text-decoration:none;
+       color:inherit;background:var(--surface)}
+.pagenav a:hover{background:#f6f9f9}
+.pagenav .dir{display:block;font-size:11px;font-weight:700;letter-spacing:.14em;
+       text-transform:uppercase;color:var(--accent2)}
+.pagenav .t{display:block;font-family:APSerif,Georgia,'Times New Roman',serif;font-weight:700;color:var(--ink);margin-top:4px}
+
+/* Any table too wide for the screen scrolls sideways instead of pushing the page. */
+.tscroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:30px 0}
+.tscroll > table{margin-top:0;margin-bottom:0;min-width:520px}
+
+/* ------------------------------------------------- wide break-out on big screens */
+@media (min-width:1040px){
+  .widget,.tscroll:has(table.wide),.grid,.bleed{width:940px;margin-left:-100px;max-width:none}
+  table.wide{min-width:0}
+}
+
+/* ---------------------------------------------------------------- responsive */
+@media (max-width:760px){
+  body{font-size:17px;line-height:1.65}
+  header.top,.masthead{padding:32px 20px 28px}
+  header.top h1,.masthead h1{font-size:30px}
+  header.top p.tag,header.top .sub,.masthead p.tag{font-size:17.5px}
+  h2{font-size:25px;margin:42px 0 12px}
+  h3{font-size:20px}
+  .wrap,.crumbs .inner,.crumbs .wrap,header.top .inner,.masthead .wrap,nav.jump ul{padding-left:20px;padding-right:20px}
+  nav.jump ul{gap:0 16px}
+  nav.jump a{padding:12px 0;font-size:13.5px}
+  .widget{padding:20px 18px}
+  .ro .v{font-size:24px}
+  .readouts{gap:20px}
+  .resource{flex-direction:column;align-items:flex-start;gap:8px}
+  table{font-size:16px}
+}
+
+/* ---------------------------------------------------------------- print */
+@media print{
+  body{background:#fff;font-size:11pt;color:#000}
+  nav.jump,.crumbs,button,.btnrow,input[type=range],.pagenav,.toggle{display:none!important}
+  header.top,.masthead{background:#fff!important;color:var(--ink)!important;padding:0 0 14px;border:0}
+  .widget,.tscroll,.bleed{width:auto!important;margin-left:0!important;overflow:visible!important}
+  .tscroll > table,table.wide{min-width:0!important}
+  .reveal{display:block!important}
+  .worked{display:block!important}
+  .widget,.q-item,.box,.note,table,details,figure,.hero,.img-row,.grid .card{
+     break-inside:avoid;page-break-inside:avoid}
+  h2,h3{break-after:avoid}
+  @page{size:A4;margin:15mm}
+}
+
+/* ------------------------------------------------ research methods page extras */
+.yes{color:var(--green);font-weight:700}
+.no{color:var(--red);font-weight:700}
+.claim-yes{color:var(--green);font-weight:600}
+.claim-no{color:var(--red);font-weight:600}
+.signals{font-style:italic;color:var(--blue)}
+
+.split{display:grid;grid-template-columns:1fr 1fr;gap:1px;margin:30px 0;background:var(--line);
+       border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.panel{background:var(--surface);padding:22px 24px}
+.panel h4{margin-top:0;font-size:18px}
+.panel.is-method h4{color:var(--green)}
+.panel.is-tool h4{color:var(--accent2)}
+.panel ul{padding-left:20px;margin-bottom:0}
+
+.tree{margin:32px 0}
+.step{display:grid;grid-template-columns:34px 1fr;gap:18px;background:var(--surface);
+      border:1px solid var(--line);border-radius:4px;padding:20px 22px;margin-bottom:12px}
+.step .n{font-family:APSerif,Georgia,serif;color:var(--accent2);font-weight:700;font-size:24px;
+      line-height:1.2;text-align:center}
+.step .q{font-weight:600;font-size:18px;margin:0 0 10px}
+.step .out{font-size:16px;padding:0 0 0 16px;border-left:3px solid var(--green);margin:10px 0 0;
+      color:var(--ink-soft)}
+.step .out strong{color:var(--green)}
+.step .nope{font-size:16px;color:var(--muted);margin:10px 0 0;font-style:italic}
+.arrow{text-align:center;color:var(--line-d);font-size:20px;line-height:1;margin:-4px 0 8px}
+
+.mcard{border:1px solid var(--line);border-radius:4px;background:var(--surface);margin:28px 0;
+      overflow:hidden}
+.mcard > .head{border-bottom:2px solid var(--ink);padding:16px 24px;display:flex;
+      justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;background:var(--surface)}
+.mcard > .head .name{font-family:APSerif,Georgia,serif;font-size:23px;font-weight:700;color:var(--ink)}
+.mcard > .head .tag{font-size:11px;text-transform:uppercase;letter-spacing:.14em;font-weight:700;
+      color:var(--accent2);white-space:nowrap}
+.mcard.exp > .head{border-bottom-color:var(--green)}
+.mcard.exp > .head .name{color:var(--green)}
+.mcard.exp > .head .tag{color:var(--green)}
+.mcard > .body{padding:20px 24px 24px}
+.mcard dl{margin:0}
+.mcard dt{font-weight:700;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;
+      color:var(--accent2);margin-top:20px}
+.mcard dt:first-child{margin-top:0}
+.mcard dd{margin:6px 0 0}
+.mcard dd ul{margin:6px 0 0}
+
+.drill{border:0}
+.drill-row{display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;
+      padding:16px 0;border-bottom:1px solid var(--line)}
+.drill-row:first-child{border-top:1px solid var(--line)}
+.drill-row:last-child{border-bottom:1px solid var(--line)}
+.drill-row .stem{font-size:17px}
+.drill-row .ans-slot{min-width:210px;text-align:right;font-weight:700;color:var(--green);
+      font-size:15.5px;cursor:pointer;user-select:none;border-radius:3px;padding:3px 7px}
+.drill-row .ans-slot:hover{background:var(--soft)}
+.drill-row .ans-slot:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.drill-row .ans-slot .ph{display:none;color:var(--muted);font-weight:700;font-size:13px;
+      letter-spacing:.14em;text-transform:uppercase}
+.drill-row .ans-slot.hidden-ans .ph{display:inline}
+.drill-row .ans-slot.hidden-ans .txt{display:none}
+
+@media (max-width:760px){
+  .split{grid-template-columns:1fr}
+  .drill-row{grid-template-columns:1fr;gap:6px}
+  .drill-row .ans-slot{text-align:left;min-width:0;padding-left:0}
+}
+@media print{
+  .split{grid-template-columns:1fr 1fr}
+  .drill-row .ans-slot .txt{display:inline!important}
+  .drill-row .ans-slot .ph{display:none!important}
+  .mcard,.q-item,.panel,.step,.drill,.drill-row{break-inside:avoid;page-break-inside:avoid}
+}
+
+/* ------------------------------------------------ unit 4 topic page extras */
+.eq{list-style:none;padding:0;margin:20px 0}
+.eq li{padding:12px 0 12px 18px;border-left:3px solid var(--accent);margin:10px 0;background:var(--surface);
+      font-family:APSerif,Georgia,serif;font-size:19px}
+.loop{counter-reset:loop;list-style:none;padding:0;margin:24px 0}
+.loop li{counter-increment:loop;position:relative;padding:14px 18px 14px 58px;background:var(--surface);
+      border:1px solid var(--line);border-radius:4px;margin:0 0 10px}
+.loop li::before{content:counter(loop);position:absolute;left:18px;top:12px;font-family:APSerif,Georgia,serif;
+      font-weight:700;font-size:24px;color:var(--accent2)}
+.pair{border:1px solid var(--line);border-radius:4px;background:var(--surface);margin:26px 0;overflow:hidden}
+.pair > .head{padding:14px 22px;border-bottom:2px solid var(--ink);font-family:APSerif,Georgia,serif;
+      font-size:21px;font-weight:700}
+.pair .cols{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line)}
+.pair .cols.three{grid-template-columns:1fr 1fr 1fr}
+.pair .col{background:var(--surface);padding:18px 22px}
+.pair .col h4{margin:0 0 6px;color:var(--accent)}
+.pair .col p{margin:8px 0;font-size:16.5px}
+.pair .col .ex{color:var(--ink-soft);font-style:italic}
+.pair .tell{padding:14px 22px;background:var(--soft2);font-size:16.5px;border-top:1px solid var(--line)}
+.pair .tell strong{color:var(--accent2)}
+
+/* detective + quiz */
+.score{font-size:15px;font-weight:700;color:var(--muted);letter-spacing:.04em}
+.score b{color:var(--green);font-size:18px}
+.case{border-top:1px solid var(--line);padding:20px 0}
+.case:last-of-type{border-bottom:1px solid var(--line)}
+.case .cnum{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent2)}
+.case .ctext{margin:6px 0 12px;font-size:17.5px}
+.opts{display:flex;flex-wrap:wrap;gap:10px}
+.opts button{flex:0 1 auto}
+.opts.stack{flex-direction:column;align-items:stretch}
+.opts.stack button{text-align:left;font-weight:400;font-size:16.5px;color:var(--ink);border-color:var(--line-d);line-height:1.5}
+.opts.stack button:hover{background:var(--soft);color:var(--ink)}
+.opts button.right,.opts button.right:hover{background:var(--green);border-color:var(--green);color:#fff}
+.opts button.wrong,.opts button.wrong:hover{background:var(--red-s);border-color:var(--red);color:var(--red)}
+.opts button:disabled{opacity:1;cursor:default}
+.opts button.dim{opacity:.5}
+.fb{display:none;margin:14px 0 0;padding:12px 16px;border-left:3px solid var(--green);background:var(--green-s);font-size:16.5px}
+.fb.miss{border-left-color:var(--red);background:var(--red-s)}
+.fb.open{display:block}
+.fb strong{display:block;margin-bottom:4px}
+.tabs{display:flex;gap:0;border-bottom:1px solid var(--line);margin:8px 0 6px}
+.tabs button{border:0;border-bottom:2px solid transparent;border-radius:0;background:none;color:var(--muted);padding:10px 16px 10px 0;margin-right:14px}
+.tabs button:hover{background:none;color:var(--accent)}
+.tabs button[aria-selected="true"]{color:var(--accent);border-bottom-color:var(--accent)}
+.done{display:none;margin:20px 0 0;font-weight:600}
+.done.open{display:block}
+
+@media (max-width:760px){
+  .pair .cols,.pair .cols.three{grid-template-columns:1fr}
+}
+@media print{
+  .fb{display:block!important}
+  .case,.pair,.loop li{break-inside:avoid;page-break-inside:avoid}
+}
+
+.pr{border-top:1px solid var(--line);padding:22px 0}
+.pr:first-child{border-top:0;padding-top:6px}
+.pr .study{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent2)}
+.pr .setup{margin:6px 0 4px;font-size:17px}
+.pr .ask{font-weight:600;margin:10px 0 4px}
+.pr .guessrow{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.pr .guessrow input{flex:1 1 240px}
+.pr .gv{font-family:APSerif,Georgia,serif;font-size:28px;font-weight:700;color:var(--accent);min-width:74px}
+.bars{display:none;margin:16px 0 0}
+.bars.open{display:block}
+.bar{display:grid;grid-template-columns:120px 1fr 64px;align-items:center;gap:12px;margin:8px 0;font-size:15px}
+.bar .lab{font-weight:700;color:var(--muted);font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+.bar .track{background:var(--soft);height:22px;border-radius:2px;position:relative;overflow:hidden}
+.bar .fill{position:absolute;left:0;top:0;bottom:0;background:var(--accent);transition:width .6s ease}
+.bar.you .fill{background:var(--accent2)}
+.bar .num{font-weight:700;text-align:right}
+.bars .why{margin:12px 0 0;font-size:16.5px;padding-left:16px;border-left:3px solid var(--line-d)}
+.prsum{display:none;margin:18px 0 0;padding:14px 18px;background:var(--soft);border-radius:3px;font-size:16.5px}
+.prsum.open{display:block}
+@media print{.bars{display:block!important}}
+
+</style>
+</head>
+
+<body>
+<div class="crumbs">
+  <div class="inner">
+    <a href="../index.html">AP Psychology</a>
+    <span class="sep">&rsaquo;</span>
+    <a href="index.html">Unit 4</a>
+    <span class="sep">&rsaquo;</span>
+    <span class="here">4.3A Social Influence</span>
+  </div>
+</div>
+
+<header class="top">
+  <div class="inner">
+    <h1>Social Influence</h1>
+    <p class="tag">Norms, conformity, obedience, persuasion, and compliance: why the same person acts so differently depending on who is in the room</p>
+    <p class="meta">AP Psychology &bull; Unit 4: Social Psychology and Personality &bull; CED Topic 4.3 (Learning Objective 4.3.A)</p>
+  </div>
+</header>
+
+<nav class="jump">
+  <ul>
+    <li><a href="#start">Start Here</a></li>
+    <li><a href="#terms">Key Terms</a></li>
+    <li><a href="#norms">Norms and Roles</a></li>
+    <li><a href="#conformity">Conformity</a></li>
+    <li><a href="#obedience">Obedience</a></li>
+    <li><a href="#persuasion">Persuasion</a></li>
+    <li><a href="#compliance">Compliance</a></li>
+    <li><a href="#mixups">Don't Mix These Up</a></li>
+    <li><a href="#predict">Predict, Then Reveal</a></li>
+    <li><a href="#detective">Influence Sorter</a></li>
+    <li><a href="#quiz">Self-Check Quiz</a></li>
+    <li><a href="#traps">AP Exam Traps</a></li>
+  </ul>
+</nav>
+
+<div class="wrap">
+
+<h2 id="start"><span class="num">1</span>Start Here</h2>
+
+<p class="lede">Most people believe they would never go along with an obviously wrong group, obey an order to hurt someone, or fall for a sales trick. The research on this page says most people are wrong about themselves. This topic is about the pressure other people put on us, whether it comes from the group beside us, an authority above us, or a message designed to change our minds.</p>
+
+<ul class="eq">
+  <li>Why do people go along with a group, even when the group is clearly wrong?</li>
+  <li>How far will ordinary people go when an authority tells them to?</li>
+  <li>What makes a message, or a request, persuasive?</li>
+</ul>
+
+<div class="box note">
+  <span class="label">How to use this page</span>
+  <p>Read the key terms and sections first. Then test your intuitions in <a href="#predict">Predict, Then Reveal</a>, sort scenarios in the <a href="#detective">Influence Sorter</a>, and finish with the <a href="#quiz">Self-Check Quiz</a>. Nothing you click is recorded or graded.</p>
+</div>
+
+<h2 id="terms"><span class="num">2</span>Key Terms at a Glance</h2>
+
+<div class="tscroll">
+<table class="wide">
+  <thead><tr><th style="width:32%">Term</th><th>What it means</th></tr></thead>
+  <tbody>
+    <tr><td class="term">Social norms</td><td>A group's spoken or unspoken rules for acceptable attitudes and behavior.</td></tr>
+    <tr><td class="term">Role</td><td>A set of expected behaviors attached to a social position.</td></tr>
+    <tr><td class="term">Conformity</td><td>Adjusting our behavior or thinking to match a group standard.</td></tr>
+    <tr><td class="term">Chameleon effect</td><td>Unconsciously mimicking other people's expressions, postures, and tone.</td></tr>
+    <tr><td class="term">Normative social influence</td><td>Conforming to gain approval or avoid rejection (to fit in).</td></tr>
+    <tr><td class="term">Informational social influence</td><td>Conforming because we believe others know something we do not (to be right).</td></tr>
+    <tr><td class="term">Obedience</td><td>Changing behavior in response to a direct command from an authority figure.</td></tr>
+    <tr><td class="term">Persuasion</td><td>Changing attitudes or behavior through communication.</td></tr>
+    <tr><td class="term">Central route</td><td>Persuasion through careful thought about the strength of the arguments and evidence.</td></tr>
+    <tr><td class="term">Peripheral route</td><td>Persuasion through surface cues such as attractiveness, celebrity, or emotion.</td></tr>
+    <tr><td class="term">Halo effect</td><td>One positive impression spilling over into judgments of unrelated traits.</td></tr>
+    <tr><td class="term">Compliance</td><td>Changing behavior in response to a request (not a command).</td></tr>
+    <tr><td class="term">Foot-in-the-door</td><td>A small request first, to increase agreement with a larger request later.</td></tr>
+    <tr><td class="term">Door-in-the-face</td><td>A large request that is refused, followed by a smaller one that now seems reasonable.</td></tr>
+    <tr><td class="term">Low-ball technique</td><td>Getting agreement to an attractive deal, then revealing added costs.</td></tr>
+    <tr><td class="term">Reciprocity norm</td><td>The expectation that we return favors and help those who have helped us.</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2 id="norms"><span class="num">3</span>Norms and Roles</h2>
+<p><span class="term">Social norms</span> are a group's rules for how members should behave. Most are unspoken: we queue for the MRT, lower our voices in the library, and face forward in an elevator, though no one ever taught us these as rules. You notice a norm most clearly the moment someone breaks it. The discomfort you feel is the norm working.</p>
+<p>A <span class="term">role</span> is the set of norms attached to a position: student, customer, team captain, employee. Stepping into a new role often feels like acting at first. A new teacher feels like a fraud; a new team captain feels awkward giving instructions. Then, gradually, the role becomes real. What we do, we slowly become.</p>
+
+<h2 id="conformity"><span class="num">4</span>Conformity</h2>
+
+<p><span class="term">Conformity</span> is adjusting our behavior or thinking to match a group. Some of it is automatic: the <span class="term">chameleon effect</span> is our tendency to unconsciously mimic other people's expressions and postures. We yawn when others yawn and laugh when others laugh.</p>
+
+<h3>Sherif: how norms are born</h3>
+<p>Muzafer Sherif (1936) used an optical illusion: a still point of light in a dark room appears to move. Alone, people gave very different estimates of how far it moved. In groups, their estimates converged on a shared number, and each person kept using the group's number later, even alone. Groups create norms, and once formed, those norms stick inside us.</p>
+
+<h3>Asch: conforming to the obvious wrong answer</h3>
+<p>Solomon Asch (1951) asked people to match a line to one of three comparison lines, an easy task with an obvious answer. The other "participants" were actors who confidently gave the same wrong answer. Real participants went along with the group's clearly incorrect choice about <strong>one-third of the time</strong>. Alone, people made errors less than 1 percent of the time.</p>
+
+<div class="box key">
+  <span class="label">We conform more when we</span>
+  <ul>
+    <li>feel incompetent or insecure</li>
+    <li>are in a group of at least three people</li>
+    <li>face a <strong>unanimous</strong> group (a single ally breaks the spell)</li>
+    <li>admire the group's status</li>
+    <li>have made no prior public commitment</li>
+    <li>are being watched, especially in a culture that strongly values fitting in</li>
+  </ul>
+</div>
+
+<h3>Why we conform: two pressures</h3>
+<div class="split">
+  <div class="panel is-method">
+    <h4>Normative social influence</h4>
+    <p>We conform to <strong>be liked</strong> and avoid rejection, even when we privately disagree.</p>
+    <p><em>Laughing at a joke you did not find funny. Dressing like your friend group.</em></p>
+  </div>
+  <div class="panel is-tool">
+    <h4>Informational social influence</h4>
+    <p>We conform because we think others <strong>know better</strong>.</p>
+    <p><em>Following the crowd to the exit in an unfamiliar building. Checking reviews before you buy.</em></p>
+  </div>
+</div>
+<p>Quick test: "I want them to like me" is normative. "They must know something I don't" is informational.</p>
+
+<h2 id="obedience"><span class="num">5</span>Obedience</h2>
+
+<p><span class="term">Obedience</span> is changing behavior at the direct command of an authority figure. Conformity is sideways pressure from peers; obedience is top-down pressure from someone with perceived authority. After World War II, psychologists wanted to know how so many ordinary people took part in atrocities by "just following orders."</p>
+
+<h3>Milgram's obedience study</h3>
+<p>Stanley Milgram (1963) told participants they were helping with a "learning experiment." Each time the "learner" in the next room answered wrong, the participant was told to deliver a stronger electric shock, rising in steps to 450 volts. When participants hesitated, the experimenter calmly said, "The experiment requires that you continue." No shocks were real, but participants did not know that.</p>
+<p>About <strong>65 percent</strong> obeyed all the way to 450 volts, despite the learner's screams. They were not monsters: many sweated, trembled, and protested, and most kept going anyway.</p>
+
+<div class="tscroll">
+<table class="wide">
+  <caption>What raised and lowered obedience in Milgram's variations</caption>
+  <thead><tr><th>Obedience went up when...</th><th>Obedience went down when...</th></tr></thead>
+  <tbody>
+    <tr><td>the authority was physically present</td><td>the experimenter gave orders by phone</td></tr>
+    <tr><td>the authority seemed legitimate (a prestigious university)</td><td>the setting seemed less official</td></tr>
+    <tr><td>the victim was distant or unseen</td><td>the victim was in the same room, or had to be touched</td></tr>
+    <tr><td>no one else defied the orders</td><td>other "participants" refused to continue</td></tr>
+  </tbody>
+</table>
+</div>
+
+<p>At his trial, Nazi organizer Adolf Eichmann claimed he was simply obeying orders. Philosopher Hannah Arendt called this the <strong>"banality of evil"</strong>: great harm often comes not from cartoon villains but from ordinary people who stop thinking and defer to authority. Yet some people resist. The lone man who stood in front of a column of tanks at Tiananmen Square in 1989 shows that defiance is possible, and like the single ally in Asch's study, one person refusing makes it easier for others to refuse.</p>
+
+<h3>Zimbardo: the power of the role</h3>
+<p>Philip Zimbardo's 1971 Stanford Prison study randomly assigned college students to be "guards" or "prisoners." Within days, many guards became cruel and prisoners broke down, and the planned two-week study was stopped after six days. Zimbardo's conclusion was "bad barrels, not bad apples": put ordinary people into a toxic situation and role, and the situation often wins.</p>
+
+<div class="box warn">
+  <span class="label">A research methods caution</span>
+  <p>The Stanford Prison study has serious criticisms. There was no control group, the sample was small, Zimbardo himself acted as the prison "superintendent," and later recordings suggest some guards were coached to be tough. The AP exam still uses it to illustrate the power of roles and situations, but be ready to name its flaws. Milgram's and Zimbardo's studies also raise major ethical issues about deception and harm to participants, which is part of why today's ethics rules exist.</p>
+</div>
+
+<h2 id="persuasion"><span class="num">6</span>Persuasion</h2>
+
+<p>Imagine a brand-new soda called Starlight. Ad 1 shows your favorite celebrity laughing on a beach and taking a sip. Ad 2 cites independent lab tests showing Starlight has 75 percent less sugar than the leading cola. Both might work, but through different routes.</p>
+
+<div class="split">
+  <div class="panel is-method">
+    <h4>Central route</h4>
+    <p>Persuasion through the <strong>strength of the arguments and evidence</strong>. Needs an audience that is motivated and able to think it through. Slower, but produces lasting change.</p>
+    <p><em>The lab-test ad.</em></p>
+  </div>
+  <div class="panel is-tool">
+    <h4>Peripheral route</h4>
+    <p>Persuasion through <strong>surface cues</strong>: a celebrity, attractiveness, music, good feelings. Fast, but tends to fade.</p>
+    <p><em>The celebrity beach ad.</em></p>
+  </div>
+</div>
+
+<p>The <span class="term">halo effect</span> powers a lot of peripheral persuasion: one positive trait colors judgments of unrelated traits. An attractive, confident job candidate is rated as more competent; someone who loves one product from a brand assumes everything the brand makes is great. That is why companies pay likable celebrities to stand next to their products.</p>
+
+<h2 id="compliance"><span class="num">7</span>Compliance Techniques</h2>
+<p><span class="term">Compliance</span> is going along with a <strong>request</strong>. These techniques are built to make "yes" more likely.</p>
+
+<div class="tscroll">
+<table class="wide">
+  <thead><tr><th style="width:24%">Technique</th><th style="width:36%">The move</th><th>Example</th></tr></thead>
+  <tbody>
+    <tr><td class="term">Foot-in-the-door</td><td>Small request <strong>first</strong>, bigger request later. Saying yes again feels consistent with who you just showed yourself to be.</td><td>"Can you sign this petition?" A week later: "Can you volunteer for our campaign?"</td></tr>
+    <tr><td class="term">Door-in-the-face</td><td>Huge request <strong>first</strong> (refused), then a smaller one that seems like a fair compromise.</td><td>"Can you volunteer 10 hours a week for two years?" "No." "Could you help at one event this weekend?"</td></tr>
+    <tr><td class="term">Low-ball</td><td>Agree to an attractive deal, then the added costs appear. Once committed, people often stick with it.</td><td>"Great price!" At checkout: "That didn't include the service fees."</td></tr>
+    <tr><td class="term">Reciprocity norm</td><td>A gift or favor creates pressure to give something back.</td><td>A free sample at the night market, then feeling you should buy something.</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2 id="mixups"><span class="num">8</span>Don't Mix These Up</h2>
+
+<div class="pair">
+  <div class="head">Conformity vs. obedience vs. compliance</div>
+  <div class="cols three">
+    <div class="col"><h4>Conformity</h4><p>Pressure from <strong>peers</strong>. Nobody has to ask.</p><p class="ex">Everyone at the table orders dessert, so you do too.</p></div>
+    <div class="col"><h4>Obedience</h4><p>A <strong>command</strong> from an <strong>authority</strong>.</p><p class="ex">A manager orders you to stay late.</p></div>
+    <div class="col"><h4>Compliance</h4><p>A <strong>request</strong>, often from an equal or a stranger.</p><p class="ex">A classmate asks to borrow your notes.</p></div>
+  </div>
+  <div class="tell"><strong>The tell:</strong> ask who is applying the pressure and how. A group just being there points to conformity, an order from above to obedience, and a request to compliance.</div>
+</div>
+
+<div class="pair">
+  <div class="head">Normative vs. informational social influence</div>
+  <div class="cols">
+    <div class="col"><h4>Normative</h4><p>To <strong>fit in</strong>. You privately disagree.</p><p class="ex">Saying you love the new song everyone likes, though you don't.</p></div>
+    <div class="col"><h4>Informational</h4><p>To <strong>be right</strong>. You think they know more.</p><p class="ex">Copying how locals buy a train ticket in a country where you can't read the signs.</p></div>
+  </div>
+  <div class="tell"><strong>The tell:</strong> ambiguous or unfamiliar situations point to informational influence. A situation where you already know the answer but go along anyway points to normative influence (Asch's lines).</div>
+</div>
+
+<div class="pair">
+  <div class="head">Foot-in-the-door vs. door-in-the-face</div>
+  <div class="cols">
+    <div class="col"><h4>Foot-in-the-door</h4><p><strong>Small, then big.</strong></p></div>
+    <div class="col"><h4>Door-in-the-face</h4><p><strong>Big (refused), then small.</strong></p></div>
+  </div>
+  <div class="tell"><strong>The tell:</strong> the order of the requests is the entire answer. Picture a salesperson getting a foot in a door that is still open, versus having a door slammed in their face first.</div>
+</div>
+
+<div class="pair">
+  <div class="head">Central vs. peripheral route</div>
+  <div class="cols">
+    <div class="col"><h4>Central</h4><p>Evidence, statistics, reasons. The audience is motivated and thinking.</p></div>
+    <div class="col"><h4>Peripheral</h4><p>Looks, fame, catchy music, emotion, number of arguments rather than their quality.</p></div>
+  </div>
+  <div class="tell"><strong>The tell:</strong> ask whether the audience was persuaded by the <em>message</em> itself or by something <em>around</em> the message.</div>
+</div>
+
+<div class="pair">
+  <div class="head">Asch vs. Milgram vs. Zimbardo</div>
+  <div class="cols three">
+    <div class="col"><h4>Asch</h4><p><strong>Conformity</strong> to a group about line lengths.</p></div>
+    <div class="col"><h4>Milgram</h4><p><strong>Obedience</strong> to an authority giving "shocks."</p></div>
+    <div class="col"><h4>Zimbardo</h4><p>The power of <strong>roles</strong> and situations in a mock prison.</p></div>
+  </div>
+  <div class="tell"><strong>The tell:</strong> all three show the power of the situation over personality, which links straight back to the fundamental attribution error in 4.1.</div>
+</div>
+
+<h2 id="predict"><span class="num">9</span>Predict, Then Reveal</h2>
+<p>People are famously bad at predicting their own behavior in these studies. Slide to your best guess, lock it in, then see what really happened.</p>
+
+<div class="widget" id="predictBox">
+  <h3>How would people really act? <span class="tryit">Guess first</span></h3>
+  <div id="prList"></div>
+  <p class="prsum" id="prSum" aria-live="polite"></p>
+</div>
+
+<h2 id="detective"><span class="num">10</span>Influence Sorter</h2>
+<p>Three rounds. Round 1: what kind of social influence? Round 2: why did they conform? Round 3: name the persuasion route or compliance technique.</p>
+
+<div class="widget" id="det">
+  <h3>Sort the influence <span class="tryit">Try it</span></h3>
+  <div class="tabs" role="tablist"></div>
+  <p class="score" aria-live="polite">Score: <b id="detScore">0</b> / <span id="detTotal">0</span> answered</p>
+  <div id="detCases"></div>
+  <p class="done" id="detDone"></p>
+  <div class="btnrow"><button type="button" id="detReset">Start this round over</button></div>
+</div>
+
+<h2 id="quiz"><span class="num">11</span>Self-Check Quiz</h2>
+<p>Ten AP-style questions. Click an answer to see whether you were right and why. Your score stays on this screen only.</p>
+
+<div class="widget" id="quizBox">
+  <h3>Check yourself <span class="tryit">Four choices each</span></h3>
+  <p class="score" aria-live="polite">Score: <b id="qScore">0</b> / <span id="qDone">0</span> answered of <span id="qTotal">0</span></p>
+  <div id="quizList"></div>
+  <p class="done" id="qFinal"></p>
+  <div class="btnrow"><button type="button" id="qReset">Start the quiz over</button></div>
+</div>
+
+<h2 id="traps"><span class="num">12</span>AP Exam Traps</h2>
+<div class="box warn">
+  <span class="label">Watch for these</span>
+  <ul>
+    <li><strong>Conformity is sideways; obedience is top-down; compliance is a request.</strong> Scenarios will try to blur them.</li>
+    <li><strong>Normative = fit in. Informational = be right.</strong> Memorize which is which.</li>
+    <li><strong>Know the headline numbers:</strong> Asch, about one-third conformity on critical trials; Milgram, about 65 percent full obedience.</li>
+    <li><strong>Milgram's obedience rose</strong> with a present, legitimate authority and fell with a close victim or a defiant peer.</li>
+    <li><strong>Foot-in-the-door = small then big. Door-in-the-face = big then small.</strong> The order is the whole answer.</li>
+    <li><strong>The halo effect is a peripheral-route tool.</strong> One good trait spills onto unrelated judgments.</li>
+    <li><strong>On "apply" prompts,</strong> name the technique and point to the exact move in the scenario that proves it.</li>
+  </ul>
+</div>
+
+<div class="box note">
+  <span class="label">Connections across the course</span>
+  <p><strong>Topic 4.1:</strong> Milgram and Zimbardo are the strongest evidence against the fundamental attribution error. <strong>Topic 4.2:</strong> persuasion is how attitudes get formed and changed. <strong>Topic 4.3B:</strong> deindividuation and groupthink show what groups do to the individual. <strong>Unit 0:</strong> these studies are why informed consent, debriefing, and ethics review boards exist.</p>
+</div>
+
+<div class="pagenav">
+  <a href="attitude-formation-and-change.html"><span class="dir">&larr; Previous</span><span class="t">4.2 Attitude Formation and Change</span></a>
+  <a href="group-cultural-prosocial-behavior.html"><span class="dir">Next &rarr;</span><span class="t">4.3B/C Group, Cultural, and Prosocial Behavior</span></a>
+</div>
+
+<footer>
+  <p>AP Psychology, Unit 4: Social Psychology and Personality. Topic 4.3 (4.3.A), aligned to the 2024 Course and Exam Description.</p>
+  <p>Don West, AP Psychology Teacher. Questions? Message me on Canvas or ask at the start of class.</p>
+</footer>
+
+</div>
+
+<script>
+(function () {
+  var ITEMS = [
+    { study: 'Asch (1951): the line test, alone', setup: 'Participants alone matched a line to one of three comparison lines.', ask: 'What percentage of the time did people pick the wrong line when alone?', actual: 0.9, shown: 'Less than 1%', why: 'The task was easy. Almost no one gets it wrong alone, which is what makes the group results so striking.' },
+    { study: 'Asch (1951): with a unanimous wrong group', setup: 'Now the participant hears several confident group members give the same obviously wrong answer first.', ask: 'On those trials, what percentage of answers went along with the wrong group?', actual: 33, shown: 'About 33%', why: 'Participants went along with a clearly wrong answer on roughly one-third of trials. Many later said they doubted their own eyes or did not want to stand out.' },
+    { study: 'Asch (1951): at least once', setup: 'Each participant faced a dozen of these group-pressure trials.', ask: 'What percentage of participants conformed at least once?', actual: 75, shown: 'About 75%', why: 'Roughly three out of four people conformed at least once. Conformity is not something only "weak" people do.' },
+    { study: 'Asch: one ally', setup: 'Same setup, but one group member gives the correct answer before the participant.', ask: 'With one ally, what percentage of answers conformed to the wrong majority?', actual: 5, shown: 'About 5%', why: 'A single dissenter cut conformity by roughly 80 percent. Unanimity is what gives a group its power.' },
+    { study: 'Milgram (1963): the experts predict', setup: 'Before the study, Milgram asked psychiatrists to predict how many people would go all the way to 450 volts.', ask: 'What percentage did the psychiatrists predict would go all the way?', actual: 0.1, num: '0.1%', shown: 'About 0.1% (1 in 1,000)', why: 'The experts assumed only a rare, disturbed person would go all the way. That is the fundamental attribution error at work: they underestimated the situation.' },
+    { study: 'Milgram (1963): what really happened', setup: 'Ordinary adult men, a calm experimenter in a lab coat, and a learner screaming from the next room.', ask: 'What percentage actually obeyed all the way to 450 volts?', actual: 65, shown: 'About 65%', why: 'Nearly two-thirds went to the maximum. Many were visibly distressed, and they obeyed anyway.' },
+    { study: 'Milgram variation: orders by phone', setup: 'The experimenter leaves the room and gives the commands over the telephone.', ask: 'What percentage obeyed fully?', actual: 21, shown: 'About 21%', why: 'When the authority was not physically present, obedience dropped by about two-thirds.' },
+    { study: 'Milgram variation: two peers refuse', setup: 'Two other "teachers" (actors) refuse to continue partway through.', ask: 'What percentage obeyed fully?', actual: 10, shown: 'About 10%', why: 'Seeing others defy the authority gave people permission to refuse. This is the same "one ally" effect Asch found.' }
+  ];
+  var list = document.getElementById('prList'), done = 0, gap = 0;
+  ITEMS.forEach(function (it, i) {
+    var d = document.createElement('div');
+    d.className = 'pr';
+    d.innerHTML = '<span class="study"></span><p class="setup"></p><p class="ask"></p>' +
+      '<div class="guessrow"><input type="range" min="0" max="100" step="1" value="50" aria-label="Your guess in percent"><span class="gv">50%</span>' +
+      '<button type="button" class="primary">Lock in my guess</button></div>' +
+      '<div class="bars"><div class="bar you"><span class="lab">Your guess</span><span class="track"><span class="fill" style="width:0"></span></span><span class="num"></span></div>' +
+      '<div class="bar"><span class="lab">Actual</span><span class="track"><span class="fill" style="width:0"></span></span><span class="num"></span></div><p class="why"></p></div>';
+    d.querySelector('.study').textContent = it.study;
+    d.querySelector('.setup').textContent = it.setup;
+    d.querySelector('.ask').textContent = it.ask;
+    var r = d.querySelector('input'), gv = d.querySelector('.gv'), btn = d.querySelector('button');
+    r.addEventListener('input', function () { gv.textContent = r.value + '%'; });
+    btn.addEventListener('click', function () {
+      var g = +r.value; r.disabled = true; btn.disabled = true;
+      var bars = d.querySelector('.bars'); bars.classList.add('open');
+      var fills = bars.querySelectorAll('.fill'), nums = bars.querySelectorAll('.num');
+      nums[0].textContent = g + '%'; nums[1].textContent = it.num || (it.actual < 1 ? '<1%' : it.actual + '%');
+      setTimeout(function () { fills[0].style.width = g + '%'; fills[1].style.width = Math.max(it.actual, 0.6) + '%'; }, 30);
+      bars.querySelector('.why').textContent = it.shown + '. ' + it.why;
+      done++; gap += Math.abs(g - it.actual);
+      if (done === ITEMS.length) {
+        var s = document.getElementById('prSum');
+        s.textContent = 'Your guesses were off by an average of ' + Math.round(gap / ITEMS.length) + ' percentage points. ' +
+          'If you underestimated how many people conformed and obeyed, you are in good company: so did Milgram\'s psychiatrists. That gap between what we predict and what people do is the power of the situation.';
+        s.classList.add('open');
+      }
+    });
+    list.appendChild(d);
+  });
+})();
+
+window.PAGE = {
+  reviewHint: 'Review sections 4 to 7, then start the round over.',
+  rounds: [
+    { tab: 'Round 1: What kind of influence?',
+      options: ['Conformity', 'Obedience', 'Compliance'],
+      cases: [
+        ['Everyone in the group chat changes their profile picture to support a friend, so Jin does too, even though no one asked him.', 0, 'No one requested or ordered anything. Jin matched what the group was doing, which is conformity.'],
+        ['A security guard tells shoppers, "Step back behind the yellow line," and they do.', 1, 'A person with perceived authority gave a direct command. Following it is obedience.'],
+        ['A classmate asks, "Could you save me a seat?" and you do.', 2, 'An equal made a request, and you went along with it. That is compliance.'],
+        ['A nurse follows a doctor\'s order to give a medication dose that seems too high.', 1, 'A command from an authority figure, even against the nurse\'s own judgment, is obedience.'],
+        ['At a concert, everyone around Lin stands up during the chorus. She stands up too.', 0, 'Matching the crowd\'s behavior without any request or command is conformity.'],
+        ['A street volunteer asks you to sign a petition for a new bike lane, and you sign.', 2, 'You agreed to a request from someone with no authority over you. That is compliance.']
+      ]},
+    { tab: 'Round 2: Normative or informational?',
+      options: ['Normative (to fit in)', 'Informational (to be right)'],
+      cases: [
+        ['On the first day at a new job, Sam watches where coworkers put their lunches and does the same.', 1, 'Sam copies others because they know the office routine and he does not. That is informational influence.'],
+        ['Ivy thinks the movie was boring but says she loved it when everyone else in her friend group raves about it.', 0, 'Ivy privately disagrees and goes along to avoid standing out. That is normative influence.'],
+        ['In an Asch-style study, a participant clearly sees that line B matches, but says "A" after everyone else does.', 0, 'The answer is obvious, so the group is not providing information. Going along to avoid disapproval is normative influence.'],
+        ['A fire alarm goes off in an unfamiliar building, and you follow the crowd toward an exit.', 1, 'In an ambiguous emergency, you assume others know the way out. That is informational influence.'],
+        ['A student buys the same brand of sneakers as the popular kids so he will not be teased.', 0, 'The goal is acceptance and avoiding teasing, which is normative influence.'],
+        ['Trying a new restaurant, you order the dish most of the diners around you seem to be eating.', 1, 'You assume the regulars know what is good. Conforming to be correct is informational influence.']
+      ]},
+    { tab: 'Round 3: Name the technique',
+      options: ['Central route', 'Peripheral route', 'Foot-in-the-door', 'Door-in-the-face', 'Low-ball', 'Reciprocity norm'],
+      cases: [
+        ['A phone ad shows a famous K-pop star smiling while holding the phone, with no information about the phone itself.', 1, 'The ad relies on a celebrity and good feelings, not arguments. That is the peripheral route (with a helping of the halo effect).'],
+        ['Before buying a laptop, Daniel reads detailed battery tests and compares repair rates across brands, then chooses one.', 0, 'Daniel is persuaded by carefully weighing evidence. That is the central route.'],
+        ['A charity first asks you to wear a small pin for a week. A month later, they ask you to put a large sign in your front yard.', 2, 'Small request first, bigger request later: foot-in-the-door.'],
+        ['Your friend asks to borrow NT$5,000. You refuse. She then asks for NT$500, and you agree.', 3, 'Big request (refused), then a smaller one that seems reasonable: door-in-the-face.'],
+        ['A dealer agrees to sell you a scooter at a great price. After you shake hands, he adds "mandatory" fees that raise the price by 20 percent. You buy it anyway.', 4, 'Getting your commitment first, then revealing extra costs, is the low-ball technique.'],
+        ['A tea shop hands you a free sample, and you feel you should buy a drink.', 5, 'The free gift creates a sense of owing something back. That is the reciprocity norm.'],
+        ['A public health campaign lists statistics on how seat belts reduce deaths and explains exactly how they work.', 0, 'The message relies on evidence and reasoning, so it targets the central route.'],
+        ['A teacher asks, "Could you stay after school every day this month to tutor?" After you say no, she asks, "Could you tutor just on Friday?"', 3, 'The huge request makes the smaller one look like a compromise. Door-in-the-face.']
+      ]}
+  ],
+  quiz: [
+    ['Jon joins his friends in throwing eggs at houses on Halloween, even though he knows it is wrong and would never do it alone. This best illustrates:',
+      ['obedience', 'the chameleon effect', 'conformity', 'informational social influence'], 2,
+      'Matching the group against his own judgment is conformity. No authority commanded him, and he is not copying because he thinks the group knows better.'],
+    ['In a foreign country where you do not speak the language, you watch what others do at the train station and copy them to buy a ticket. This is:',
+      ['normative social influence', 'informational social influence', 'obedience', 'the door-in-the-face technique'], 1,
+      'You copy others because they know what to do and you do not. Conforming to be right is informational influence.'],
+    ['Which change in Asch\'s procedure most reduced conformity?',
+      ['Making the group larger than 15 people', 'Having one other group member give the correct answer', 'Making the lines more similar in length', 'Having the participant answer last instead of first'], 1,
+      'A single ally broke the group\'s unanimity and cut conformity dramatically. Making the lines harder to judge would actually increase conformity, because the situation becomes more ambiguous.'],
+    ['In Milgram\'s studies, obedience was highest when:',
+      ['the participant could see the learner up close', 'other participants refused to continue', 'the authority figure was physically present and seemed legitimate', 'the experimenter gave orders by telephone'], 2,
+      'A present, legitimate authority produced the most obedience. A close victim, defiant peers, and a remote authority all lowered it.'],
+    ['Milgram\'s and Zimbardo\'s studies are most often used to show:',
+      ['that some personalities are naturally cruel', 'the power of the situation to shape the behavior of ordinary people', 'that people rarely obey authority figures', 'that group decisions are more extreme than individual decisions'], 1,
+      'Both show ordinary people behaving in unexpected, harmful ways because of the situation and their roles. The last option describes group polarization (4.3B).'],
+    ['A voter supports a candidate after carefully reading and comparing detailed policy proposals. This is persuasion through the:',
+      ['peripheral route', 'central route', 'halo effect', 'reciprocity norm'], 1,
+      'Weighing the strength of the arguments and evidence is the central route. Reacting to the candidate\'s looks or charisma would be the peripheral route.'],
+    ['Interviewers rate a well-dressed, attractive applicant as more intelligent and more hardworking, even though they have no evidence of either. This is:',
+      ['the halo effect', 'the foot-in-the-door technique', 'normative social influence', 'the low-ball technique'], 0,
+      'One positive trait (appearance) spills over into judgments of unrelated traits (intelligence, effort). That is the halo effect.'],
+    ['Mary wants $1 donations. She first asks passersby for $20, which is almost always refused, then asks for just $1, which many now give. Mary is using:',
+      ['foot-in-the-door', 'door-in-the-face', 'the low-ball technique', 'the reciprocity norm'], 1,
+      'Large request first, then a smaller one, is door-in-the-face. Foot-in-the-door runs in the opposite order.'],
+    ['A website asks you to answer one quick question about your favorite snack. Afterward, it asks you to complete a 20-minute survey. The website is using:',
+      ['foot-in-the-door', 'door-in-the-face', 'the halo effect', 'obedience'], 0,
+      'A small request first makes a bigger request later more likely. That is foot-in-the-door.'],
+    ['Which is the strongest criticism of Zimbardo\'s Stanford Prison study?',
+      ['It used too many participants to analyze.', 'It lacked a control group, and the researcher played a role in running the prison.', 'It used random assignment to roles.', 'It studied behavior in a real prison rather than a simulation.'], 1,
+      'With no control group and Zimbardo acting as superintendent, it is hard to separate the effect of the roles from the researcher\'s influence. Random assignment is a strength, not a flaw.']
+  ]
+};
+</script>
+<script>
+(function () {
+  var P = window.PAGE || {};
+
+  function markChoice(opts, fbEl, chosen, correct, head, why) {
+    var btns = opts.querySelectorAll('button');
+    btns.forEach(function (x, k) {
+      x.disabled = true;
+      if (k === correct) x.classList.add('right');
+      else if (k === chosen) x.classList.add('wrong');
+      else x.classList.add('dim');
+    });
+    fbEl.className = 'fb open' + (chosen === correct ? '' : ' miss');
+    fbEl.innerHTML = '<strong></strong>';
+    fbEl.firstChild.textContent = head;
+    fbEl.appendChild(document.createTextNode(why));
+  }
+
+  /* ---------------- sorting activity (tabs of rounds) ---------------- */
+  if (P.rounds && document.getElementById('det')) {
+    var round = 0, score = 0, answered = 0;
+    var casesEl = document.getElementById('detCases');
+    var tabsEl = document.querySelector('#det .tabs');
+    P.rounds.forEach(function (r, i) {
+      var t = document.createElement('button');
+      t.type = 'button'; t.setAttribute('role', 'tab');
+      t.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
+      t.textContent = r.tab;
+      t.addEventListener('click', function () {
+        round = i;
+        tabsEl.querySelectorAll('button').forEach(function (x) { x.setAttribute('aria-selected', x === t ? 'true' : 'false'); });
+        renderRound();
+      });
+      tabsEl.appendChild(t);
+    });
+    if (P.rounds.length < 2) tabsEl.style.display = 'none';
+
+    var renderRound = function () {
+      score = 0; answered = 0;
+      var r = P.rounds[round];
+      casesEl.innerHTML = '';
+      if (r.intro) {
+        var ip = document.createElement('p');
+        ip.className = 'commentary'; ip.textContent = r.intro;
+        casesEl.appendChild(ip);
+      }
+      r.cases.forEach(function (c, i) {
+        var options = c[3] || r.options;
+        var d = document.createElement('div');
+        d.className = 'case';
+        d.innerHTML = '<span class="cnum">Case ' + (i + 1) + '</span><p class="ctext"></p><div class="opts' + (r.stack ? ' stack' : '') + '"></div><div class="fb" aria-live="polite"></div>';
+        d.querySelector('.ctext').textContent = c[0];
+        var opts = d.querySelector('.opts');
+        options.forEach(function (label, j) {
+          var b = document.createElement('button');
+          b.type = 'button'; b.textContent = label;
+          b.addEventListener('click', function () {
+            var right = j === c[1];
+            markChoice(opts, d.querySelector('.fb'), j, c[1],
+              (right ? 'Correct: ' : 'Not quite. Correct answer: ') + options[c[1]] + '.', c[2]);
+            answered++; if (right) score++;
+            update();
+            if (answered === r.cases.length) {
+              var done = document.getElementById('detDone');
+              var last = round === P.rounds.length - 1;
+              done.textContent = 'Round complete: ' + score + ' of ' + r.cases.length + '. ' +
+                (!last ? 'Ready for the next round? Use the tabs at the top of the box.' :
+                 score >= Math.ceil(r.cases.length * 0.75) ? 'Strong work. Now try the Self-Check Quiz below.' :
+                 (P.reviewHint || 'Review the sections above, then start the round over.'));
+              done.className = 'done open';
+            }
+          });
+          opts.appendChild(b);
+        });
+        casesEl.appendChild(d);
+      });
+      document.getElementById('detDone').className = 'done';
+      update();
+    };
+    var update = function () {
+      document.getElementById('detScore').textContent = score;
+      document.getElementById('detTotal').textContent = answered;
+    };
+    document.getElementById('detReset').addEventListener('click', renderRound);
+    renderRound();
+  }
+
+  /* ---------------- self-check quiz ---------------- */
+  if (P.quiz && document.getElementById('quizList')) {
+    var qEl = document.getElementById('quizList');
+    var qScore = 0, qDone = 0, LET = ['A', 'B', 'C', 'D'];
+    var n = P.quiz.length;
+    var updateQ = function () {
+      document.getElementById('qScore').textContent = qScore;
+      document.getElementById('qDone').textContent = qDone;
+    };
+    var renderQuiz = function () {
+      qScore = 0; qDone = 0; qEl.innerHTML = '';
+      P.quiz.forEach(function (q, i) {
+        var d = document.createElement('div');
+        d.className = 'case';
+        d.innerHTML = '<span class="cnum">Question ' + (i + 1) + '</span><p class="ctext"></p><div class="opts stack"></div><div class="fb" aria-live="polite"></div>';
+        d.querySelector('.ctext').textContent = q[0];
+        var opts = d.querySelector('.opts');
+        q[1].forEach(function (txt, j) {
+          var b = document.createElement('button');
+          b.type = 'button'; b.textContent = LET[j] + '.  ' + txt;
+          b.addEventListener('click', function () {
+            var right = j === q[2];
+            markChoice(opts, d.querySelector('.fb'), j, q[2],
+              right ? 'Correct.' : 'Not quite. The answer is ' + LET[q[2]] + '.', q[3]);
+            qDone++; if (right) qScore++;
+            updateQ();
+            if (qDone === n) {
+              var f = document.getElementById('qFinal');
+              f.textContent = 'Final score: ' + qScore + ' of ' + n + '. ' +
+                (qScore >= Math.ceil(n * 0.8) ? 'You are in good shape for this topic.' :
+                 qScore >= Math.ceil(n * 0.55) ? 'Solid. Reread the explanations for the ones you missed, then check Don\'t Mix These Up.' :
+                 'Go back through the sections above, then start the quiz over.');
+              f.className = 'done open';
+            }
+          });
+          opts.appendChild(b);
+        });
+        qEl.appendChild(d);
+      });
+      document.getElementById('qTotal').textContent = n;
+      document.getElementById('qFinal').className = 'done';
+      updateQ();
+    };
+    document.getElementById('qReset').addEventListener('click', renderQuiz);
+    renderQuiz();
+  }
+})();
+</script>
+
+</body>
+</html>
