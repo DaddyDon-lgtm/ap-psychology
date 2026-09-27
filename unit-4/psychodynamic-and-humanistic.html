@@ -406,6 +406,32 @@ body > footer .wrap{padding-bottom:0}
   .fb{display:block!important}
   .case,.pair,.loop li{break-inside:avoid;page-break-inside:avoid}
 }
+/* ------------------------------------------------ diagrams (inline SVG) */
+figure.diagram{margin:34px 0}
+figure.diagram svg{display:block;width:100%;height:auto;border:0;background:none}
+.dg-narrow{display:none!important}
+@media (max-width:600px){ .dg-wide{display:none!important} .dg-narrow{display:block!important} }
+.dg text{font-family:APSans,'Segoe UI',-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;fill:var(--ink)}
+.dg .t{font-size:15px}
+.dg .tb{font-size:15px;font-weight:700}
+.dg .ts{font-size:13px;fill:var(--ink-soft)}
+.dg .lab{font-size:11.5px;font-weight:700;letter-spacing:.12em;fill:var(--muted)}
+.dg .big{font-family:APSerif,Georgia,serif;font-size:19px;font-weight:700;fill:var(--accent)}
+.dg .yes{fill:var(--green)} .dg .no{fill:var(--accent2)}
+.dg .q{fill:var(--surface);stroke:var(--line-d);stroke-width:1.5}
+.dg .start{fill:var(--soft);stroke:var(--accent);stroke-width:1.5}
+.dg .out{fill:var(--green-s);stroke:var(--green);stroke-width:1.5}
+.dg .warm{fill:var(--soft2);stroke:var(--accent2);stroke-width:1.5}
+.dg .bad{fill:var(--red-s);stroke:var(--red);stroke-width:1.5}
+.dg .end{fill:none;stroke:var(--line-d);stroke-width:1.2;stroke-dasharray:4 4}
+.dg .ar{fill:none;stroke:var(--ink-soft);stroke-width:1.6}
+.dg .arY{fill:none;stroke:var(--green);stroke-width:1.8}
+.dg .head{fill:var(--ink-soft)} .dg .headY{fill:var(--green)}
+.dg .fillA{fill:var(--accent)} .dg .fillB{fill:var(--accent2)} .dg .fillS{fill:var(--soft)}
+.dg .grid{fill:none;stroke:var(--line-d);stroke-width:1.2}
+.dg .axis{fill:none;stroke:var(--ink-soft);stroke-width:1.4}
+@media print{ .dg-narrow{display:none!important} .dg-wide{display:block!important} figure.diagram{break-inside:avoid} }
+
 </style>
 </head>
 <body>
@@ -495,6 +521,11 @@ body > footer .wrap{padding-bottom:0}
   <li><strong>Preconscious:</strong> not in awareness now, but easy to recall, like your phone number.</li>
   <li><strong>Unconscious:</strong> hidden wishes, fears, and memories you cannot easily reach, which Freud argued steer your behavior. Most of the iceberg.</li>
 </ol>
+<figure class="diagram">
+<a href="../assets/img/u4-freud-model-of-the-mind.jpg" title="Open full size"><img src="../assets/img/u4-freud-model-of-the-mind.jpg" width="1536" height="1024" loading="lazy" alt="Infographic of Freud's model of the mind. Left: an iceberg showing the conscious above the water, the preconscious just below, and the unconscious deep below. Center: overlapping circles for the id, superego, and ego, with the ego in the middle balancing the id's demands, the superego's demands, and reality. Right: the id is entirely unconscious and follows the pleasure principle; the ego follows the reality principle; the superego holds morals and ideals; the ego and superego operate at conscious, preconscious, and unconscious levels."></a>
+<figcaption>Freud's two models side by side: the iceberg shows levels of awareness (topographic model), and the circles show the id, ego, and superego (structural model). Tap the image to open it full size. The ego appears twice in the circles, but it is one structure; the center label just shows it sitting in the middle of the conflict.</figcaption>
+</figure>
+
 
 <p>Freud believed the unconscious leaks out. In <span class="term">free association</span>, a patient relaxes and says whatever comes to mind so buried material can surface. He called dreams "the royal road to the unconscious," and he read slips of the tongue ("Freudian slips") as hidden wishes breaking through.</p>
 
