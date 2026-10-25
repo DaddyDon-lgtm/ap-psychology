@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>How to Write AAQs</title>
+<style>@font-face{font-family:'APSerif';src:url('../assets/fonts/source-serif-4-latin-400-normal.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'APSerif';src:url('../assets/fonts/source-serif-4-latin-600-normal.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:'APSerif';src:url('../assets/fonts/source-serif-4-latin-700-normal.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'APSans';src:url('../assets/fonts/source-sans-3-latin-400-normal.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'APSans';src:url('../assets/fonts/source-sans-3-latin-400-italic.woff2') format('woff2');font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:'APSans';src:url('../assets/fonts/source-sans-3-latin-600-normal.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:'APSans';src:url('../assets/fonts/source-sans-3-latin-700-normal.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
+
+/* ---------------------------------------------------------------- base */
+:root{
+  --ink:#14293a; --ink-soft:#243c50; --accent:#0f5c5e; --accent-d:#0c4749;
+  --accent2:#a35617; --accent2-d:#8a4a13;
+  --soft:#eef4f4; --soft2:#fdf1e6;
+  --green:#1b6b48; --green-s:#edf5f0; --red:#9c2a2a; --red-s:#faeeee;
+  --line:#dfe4e8; --line-d:#c4ced6; --muted:#5d6b78; --faint:#6b7885; --bg:#fbfbf9; --surface:#ffffff;
+  --blue:#2f5d80;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:APSans,'Segoe UI',-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;font-size:18px;line-height:1.72;
+     color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}
+.wrap{max-width:740px;margin:0 auto;padding:0 24px 80px}
+
+/* ---------------------------------------------------------------- chrome */
+.crumbs{background:var(--surface);border-bottom:1px solid var(--line);font-size:14px}
+.crumbs .inner,.crumbs .wrap{max-width:740px;margin:0 auto;padding:12px 24px}
+.crumbs a{color:var(--accent);text-decoration:none;font-weight:600}
+.crumbs a:hover{text-decoration:underline}
+.crumbs .sep{color:var(--line-d);margin:0 9px}
+.crumbs .here{color:var(--muted)}
+
+header.top,.masthead{background:var(--surface);border-bottom:1px solid var(--line);
+     padding:44px 24px 38px;color:var(--ink)}
+header.top .inner,.masthead .wrap{max-width:740px;margin:0 auto;padding-bottom:0}
+header.top .kicker,header.top .meta,.masthead .course{font-size:12px;letter-spacing:.16em;
+     text-transform:uppercase;color:var(--accent2);font-weight:700;margin:0 0 14px;opacity:1}
+header.top h1,.masthead h1{font-family:APSerif,Georgia,'Times New Roman',serif;font-weight:700;font-size:42px;line-height:1.14;
+     margin:0;letter-spacing:-.015em;color:var(--ink)}
+header.top p.tag,header.top .sub,.masthead p.tag{margin:14px 0 0;font-size:19px;
+     color:var(--muted);line-height:1.55;opacity:1}
+header.top .meta{margin:18px 0 0;letter-spacing:.1em;color:var(--muted);font-size:11.5px}
+.masthead a{color:var(--accent)}
+
+/* Deliberately not sticky: this direction reads as a document, the breadcrumb
+   already says where you are, and a wrapped two-row bar would cover anchored
+   headings as you jump between sections. */
+nav.jump{background:var(--surface);border-bottom:1px solid var(--line)}
+nav.jump ul{max-width:940px;margin:0 auto;padding:0 24px;list-style:none;display:flex;flex-wrap:wrap;
+     gap:0 22px}
+nav.jump a{display:block;padding:13px 0;font-size:14.5px;color:var(--muted);text-decoration:none;
+     border-bottom:2px solid transparent;font-weight:600}
+nav.jump a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+
+main{padding:8px 0 0}
+
+/* ---------------------------------------------------------------- type */
+h2{font-family:APSerif,Georgia,'Times New Roman',serif;font-size:30px;font-weight:700;color:var(--ink);margin:54px 0 14px;
+   letter-spacing:-.01em;line-height:1.24;scroll-margin-top:24px}
+h2 .num{font-family:APSans,'Segoe UI',-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;display:inline-block;font-size:12px;font-weight:700;
+   letter-spacing:.14em;color:var(--accent2);vertical-align:.42em;margin-right:12px}
+h3{font-family:APSerif,Georgia,'Times New Roman',serif;font-size:22px;font-weight:600;margin:34px 0 10px;color:var(--ink)}
+h4{font-family:APSerif,Georgia,'Times New Roman',serif;font-size:18.5px;font-weight:600;margin:24px 0 7px;color:var(--ink)}
+p{margin:16px 0}
+ul,ol{margin:16px 0;padding-left:26px}
+li{margin:6px 0}
+.lede{font-size:19.5px;color:var(--muted);margin:22px 0 4px;line-height:1.6}
+code{background:var(--soft);padding:1px 6px;border-radius:3px;
+     font-family:Consolas,Monaco,monospace;font-size:.9em}
+em{font-style:italic}
+
+/* ---------------------------------------------------------------- boxes */
+.box,.note{border-radius:3px;padding:20px 24px;margin:28px 0;border-left:3px solid var(--accent2);
+     background:var(--soft2)}
+.box p:first-child,.note p:first-child{margin-top:0}
+.box p:last-child,.note p:last-child{margin-bottom:0}
+.box p,.note p{font-size:17.5px}
+.box .label,.note .label{display:block;font-size:11.5px;font-weight:700;letter-spacing:.14em;
+     text-transform:uppercase;color:var(--accent2);margin-bottom:9px}
+.box.key{background:var(--soft2);border-color:var(--accent2)}
+.box.key .label{color:var(--accent2)}
+.box.note{background:var(--soft);border-color:var(--accent)}
+.box.note .label{color:var(--accent)}
+.box.good{background:var(--green-s);border-color:var(--green)}
+.box.good .label{color:var(--green)}
+.box.warn{background:var(--red-s);border-color:var(--red)}
+.box.warn .label{color:var(--red)}
+.pending{background:var(--surface);border:1px dashed var(--line-d);border-radius:3px;
+     padding:30px 20px;text-align:center;color:var(--muted);margin:28px 0}
+.pending strong{display:block;color:var(--ink);margin-bottom:4px;font-size:17px}
+
+/* ---------------------------------------------------------------- table */
+table{border-collapse:collapse;width:100%;margin:30px 0;font-size:17px}
+th,td{border:0;border-bottom:1px solid var(--line);padding:14px 10px 14px 0;
+      text-align:left;vertical-align:top}
+th:last-child,td:last-child{padding-right:0}
+thead th{border-bottom:2px solid var(--ink);font-size:12.5px;letter-spacing:.09em;
+      text-transform:uppercase;color:var(--muted);font-weight:700;padding-bottom:10px}
+tbody tr:last-child td{border-bottom:1px solid var(--line)}
+caption{caption-side:top;text-align:left;font-size:13px;letter-spacing:.1em;text-transform:uppercase;
+      color:var(--muted);font-weight:700;padding-bottom:12px}
+td.center,th.center{text-align:center}
+.term{font-weight:700;color:var(--accent)}
+
+/* ---------------------------------------------------------------- cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1px;
+      background:var(--line);border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+      margin:26px 0}
+.grid .card{display:block;background:var(--surface);padding:24px 26px;text-decoration:none;
+      color:inherit;transition:background .15s}
+a.grid > .card:hover,.grid a.card:hover{background:#f6f9f9}
+.grid .card .kicker{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+      color:var(--accent2);margin:0 0 8px}
+.grid .card .title{font-family:APSerif,Georgia,'Times New Roman',serif;font-size:22px;font-weight:700;margin:0 0 8px;line-height:1.25}
+.grid .card .desc{font-size:16px;color:var(--muted);margin:0;line-height:1.55}
+/* A unit with nothing in it yet is muted by colour, not by opacity: fading the
+   whole tile would grey out its background and checkerboard the grid. */
+.grid .card.empty .kicker{color:var(--faint)}
+.grid .card.empty .title{color:var(--muted);font-weight:700}
+.grid .card.empty .desc{color:var(--faint)}
+
+.resource{display:flex;justify-content:space-between;align-items:center;gap:20px;
+      border:0;border-bottom:1px solid var(--line);padding:22px 0;margin:0;
+      text-decoration:none;color:inherit}
+.resource:first-of-type{border-top:1px solid var(--line)}
+a.resource:hover .title{color:var(--accent)}
+.resource .title{font-family:APSerif,Georgia,'Times New Roman',serif;font-weight:700;font-size:20px;margin:0 0 3px;
+      transition:color .12s}
+.resource .desc{font-size:16px;color:var(--muted);margin:0}
+.resource .go{color:var(--accent);font-weight:600;font-size:15px;white-space:nowrap}
+
+/* ---------------------------------------------------------------- widget */
+.widget{background:var(--surface);border:1px solid var(--line);border-radius:4px;
+        padding:26px 28px;margin:34px 0}
+.widget > h3{margin-top:0;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.widget .tryit{font-family:APSans,'Segoe UI',-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:.14em;
+        text-transform:uppercase;color:var(--accent2);background:none;padding:0}
+.widget svg{display:block;width:100%;height:auto;max-width:100%;touch-action:none}
+svg,canvas{display:block;max-width:100%}
+
+.ctrls{display:flex;flex-wrap:wrap;gap:24px;margin:22px 0 4px;align-items:flex-end}
+.ctrl{flex:1 1 220px;min-width:200px}
+.ctrl label{display:block;font-size:12px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;
+        color:var(--muted);margin-bottom:10px}
+.ctrl .val{color:var(--accent);font-size:15px;letter-spacing:0}
+input[type=range]{width:100%;accent-color:var(--accent);height:26px;cursor:pointer}
+
+.btnrow{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0 0}
+button{font-family:APSans,'Segoe UI',-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;font-size:14.5px;font-weight:600;cursor:pointer;border-radius:3px;
+       padding:10px 18px;border:1px solid var(--accent);background:var(--surface);
+       color:var(--accent);transition:background .12s,color .12s}
+button:hover{background:var(--accent);color:#fff}
+button.primary{background:var(--accent);color:#fff}
+button.primary:hover{background:var(--accent-d)}
+button:disabled{opacity:.45;cursor:not-allowed}
+button:focus-visible,input:focus-visible,a:focus-visible,textarea:focus-visible,
+[tabindex]:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+.readouts{display:flex;flex-wrap:wrap;gap:34px;margin:30px 0 0}
+.ro{flex:0 1 auto;min-width:110px}
+.ro .k{display:block;font-size:11.5px;font-weight:700;letter-spacing:.12em;
+       text-transform:uppercase;color:var(--muted)}
+.ro .v{display:block;font-family:APSerif,Georgia,'Times New Roman',serif;font-size:30px;font-weight:700;color:var(--ink);line-height:1.3}
+.ro.hl .v{color:var(--green)}
+.commentary{margin:20px 0 0;padding:0 0 0 18px;border-left:3px solid var(--line-d);
+       font-size:16.5px;color:var(--ink-soft)}
+.toggle-line{display:flex;align-items:center;gap:10px;margin:18px 0 0;font-size:15.5px}
+.toggle-line input{width:18px;height:18px;accent-color:var(--accent);cursor:pointer}
+.field{display:inline-flex;flex-direction:column;gap:5px;margin:0 14px 12px 0}
+.field label{font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.field input{font-family:inherit;font-size:17px;padding:8px 10px;width:110px;
+       border:1px solid var(--line-d);border-radius:3px;background:var(--surface);color:var(--ink)}
+.field input.ok{border-color:var(--green);background:var(--green-s)}
+.field input.bad{border-color:var(--accent2);background:var(--soft2)}
+.worked{display:none;margin:18px 0 0;padding:16px 18px;background:#f7f9f9;border-radius:3px;
+       font-family:Consolas,Monaco,monospace;font-size:14.5px;line-height:1.75;white-space:pre-wrap}
+.worked.open{display:block}
+.dataset{font-family:APSerif,Georgia,'Times New Roman',serif;font-size:25px;font-weight:700;letter-spacing:.03em;color:var(--ink);
+       background:#f7f9f9;border-radius:3px;padding:15px 18px;margin:8px 0 18px;text-align:center}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------------------------------------------------------------- practice */
+.q-item{border:0;border-top:1px solid var(--line);border-radius:0;background:none;
+        margin:0;padding:26px 0}
+.q-item .qnum{display:inline-block;background:none;color:var(--accent2);font-size:11.5px;
+        font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:0;margin-bottom:10px}
+.q-item .stem{margin:6px 0 12px}
+.q-item .ask{font-weight:600;margin:12px 0}
+.q-item ol.choices{list-style:upper-alpha;padding-left:26px;margin:12px 0 16px}
+.q-item ol.choices li{margin:6px 0}
+.reveal{display:none;border-top:1px dashed var(--line-d);margin-top:16px;padding-top:16px}
+.reveal.open{display:block}
+.reveal .ans{font-weight:700;color:var(--green);font-size:17px;margin:0 0 10px}
+.reveal .why{margin:10px 0 0}
+.reveal .why-not{margin:12px 0 0;font-size:16px}
+.reveal .why-not li{color:var(--muted)}
+.reveal .why-not li strong{color:var(--ink)}
+.toggle{font-size:14.5px}
+
+/* ---------------------------------------------------------------- misc */
+details{border:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+        border-radius:0;padding:16px 0;margin:26px 0;background:none}
+details summary{font-family:APSerif,Georgia,'Times New Roman',serif;font-weight:600;color:var(--accent);cursor:pointer;font-size:18px}
+details[open] summary{margin-bottom:10px}
+
+figure{margin:32px 0}
+figure img{max-width:100%;height:auto;display:block;border:1px solid var(--line);
+      border-radius:3px;background:#fff}
+figure.plain img{border:none}
+figcaption{font-size:15px;color:var(--muted);margin-top:10px;line-height:1.55}
+figure.half{max-width:460px}
+figure.center{margin-left:auto;margin-right:auto}
+.hero{margin:0 0 30px;border-radius:3px;overflow:hidden;border:1px solid var(--line)}
+.hero img{display:block;width:100%;height:auto}
+.img-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin:28px 0}
+.img-row figure{margin:0}
+
+footer{margin-top:62px;padding:26px 0 0;border-top:1px solid var(--line);font-size:15px;color:var(--muted)}
+footer p{margin:5px 0}
+body > footer{background:var(--surface);margin-top:62px;padding:28px 0 34px}
+body > footer .wrap{padding-bottom:0}
+
+.pagenav{display:flex;flex-wrap:wrap;gap:1px;margin:34px 0 0;background:var(--line);
+       border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.pagenav a{flex:1 1 220px;border:0;border-radius:0;padding:18px 20px;text-decoration:none;
+       color:inherit;background:var(--surface)}
+.pagenav a:hover{background:#f6f9f9}
+.pagenav .dir{display:block;font-size:11px;font-weight:700;letter-spacing:.14em;
+       text-transform:uppercase;color:var(--accent2)}
+.pagenav .t{display:block;font-family:APSerif,Georgia,'Times New Roman',serif;font-weight:700;color:var(--ink);margin-top:4px}
+
+/* Any table too wide for the screen scrolls sideways instead of pushing the page. */
+.tscroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:30px 0}
+.tscroll > table{margin-top:0;margin-bottom:0;min-width:520px}
+
+/* ------------------------------------------------- wide break-out on big screens */
+@media (min-width:1040px){
+  .widget,.tscroll:has(table.wide),.grid,.bleed{width:940px;margin-left:-100px;max-width:none}
+  table.wide{min-width:0}
+}
+
+/* ---------------------------------------------------------------- responsive */
+@media (max-width:760px){
+  body{font-size:17px;line-height:1.65}
+  header.top,.masthead{padding:32px 20px 28px}
+  header.top h1,.masthead h1{font-size:30px}
+  header.top p.tag,header.top .sub,.masthead p.tag{font-size:17.5px}
+  h2{font-size:25px;margin:42px 0 12px}
+  h3{font-size:20px}
+  .wrap,.crumbs .inner,.crumbs .wrap,header.top .inner,.masthead .wrap,nav.jump ul{padding-left:20px;padding-right:20px}
+  nav.jump ul{gap:0 16px}
+  nav.jump a{padding:12px 0;font-size:13.5px}
+  .widget{padding:20px 18px}
+  .ro .v{font-size:24px}
+  .readouts{gap:20px}
+  .resource{flex-direction:column;align-items:flex-start;gap:8px}
+  table{font-size:16px}
+}
+
+/* ---------------------------------------------------------------- print */
+@media print{
+  body{background:#fff;font-size:11pt;color:#000}
+  nav.jump,.crumbs,button,.btnrow,input[type=range],.pagenav,.toggle{display:none!important}
+  header.top,.masthead{background:#fff!important;color:var(--ink)!important;padding:0 0 14px;border:0}
+  .widget,.tscroll,.bleed{width:auto!important;margin-left:0!important;overflow:visible!important}
+  .tscroll > table,table.wide{min-width:0!important}
+  .reveal{display:block!important}
+  .worked{display:block!important}
+  .widget,.q-item,.box,.note,table,details,figure,.hero,.img-row,.grid .card{
+     break-inside:avoid;page-break-inside:avoid}
+  h2,h3{break-after:avoid}
+  @page{size:A4;margin:15mm}
+}
+
+/* ------------------------------------------------ research methods page extras */
+.yes{color:var(--green);font-weight:700}
+.no{color:var(--red);font-weight:700}
+.claim-yes{color:var(--green);font-weight:600}
+.claim-no{color:var(--red);font-weight:600}
+.signals{font-style:italic;color:var(--blue)}
+
+.split{display:grid;grid-template-columns:1fr 1fr;gap:1px;margin:30px 0;background:var(--line);
+       border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.panel{background:var(--surface);padding:22px 24px}
+.panel h4{margin-top:0;font-size:18px}
+.panel.is-method h4{color:var(--green)}
+.panel.is-tool h4{color:var(--accent2)}
+.panel ul{padding-left:20px;margin-bottom:0}
+
+.tree{margin:32px 0}
+.step{display:grid;grid-template-columns:34px 1fr;gap:18px;background:var(--surface);
+      border:1px solid var(--line);border-radius:4px;padding:20px 22px;margin-bottom:12px}
+.step .n{font-family:APSerif,Georgia,serif;color:var(--accent2);font-weight:700;font-size:24px;
+      line-height:1.2;text-align:center}
+.step .q{font-weight:600;font-size:18px;margin:0 0 10px}
+.step .out{font-size:16px;padding:0 0 0 16px;border-left:3px solid var(--green);margin:10px 0 0;
+      color:var(--ink-soft)}
+.step .out strong{color:var(--green)}
+.step .nope{font-size:16px;color:var(--muted);margin:10px 0 0;font-style:italic}
+.arrow{text-align:center;color:var(--line-d);font-size:20px;line-height:1;margin:-4px 0 8px}
+
+.mcard{border:1px solid var(--line);border-radius:4px;background:var(--surface);margin:28px 0;
+      overflow:hidden}
+.mcard > .head{border-bottom:2px solid var(--ink);padding:16px 24px;display:flex;
+      justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;background:var(--surface)}
+.mcard > .head .name{font-family:APSerif,Georgia,serif;font-size:23px;font-weight:700;color:var(--ink)}
+.mcard > .head .tag{font-size:11px;text-transform:uppercase;letter-spacing:.14em;font-weight:700;
+      color:var(--accent2);white-space:nowrap}
+.mcard.exp > .head{border-bottom-color:var(--green)}
+.mcard.exp > .head .name{color:var(--green)}
+.mcard.exp > .head .tag{color:var(--green)}
+.mcard > .body{padding:20px 24px 24px}
+.mcard dl{margin:0}
+.mcard dt{font-weight:700;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;
+      color:var(--accent2);margin-top:20px}
+.mcard dt:first-child{margin-top:0}
+.mcard dd{margin:6px 0 0}
+.mcard dd ul{margin:6px 0 0}
+
+.drill{border:0}
+.drill-row{display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;
+      padding:16px 0;border-bottom:1px solid var(--line)}
+.drill-row:first-child{border-top:1px solid var(--line)}
+.drill-row:last-child{border-bottom:1px solid var(--line)}
+.drill-row .stem{font-size:17px}
+.drill-row .ans-slot{min-width:210px;text-align:right;font-weight:700;color:var(--green);
+      font-size:15.5px;cursor:pointer;user-select:none;border-radius:3px;padding:3px 7px}
+.drill-row .ans-slot:hover{background:var(--soft)}
+.drill-row .ans-slot:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.drill-row .ans-slot .ph{display:none;color:var(--muted);font-weight:700;font-size:13px;
+      letter-spacing:.14em;text-transform:uppercase}
+.drill-row .ans-slot.hidden-ans .ph{display:inline}
+.drill-row .ans-slot.hidden-ans .txt{display:none}
+
+@media (max-width:760px){
+  .split{grid-template-columns:1fr}
+  .drill-row{grid-template-columns:1fr;gap:6px}
+  .drill-row .ans-slot{text-align:left;min-width:0;padding-left:0}
+}
+@media print{
+  .split{grid-template-columns:1fr 1fr}
+  .drill-row .ans-slot .txt{display:inline!important}
+  .drill-row .ans-slot .ph{display:none!important}
+  .mcard,.q-item,.panel,.step,.drill,.drill-row{break-inside:avoid;page-break-inside:avoid}
+}
+
+
+/* ------------------------------------------------ AAQ guide extras */
+.box.frame{background:var(--soft);border-color:var(--accent)}
+.box.frame .label{color:var(--accent)}
+.frame-row{display:flex;align-items:flex-start;justify-content:space-between;gap:14px}
+.frame-text{font-family:APSerif,Georgia,serif;font-size:19px;margin:0!important}
+.copy{font-size:13px;padding:6px 12px;flex:none}
+.box.trap{background:var(--red-s);border-color:var(--red)}
+.box.trap .label{color:var(--red)}
+.box.cb{background:#f4f5f6;border-color:var(--line-d)}
+.box.cb .label{color:var(--muted)}
+.prompt{font-weight:600}
+.pts{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+     color:var(--accent2);margin-left:6px}
+
+/* score it */
+.si-item{border-top:1px solid var(--line);padding:18px 0}
+.si-item:last-child{border-bottom:1px solid var(--line)}
+.si-item .resp{font-family:APSerif,Georgia,serif;font-size:18px;margin:0 0 12px}
+.si-btns{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.si-btns .ask{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-right:6px}
+.si-btns button{min-width:48px;padding:7px 14px}
+.fb{margin:12px 0 0;padding:12px 16px;border-radius:3px;font-size:16.5px;display:none}
+.fb.show{display:block}
+.fb.right{background:var(--green-s);border-left:3px solid var(--green)}
+.fb.wrong{background:var(--soft2);border-left:3px solid var(--accent2)}
+.fb strong{display:block;margin-bottom:2px}
+button.picked{background:var(--accent2);border-color:var(--accent2);color:#fff}
+button.correct-pick{background:var(--green);border-color:var(--green);color:#fff}
+.tally{font-size:15px;color:var(--muted);margin:14px 0 0}
+
+/* drills */
+.dr-item{border-top:1px solid var(--line);padding:18px 0}
+.dr-item:last-child{border-bottom:1px solid var(--line)}
+.dr-item .stem{margin:0 0 12px}
+.dr-btns{display:flex;flex-wrap:wrap;gap:8px}
+.dr-btns button{padding:7px 13px;font-size:14px}
+
+/* map the source */
+.mini-source{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:6px 22px 14px}
+.mini-source h4{margin:18px 0 4px;font-size:13px;font-family:APSans,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.sent{padding:12px 0;border-bottom:1px solid var(--line)}
+.sent:last-child{border-bottom:0}
+.sent p{margin:0 0 10px;font-family:APSerif,Georgia,serif;font-size:17.5px}
+.part-btns{display:flex;flex-wrap:wrap;gap:6px}
+.part-btns button{min-width:44px;padding:6px 10px;font-size:14px}
+
+/* r slider */
+.rplot{background:#fcfcfb;border:1px solid var(--line);border-radius:3px}
+.rplot .dot{fill:var(--accent);opacity:.55}
+.rplot .axis{stroke:var(--line-d);stroke-width:1}
+.rplot .trend{stroke:var(--accent2);stroke-width:3}
+.rplot text{font-family:APSans,sans-serif;font-size:13px;fill:var(--muted)}
+
+/* checklist */
+.check{list-style:none;padding:0;margin:20px 0}
+.check li{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--line);margin:0}
+.check input{width:20px;height:20px;margin-top:4px;accent-color:var(--green);flex:none;cursor:pointer}
+.check label{cursor:pointer}
+.check .p{font-weight:700;color:var(--accent);margin-right:6px}
+
+.totop{position:fixed;right:18px;bottom:18px;padding:9px 14px;font-size:13.5px;display:none;
+       box-shadow:0 1px 4px rgba(20,41,58,.15)}
+.totop.show{display:block}
+
+@media print{
+  .copy,.totop,.si-btns,.dr-btns,.part-btns,.tally{display:none!important}
+  .fb{display:block!important;background:none!important;border:0!important;padding:4px 0!important}
+  .si-item,.dr-item,.sent{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<div class="crumbs">
+  <div class="inner">
+    <a href="../index.html">AP Psychology</a>
+    <span class="sep">&rsaquo;</span>
+    <a href="index.html">FRQ Skills</a>
+    <span class="sep">&rsaquo;</span>
+    <span class="here">How to Write AAQs</span>
+  </div>
+</div>
+
+<header class="top">
+  <div class="inner">
+    <h1>How to Write AAQs</h1>
+    <p class="tag">The Article Analysis Question, part by part: what earns each point, the traps that cost points, and practice you can do right here</p>
+    <p class="meta">AP Psychology &bull; FRQ Skills &bull; FRQ 1: Article Analysis Question &bull; Science Practices 2, 3, and 4</p>
+  </div>
+</header>
+
+<nav class="jump" aria-label="Sections on this page">
+  <ul>
+    <li><a href="#start">Start Here</a></li>
+    <li><a href="#rules">Rules</a></li>
+    <li><a href="#part-a">Part A</a></li>
+    <li><a href="#part-b">Part B</a></li>
+    <li><a href="#part-c">Part C</a></li>
+    <li><a href="#part-d">Part D</a></li>
+    <li><a href="#part-e">Part E</a></li>
+    <li><a href="#part-f">Part F</a></li>
+    <li><a href="#map">Map the Source</a></li>
+    <li><a href="#example1">Worked Examples</a></li>
+    <li><a href="#quickref">Quick Reference</a></li>
+  </ul>
+</nav>
+
+<div class="wrap">
+
+<!-- ============ START HERE ============ -->
+<h2 id="start"><span class="num">1</span>Start Here: What the AAQ Is</h2>
+
+<p class="lede">The AAQ is FRQ 1 on the AP Psychology exam: one summarized, peer-reviewed study, six parts, and 7 points. It is worth 16.65% of your total exam score, about the same as 25 multiple-choice questions.</p>
+
+<div class="tscroll"><table>
+  <caption>The six parts</caption>
+  <thead><tr><th>Part</th><th>What you do</th><th class="center">Points</th></tr></thead>
+  <tbody>
+    <tr><td><a href="#part-a">A</a></td><td>Identify the research method</td><td class="center">1</td></tr>
+    <tr><td><a href="#part-b">B</a></td><td>State an operational definition</td><td class="center">1</td></tr>
+    <tr><td><a href="#part-c">C</a></td><td>Describe what a statistic means in the study</td><td class="center">1</td></tr>
+    <tr><td><a href="#part-d">D</a></td><td>Identify an ethical guideline and describe how it was applied</td><td class="center">1</td></tr>
+    <tr><td><a href="#part-e">E</a></td><td>Explain whether the findings are generalizable</td><td class="center">1</td></tr>
+    <tr><td><a href="#part-f">F</a></td><td>Explain how a finding supports or refutes a hypothesis or concept</td><td class="center">2</td></tr>
+  </tbody>
+</table></div>
+
+<p><strong>Time:</strong> 25 minutes, including a 10-minute reading period. The order and wording of the parts can change slightly from year to year, but these six skills are the core.</p>
+
+<h3>Map the source before you write</h3>
+<p>AAQ sources usually have four sections, and each one feeds certain parts.</p>
+<div class="tscroll"><table>
+  <thead><tr><th>Section of the study</th><th>What it gives you</th><th>Parts</th></tr></thead>
+  <tbody>
+    <tr><td>Introduction</td><td>The hypothesis or concept being tested</td><td>F</td></tr>
+    <tr><td>Participants</td><td>Who was studied, and often ethics</td><td>E, D</td></tr>
+    <tr><td>Method</td><td>The design, how variables were measured, and ethics</td><td>A, B, D</td></tr>
+    <tr><td>Results and Discussion</td><td>Numbers, tables, graphs, and the findings</td><td>C, F</td></tr>
+  </tbody>
+</table></div>
+
+<div class="box key">
+  <span class="label">Your 10-minute reading routine</span>
+  <ol style="margin:0;padding-left:22px">
+    <li>Read the six prompts first, so you know what you are hunting for.</li>
+    <li>Label each section of the study with the part letters it helps with.</li>
+    <li>Circle the variables that were measured.</li>
+    <li>Highlight signal words: &ldquo;randomly assigned,&rdquo; &ldquo;measured,&rdquo; &ldquo;scored,&rdquo; &ldquo;consent,&rdquo; &ldquo;correlated,&rdquo; &ldquo;significant.&rdquo;</li>
+    <li>Star the result you would use for Part F.</li>
+  </ol>
+</div>
+<p>Want to practise this? Try <a href="#map">Map the Source</a> near the end of the page.</p>
+
+<!-- ============ RULES ============ -->
+<h2 id="rules"><span class="num">2</span>Rules for Every Part</h2>
+<p>Readers score each part on its own, so every part must stand alone and answer exactly what was asked.</p>
+<ul>
+  <li><strong>Write in complete sentences.</strong> Lists, bullet points, and fragments do not score.</li>
+  <li><strong>Label every part</strong> (A, B, C&hellip;) so the reader can find each answer fast.</li>
+  <li><strong>Answer the command word.</strong> &ldquo;Identify&rdquo; means name it. &ldquo;Describe&rdquo; means say what it means. &ldquo;Explain&rdquo; means give the reason, using evidence.</li>
+  <li><strong>Use the source.</strong> The answer is almost always in the text. Use the study&rsquo;s numbers, groups, and wording.</li>
+  <li><strong>Define briefly, then apply.</strong> College Board: &ldquo;A definition alone will not earn the point, but a clear definition can support the application.&rdquo; Keep the definition accurate: a wrong definition that contradicts your answer can cancel the point.</li>
+  <li><strong>Commit to one answer.</strong> Two methods, two guidelines, or &ldquo;both supports and refutes&rdquo; without evidence for each side counts as contradicting yourself.</li>
+  <li><strong>Never write &ldquo;the researchers should have&hellip;&rdquo;</strong> Readers score what the study did, not what it should have done.</li>
+  <li><strong>Don&rsquo;t claim cause unless the study is an experiment.</strong> In a correlational study, use &ldquo;tended to,&rdquo; &ldquo;was related to,&rdquo; or &ldquo;predicted,&rdquo; never &ldquo;caused&rdquo; or &ldquo;proved.&rdquo;</li>
+</ul>
+
+<!-- ============ PART A ============ -->
+<h2 id="part-a"><span class="num">Part A</span>Research Method</h2>
+<p>Name one research method from the five the course lists, in one sentence. That earns the point.</p>
+<p class="prompt">Prompt: Identify the research method used in the study.<span class="pts">1 point</span></p>
+<div class="box frame"><span class="label">Sentence frame</span>
+  <div class="frame-row"><p class="frame-text">&ldquo;The research method used in this study is ______.&rdquo;</p><button class="copy" type="button">Copy</button></div>
+</div>
+
+<div class="tscroll"><table class="wide">
+  <caption>The five possible answers</caption>
+  <thead><tr><th>Method</th><th>Clues in the source</th><th>Signal words</th></tr></thead>
+  <tbody>
+    <tr><td class="term">Experiment</td><td>Participants randomly assigned to groups or conditions; researchers manipulate an independent variable; experimental and control (or placebo) groups</td><td class="signals">randomly assigned, placebo, control group, condition</td></tr>
+    <tr><td class="term">Correlational</td><td>Two or more variables measured as they already exist; researchers look for a relationship; often reports r</td><td class="signals">related to, associated with, predicts, correlated</td></tr>
+    <tr><td class="term">Case study</td><td>One person or a small group studied in depth, often because of something rare</td><td class="signals">an alias (&ldquo;H.M.&rdquo;), the participant, the subject</td></tr>
+    <tr><td class="term">Naturalistic observation</td><td>Behavior watched in a natural setting with no interference</td><td class="signals">observed, recorded, hidden cameras, natural setting</td></tr>
+    <tr><td class="term">Meta-analysis</td><td>Results combined from many earlier studies; no new participants</td><td class="signals">studies were included, pooled, excluded studies</td></tr>
+  </tbody>
+</table></div>
+
+<div class="box trap"><span class="label">Trap: survey is not a research method</span>
+  <p>A survey or questionnaire is how the data were collected. If researchers used a survey to look for a relationship between variables, the method is <strong>correlational</strong>.</p>
+  <p><strong>Laboratory observation</strong> is a real research method, but it isn&rsquo;t one of the five AAQ answer options. On the exam, translate it into one of the five: if researchers only watched behavior, answer <strong>naturalistic observation</strong>; if they changed something and measured the effect, answer <strong>experiment</strong>.</p>
+</div>
+<div class="box trap"><span class="label">Trap: comparing groups is not an experiment</span>
+  <p>If the groups already existed (age, grade, gender, AP score) and nobody was randomly assigned, it is not an experiment. And commit to one method: &ldquo;an experiment or a correlational study&rdquo; does not earn the point.</p>
+</div>
+
+<h3>The experiment with no control group</h3>
+<p>Some experiments use a <strong>within-subjects design</strong>: every participant experiences every condition. There is no separate control group. Instead there is a <strong>control condition</strong> (the normal or baseline condition), and each participant serves as their own control.</p>
+<p>The source may never say &ldquo;within-subjects,&rdquo; &ldquo;control group,&rdquo; or even &ldquo;random assignment.&rdquo; It might only say that the order of conditions was mixed up or balanced. Use the key test: <strong>did the researchers change something and measure the effect?</strong> If yes, the answer is still experiment.</p>
+<div class="box note"><span class="label">Example</span>
+  <p>Twenty students each took a reading test twice, once in a silent room and once with music playing. Half did the silent room first, and half did the music first. This is an experiment. The silent room is the control condition, and balancing the order does the job random assignment does in a group design.</p>
+</div>
+
+<div class="widget" id="methodDrill">
+  <h3>Name That Method <span class="tryit">Try it</span></h3>
+  <p style="margin-top:0">Pick the research method for each study. Feedback tells you which clue to look for.</p>
+  <div class="dr-item" data-ans="Experiment" data-why="Students were randomly assigned to conditions, and the researchers manipulated the independent variable (phone on the desk or not)."><p class="stem">1. College students drew numbers to decide whether their phone stayed on the desk or in another room during a reading test.</p><div class="dr-btns"></div><div class="fb"></div></div>
+  <div class="dr-item" data-ans="Correlational" data-why="A questionnaire is only the data collection tool. The researchers measured two existing variables and looked for a relationship (r)."><p class="stem">2. Researchers gave 600 teenagers a questionnaire about daily social media use and loneliness and reported r = +.29.</p><div class="dr-btns"></div><div class="fb"></div></div>
+  <div class="dr-item" data-ans="Naturalistic observation" data-why="Behavior was watched in a natural setting, and the observer did not interfere."><p class="stem">3. An observer sat unnoticed in a school cafeteria for two weeks and recorded how often students ate alone.</p><div class="dr-btns"></div><div class="fb"></div></div>
+  <div class="dr-item" data-ans="Experiment" data-why="This is a within-subjects experiment. Every participant experienced both conditions, the researchers changed the room temperature, and the order was balanced."><p class="stem">4. Every participant completed a typing test once in a warm room and once in a cold room. Half did the warm room first.</p><div class="dr-btns"></div><div class="fb"></div></div>
+  <div class="dr-item" data-ans="Case study" data-why="One person was studied in depth because of a rare condition."><p class="stem">5. A neurologist wrote a detailed report on one man who lost the ability to form new memories after surgery.</p><div class="dr-btns"></div><div class="fb"></div></div>
+  <div class="dr-item" data-ans="Meta-analysis" data-why="No new participants: the researchers combined the results of earlier studies."><p class="stem">6. A team combined the results of 48 published studies on exercise and anxiety and reported an overall effect size.</p><div class="dr-btns"></div><div class="fb"></div></div>
+  <div class="dr-item" data-ans="Correlational" data-why="The groups already existed (grade levels). Nobody was randomly assigned and nothing was manipulated, so comparing them is still correlational."><p class="stem">7. Researchers compared the reading motivation scores of existing 3rd, 5th, and 8th graders.</p><div class="dr-btns"></div><div class="fb"></div></div>
+  <p class="tally" id="methodTally"></p>
+</div>
+
+<h3>Score it</h3>
+<div class="scoreit" data-max="1">
+  <div class="si-item" data-score="0" data-why="The grade groups already existed. Nobody was randomly assigned or given a treatment."><p class="resp">&ldquo;The research method is an experiment because the researchers compared 3rd graders to 8th graders.&rdquo;</p><div class="si-btns"></div><div class="fb"></div></div>
+  <div class="si-item" data-score="0" data-why="A survey is a data collection tool, not the research method."><p class="resp">&ldquo;The researchers used a survey.&rdquo;</p><div class="si-btns"></div><div class="fb"></div></div>
+  <div class="si-item" data-score="1" data-why="Correct method, in one complete sentence."><p class="resp">&ldquo;The research method used in this study is correlational research.&rdquo;</p><div class="si-btns"></div><div class="fb"></div></div>
+</div>
+
+<!-- ============ PART B ============ -->
+<h2 id="part-b"><span class="num">Part B</span>Operational Definition</h2>
+<p>State how <em>this</em> study measured the variable, in a way someone could count or score. The source always holds the answer.</p>
+<p class="prompt">Prompt: State the operational definition of [variable].<span class="pts">1 point</span></p>
+<div class="box frame"><span class="label">Sentence frame</span>
+  <div class="frame-row"><p class="frame-text">&ldquo;The operational definition of ______ is the participants&rsquo; ______ on ______.&rdquo;</p><button class="copy" type="button">Copy</button></div>
+</div>
+
+<div class="split">
+  <div class="panel is-tool"><h4>Textbook (conceptual) definition</h4>
+    <p><strong>Sleepiness:</strong> feeling a strong need to sleep.</p>
+    <p style="margin-bottom:0">Says what the idea means. <span class="no">On its own, earns 0.</span></p></div>
+  <div class="panel is-method"><h4>Operational definition</h4>
+    <p><strong>Sleepiness:</strong> a person&rsquo;s rating from 1 to 9 on a sleepiness scale.</p>
+    <p style="margin-bottom:0">Says how the study measured it. <span class="yes">Earns the point.</span></p></div>
+</div>
+<p>A brief textbook definition is fine as a lead-in, as long as the measurement follows. Look in the Method section for &ldquo;measured,&rdquo; &ldquo;rated,&rdquo; &ldquo;scored,&rdquo; &ldquo;completed,&rdquo; &ldquo;coded,&rdquo; and &ldquo;higher scores meant.&rdquo;</p>
+
+<h3>Operational definitions don&rsquo;t have to be numbers</h3>
+<ul>
+  <li><strong>A score on a scale:</strong> &ldquo;The operational definition of self-esteem is the participant&rsquo;s score on the Rosenberg Self-Esteem Scale.&rdquo;</li>
+  <li><strong>Speed or accuracy on a task:</strong> &ldquo;The operational definition of executive functioning is how quickly participants correctly identified whether the second set of items was the same as or different from the first.&rdquo;</li>
+  <li><strong>Coded categories (practice example):</strong> &ldquo;The operational definition of emotional overeating is the participant&rsquo;s interview responses that describe eating in response to negative emotions.&rdquo;</li>
+</ul>
+<div class="box trap"><span class="label">Trap: the wrong variable</span>
+  <p>Most studies measure more than one variable. Make sure your definition matches the variable named in the prompt. In the motivation study, GPA is the operational definition of achievement, not of motivation.</p>
+</div>
+
+<h3>Score it</h3>
+<div class="scoreit" data-max="1">
+  <div class="si-item" data-score="0" data-why="Only a textbook definition. It never says how the study measured the variable."><p class="resp">&ldquo;Intrinsic motivation is when you do something because you enjoy it.&rdquo;</p><div class="si-btns"></div><div class="fb"></div></div>
+  <div class="si-item" data-score="0" data-why="Wrong variable: GPA measured achievement."><p class="resp">&ldquo;The operational definition of intrinsic motivation is the student&rsquo;s GPA.&rdquo;</p><div class="si-btns"></div><div class="fb"></div></div>
+  <div class="si-item" data-score="1" data-why="Measurable, and it matches exactly how the study measured the variable."><p class="resp">&ldquo;The operational definition of intrinsic motivation is the student&rsquo;s average rating, from 1 to 5, on the 17 intrinsic statements in the questionnaire.&rdquo;</p><div class="si-btns"></div><div class="fb"></div></div>
+</div>
+
+<!-- ============ PART C ============ -->
+<h2 id="part-c"><span class="num">Part C</span>Interpreting a Statistic</h2>
+<p>Say what the number means for the people in this study. Restating the number, or defining the statistic with no link to the study, earns 0.</p>
+<p class="prompt">Prompt: Describe what [statistic] indicates about [variable or groups] in the study.<span class="pts">1 point</span></p>
+<div class="box frame"><span class="label">Sentence frames</span>
+  <div class="frame-row"><p class="frame-text">Means: &ldquo;The means show that the ______ group ______ more than the ______ group.&rdquo;</p><button class="copy" type="button">Copy</button></div>
+  <div class="frame-row" style="margin-top:12px"><p class="frame-text">Correlation: &ldquo;The correlation of ___ shows that people who ______ tended to ______.&rdquo;</p><button class="copy" type="button">Copy</button></div>
+  <div class="frame-row" style="margin-top:12px"><p class="frame-text">Spread: &ldquo;The standard deviation shows that scores in the ______ group were more / less spread out than in the ______ group.&rdquo;</p><button class="copy" type="button">Copy</button></div>
+</div>
+
+<div class="tscroll"><table class="wide">
+  <caption>What each statistic means</caption>
+  <thead><tr><th>Statistic</th><th>What it tells you</th><th>How to say it in a study</th></tr></thead>
+  <tbody>
+    <tr><td class="term">Mean</td><td>The average score of a group</td><td>&ldquo;The placebo group recalled fewer words on average.&rdquo;</td></tr>
+    <tr><td class="term">Median</td><td>The middle score when scores are put in order; less affected by extreme scores than the mean</td><td>&ldquo;Half of the participants were older than 34.&rdquo;</td></tr>
+    <tr><td class="term">Mode</td><td>The most common score</td><td>&ldquo;The most common age was 34.&rdquo;</td></tr>
+    <tr><td class="term">Range</td><td>Highest score minus lowest score</td><td>&ldquo;Scores in the control group were more spread out.&rdquo;</td></tr>
+    <tr><td class="term">Standard deviation</td><td>How much scores vary around the mean; larger SD means more spread out</td><td>&ldquo;Recall scores varied more after staying up late.&rdquo;</td></tr>
+    <tr><td class="term">Skew</td><td>A lopsided distribution. Positive skew: a tail of high scores pulls the mean above the median. Negative skew: a tail of low scores pulls the mean below the median.</td><td>&ldquo;A few very high incomes pulled the mean above the median.&rdquo;</td></tr>
+    <tr><td class="term">Percentile rank</td><td>The percentage of scores at or below this score</td><td>&ldquo;H.S. scored higher than about 95% of test takers.&rdquo;</td></tr>
+    <tr><td class="term">Correlation (r)</td><td>Direction (+ or &minus;) and strength (closer to &plusmn;1 is stronger, closer to 0 is weaker) of a relationship</td><td>&ldquo;Students with higher intrinsic motivation tended to have higher GPAs.&rdquo;</td></tr>
+    <tr><td class="term">Statistical significance</td><td>The result is unlikely to be due to chance</td><td>&ldquo;The difference was unlikely to be due to chance.&rdquo;</td></tr>
+    <tr><td class="term">Effect size</td><td>How big a difference or relationship is. For Cohen&rsquo;s d, about 0.2 is small, 0.5 medium, 0.8 large</td><td>&ldquo;Sleep had a medium-sized effect on memory.&rdquo;</td></tr>
+  </tbody>
+</table></div>
+
+<div class="tscroll"><table class="wide">
+  <caption>What each research method usually reports</caption>
+  <thead><tr><th>Method</th><th>Statistics you usually see</th><th>Typical graph</th></tr></thead>
+  <tbody>
+    <tr><td class="term">Experiment</td><td>Group or condition means and SDs; significance; sometimes effect size</td><td>Bar graph of group means, or a line graph over time</td></tr>
+    <tr><td class="term">Correlational</td><td>r values; sometimes means or percentages for groups that already existed</td><td>Scatter plot, a table of r values, or bars for existing groups</td></tr>
+    <tr><td class="term">Meta-analysis</td><td>Number of studies and participants; an overall effect size or r</td><td>Table or forest plot of study results</td></tr>
+    <tr><td class="term">Case study</td><td>One person&rsquo;s scores compared with typical people; percentile ranks</td><td>Table of scores</td></tr>
+    <tr><td class="term">Naturalistic observation</td><td>Counts, frequencies, percentages; sometimes the mode</td><td>Bar graph or table of how often each behavior happened</td></tr>
+  </tbody>
+</table></div>
+
+<div class="widget" id="rWidget">
+  <h3>What Does r Look Like? <span class="tryit">Try it</span></h3>
+  <p style="margin-top:0">Drag the slider and watch 120 students&rsquo; scores change. Then press the buttons to see the real values from the motivation study.</p>
+  <svg class="rplot" id="rSvg" viewBox="0 0 640 380" role="img" aria-label="Scatter plot of intrinsic motivation against GPA that changes with the slider"></svg>
+  <div class="ctrls">
+    <div class="ctrl"><label for="rRange">Correlation r = <span class="val" id="rVal">+.34</span></label>
+      <input type="range" id="rRange" min="-1" max="1" step="0.01" value="0.34"></div>
+  </div>
+  <div class="btnrow">
+    <button type="button" data-r="0.34">Intrinsic &amp; GPA: +.34</button>
+    <button type="button" data-r="-0.23">Extrinsic &amp; GPA: &minus;.23</button>
+    <button type="button" data-r="-0.32">Extrinsic &amp; test scores: &minus;.32</button>
+    <button type="button" data-r="0">r = 0</button>
+  </div>
+  <div class="readouts">
+    <div class="ro"><span class="k">Direction</span><span class="v" id="rDir">Positive</span></div>
+    <div class="ro"><span class="k">Strength</span><span class="v" id="rStr">Moderate</span></div>
+  </div>
+  <p class="commentary" id="rSay"></p>
+  <p style="font-size:15px;color:var(--muted)">Simulated students. Strength labels follow the usual guide: below .30 weak, .30 to .49 moderate, .50 and above strong. For more, see <a href="../unit-0/correlation-and-regression.html">Statistics 3: Correlation and Regression</a>.</p>
+</div>
+
+<div class="box trap"><span class="label">Traps</span>
+  <p><strong>A negative r is not &ldquo;weaker.&rdquo;</strong> Strength is distance from zero, so r = &minus;.32 is stronger than r = +.27.</p>
+  <p><strong>A correlation never shows cause.</strong> &ldquo;Extrinsic motivation causes lower grades&rdquo; earns 0. Use &ldquo;tended to.&rdquo;</p>
+  <p><strong>Restating is not interpreting.</strong> &ldquo;The correlation is &minus;.23&rdquo; earns 0 on its own.</p>
+</div>
+
+<h3>Score it</h3>
+<div class="scoreit" data-max="1">
+  <div class="si-item" data-score="0" data-why="It restates the number without saying what it means."><p class="resp">&ldquo;The correlation between extrinsic motivation and GPA is &minus;.23.&rdquo;</p><div class="si-btns"></div><div class="fb"></div></div>
+  <div class="si-item" data-score="0" data-why="It claims cause from a correlation, so the interpretation is inaccurate."><p class="resp">&ldquo;The negative correlation shows that extrinsic motivation causes lower grades.&rdquo;</p><div class="si-btns"></div><div class="fb"></div></div>
+  <div class="si-item" data-score="1" data-why="Direction, in terms of the study&rsquo;s students and variables, with no claim of cause."><p class="resp">&ldquo;The correlation of &minus;.23 shows that students who reported more extrinsic motivation tended to have somewhat lower GPAs.&rdquo;</p><div class="si-btns"></div><div class="fb"></div></div>
+</div>
+
+<!-- ============ PART D ============ -->
+<h2 id="part-d"><span class="num">Part D</span>Ethical Guidelines</h2>
+<p>The ethics point needs two moves: name a guideline the source describes <strong>and</strong> say what these researchers did to apply it. Naming alone earns 0.</p>
+<p class="prompt">Prompt: Identify one ethical guideline described in the study. Describe one way the researchers in the study applied this ethical guideline.<span class="pts">1 point</span></p>
+<div class="box frame"><span class="label">Sentence frame</span>
+  <div class="frame-row"><p class="frame-text">&ldquo;The researchers followed the ethical guideline of ______ when they ______.&rdquo;</p><button class="copy" type="button">Copy</button></div>
+</div>
+
+<div class="tscroll"><table class="wide">
+  <caption>The guideline menu</caption>
+  <thead><tr><th>Guideline</th><th>What it means</th><th>What it looks like in a source</th></tr></thead>
+  <tbody>
+    <tr><td class="term">IRB approval</td><td>An institutional review board (ethics committee) approved the study before it began</td><td>&ldquo;approved by the university&rsquo;s Institutional Review Board&rdquo;</td></tr>
+    <tr><td class="term">Informed consent</td><td>Participants (or parents, for minors) agree after learning what the study involves</td><td>&ldquo;participants agreed to take part,&rdquo; &ldquo;with parental consent&rdquo;</td></tr>
+    <tr><td class="term">Informed assent</td><td>Participants under 18 agree for themselves</td><td>&ldquo;children agreed to participate&rdquo;</td></tr>
+    <tr><td class="term">Protection from harm</td><td>Researchers reduce physical or emotional risk</td><td>&ldquo;researchers considered factors that might impose difficulty&rdquo;</td></tr>
+    <tr><td class="term">Confidentiality</td><td>Participants&rsquo; identities are protected</td><td>&ldquo;participants could not be identified from the data&rdquo;</td></tr>
+    <tr><td class="term">Right to withdraw</td><td>Participants can quit at any time</td><td>&ldquo;knew they could back out at any time&rdquo;</td></tr>
+    <tr><td class="term">Debriefing</td><td>Participants learn the study&rsquo;s true purpose afterward</td><td>&ldquo;participants were told the purpose after the study&rdquo;</td></tr>
+  </tbody>
+</table></div>
+
+<div class="box trap"><span class="label">Traps</span>
+  <p><strong>Only what the source describes.</strong> You may know a guideline that should apply. If the source does not say the researchers did it, it does not count.</p>
+  <p><strong>No &ldquo;should have.&rdquo;</strong> &ldquo;The researchers should have kept answers confidential&rdquo; earns 0.</p>
+  <p><strong>Design features are not ethics.</strong> Random assignment, a large sample, or a standardized survey are not ethical guidelines.</p>
+  <p><strong>Minors:</strong> consent comes from a parent or guardian. Assent from the child only counts if the source mentions it.</p>
+</div>
+
+<h3>Score it</h3>
+<div class="scoreit" data-max="1">
+  <div class="si-item" data-score="0" data-why="It names the guideline but never describes how the researchers applied it."><p class="resp">&ldquo;The study used informed consent.&rdquo;</p><div class="si-btns"></div><div class="fb"></div></div>
+  <div class="si-item" data-score="0" data-why="The source never describes researchers protecting anyone from harm. This is the student&rsquo;s guess."><p class="resp">&ldquo;The researchers protected the children from harm because filling out a questionnaire is not dangerous.&rdquo;</p><div class="si-btns"></div><div class="fb"></div></div>
+  <div class="si-item" data-score="1" data-why="It names the guideline and describes exactly what the researchers did."><p class="resp">&ldquo;The researchers followed the ethical guideline of informed consent when they got permission from the students&rsquo; parents before the students completed the questionnaire.&rdquo;</p><div class="si-btns"></div><div class="fb"></div></div>
+</div>
+
+<!-- ============ PART E ============ -->
+<h2 id="part-e"><span class="num">Part E</span>Generalizability</h2>
+<p>Name a population and back your claim with a feature of the participants that the source reports. &ldquo;Generalizable&rdquo; and &ldquo;not generalizable&rdquo; both earn the point when the evidence fits.</p>
+<p class="prompt">Prompt: Explain the extent to which the research findings may or may not be generalizable using specific and relevant evidence from the study.<span class="pts">1 point</span></p>
+<div class="box frame"><span class="label">Sentence frame</span>
+  <div class="frame-row"><p class="frame-text">&ldquo;The findings are / are not generalizable to ______ because the participants were ______.&rdquo;</p><button class="copy" type="button">Copy</button></div>
+</div>
+
+<div class="split">
+  <div class="panel is-method"><h4>Counts: participant features the source reports</h4>
+    <ul><li>Age or grade level</li><li>Location (city, region, country)</li><li>Type of school, community, or setting</li><li>Ethnicity or cultural background</li><li>Gender or sex</li><li>How participants were selected</li></ul></div>
+  <div class="panel is-tool"><h4>Does not count</h4>
+    <ul><li>Sample size (&ldquo;797 is a big sample&rdquo;)</li><li>Reliability or validity of the measures</li><li>Confounds</li><li>Guesses about personality, character, motivation, or effort</li><li>&ldquo;Everyone is different&rdquo;</li><li>A claim with no population named</li></ul></div>
+</div>
+<p>A trait like personality counts only if the source reports it as a participant characteristic, for example as a selection criterion.</p>
+<div class="box trap"><span class="label">Trap: the &ldquo;partly&rdquo; rule</span>
+  <p>If you say &ldquo;partly generalizable,&rdquo; or both generalizable and not, give evidence for each side. One side only earns 0.</p>
+</div>
+
+<div class="widget" id="countDrill">
+  <h3>Does It Count? <span class="tryit">Try it</span></h3>
+  <p style="margin-top:0">Each item is a piece of evidence a student used for Part E in the motivation study. Does it count?</p>
+  <div class="dr-item" data-ans="Counts" data-why="Grade level is a participant feature the source reports."><p class="stem">&ldquo;All participants were in grades 3 through 8.&rdquo;</p><div class="dr-btns"></div><div class="fb"></div></div>
+  <div class="dr-item" data-ans="Doesn&rsquo;t count" data-why="Sample size is specifically not accepted as generalizability evidence."><p class="stem">&ldquo;There were 797 students, which is a big sample.&rdquo;</p><div class="dr-btns"></div><div class="fb"></div></div>
+  <div class="dr-item" data-ans="Counts" data-why="Location is a participant feature the source reports."><p class="stem">&ldquo;Both school districts were in the San Francisco Bay Area.&rdquo;</p><div class="dr-btns"></div><div class="fb"></div></div>
+  <div class="dr-item" data-ans="Doesn&rsquo;t count" data-why="This is a guess about the participants, not information from the study."><p class="stem">&ldquo;Some of the students might have been lazy.&rdquo;</p><div class="dr-btns"></div><div class="fb"></div></div>
+  <div class="dr-item" data-ans="Counts" data-why="Ethnic background is reported in the Participants section."><p class="stem">&ldquo;42% of participants were Asian American and 34% were White.&rdquo;</p><div class="dr-btns"></div><div class="fb"></div></div>
+  <div class="dr-item" data-ans="Doesn&rsquo;t count" data-why="Reliability and validity are about the measures, not about who was studied."><p class="stem">&ldquo;The questionnaire might not be valid.&rdquo;</p><div class="dr-btns"></div><div class="fb"></div></div>
+  <div class="dr-item" data-ans="Counts" data-why="The type of school community is a participant feature the source reports."><p class="stem">&ldquo;One district was known for high academic achievement.&rdquo;</p><div class="dr-btns"></div><div class="fb"></div></div>
+  <p class="tally" id="countTally"></p>
+</div>
+
+<h3>Score it</h3>
+<div class="scoreit" data-max="1">
+  <div class="si-item" data-score="0" data-why="Sample size is not accepted as evidence."><p class="resp">&ldquo;The study is generalizable because it had 797 students.&rdquo;</p><div class="si-btns"></div><div class="fb"></div></div>
+  <div class="si-item" data-score="0" data-why="A guess, not participant information from the study, and no population is named."><p class="resp">&ldquo;The findings may not be generalizable, because some students might have been lazy.&rdquo;</p><div class="si-btns"></div><div class="fb"></div></div>
+  <div class="si-item" data-score="1" data-why="It names a population and uses participant evidence from the source."><p class="resp">&ldquo;The findings may not be generalizable to high school students, because all of the participants were in grades 3 through 8.&rdquo;</p><div class="si-btns"></div><div class="fb"></div></div>
+  <div class="si-item" data-score="1" data-why="&ldquo;Partly&rdquo; works here because both sides have participant evidence."><p class="resp">&ldquo;The findings may apply to both boys and girls, since the sample was about half each, but may not apply to students outside California, since both districts were in the San Francisco Bay Area.&rdquo;</p><div class="si-btns"></div><div class="fb"></div></div>
+</div>
+
+<!-- ============ PART F ============ -->
+<h2 id="part-f"><span class="num">Part F</span>Support or Refute</h2>
+<p>Part F is worth 2 points: use one specific result from the study, explain how it connects to the hypothesis or concept, and interpret it accurately.</p>
+<p class="prompt">Prompt: Explain how at least one of the research findings supports or refutes [the hypothesis or concept].<span class="pts">2 points</span></p>
+<div class="box frame"><span class="label">Sentence frame</span>
+  <div class="frame-row"><p class="frame-text">&ldquo;The finding that ______ supports / refutes the hypothesis that ______ because ______.&rdquo;</p><button class="copy" type="button">Copy</button></div>
+</div>
+
+<div class="tscroll"><table>
+  <caption>How Part F is scored</caption>
+  <thead><tr><th class="center">Points</th><th>What the response does</th></tr></thead>
+  <tbody>
+    <tr><td class="center"><strong>2</strong></td><td>A specific result, explained clearly, connected to the hypothesis, and interpreted accurately</td></tr>
+    <tr><td class="center"><strong>1</strong></td><td>A result with no explanation, OR an explanation with no result, OR a result interpreted with an error (such as claiming cause from a correlation)</td></tr>
+    <tr><td class="center"><strong>0</strong></td><td>No accurate connection between the results and the hypothesis</td></tr>
+  </tbody>
+</table></div>
+
+<div class="box good"><span class="label">Three steps to 2 points</span>
+  <ol style="margin:0;padding-left:22px">
+    <li>Pick one specific result: a number, a table value, a graph comparison, or a stated finding.</li>
+    <li>Say whether it supports or refutes the hypothesis.</li>
+    <li>Explain the link in plain words: what does the result mean for the people in the study?</li>
+  </ol>
+</div>
+<div class="box trap"><span class="label">Traps</span>
+  <p>A number with no explanation, or an explanation with no result, caps you at 1 point. &ldquo;Proves&rdquo; or &ldquo;causes&rdquo; in a correlational study is an inaccurate interpretation. Saying it both supports and refutes needs evidence for each side.</p>
+</div>
+
+<h3>Score it: 0, 1, or 2?</h3>
+<div class="scoreit" data-max="2">
+  <div class="si-item" data-score="1" data-why="It uses a result but never explains how it supports the hypothesis."><p class="resp">&ldquo;Intrinsic motivation had a correlation of +.34 with GPA.&rdquo;</p><div class="si-btns"></div><div class="fb"></div></div>
+  <div class="si-item" data-score="1" data-why="It explains, but uses no result from the study."><p class="resp">&ldquo;The hypothesis is supported because students who like learning do better in school.&rdquo;</p><div class="si-btns"></div><div class="fb"></div></div>
+  <div class="si-item" data-score="1" data-why="It uses a result, but &ldquo;proves&rdquo; and &ldquo;causes&rdquo; interpret a correlation inaccurately."><p class="resp">&ldquo;Intrinsic motivation was positively correlated with GPA (r = +.34), which proves that enjoying school causes higher grades.&rdquo;</p><div class="si-btns"></div><div class="fb"></div></div>
+  <div class="si-item" data-score="2" data-why="A specific result, a clear link to the hypothesis, and accurate correlational language."><p class="resp">&ldquo;The finding that intrinsic motivation was positively correlated with GPA (r = +.34) supports the hypothesis, because students who reported enjoying challenging schoolwork tended to earn higher grades.&rdquo;</p><div class="si-btns"></div><div class="fb"></div></div>
+</div>
+
+<div class="box note"><span class="label">A &ldquo;refutes&rdquo; example</span>
+  <p>Suppose the prompt asked about the claim that working for rewards and teacher approval improves achievement. A 2-point answer: &ldquo;The finding that extrinsic motivation was negatively correlated with test scores (r = &minus;.32) refutes the claim, because students who worked mainly for the teacher or to avoid hard work tended to score lower, not higher.&rdquo;</p>
+</div>
+
+<!-- ============ MAP THE SOURCE ============ -->
+<h2 id="map"><span class="num">9</span>Practice: Map the Source</h2>
+<p>This short practice source is fictional. For each sentence, pick the part it helps you answer. This is exactly what your 10-minute reading period is for.</p>
+<div class="widget" id="mapDrill">
+  <h3>Phones and Focus <span class="tryit">Try it</span></h3>
+  <div class="mini-source">
+    <h4>Introduction</h4>
+    <div class="sent" data-part="F" data-why="The hypothesis is what Part F asks you to support or refute."><p>Researchers predicted that having a phone in sight would lower students&rsquo; reading comprehension.</p><div class="part-btns"></div><div class="fb"></div></div>
+    <h4>Participants</h4>
+    <div class="sent" data-part="E" data-why="Who was studied (age, school, location) is your Part E evidence."><p>Participants were 120 first-year students, aged 18 to 20, at one university in Taipei.</p><div class="part-btns"></div><div class="fb"></div></div>
+    <div class="sent" data-part="D" data-why="Agreeing to take part and being able to stop at any time are ethical guidelines (informed consent, right to withdraw)."><p>All students signed a consent form and were told they could stop at any time.</p><div class="part-btns"></div><div class="fb"></div></div>
+    <h4>Method</h4>
+    <div class="sent" data-part="A" data-why="Random assignment and a manipulated variable mean the method is an experiment."><p>A computer randomly assigned each student to keep their phone face-down on the desk or to leave it in another room.</p><div class="part-btns"></div><div class="fb"></div></div>
+    <div class="sent" data-part="B" data-why="How comprehension was measured is its operational definition."><p>Reading comprehension was measured as the number of correct answers, out of 20, on a quiz about a passage students read.</p><div class="part-btns"></div><div class="fb"></div></div>
+    <h4>Results and Discussion</h4>
+    <div class="sent" data-part="C" data-why="Group means are the statistic Part C asks you to interpret."><p>Students with the phone on the desk scored a mean of 13.1 correct (SD = 3.2), compared with 15.4 (SD = 2.9) for students whose phone was in another room.</p><div class="part-btns"></div><div class="fb"></div></div>
+  </div>
+  <p class="tally" id="mapTally"></p>
+</div>
+
+<!-- ============ WORKED EXAMPLE 1 ============ -->
+<h2 id="example1"><span class="num">10</span>Worked Example 1: Does Loving School Pay Off?</h2>
+<p>This is the correlational study from our AAQ workshop, with a full 7-point response. The complete source is in the Canvas quiz &ldquo;AAQ Workshop: Motivation and Achievement.&rdquo;</p>
+<p style="font-size:15.5px;color:var(--muted)">Source: adapted from Lepper, M. R., Corpus, J. H., &amp; Iyengar, S. S. (2005). Intrinsic and extrinsic motivational orientations in the classroom: Age differences and academic correlates. <em>Journal of Educational Psychology, 97</em>(2), 184&ndash;196.</p>
+<ul>
+  <li><strong>Hypothesis:</strong> students with higher intrinsic motivation would have higher academic achievement.</li>
+  <li><strong>Participants:</strong> 797 students in grades 3 to 8 from two public school districts in the San Francisco Bay Area; 401 girls and 395 boys; 42% Asian American, 34% White, 5% Hispanic, 2% African American, 10% other, 7% not reported; parental consent.</li>
+  <li><strong>Method:</strong> students rated 17 intrinsic and 13 extrinsic statements from 1 (not at all true for me) to 5 (very true for me). Achievement was GPA (suburban district) or California Achievement Test scores (urban district).</li>
+  <li><strong>Results:</strong> intrinsic motivation fell from a mean of 4.07 (SD = 0.67) in grade 3 to 3.42 (SD = 0.75) in grade 8. All four correlations below were statistically significant.</li>
+</ul>
+<div class="tscroll"><table>
+  <thead><tr><th></th><th class="center">GPA (n = 216)</th><th class="center">Test scores (n = 136)</th></tr></thead>
+  <tbody>
+    <tr><td class="term">Intrinsic motivation</td><td class="center">r = +.34</td><td class="center">r = +.27</td></tr>
+    <tr><td class="term">Extrinsic motivation</td><td class="center">r = &minus;.23</td><td class="center">r = &minus;.32</td></tr>
+  </tbody>
+</table></div>
+<details>
+  <summary>Show the 7-point model response</summary>
+  <p><strong>(A)</strong> The research method used in this study is correlational research.</p>
+  <p><strong>(B)</strong> The operational definition of intrinsic motivation is the student&rsquo;s average rating, from 1 to 5, on the 17 intrinsic statements in the classroom questionnaire.</p>
+  <p><strong>(C)</strong> The correlation of &minus;.23 shows that students who reported higher extrinsic motivation tended to have lower GPAs, although the relationship was fairly weak.</p>
+  <p><strong>(D)</strong> The researchers followed the ethical guideline of informed consent when they obtained consent from the students&rsquo; parents before the students completed the questionnaire.</p>
+  <p><strong>(E)</strong> The findings may not be generalizable to students in other countries, such as Taiwan, because all of the participants attended public schools in the San Francisco Bay Area of California.</p>
+  <p><strong>(F)</strong> The finding that intrinsic motivation was positively correlated with GPA (r = +.34) supports the hypothesis that students with higher intrinsic motivation have higher academic achievement, because students who rated statements like &ldquo;I like hard work because it&rsquo;s a challenge&rdquo; as more true for them tended to earn higher grades.</p>
+</details>
+
+<!-- ============ WORKED EXAMPLE 2 ============ -->
+<h2 id="example2"><span class="num">11</span>Worked Example 2: The College Board Sample</h2>
+<p>The sample AAQ in the AP Psychology Course and Exam Description is an <strong>experiment</strong>: about 3,500 adults over 60 were randomly assigned to take a daily multivitamin or a placebo, and their memory and executive functioning were tested once a year for 3 years. The multivitamin group&rsquo;s immediate recall improved by a mean of 0.71 words after one year, compared with 0.44 words for the placebo group. The examples below are College Board&rsquo;s own.</p>
+<div class="tscroll"><table class="wide">
+  <caption>Official scored examples</caption>
+  <thead><tr><th>Part</th><th>Earns the point</th><th>Does not earn</th></tr></thead>
+  <tbody>
+    <tr><td class="term">A</td><td>&ldquo;The research method is an experiment.&rdquo;</td><td>&ldquo;The research is a correlational study.&rdquo;</td></tr>
+    <tr><td class="term">B</td><td>&ldquo;The operational definition is the scores on the executive functioning test.&rdquo;</td><td>&ldquo;Executive functioning is how many words they recall.&rdquo; (wrong variable)</td></tr>
+    <tr><td class="term">C</td><td>&ldquo;The means show that the multivitamin group had better recall than the placebo group.&rdquo;</td><td>&ldquo;The mean is the average of a group of data.&rdquo; (definition only)</td></tr>
+    <tr><td class="term">D</td><td>&ldquo;Researchers maintained confidentiality when they ensured that the individual participants could not be identified from the data collected.&rdquo;</td><td>&ldquo;The study was approved by an IRB and the researchers debriefed their participants.&rdquo; (not described in the study)</td></tr>
+    <tr><td class="term">E</td><td>&ldquo;The study is generalizable to older adults only because that is the only group the researchers used.&rdquo;</td><td>&ldquo;The study is generalizable to the larger population.&rdquo; (no evidence)</td></tr>
+    <tr><td class="term">F (2)</td><td>&ldquo;This study shows that older adults can delay some cognitive decline if they take a multivitamin because it seems to improve episodic memory, but not executive functioning.&rdquo;</td><td>&ldquo;Older adults gain 3.1 years of memory change because of taking a multivitamin.&rdquo; (1 point: result, no explanation)</td></tr>
+  </tbody>
+</table></div>
+<p><strong>Compare the two examples.</strong> Example 1 is correlational, so its answers say &ldquo;tended to.&rdquo; Example 2 is an experiment with random assignment, so cause-and-effect language is allowed.</p>
+
+<!-- ============ QUICK REFERENCE ============ -->
+<h2 id="quickref"><span class="num">12</span>Quick Reference</h2>
+<p>Keep this open during practice. It prints on one A4 page from your browser&rsquo;s print menu.</p>
+<div class="tscroll"><table>
+  <caption>Sentence frames</caption>
+  <thead><tr><th>Part</th><th>Frame</th></tr></thead>
+  <tbody>
+    <tr><td class="term">A</td><td>&ldquo;The research method used in this study is ______.&rdquo;</td></tr>
+    <tr><td class="term">B</td><td>&ldquo;The operational definition of ______ is the participants&rsquo; ______ on ______.&rdquo;</td></tr>
+    <tr><td class="term">C</td><td>&ldquo;The [statistic] of ___ shows that [group or people] who ______ tended to ______.&rdquo;</td></tr>
+    <tr><td class="term">D</td><td>&ldquo;The researchers followed the ethical guideline of ______ when they ______.&rdquo;</td></tr>
+    <tr><td class="term">E</td><td>&ldquo;The findings are / are not generalizable to ______ because the participants were ______.&rdquo;</td></tr>
+    <tr><td class="term">F</td><td>&ldquo;The finding that ______ supports / refutes the hypothesis that ______ because ______.&rdquo;</td></tr>
+  </tbody>
+</table></div>
+
+<h3>Self-score checklist</h3>
+<p style="font-size:16px;color:var(--muted)">Tick each part after a practice AAQ. Your ticks are saved on this device only.</p>
+<ul class="check" id="checklist">
+  <li><input type="checkbox" id="ck-a"><label for="ck-a"><span class="p">A (1)</span>I named one method from the five, and it is correct.</label></li>
+  <li><input type="checkbox" id="ck-b"><label for="ck-b"><span class="p">B (1)</span>My definition says how the variable was measured, not just what it means.</label></li>
+  <li><input type="checkbox" id="ck-c"><label for="ck-c"><span class="p">C (1)</span>I explained what the number means for these participants, without claiming cause.</label></li>
+  <li><input type="checkbox" id="ck-d"><label for="ck-d"><span class="p">D (1)</span>I named a guideline the source describes AND said what these researchers did.</label></li>
+  <li><input type="checkbox" id="ck-e"><label for="ck-e"><span class="p">E (1)</span>I named a population AND used a participant feature from the source.</label></li>
+  <li><input type="checkbox" id="ck-f"><label for="ck-f"><span class="p">F (2)</span>I used a specific result AND explained the link, accurately.</label></li>
+</ul>
+<p class="tally" id="ckTotal"></p>
+<div class="btnrow" style="margin-top:8px"><button type="button" id="ckReset">Clear ticks</button></div>
+
+<div class="box key"><span class="label">The five costliest mistakes</span>
+  <ol style="margin:0;padding-left:22px">
+    <li>Defining without applying (Parts B and C): a definition alone earns 0.</li>
+    <li>Restating instead of interpreting (Part C): &ldquo;r = &minus;.23&rdquo; is not an answer.</li>
+    <li>Naming without describing (Part D): the ethics point needs both.</li>
+    <li>Using sample size or guesses for generalizability (Part E).</li>
+    <li>Claiming cause from a correlation (Parts C and F).</li>
+  </ol>
+</div>
+
+<div class="pagenav">
+  <a href="index.html"><span class="dir">&larr; Back</span><span class="t">FRQ Skills</span></a>
+  <a href="../unit-0/research-methods.html"><span class="dir">Related</span><span class="t">Research Methods Reference</span></a>
+</div>
+
+<footer>
+  <p>AP Psychology, FRQ Skills. Aligned to the 2024 Course and Exam Description and the 2025 and 2026 AP Psychology scoring guidelines. Worked Example 2 quotes College Board&rsquo;s published scoring examples.</p>
+  <p>Questions about anything on this page? Message me on Canvas or ask at the start of class.</p>
+</footer>
+
+</div>
+
+<button class="totop" id="toTop" type="button">&uarr; Top</button>
+
+<script>
+(function () {
+  function $all(sel, root) { return Array.prototype.slice.call((root || document).querySelectorAll(sel)); }
+
+  /* ---------- copy buttons ---------- */
+  $all('.copy').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var t = btn.parentNode.querySelector('.frame-text').textContent.replace(/^[A-Za-z]+:\s*/, '');
+      function done() { btn.textContent = 'Copied'; setTimeout(function () { btn.textContent = 'Copy'; }, 1500); }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(t).then(done, function () { fallback(t); done(); });
+      } else { fallback(t); done(); }
+    });
+  });
+  function fallback(t) {
+    var ta = document.createElement('textarea'); ta.value = t; document.body.appendChild(ta);
+    ta.select(); try { document.execCommand('copy'); } catch (e) {} document.body.removeChild(ta);
+  }
+
+  /* ---------- score it ---------- */
+  $all('.scoreit').forEach(function (box) {
+    var max = parseInt(box.getAttribute('data-max'), 10);
+    $all('.si-item', box).forEach(function (item) {
+      var right = parseInt(item.getAttribute('data-score'), 10);
+      var btns = item.querySelector('.si-btns'), fb = item.querySelector('.fb');
+      var ask = document.createElement('span'); ask.className = 'ask'; ask.textContent = 'Your score:'; btns.appendChild(ask);
+      for (var v = 0; v <= max; v++) {
+        (function (v) {
+          var b = document.createElement('button'); b.type = 'button'; b.textContent = v;
+          b.setAttribute('aria-label', 'Score this response ' + v);
+          b.addEventListener('click', function () {
+            $all('button', btns).forEach(function (x) { x.classList.remove('picked', 'correct-pick'); });
+            b.classList.add(v === right ? 'correct-pick' : 'picked');
+            fb.className = 'fb show ' + (v === right ? 'right' : 'wrong');
+            fb.innerHTML = '<strong>' + (v === right ? 'Yes: it earns ' : 'Not quite: it earns ') + right +
+              (right === 1 ? ' point.' : ' points.') + '</strong>' + item.getAttribute('data-why');
+          });
+          btns.appendChild(b);
+        })(v);
+      }
+      fb.setAttribute('aria-live', 'polite');
+    });
+  });
+
+  /* ---------- choice drills (method, does it count, map the source) ---------- */
+  function drill(rootId, itemSel, options, ansAttr, tallyId, label) {
+    var root = document.getElementById(rootId); if (!root) return;
+    var items = $all(itemSel, root), tally = document.getElementById(tallyId), score = {};
+    function update() {
+      var n = Object.keys(score).length, c = 0;
+      Object.keys(score).forEach(function (k) { if (score[k]) c++; });
+      tally.textContent = n ? (c + ' of ' + items.length + ' correct on your first try' + (n < items.length ? ' (' + (items.length - n) + ' to go)' : '.')) : '';
+    }
+    items.forEach(function (item, i) {
+      var ans = item.getAttribute(ansAttr), btns = item.querySelector('.dr-btns, .part-btns'), fb = item.querySelector('.fb');
+      fb.setAttribute('aria-live', 'polite');
+      options.forEach(function (opt) {
+        var b = document.createElement('button'); b.type = 'button'; b.innerHTML = opt;
+        b.addEventListener('click', function () {
+          var txt = b.textContent, ok = txt === item.getAttribute(ansAttr).replace('&rsquo;', '’');
+          if (!(i in score)) { score[i] = ok; update(); }
+          $all('button', btns).forEach(function (x) { x.classList.remove('picked', 'correct-pick'); });
+          b.classList.add(ok ? 'correct-pick' : 'picked');
+          fb.className = 'fb show ' + (ok ? 'right' : 'wrong');
+          fb.innerHTML = '<strong>' + (ok ? 'Correct.' : 'Not quite. ' + label + item.getAttribute(ansAttr) + '.') + '</strong>' + item.getAttribute('data-why');
+        });
+        btns.appendChild(b);
+      });
+    });
+  }
+  drill('methodDrill', '.dr-item', ['Experiment', 'Correlational', 'Case study', 'Naturalistic observation', 'Meta-analysis'], 'data-ans', 'methodTally', 'Answer: ');
+  drill('countDrill', '.dr-item', ['Counts', 'Doesn’t count'], 'data-ans', 'countTally', 'Answer: ');
+  drill('mapDrill', '.sent', ['A', 'B', 'C', 'D', 'E', 'F'], 'data-part', 'mapTally', 'This sentence helps with Part ');
+
+  /* ---------- r slider ---------- */
+  (function () {
+    var svg = document.getElementById('rSvg'); if (!svg) return;
+    var NS = 'http://www.w3.org/2000/svg', W = 640, H = 380, L = 56, R = 20, T = 18, B = 46, N = 120;
+    var seed = 7; function rnd() { seed = (seed * 16807) % 2147483647; return seed / 2147483647; }
+    function gauss() { var u = rnd() || 1e-9, v = rnd(); return Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * v); }
+    var z1 = [], z2 = [], i;
+    for (i = 0; i < N; i++) { z1.push(gauss()); z2.push(gauss()); }
+    function center(a) { var m = a.reduce(function (s, x) { return s + x; }, 0) / a.length;
+      var sd = Math.sqrt(a.reduce(function (s, x) { return s + (x - m) * (x - m); }, 0) / a.length);
+      return a.map(function (x) { return (x - m) / sd; }); }
+    z1 = center(z1);
+    var b = z1.reduce(function (s, x, k) { return s + x * z2[k]; }, 0) / N;
+    z2 = center(z2.map(function (x, k) { return x - b * z1[k]; }));
+    function el(name, attrs, parent) { var e = document.createElementNS(NS, name);
+      for (var k in attrs) e.setAttribute(k, attrs[k]); (parent || svg).appendChild(e); return e; }
+    el('line', { x1: L, y1: H - B, x2: W - R, y2: H - B, 'class': 'axis' });
+    el('line', { x1: L, y1: T, x2: L, y2: H - B, 'class': 'axis' });
+    var xl = el('text', { x: (L + W - R) / 2, y: H - 12, 'text-anchor': 'middle' }); xl.textContent = 'Intrinsic motivation score →';
+    var yl = el('text', { x: 16, y: (T + H - B) / 2, 'text-anchor': 'middle', transform: 'rotate(-90 16 ' + (T + H - B) / 2 + ')' }); yl.textContent = 'GPA →';
+    var trend = el('line', { 'class': 'trend' });
+    var dots = []; for (i = 0; i < N; i++) dots.push(el('circle', { r: 4.5, 'class': 'dot' }));
+    function sx(z) { return L + (Math.max(-3, Math.min(3, z)) + 3) / 6 * (W - R - L); }
+    function sy(z) { return (H - B) - (Math.max(-3, Math.min(3, z)) + 3) / 6 * (H - B - T); }
+    var range = document.getElementById('rRange');
+    function fmt(r) { var s = Math.abs(r).toFixed(2).replace(/^0/, ''); return r > 0.004 ? '+' + s : r < -0.004 ? '−' + s : '0'; }
+    function draw(r) {
+      var k = Math.sqrt(Math.max(0, 1 - r * r));
+      for (var j = 0; j < N; j++) { var y = r * z1[j] + k * z2[j];
+        dots[j].setAttribute('cx', sx(z1[j]).toFixed(1)); dots[j].setAttribute('cy', sy(y).toFixed(1)); }
+      trend.setAttribute('x1', sx(-3)); trend.setAttribute('y1', sy(-3 * r));
+      trend.setAttribute('x2', sx(3)); trend.setAttribute('y2', sy(3 * r));
+      var a = Math.abs(r);
+      document.getElementById('rVal').textContent = fmt(r);
+      document.getElementById('rDir').textContent = a < 0.005 ? 'None' : r > 0 ? 'Positive' : 'Negative';
+      document.getElementById('rStr').textContent = a < 0.1 ? 'Little or none' : a < 0.3 ? 'Weak' : a < 0.5 ? 'Moderate' : a < 0.995 ? 'Strong' : 'Perfect';
+      document.getElementById('rSay').textContent = a < 0.1 ? 'Knowing a student’s motivation tells you almost nothing about their GPA.'
+        : 'Students with higher motivation scores tended to have ' + (r > 0 ? 'higher' : 'lower') + ' GPAs. Notice how many students still break the pattern: r describes the group, not each person.';
+    }
+    range.addEventListener('input', function () { draw(parseFloat(range.value)); });
+    $all('#rWidget [data-r]').forEach(function (btn) { btn.addEventListener('click', function () {
+      range.value = btn.getAttribute('data-r'); draw(parseFloat(range.value)); }); });
+    draw(parseFloat(range.value));
+  })();
+
+  /* ---------- checklist (saved on this device only) ---------- */
+  (function () {
+    var KEY = 'apPsych.aaqChecklist', boxes = $all('#checklist input'), total = document.getElementById('ckTotal');
+    var pts = { 'ck-a': 1, 'ck-b': 1, 'ck-c': 1, 'ck-d': 1, 'ck-e': 1, 'ck-f': 2 };
+    var saved = {}; try { saved = JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch (e) { saved = {}; }
+    function sum() { var s = 0; boxes.forEach(function (b) { if (b.checked) s += pts[b.id]; });
+      total.textContent = 'Estimated score: ' + s + ' out of 7'; }
+    boxes.forEach(function (b) {
+      b.checked = !!saved[b.id];
+      b.addEventListener('change', function () { saved[b.id] = b.checked;
+        try { localStorage.setItem(KEY, JSON.stringify(saved)); } catch (e) {} sum(); });
+    });
+    document.getElementById('ckReset').addEventListener('click', function () {
+      saved = {}; boxes.forEach(function (b) { b.checked = false; });
+      try { localStorage.removeItem(KEY); } catch (e) {} sum(); });
+    sum();
+  })();
+
+  /* ---------- back to top ---------- */
+  var top = document.getElementById('toTop');
+  window.addEventListener('scroll', function () { top.classList.toggle('show', window.scrollY > 900); }, { passive: true });
+  top.addEventListener('click', function () { window.scrollTo(0, 0); });
+})();
+</script>
+
+</body>
+</html>

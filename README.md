@@ -67,6 +67,8 @@ unit-0/research-methods.html
 unit-0/describing-data.html, normal-curve.html,
        correlation-and-regression.html, significance-and-effect-size.html
 unit-1/ ... unit-5/   same pattern
+frq-skills/index.html FRQ Skills landing page
+frq-skills/aaq-guide.html  How to Write AAQs (EBQ guide to follow)
 .nojekyll             tells GitHub Pages to serve files as-is
 ```
 
